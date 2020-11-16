@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "ccec8bc6-1224-4098-8a64-6dea8bcae4dc",
+    "prId" : 1612,
+    "comments" : [
+      {
+        "id" : "afe96691-fc18-4c88-9ddf-7a6f917c4c89",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Fancy!",
+        "createdAt" : "2018-06-20T17:24:51Z",
+        "updatedAt" : "2018-06-20T17:31:26Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "57ca5bba-00c9-49f1-ab01-64847e8700f8",
+        "parentId" : "afe96691-fc18-4c88-9ddf-7a6f917c4c89",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I already use `StringFS` in scalafmt and scalafix for a long time, it's very helpful!",
+        "createdAt" : "2018-06-20T17:32:57Z",
+        "updatedAt" : "2018-06-20T17:32:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8e985d4f09adfa2b4935375ed70aac9d3fef4379",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +22,26 @@    *   /src/main/scala/core/Foo.scala\n    *   package core\n    *   object Foo.scala\n    *   \"\"\")\n    * }}}"
+  }
+]

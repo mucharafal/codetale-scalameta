@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "a57d4172-60d1-4f2f-84bf-6ea032c5c77e",
+    "prId" : 1094,
+    "comments" : [
+      {
+        "id" : "480c5c23-1ba9-4c86-95ca-8213d3038a2d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why do we need these changes?",
+        "createdAt" : "2017-08-25T17:27:42Z",
+        "updatedAt" : "2017-08-28T08:30:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f592a55d-dce1-4287-9611-59f563f888dc",
+        "parentId" : "480c5c23-1ba9-4c86-95ca-8213d3038a2d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Because langmeta/io is now in the same project as langmeta/semanticdb that used these methods. Previously, it compiled because java.io is on the boot classpath, now it failed because java.io is compiled in the same project. It didn't fail because it got DCEd.",
+        "createdAt" : "2017-08-28T08:25:45Z",
+        "updatedAt" : "2017-08-28T08:30:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "200894e1656e1855c673f442ce23857245f2241b",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +35,39 @@    toPath.getParent.toFile\n  def mkdirs(): Unit =\n    throw new UnsupportedOperationException(\"mkdirs() is not supported in Scala.js\")\n  def getPath: String =\n    path"
+  }
+]

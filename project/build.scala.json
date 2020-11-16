@@ -1,0 +1,181 @@
+[
+  {
+    "id" : "ed9ea767-dd33-4843-adaa-4c75c27ecb7a",
+    "prId" : 423,
+    "comments" : [
+      {
+        "id" : "697480bc-30ad-4f4f-8405-daf070964622",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "/cc @eed3si9n. Maybe you'll be able to come up with something here. Here's the background that introduces the need for this: https://github.com/scalameta/scalameta/pull/421/files/5be17c403529e85d39cbac3c9f73723d1acac6b2#r65814536.\n",
+        "createdAt" : "2016-06-05T12:39:45Z",
+        "updatedAt" : "2016-06-05T12:39:45Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "09dce35c7b8fa0757ea00ed798de3eb16398ca73",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +34,38 @@    },\n    // TODO: The same thing for publishSigned doesn't work.\n    // SBT calls publishSigned on aggregated projects, but ignores everything else.\n    console := (console in scalameta in Compile).value\n  ) aggregate ("
+  },
+  {
+    "id" : "f4e21377-3c79-413b-a241-af9c68b839f1",
+    "prId" : 421,
+    "comments" : [
+      {
+        "id" : "0ec2a7d1-3853-48af-bd3d-c813a4ae8b01",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@fommil maybe you could provide advice here?\n",
+        "createdAt" : "2016-06-05T09:43:27Z",
+        "updatedAt" : "2016-06-05T09:43:27Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "11900e13-98d8-49ec-af45-ed5a0ba473c7",
+        "parentId" : "0ec2a7d1-3853-48af-bd3d-c813a4ae8b01",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "More precisely, I can't fully override `publish-signed` for the `readme` project. \n\nI do not want to publish this project, just to use it to generate the website via Scalatex. However, `sbt-pgp` insists that I configure a publishing repository for `readme`, otherwise it errors out when I do `sbt publish-signed`, even though I've overridden that task explicitly in my build.\n",
+        "createdAt" : "2016-06-05T09:44:30Z",
+        "updatedAt" : "2016-06-05T09:46:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ce7a989-0275-435f-8303-f87e39c2a3b1",
+        "parentId" : "0ec2a7d1-3853-48af-bd3d-c813a4ae8b01",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Also /cc @lihaoyi\n",
+        "createdAt" : "2016-06-05T09:44:43Z",
+        "updatedAt" : "2016-06-05T09:44:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c5f8b79e-1503-44b5-9f11-3db486aeb516",
+        "parentId" : "0ec2a7d1-3853-48af-bd3d-c813a4ae8b01",
+        "author" : {
+          "login" : "lihaoyi",
+          "name" : "Li Haoyi",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/934140?v=4"
+        },
+        "body" : "I usually have a separate project that aggregates all my publishable stuff. Often I have integration tests or other random things that I don't want to publish either\n",
+        "createdAt" : "2016-06-05T10:59:24Z",
+        "updatedAt" : "2016-06-05T10:59:24Z",
+        "lastEditedBy" : {
+          "login" : "lihaoyi",
+          "name" : "Li Haoyi",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/934140?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e873ec6f-5ef8-4635-86dd-b91a5266006a",
+        "parentId" : "0ec2a7d1-3853-48af-bd3d-c813a4ae8b01",
+        "author" : {
+          "login" : "fommil",
+          "name" : ">>=",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/1914041?u=bd96315dd5fa039f8b0cf69428ac03181d002b57&v=4"
+        },
+        "body" : "we aggregate just the bits we want to publish https://github.com/ensime/ensime-server/blob/2.0/project/EnsimeBuild.scala#L243\n\nnote also that if you have a custom test configuration, with its own dependencies, you must add them to `test` and your config or it triggers a bug in ivy that means your `main` config will depend on those jars. Probably not relevant for you but a major source of pain for us.\n",
+        "createdAt" : "2016-06-05T11:18:24Z",
+        "updatedAt" : "2016-06-05T11:18:24Z",
+        "lastEditedBy" : {
+          "login" : "fommil",
+          "name" : ">>=",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/1914041?u=bd96315dd5fa039f8b0cf69428ac03181d002b57&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b3b73614-6e5c-43ca-8b73-d1cae41fa326",
+        "parentId" : "0ec2a7d1-3853-48af-bd3d-c813a4ae8b01",
+        "author" : {
+          "login" : "fommil",
+          "name" : ">>=",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/1914041?u=bd96315dd5fa039f8b0cf69428ac03181d002b57&v=4"
+        },
+        "body" : "oh joy, I just realised we are publishing `testutil`... that's probably not right.\n",
+        "createdAt" : "2016-06-05T11:19:32Z",
+        "updatedAt" : "2016-06-05T11:19:32Z",
+        "lastEditedBy" : {
+          "login" : "fommil",
+          "name" : ">>=",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/1914041?u=bd96315dd5fa039f8b0cf69428ac03181d002b57&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5be17c403529e85d39cbac3c9f73723d1acac6b2",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +209,213 @@    },\n    // TODO: doesn't work at the moment, see https://github.com/sbt/sbt-pgp/issues/42\n    publishSigned := publish.value,\n    publishLocal := {},\n    publishLocalSigned := {},"
+  },
+  {
+    "id" : "d587c773-dc9a-4b9c-90d2-89a8f267b1a7",
+    "prId" : 141,
+    "comments" : [
+      {
+        "id" : "9057bc67-b315-4774-b81f-1aa5c6c02be2",
+        "parentId" : null,
+        "author" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "body" : "Note: this will have to be remove prior to the pull request to be accepted (Travis will also not be happy). #140 should be accepted first.\n",
+        "createdAt" : "2015-06-01T14:32:19Z",
+        "updatedAt" : "2015-06-05T12:28:06Z",
+        "lastEditedBy" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ee0b67de5c6acc029118b379809088fb2d841225",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +148,152 @@    libraryDependencies <+= (scalaVersion)(\"org.scala-lang\" % \"scala-reflect\" % _ % \"provided\"),\n    libraryDependencies <+= (scalaVersion)(\"org.scala-lang\" % \"scala-compiler\" % _ % \"provided\"),\n    libraryDependencies += \"plugin\" %% \"plugin\" % \"0.1.0-SNAPSHOT\" // TODO: change/remove once Martin's work is integrated to SM.\n  ) dependsOn (foundation)\n"
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "55d5de9b-77b4-4e3a-93bb-8a2d15d6b46f",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "03e0f96c-5a97-47ec-a7aa-a39479c0e556",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This will change the check to accept everything as top level irrelevent of whether the dialect is set. ",
+        "createdAt" : "2020-05-25T15:14:23Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2db8a205-72b1-4e08-9757-eb2ff5f47d60",
+        "parentId" : "03e0f96c-5a97-47ec-a7aa-a39479c0e556",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "yes, we don't have dialect here available",
+        "createdAt" : "2020-05-26T08:51:53Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +161,165 @@      case _: Defn.Trait => true\n      case _: Defn.Object => true\n      case _: Defn.Def => true\n      case _: Defn.Given => true\n      case _: Defn.GivenAlias => true"
+  },
+  {
+    "id" : "349a57aa-451a-478b-92f0-00cbb57bf168",
+    "prId" : 2008,
+    "comments" : [
+      {
+        "id" : "45ffd04c-6119-49e3-b178-0971e0c15e1b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Shouldn't we also have an iterator here in order not to allocate a new list?",
+        "createdAt" : "2020-04-22T16:48:43Z",
+        "updatedAt" : "2020-04-28T14:12:15Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3ebb6489-c9d4-478d-826b-c177289752d2",
+        "parentId" : "45ffd04c-6119-49e3-b178-0971e0c15e1b",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "correct, changed :+1:",
+        "createdAt" : "2020-04-23T07:20:58Z",
+        "updatedAt" : "2020-04-28T14:12:15Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1eedb4ba2ce047aa874b408f69db9d8c51054e90",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +219,223 @@  def onlyLastParamCanBeRepeated(params: List[Term.Param]): Boolean = {\n    params.iterator\n      .take(params.length - 1)\n      .forall(p => p.is[Term.Param.Quasi] || !p.decltpe.exists(_.is[Type.Repeated]))\n  }"
+  }
+]

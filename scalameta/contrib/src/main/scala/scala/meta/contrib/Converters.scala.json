@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "50da17ac-8198-4bf9-9db4-b0f73391403b",
+    "prId" : 701,
+    "comments" : [
+      {
+        "id" : "2a777be0-70e5-4f19-adc8-ae1ba0be0dc9",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I'd suggest renaming this to just `asPat`.",
+        "createdAt" : "2017-02-26T05:17:28Z",
+        "updatedAt" : "2017-02-26T05:17:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c35b40a9-7956-485e-983b-ad4e390ed50e",
+        "parentId" : "2a777be0-70e5-4f19-adc8-ae1ba0be0dc9",
+        "author" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "body" : "Sounds good to me",
+        "createdAt" : "2017-02-26T07:25:14Z",
+        "updatedAt" : "2017-02-26T07:25:14Z",
+        "lastEditedBy" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37ac01f5f34c4061cb39aecec21a7956a0c3a82f",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@    def asType: Type.Name = Type.Name(n.value)\n    def asCtorRef: Ctor.Ref.Name = Ctor.Ref.Name(n.value)\n    def asPatVarTerm: Pat.Var.Term = Pat.Var.Term(n.asTerm)\n  }\n}"
+  }
+]

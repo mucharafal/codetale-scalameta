@@ -1,0 +1,105 @@
+[
+  {
+    "id" : "347efa02-b19e-4e96-a316-f8d2681b7aab",
+    "prId" : 1778,
+    "comments" : [
+      {
+        "id" : "be981249-b25e-4ea8-910d-70bf1111b466",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we include the output from `.structure` here? Same for the examples below",
+        "createdAt" : "2018-09-24T18:16:46Z",
+        "updatedAt" : "2018-09-25T14:35:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "39ee8000adc306863c4504813c0ff0c618fb36b4",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@\n```scala\n\"package a\".parse[Source].get.structure\n\nSource(stats = List(Pkg(ref = Term.Name(\"a\"), stats = Nil)))"
+  },
+  {
+    "id" : "0d0991e5-620a-4524-a12b-c7652e7ae272",
+    "prId" : 1778,
+    "comments" : [
+      {
+        "id" : "10284735-9c57-48ea-92ef-3d1174b99f06",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`meta.Name.Indeterminate()`",
+        "createdAt" : "2018-09-24T18:37:49Z",
+        "updatedAt" : "2018-09-25T14:35:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6bdcc449-6ef3-4666-9a4c-ee622041ba99",
+        "parentId" : "10284735-9c57-48ea-92ef-3d1174b99f06",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`s/n/N`",
+        "createdAt" : "2018-09-25T09:42:29Z",
+        "updatedAt" : "2018-09-25T14:35:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "39ee8000adc306863c4504813c0ff0c618fb36b4",
+    "line" : 214,
+    "diffHunk" : "@@ -1,1 +212,216 @@```\n\n`meta.name.Indeterminate()`\n\nIs it a type, or is it a term? Indeterminate."
+  },
+  {
+    "id" : "6f661543-434c-4e95-b05f-51660340b470",
+    "prId" : 1778,
+    "comments" : [
+      {
+        "id" : "4c1457a0-0dd7-4277-b302-c6c5a47445b9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`class T`, I think it's important to use different characters for `Term.Name` and `Type.Name`. ",
+        "createdAt" : "2018-09-25T09:45:17Z",
+        "updatedAt" : "2018-09-25T14:35:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "39ee8000adc306863c4504813c0ff0c618fb36b4",
+    "line" : 51,
+    "diffHunk" : "@@ -1,1 +49,53 @@`Defn.Macro` | `def f = macro impl`\n`Defn.Type`  | `type T = Int`\n`Defn.Class` | `class A`\n`Defn.Trait` | `trait A`\n`Defn.Object`| `object A`"
+  }
+]

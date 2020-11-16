@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "a4b6f33d-470e-4f34-a739-9d6b11e78393",
+    "prId" : 1723,
+    "comments" : [
+      {
+        "id" : "7f2e8c32-76ea-4b95-9c0a-a658cf44c00b",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "🙏 Thank you!",
+        "createdAt" : "2018-07-31T15:38:28Z",
+        "updatedAt" : "2018-07-31T15:46:06Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dd80713ff87258a06af69e91efb6fbdf8d21e80b",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +25,29 @@        if (doc.text.nonEmpty) {\n          val input = inputCache.getOrElseUpdate(doc, Input.String(doc.text))\n          val pos = Position.Range(\n            input,\n            range.startLine,"
+  },
+  {
+    "id" : "a389dd7d-5b7a-45ad-afcf-9faa9b78d1f6",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "68036f65-c2a8-4297-9537-040335a59286",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This is a sad amount of duplicated logic with `scala.meta.Input`. Metap originally had no scalameta dependencies to support native but now the main module is cross-built for native so I think we should consider having a dependency on `inputs` to avoid duplicated logic. A FIXME + ticket is sufficient, no need to fix in this PR",
+        "createdAt" : "2018-06-06T09:13:04Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebc16231-6d64-40d5-aaaf-4dd3570084e6",
+        "parentId" : "68036f65-c2a8-4297-9537-040335a59286",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1588",
+        "createdAt" : "2018-06-06T15:29:35Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +23,27 @@      range.flatMap { range =>\n        if (doc.text.nonEmpty) {\n          val lineToOffset = lineToOffsetCache.getOrElseUpdate(doc, {\n            val chars = doc.text.toArray\n            val buf = new mutable.ArrayBuffer[Int]"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "418d20e7-bf6d-4d28-8c07-4aacaf1cd9f6",
+    "prId" : 858,
+    "comments" : [
+      {
+        "id" : "7d8693b5-824b-4a78-a1fb-547d79ef797a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Is the semantic-example-slim test just checking that it won't crash? If so, I believe we can reuse the same project as semantic-example-fat by adding more statements to the `test` file. Scripted tests are super duper slow.",
+        "createdAt" : "2017-05-12T06:53:48Z",
+        "updatedAt" : "2017-05-12T19:26:14Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "20799dfb-bfa8-4544-8f38-80e868a0b514",
+        "parentId" : "7d8693b5-824b-4a78-a1fb-547d79ef797a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "It tests that the roundtrip produces a db that looks reasonable and has reasonable number of entries. Can you follow-up on this in a subsequent PR?",
+        "createdAt" : "2017-05-12T19:06:00Z",
+        "updatedAt" : "2017-05-12T19:26:14Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f10d7194-e8b0-4e3b-86bd-8cf86c6367db",
+        "parentId" : "7d8693b5-824b-4a78-a1fb-547d79ef797a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I can do that. ",
+        "createdAt" : "2017-05-12T19:40:11Z",
+        "updatedAt" : "2017-05-12T19:40:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0a7e405af5bcc37ff18d3106589e27d02584be1d",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@> app/run"
+  }
+]

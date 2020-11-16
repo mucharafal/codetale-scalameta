@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "f21feac5-2c7a-4274-b280-15dacd02abe5",
+    "prId" : 498,
+    "comments" : [
+      {
+        "id" : "5fe3ed4c-d06c-4454-9e28-1921dcd32888",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We don't have a dialect at this point.\n\nAccording to the spec it seems mods are allowed http://docs.scala-lang.org/sips/pending/trait-parameters.html\n",
+        "createdAt" : "2016-09-30T15:41:23Z",
+        "updatedAt" : "2016-09-30T16:08:42Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b751dde5-f9ff-4be9-858a-942edc7c23a7",
+        "parentId" : "5fe3ed4c-d06c-4454-9e28-1921dcd32888",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't think that we can have dialects in trees, unfortunately.\n\nWhat if, for example, the tree is created manually, without any kind of parsing or quasiquoting? What dialect do we choose then?\n\nHowever, what I think should be done is prohibiting trees like and types, or types, non-trivial trait constructors in contexts, where Scala211 is expected. For example, if you try to prettyprint such a tree in a Scala211 context, an exception must be thrown.\n\nWdyt?\n",
+        "createdAt" : "2016-10-01T07:42:42Z",
+        "updatedAt" : "2016-10-01T07:42:42Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "87bcee88-aa2a-4c6d-a2a5-b7f6d91d5b30",
+        "parentId" : "5fe3ed4c-d06c-4454-9e28-1921dcd32888",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "> For example, if you try to prettyprint such a tree in a Scala211 context, an exception must be thrown.\n\nI agree, it seems we need to do the validation in some other place. However, I think scala.meta should **never** throw exceptions. I would prefer to have a `.validate(dialect)` method that I can call before `.syntax`. We can discuss different strategies later. \n",
+        "createdAt" : "2016-10-01T17:07:22Z",
+        "updatedAt" : "2016-10-01T17:07:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "108cd22521aab53650b42fbee9989166b56a6ba6",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +375,379 @@    // require(templ.stats.getOrElse(Nil).forall(!_.is[Ctor]))\n\n    // TODO this doesn't work because the Dialect in implicit\n    // scope is the dialect of the host Scala environment\n    // (i.e. Scala211), not the parser's dialect."
+  }
+]

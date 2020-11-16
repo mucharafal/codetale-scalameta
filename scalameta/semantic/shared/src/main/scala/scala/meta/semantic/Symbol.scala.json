@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "ac18ee56-7bbb-40f0-b091-30aa3421713e",
+    "prId" : 858,
+    "comments" : [
+      {
+        "id" : "af076deb-6fb4-4e9f-bd9f-db7108f33924",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm not yet convinced this a good idea, an `id: String` field can really mean anything. I would prefer to have a higher-level datastructure like `Position`.",
+        "createdAt" : "2017-05-12T06:58:23Z",
+        "updatedAt" : "2017-05-12T19:26:14Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "58713681-8db0-4125-92d5-4f9b36273ddf",
+        "parentId" : "af076deb-6fb4-4e9f-bd9f-db7108f33924",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "See the comment above.",
+        "createdAt" : "2017-05-12T19:07:12Z",
+        "updatedAt" : "2017-05-12T19:26:14Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0a7e405af5bcc37ff18d3106589e27d02584be1d",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +37,41 @@  }\n\n  @leaf class Local(id: String) extends Symbol {\n    override def toString = syntax\n    override def syntax = id"
+  }
+]

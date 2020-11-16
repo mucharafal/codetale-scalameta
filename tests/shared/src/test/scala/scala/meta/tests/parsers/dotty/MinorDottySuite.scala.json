@@ -1,0 +1,190 @@
+[
+  {
+    "id" : "87afe88e-b39e-4558-a891-4228aad18b55",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "081a316e-632b-4b62-85cb-6e0d5c32c527",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "fun stuff, I hate soft keywords, now I said it :D \r\n@romanowski twitted recently kotlin puzzle and linked to code on github:\r\nhttps://github.com/Kotlin/dokka/blob/db21563/core/src/main/kotlin/plugability/DokkaJavaPlugin.kt#L47-L52\r\nAnd `override` is highlighted as keyword even though it is used as normal variable :/\r\n\r\nWhat can you do :man_shrugging: (ignore me here :P )",
+        "createdAt" : "2020-10-23T21:58:36Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2ee90575-1c2d-40f9-897c-e7809491bbe9",
+        "parentId" : "081a316e-632b-4b62-85cb-6e0d5c32c527",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Haha, yeah, there are problematic for sure. I think it would be possible to solve it better, but I think it's too late for that.",
+        "createdAt" : "2020-10-24T10:42:00Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +592,596 @@  }\n\n  test(\"opaque-soft-keyword\") {\n    runTestAssert[Stat](\n      \"enum Kind { case Type(opaque: Boolean, transparent: Boolean) }\""
+  },
+  {
+    "id" : "5156b14d-f1c6-43ca-ba90-459e136bf080",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "85cf593d-20d3-4c1e-a3ea-f4c2dd6dcf72",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I see case Branch/Leaf are from example, but maybe we can omit them here to have shorter test. Also can stay, just loose proposal :)",
+        "createdAt" : "2020-10-08T11:06:37Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "38adb81c-2054-4d00-a6c7-64ca62908277",
+        "parentId" : "85cf593d-20d3-4c1e-a3ea-f4c2dd6dcf72",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "it doesn't add that much, I already reduced the example to managable size I think",
+        "createdAt" : "2020-10-08T14:42:54Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +761,765 @@    val derivesEnum = \"\"\"|enum Tree[T] derives Eq, Ordering, Show {\n                         |  case Branch\n                         |  case Leaf\n                         |}\n                         |\"\"\".stripMargin"
+  },
+  {
+    "id" : "bf72e815-8a0f-4706-8642-95229aa95b77",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "ffd9ebfb-5f90-4a16-9f77-31aa3725b5ea",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "modify to `scala.derives.Ordering` to test fully qualified names are also parsed ok",
+        "createdAt" : "2020-10-08T11:07:23Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c93f4331-504c-4ade-b9a4-dec5372f636d",
+        "parentId" : "ffd9ebfb-5f90-4a16-9f77-31aa3725b5ea",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added!",
+        "createdAt" : "2020-10-09T12:09:45Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +759,763 @@\n  test(\"simple-derives\") {\n    val derivesEnum = \"\"\"|enum Tree[T] derives Eq, Ordering, Show {\n                         |  case Branch\n                         |  case Leaf"
+  },
+  {
+    "id" : "7daff443-f60b-4c3a-af6e-97a37952e9f3",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "b6e528e2-44ca-4d69-a9f6-80e299066c93",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Shouldn't we test it with something like `++`  ?",
+        "createdAt" : "2020-08-25T13:53:34Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "59235061-5168-47d9-a1f9-c3d6d41d164d",
+        "parentId" : "b6e528e2-44ca-4d69-a9f6-80e299066c93",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "this example is taken from dotty page so no, but I can add separate test if you want to test a construct but I need full example",
+        "createdAt" : "2020-08-27T07:27:35Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 93,
+    "diffHunk" : "@@ -1,1 +319,323 @@    runTestAssert[Source](\"\"\"|object X {\n                             |  println(\"hello\")\n                             |  ???\n                             |  ??? match {\n                             |    case 0 => 1"
+  }
+]

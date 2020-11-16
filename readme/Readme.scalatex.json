@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "99eb2563-a6fc-4043-aa9b-4ea8ed4d92fa",
+    "prId" : 776,
+    "comments" : [
+      {
+        "id" : "f6f7b0dd-0d41-4764-afd3-c31c16a4e08d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Please include the badge with the latests pre-release version like this\r\n\r\n```\r\n@raw\r\n   <a href='https://bintray.com/scalameta/maven/scalameta/_latestVersion'><img src='https://api.bintray.com/packages/scalameta/maven/scalameta/images/download.svg'></a>\r\n```",
+        "createdAt" : "2017-03-30T14:44:05Z",
+        "updatedAt" : "2017-03-30T17:32:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9dcdcc83-d805-409d-86ab-9118cdc56e65",
+        "parentId" : "f6f7b0dd-0d41-4764-afd3-c31c16a4e08d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This badge can also go under getting started.",
+        "createdAt" : "2017-03-30T14:46:21Z",
+        "updatedAt" : "2017-03-30T17:32:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "65be18a3-00a5-4419-8023-3b4822a57263",
+        "parentId" : "f6f7b0dd-0d41-4764-afd3-c31c16a4e08d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done",
+        "createdAt" : "2017-03-30T15:25:32Z",
+        "updatedAt" : "2017-03-30T17:32:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7d013af84b3085ef21436c371174e9bf9498d0e6",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +96,100 @@      We automatically publish pre-release builds to our Bintray repository on every merge into master,\n      typically within 10-30 minutes of a merge. In such builds, we publish potentially experimental changes\n      that haven't yet undergone practical testing.\n\n   @p"
+  }
+]

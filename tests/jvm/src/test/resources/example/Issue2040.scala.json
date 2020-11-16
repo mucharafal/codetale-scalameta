@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "6932c02f-1a20-47ac-982a-a84999b38071",
+    "prId" : 2043,
+    "comments" : [
+      {
+        "id" : "ae41c63d-0f1e-4606-8c3c-16816057e8c6",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Expect tests are easier to review, looks great 👍 ",
+        "createdAt" : "2020-05-03T17:45:13Z",
+        "updatedAt" : "2020-05-03T17:45:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "09ba835b7604c7478665aa16c875b517cebd7814",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +29,33 @@    ): AnyShouldWrapper/*=>example.Issue2040.AnyShouldWrapper#*/\n\n    i/*=>example.Issue2040.Base#i().*/ shouldBe/*=>example.Issue2040.AnyShouldWrapper#shouldBe().*/ 1\n  }\n}"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "c56b2889-6bba-4dc4-84bc-1283493f1f73",
+    "prId" : 823,
+    "comments" : [
+      {
+        "id" : "86d6f8eb-1abd-4eae-9c1e-cc5dd9c16509",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@lihaoyi Can we include your code in our repository under the Scala License? (https://github.com/scalameta/scalameta/blob/master/LICENSE.md)",
+        "createdAt" : "2017-05-02T15:51:15Z",
+        "updatedAt" : "2017-05-02T18:51:46Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f8c6ba57-e203-4d66-aed4-2f6c8ea13330",
+        "parentId" : "86d6f8eb-1abd-4eae-9c1e-cc5dd9c16509",
+        "author" : {
+          "login" : "lihaoyi",
+          "name" : "Li Haoyi",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/934140?v=4"
+        },
+        "body" : "Yes go ahead",
+        "createdAt" : "2017-05-02T18:26:20Z",
+        "updatedAt" : "2017-05-02T18:51:46Z",
+        "lastEditedBy" : {
+          "login" : "lihaoyi",
+          "name" : "Li Haoyi",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/934140?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dc6deadf596cfcafab3cf4911dd353eed05ca5b0",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@  * Copy-pasta from this lihaoyi comment:\n  * [[https://github.com/scalameta/fastparse/pull/1#issuecomment-244940542]]\n  * and adapted to more closely match scala-xml\n  */\nclass XmlParser(Block: P0,"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "eda075f3-b66f-47e1-8d11-359d2b2b14e0",
+    "prId" : 962,
+    "comments" : [
+      {
+        "id" : "1c27b176-b4ce-4d58-845a-8d15551c25dd",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "3 because I've already published 2 and I forgot to commit this file.",
+        "createdAt" : "2017-06-23T18:12:07Z",
+        "updatedAt" : "2017-06-23T18:12:07Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f49f00874bee14e8ed7a37e8d7c61008f4b4e4d9",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +1,5 @@{\n  \"name\": \"scalameta-parsers\",\n  \"version\": \"1.9.0-beta.3\",\n  \"main\": \"index.js\",\n  \"files\": ["
+  }
+]

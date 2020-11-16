@@ -1,0 +1,397 @@
+[
+  {
+    "id" : "31ca4ce3-3b46-48ea-9aec-8506bea85459",
+    "prId" : 868,
+    "comments" : [
+      {
+        "id" : "ace28b96-f94b-466c-b923-362bfb21d815",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why does this compile?",
+        "createdAt" : "2017-05-21T16:15:08Z",
+        "updatedAt" : "2017-05-22T14:55:08Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5a149005-8b7a-45a7-9d0f-17a9f972ef25",
+        "parentId" : "ace28b96-f94b-466c-b923-362bfb21d815",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I have removed Sourcepath.",
+        "createdAt" : "2017-05-21T19:23:46Z",
+        "updatedAt" : "2017-05-22T14:55:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "986139dd74528943167a02f94308884192d7490b",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +34,38 @@\nobject Database {\n  def load(classpath: Classpath, sourcepath: Sourcepath): Database = {\n    v.Database.load(classpath).toSchema.toMeta(Some(sourcepath))\n  }"
+  },
+  {
+    "id" : "7e0ed2cf-ada9-4a8a-ba19-0b15d00e26b1",
+    "prId" : 868,
+    "comments" : [
+      {
+        "id" : "c6087973-eb0a-4929-9ebf-32aca9042db7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How about we add another overload that takes `(classpath: Classpath)`, i.e operates exactly like `Array[Byte]`, but without its users having to know things like `META-INF`?",
+        "createdAt" : "2017-05-21T21:53:21Z",
+        "updatedAt" : "2017-05-22T14:55:08Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "986139dd74528943167a02f94308884192d7490b",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +36,40 @@  def load(classpath: Classpath, sourcepath: Sourcepath): Database = {\n    v.Database.load(classpath).toSchema.toMeta(Some(sourcepath))\n  }\n  def load(classpath: Classpath): Database = {\n    v.Database.load(classpath).toSchema.toMeta(None)"
+  },
+  {
+    "id" : "8ed5f3ea-00f6-4b1f-a01f-c2f8ba115df6",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "50107910-7451-474c-8fc2-899b27ddfa08",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "On the topic of making this api safer, what do you think about making this return a `Try[Database]`? It's not really exceptional that a random blob of bytes does not parse into a `Database`.",
+        "createdAt" : "2017-04-21T08:28:19Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "46c667ba-c162-4df6-bff0-6c7718b37224",
+        "parentId" : "50107910-7451-474c-8fc2-899b27ddfa08",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Later, I will write one megacomment about my thoughts wrt exceptions/monads for error handling.",
+        "createdAt" : "2017-04-27T23:21:22Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +52,56 @@  }\n\n  def fromBinary(bytes: Array[Byte]): Database = p.Database.parseFrom(bytes).toMeta[Database]\n  def fromFile(file: File): Database = {\n    val databaseEntries = mutable.ListBuffer[URI]()"
+  },
+  {
+    "id" : "5c2ae51f-29b9-49a3-a4b7-7a0114f97102",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "896bec41-2b8f-4514-8013-390cb533d0ea",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Same here, the file may not even exist.",
+        "createdAt" : "2017-04-21T08:28:36Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a5500495-5742-4c11-b665-d025847403ee",
+        "parentId" : "896bec41-2b8f-4514-8013-390cb533d0ea",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Same here.",
+        "createdAt" : "2017-04-27T23:21:25Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +53,57 @@\n  def fromBinary(bytes: Array[Byte]): Database = p.Database.parseFrom(bytes).toMeta[Database]\n  def fromFile(file: File): Database = {\n    val databaseEntries = mutable.ListBuffer[URI]()\n    def addFile(file: File): Unit = {"
+  },
+  {
+    "id" : "9f9705dd-770f-4e0f-9891-f29a57971c68",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "dfbbadce-66cd-42f4-9278-0b4c352e5562",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "See comment on supporting file contents in semanticdb.proto",
+        "createdAt" : "2017-04-21T08:50:36Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e5d1eb5-2aef-4edc-bdf9-038c5a101e2d",
+        "parentId" : "dfbbadce-66cd-42f4-9278-0b4c352e5562",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "See my reply there as well.",
+        "createdAt" : "2017-04-27T23:21:38Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 107,
+    "diffHunk" : "@@ -1,1 +105,109 @@\n@data class AttributedSource(\n  path: AbsolutePath,\n  names: Map[Anchor, Symbol],\n  messages: Seq[Message],"
+  },
+  {
+    "id" : "9aacd4b2-7a3f-49c4-a565-21442d2be18f",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "c3b5f358-3f08-4a61-b96a-54d2748fc5a3",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Input.LabeledString would eliminate the need for all this relativization ;) ",
+        "createdAt" : "2017-04-21T08:51:10Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "79f0bd3a-3502-4daf-9a59-bd3089764cbc",
+        "parentId" : "c3b5f358-3f08-4a61-b96a-54d2748fc5a3",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "whoops, I misunderstood what's happening here, nevermind my comment!",
+        "createdAt" : "2017-04-29T11:15:08Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 167,
+    "diffHunk" : "@@ -1,1 +165,169 @@    var result = databaseRoot.toString\n    if (!result.endsWith(\"/\")) result += \"/\"\n    // TODO: This relativization is unsound and should be removed.\n    result += path.toRelative.toString\n    result = result.stripSuffix(\".scala\") + \".semanticdb\""
+  },
+  {
+    "id" : "8aa83f42-0006-44e2-948e-dfb1d1581254",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "956fd2fb-c610-4e17-8757-2a0f882b35ae",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Following discussions in https://github.com/scalameta/scalameta/issues/777 \r\n\r\nI believe we need to pass a `sourceRoot: AbsolutePath` here in order to relativize any `AbsolutePath` inside this Database.",
+        "createdAt" : "2017-04-27T08:18:24Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7491052d-d65a-44ff-9e93-153387e6e245",
+        "parentId" : "956fd2fb-c610-4e17-8757-2a0f882b35ae",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Maybe we should construct Databases in a relativized form already. More details in my upcoming comment to #777.",
+        "createdAt" : "2017-04-28T00:33:22Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "07fb9b04-c8f4-4c51-8fd0-36537bb074ba",
+        "parentId" : "956fd2fb-c610-4e17-8757-2a0f882b35ae",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm excited to see what you have in mind :) \r\n\r\nThe biggest concern for me is merging two semanticdbs that are built from a different sourceRoot. This will likely be a common case around sbt. For example, how do I combine semanticdb built from two different repos?",
+        "createdAt" : "2017-04-29T10:59:25Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "30c73e62-8579-4467-b726-a6c03f147be5",
+        "parentId" : "956fd2fb-c610-4e17-8757-2a0f882b35ae",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "That will be possible.",
+        "createdAt" : "2017-04-29T13:34:18Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +33,37 @@\n  override def toString: String = sources.mkString(EOL + EOL)\n  def toBinary: Array[Byte] = this.toProto[p.Database].toByteArray\n  def writeToFile(dir: File): Unit = {\n    if (dir.exists) sys.error(s\"implementation restriction: can't write a semantic database to an existing file\")"
+  },
+  {
+    "id" : "8c107a65-9c27-4672-beb2-476aa6ebacc0",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "d49367c4-d9bb-49eb-ab2a-8c383ee9e235",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Do we keep sugars as `String` in this PR or do want to add a richer structure to them? I'm fine with leaving it to a separate PR.",
+        "createdAt" : "2017-04-29T11:10:36Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "79f1bcb8-2b62-497e-8bb6-132209a7658a",
+        "parentId" : "d49367c4-d9bb-49eb-ab2a-8c383ee9e235",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I'll open a ticket for that. Adding a richer structure to sugars and infos will take a while, probably on a scale of days, not hours.",
+        "createdAt" : "2017-04-29T13:36:45Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +30,34 @@  def messages: Seq[Message] = sources.flatMap(_.messages)\n  def denotations: Map[Symbol, Denotation] = sources.foldLeft(Map[Symbol, Denotation]())(_ ++ _.denotations)\n  def sugars: Map[Anchor, String] = sources.foldLeft(Map[Anchor, String]())(_ ++ _.sugars)\n\n  override def toString: String = sources.mkString(EOL + EOL)"
+  }
+]

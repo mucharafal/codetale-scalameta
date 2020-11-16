@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "151391be-18d4-4168-a527-fbe8b3f9fe35",
+    "prId" : 1000,
+    "comments" : [
+      {
+        "id" : "c3f336c3-8056-4a8e-bfce-c0b051a99e11",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@sjrd Have you encountered anything like that in the JDK?",
+        "createdAt" : "2017-07-09T22:59:20Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e2bc2c7-cef1-43f0-bdd3-19de03e7bf28",
+        "parentId" : "c3f336c3-8056-4a8e-bfce-c0b051a99e11",
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "No, I haven't. AFAIK, the only `Writer` that gives you a `size()`-like method is `CharArrayWriter`, but that's a final sink.",
+        "createdAt" : "2017-07-10T07:59:36Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f02787558f288424196edc1806705543a14be6d6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3,7 @@import java.io.Writer\n\n// A writer that keeps track of the current length.\nclass LengthWriter(delegate: Writer, start: Int) extends Writer {\n  var length: Int = start"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "b5d8edd5-4d89-48d8-8404-f3effef66ab1",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "df3f9d37-88e5-4505-8c8c-b8838f28188d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Seems like a lot of ceremony for `List(Library.jdk, Library.scalaLibrary)` 😜 I don't have a strong opinion though",
+        "createdAt" : "2018-06-06T12:52:20Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +13,17 @@object Libraries {\n  lazy val suite: List[Library] = {\n    val buf = List.newBuilder[Library]\n    buf += Library.jdk\n    buf += Library.scalaLibrary"
+  }
+]

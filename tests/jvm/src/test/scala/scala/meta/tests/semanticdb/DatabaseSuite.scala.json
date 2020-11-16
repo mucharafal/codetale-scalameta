@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "9932760f-1aa2-42b8-a074-282c82a3b317",
+    "prId" : 1326,
+    "comments" : [
+      {
+        "id" : "76e916c7-8cdb-4d91-a4b1-7f77bf5a03d3",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "haha been meaning to do something similar for a while myself, nice 👍 ",
+        "createdAt" : "2018-02-17T12:47:29Z",
+        "updatedAt" : "2018-02-17T13:07:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a82588f5-1f54-4174-a2ce-e232ddf872d7",
+        "parentId" : "76e916c7-8cdb-4d91-a4b1-7f77bf5a03d3",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "My plan was to generate a sibling source file `TargetedSuite.scala.fixed` that can be copied over the original source file if you want to save the new output but guess it was too high tech that I never got around to it",
+        "createdAt" : "2018-02-17T12:48:56Z",
+        "updatedAt" : "2018-02-17T13:07:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "098e876247bdeb8c5b579978b237091752344f2d",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +119,123 @@      catch {\n        case ex: Exception =>\n          obtained.lines.toList match {\n            case head +: tail =>\n              println(\"    \\\"\\\"\\\"|\" + head)"
+  }
+]

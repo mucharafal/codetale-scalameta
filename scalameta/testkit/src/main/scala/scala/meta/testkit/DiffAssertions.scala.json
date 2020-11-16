@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "8d88dc63-0644-455e-9897-d74411f3481f",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "02a668bf-8c3d-4fd0-b638-3ace42edbef4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I wonder what difference this makes. Could you give an example?",
+        "createdAt" : "2018-07-02T02:36:53Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ce5383f4-1991-4f57-a5f1-2aca4485ec28",
+        "parentId" : "02a668bf-8c3d-4fd0-b638-3ace42edbef4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The difference is when you create a helper method\r\n\r\n```scala\r\ndef checkFoo()(implicit pos: Position): Unit = {\r\n  assertNoDiff(\"a\", \"b\")\r\n}\r\ncheckFoo()\r\n```\r\n\r\nBefore this change the, `(MySuite.scala:103)` suffix in scalatest failures would point to the line inside the definition of `checkFoo` while after this change the suffix would point to the line number where `checkFoo()` is called. When you have many \r\n\r\n```\r\ncheckFoo()\r\ncheckFoo()\r\n...\r\n```\r\nthis helps to track down the failure.",
+        "createdAt" : "2018-07-02T07:45:38Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +17,21 @@      throw DiffFailure(title, expected, obtained, result, source)\n    }\n  }\n\n  private def header[T](t: T): String = {"
+  }
+]

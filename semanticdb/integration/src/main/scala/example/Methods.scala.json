@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "c219023e-5efe-4992-a557-7a3f83197405",
+    "prId" : 1323,
+    "comments" : [
+      {
+        "id" : "25e8aacf-68d3-43ab-924d-c3171dce931d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "As a general note, I avoid using `List` in my test examples because it's special cased by the compiler. `List` resolves to `scala.collection.immutable.List` instead of `scala.List` even if `immutable.List` is not in the root import scope.",
+        "createdAt" : "2018-02-16T09:48:05Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e1864d3b-dc49-4e6e-bfd6-de90c209947a",
+        "parentId" : "25e8aacf-68d3-43ab-924d-c3171dce931d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Noted. If you don't mind, I'd like to keep `List` as is in these tests, since changing it would be a big diff. In the future, I'll stay away from it.",
+        "createdAt" : "2018-02-16T18:00:33Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "808c93b6dbfc05c054223b4278b4fb325e60c102",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +4,8 @@\nclass Methods[T] {\n  class List[T]\n  type AList[T] = List[T]\n  def m1 = ???"
+  },
+  {
+    "id" : "254c02fe-b876-4012-817a-ca40cdc15100",
+    "prId" : 1323,
+    "comments" : [
+      {
+        "id" : "731d69b9-ae78-4b5d-8e47-b813a5d59a00",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We need a corresponding test for computing the symbol when referencing `m6`.\r\n\r\n```scala\r\nval m = new Methods[Int]\r\nm.m6(Nil) // +1\r\nm.m6(new m.List[String]) // +2\r\n```",
+        "createdAt" : "2018-02-16T09:50:09Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d4c42dd4-5439-4422-9592-e727c0ccc6dc",
+        "parentId" : "731d69b9-ae78-4b5d-8e47-b813a5d59a00",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2018-02-16T17:34:46Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "808c93b6dbfc05c054223b4278b4fb325e60c102",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +14,18 @@  def m6(x: Int) = ???\n  def m6(x: List[T]) = ???\n  def m6(x: scala.List[T]) = ???\n  def m7a[U: Ordering](c: Methods[T], l: List[U]) = ???\n  def m7b[U <% T](l: List[U]) = ???"
+  }
+]

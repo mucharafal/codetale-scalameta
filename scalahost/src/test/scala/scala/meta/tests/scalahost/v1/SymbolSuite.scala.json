@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "4c971c01-fe43-4d1c-b02f-fe323af3d115",
+    "prId" : 680,
+    "comments" : [
+      {
+        "id" : "cf1a68ba-2ee0-4a30-9125-806065039f7c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This will make some code in scalafix unnecessary, thanks!",
+        "createdAt" : "2017-02-14T09:07:24Z",
+        "updatedAt" : "2017-02-14T09:27:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c73a8ace2ee18ab80d1f5341c5ab19672d924b71",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@class SymbolSuite extends FunSuite {\n  test(\"Symbol.name\") {\n    assert(Symbol(\"_root_.foo.Bar#\").name.syntax === \"Bar\")\n    assert(Symbol(\"_root_.foo.bar.\").name.syntax === \"bar\")\n    assert(Symbol(\"_root_.foo.m(I)I.\").name.syntax === \"m\")"
+  }
+]

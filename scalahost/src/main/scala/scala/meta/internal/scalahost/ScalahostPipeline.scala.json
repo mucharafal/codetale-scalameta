@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "8ea522a4-4570-47eb-92a0-c29698895996",
+    "prId" : 649,
+    "comments" : [
+      {
+        "id" : "a48ec938-c3cb-4a28-a121-883b572c2526",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This is so much better now /cc @olafurpg",
+        "createdAt" : "2017-02-07T21:23:59Z",
+        "updatedAt" : "2017-02-07T21:23:59Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3ded88a5-85db-478c-b218-a11025bf4282",
+        "parentId" : "a48ec938-c3cb-4a28-a121-883b572c2526",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm glad you like it. Please continue reporting what you dislike with scalafmt. \r\n\r\nIt might be useful to configure a git hook to run scalafmt before committing.",
+        "createdAt" : "2017-02-08T12:29:21Z",
+        "updatedAt" : "2017-02-08T12:29:21Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e5b215cd07909e29b5a8cfbe8e34b5e8ecb5ae26",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +18,22 @@    val phaseName = \"scalameta\"\n    override val description = \"compute the scala.meta semantic database\"\n    def newPhase(_prev: Phase) = new ScalahostPhase(_prev)\n\n    class ScalahostPhase(prev: Phase) extends StdPhase(prev) {"
+  }
+]

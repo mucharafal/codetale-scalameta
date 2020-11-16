@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "121a9812-5bb1-445f-82e6-8ef13536851f",
+    "prId" : 796,
+    "comments" : [
+      {
+        "id" : "d420368f-cf11-4c5f-ad04-be2b73456d57",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@DavidDudson @olafurpg Do you think we should mention more new developments in this area?",
+        "createdAt" : "2017-04-11T22:11:02Z",
+        "updatedAt" : "2017-04-12T21:30:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "feefbee9-c548-49b8-96f1-ff80af873603",
+        "parentId" : "d420368f-cf11-4c5f-ad04-be2b73456d57",
+        "author" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "body" : "Are there any?",
+        "createdAt" : "2017-04-12T01:34:16Z",
+        "updatedAt" : "2017-04-12T21:30:43Z",
+        "lastEditedBy" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8770b401-20b7-4549-a528-33de5ff8ea80",
+        "parentId" : "d420368f-cf11-4c5f-ad04-be2b73456d57",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "There are none.",
+        "createdAt" : "2017-04-12T09:13:34Z",
+        "updatedAt" : "2017-04-12T21:30:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f364019b6a278c511a2abfdf5f01ca7486005772",
+    "line" : 47,
+    "diffHunk" : "@@ -1,1 +43,47 @@  - More use-cases for Extract are in the pipeline, follow #741 for more details.\n- `structurally` and `syntactically` have been added as enrichments to `Set[Tree]`.\n  - See the `contrib` testsuite for examples.\n- Scaladoc parsing functionality has been added as enrichment to `Comment` (see above).\n"
+  },
+  {
+    "id" : "c7817850-c4b9-406a-86ef-428b043952e0",
+    "prId" : 711,
+    "comments" : [
+      {
+        "id" : "07b4991a-0e37-4aa8-9759-b27d97d36b8b",
+        "parentId" : null,
+        "author" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "body" : "This is not the only case.\r\n\r\nFor instance in the case of `Term.Name` and `Type.Name` they are sibling types. Thus switching the order is irrelevant. This is a typesafe equals. Meaning that the rhs must be the lhs type or a subtype of the lhs type.",
+        "createdAt" : "2017-03-01T09:41:57Z",
+        "updatedAt" : "2017-03-01T09:45:09Z",
+        "lastEditedBy" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7da40fc8-56d9-479a-9aae-ca43faa5a6e8",
+        "parentId" : "07b4991a-0e37-4aa8-9759-b27d97d36b8b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good point, you could argue though that the sibling case is a bug fix rather than a breaking change. Comparing sibling types will always be false in the structural equality case (although not in syntax 🤔 )",
+        "createdAt" : "2017-03-01T09:51:28Z",
+        "updatedAt" : "2017-03-01T09:51:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "def79d923770e546406342e053456e0d7afb9c90",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@- `isEqual` defaults to structual equality, so it's not longer necessary to\n  write `[Structurally]` in `a.isEqual[Structurally](b)`.\n- `(a: Subtype).isEqual(b: Supertype)` will no longer compile, either upcast\n  `a: Supertype` or swap the order to `b.isEqual(a)`"
+  }
+]

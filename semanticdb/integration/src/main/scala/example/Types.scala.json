@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "d13944b4-4efe-455d-927a-8d0254b138af",
+    "prId" : 1458,
+    "comments" : [
+      {
+        "id" : "85fac474-4fcf-4511-8e64-1637b725da16",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "For future reference, we should put test cases like this in a separate `Bugs.scala` file (name up for debate) where we only append new code. Adding a new line to Types.scala shifts all positions in the following statements which causes unnecessary diffs making it harder to review the changes.",
+        "createdAt" : "2018-03-27T14:05:06Z",
+        "updatedAt" : "2018-03-28T17:43:54Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "df8dbcfe-bb30-4f8b-90fa-a07a10081281",
+        "parentId" : "85fac474-4fcf-4511-8e64-1637b725da16",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I agree: it's also probably interesting to keep track of this bugs (and respective workaround) in case they get fixed upstream",
+        "createdAt" : "2018-03-27T17:59:52Z",
+        "updatedAt" : "2018-03-28T17:43:54Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d4a155a9bbde2cac46f5359e30762e34787b3c39",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +44,48 @@    val singleType1: x.type = ???\n    val singleType2: p.x.type = ???\n    val Either = scala.util.Either\n\n    val thisType1: this.type = ???"
+  }
+]

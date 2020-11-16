@@ -1,0 +1,106 @@
+[
+  {
+    "id" : "ad1d6951-408c-49db-a37d-23a19deecbfb",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "167efbb2-be17-41e6-9cba-6428ffd9da3e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "First of all, I am super duper excited to use Denotation in scalafix 😸 🎉 \r\n\r\nDo you plan to change the `info` field in this PR or a followup?",
+        "createdAt" : "2017-04-21T08:52:07Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7409c08e-326b-475d-9216-2f92e78989f1",
+        "parentId" : "167efbb2-be17-41e6-9cba-6428ffd9da3e",
+        "author" : {
+          "login" : "DarkDimius",
+          "name" : "Dmitry Petrashko",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1084930?u=4d7224bafc59d579b227c92ee0b965947186d9e2&v=4"
+        },
+        "body" : "I believe that this a very bad misuse of the term. This should be called Definition instead.",
+        "createdAt" : "2017-04-22T03:52:19Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "DarkDimius",
+          "name" : "Dmitry Petrashko",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1084930?u=4d7224bafc59d579b227c92ee0b965947186d9e2&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "be1c7144-95f9-4dfa-9b48-c1baaa0b5f66",
+        "parentId" : "167efbb2-be17-41e6-9cba-6428ffd9da3e",
+        "author" : {
+          "login" : "DarkDimius",
+          "name" : "Dmitry Petrashko",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1084930?u=4d7224bafc59d579b227c92ee0b965947186d9e2&v=4"
+        },
+        "body" : "Or, even better, Declaration. This will match naming inside compilers.",
+        "createdAt" : "2017-04-22T03:57:38Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "DarkDimius",
+          "name" : "Dmitry Petrashko",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1084930?u=4d7224bafc59d579b227c92ee0b965947186d9e2&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e422fed2-2905-4f59-9a06-a283b186ee47",
+        "parentId" : "167efbb2-be17-41e6-9cba-6428ffd9da3e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "To quote `Denotations.scala` from Dotty (https://github.com/lampepfl/dotty/blob/fa13f8d772cc53a8dce5e6854309f00288876d0d/compiler/src/dotty/tools/dotc/core/Denotations.scala#L56-L58):\r\n\r\n>  *  Symbol                   A label for a definition or declaration in one compiler run\r\n> *  Denotation              The meaning of a named type or symbol during a period\r\n\r\nThis corresponds exactly to what we're doing in scalameta. A symbol is just a lightweight wrapper of a string id, and a denotation represents a symbol's meaning within a given mirror (just like in Dotty, a symbol can have multiple denotations depending on a context).\r\n\r\nEven the fields of the `Denotation` class in scalameta are similar  @to the fields of a similar class in Dotty: `flags`, `name`, `info`. In the future, we plan to add `privateWithin` and most likely `owner`.\r\n\r\nAll in all, I'm confident that separating `Symbol.id` from `Symbol.info` and friends is a very important insight. In scalac, these concepts are mixed in a fat `Symbol` object, which makes it hard to reliably metaprogram between compiler runs. @densh and I started realizing this in late 2012 when working on hygiene from scala.reflect (back then scalameta didn't exist yet), and I'm happy that in 2017 this is something that's independently employed in multiple metaprogramming frameworks for Scala.",
+        "createdAt" : "2017-04-27T23:33:48Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a92382a4-0f49-4916-9009-03d8daa33595",
+        "parentId" : "167efbb2-be17-41e6-9cba-6428ffd9da3e",
+        "author" : {
+          "login" : "DarkDimius",
+          "name" : "Dmitry Petrashko",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1084930?u=4d7224bafc59d579b227c92ee0b965947186d9e2&v=4"
+        },
+        "body" : "I still believe that this overloads a term is a very misleading way.\r\n\r\nIn your case every denotation has a corresponding symbol to start with. The symbol is the original abstraction, it's just that it makes practical sense to serialize\\pass unique identifier of the symbol instead of serializing ther entire information about it. I totally agree that separating `Symbol.id` and `Symbol.info` makes sense, similarly how introduction of primary keys in databases makes sense.\r\n\r\nIn Dotty's case, the Denotation is the original abstraction, there are a lot of denotations that do not correspond to any specific symbols or definitions. This is a lot more than simple separation of a primary key that I see here.\r\n\r\nI stand unconvinced and believe that the terms `Declaration` \\ `Definiton` represent scalameta case better. Otherwise we can have a big long-term problem in terminology between Dotty and scalameta. As compilers and meta-programming are close to each-other there is a huge value to keep terminology consistent. ",
+        "createdAt" : "2017-04-27T23:41:21Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "DarkDimius",
+          "name" : "Dmitry Petrashko",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1084930?u=4d7224bafc59d579b227c92ee0b965947186d9e2&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@import org.scalameta.data._\n\n@data class Denotation(flags: Long, name: String, info: String) extends HasFlags {\n  def hasFlag(flag: Long) = (flags & flag) == flag\n"
+  }
+]

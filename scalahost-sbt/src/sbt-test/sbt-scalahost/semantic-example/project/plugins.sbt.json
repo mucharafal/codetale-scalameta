@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "a390b0be-22df-43c9-808f-275e3b1ef100",
+    "prId" : 696,
+    "comments" : [
+      {
+        "id" : "9e589f15-06b9-4124-8fcf-44fbe0c40e24",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Where does `plugin.version` come from?",
+        "createdAt" : "2017-02-21T02:36:28Z",
+        "updatedAt" : "2017-02-21T18:45:46Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a6d6497-7d3c-44da-ae6b-fc3cda7b112e",
+        "parentId" : "9e589f15-06b9-4124-8fcf-44fbe0c40e24",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "See https://github.com/scalameta/scalameta/blob/6ce2620fb37c0ce1b1cae81d547c922be569f9ba/build.sbt#L245\r\n\r\nScripted starts `sbt` in a temporary directory.",
+        "createdAt" : "2017-02-21T14:14:12Z",
+        "updatedAt" : "2017-02-21T18:45:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b0caa2702eb21b462e8442b1dba22486d252d8ab",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@addSbtPlugin(\"org.scalameta\" % \"sbt-scalahost\" % sys.props(\"plugin.version\"))"
+  }
+]

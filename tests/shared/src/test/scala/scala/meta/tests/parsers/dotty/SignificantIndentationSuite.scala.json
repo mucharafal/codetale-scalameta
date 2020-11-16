@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "baa7d662-e07d-4a27-bfa2-53cb54e57615",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "755c7d9b-cab9-4302-bd7a-0fa983d72aa6",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is on purpose to test `EOF` ending an indent",
+        "createdAt" : "2020-10-23T15:15:50Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +36,40 @@    val code = \"\"\"|trait A:\n                  |  def f: Int\n                  |  def y: String = { fa(); fb() }\"\"\".stripMargin\n    runTestAssert[Stat](code, assertLayout = None)(\n      Defn.Trait("
+  },
+  {
+    "id" : "dd9aeed6-5e94-4197-ad64-3da8a86b732f",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "0c628048-18af-48a7-8e1c-60b108bd1b5d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This works in Dotty and apparently it's fine :/\r\n\r\nWhere is `\"error: illegal start of simple expression\"` coming from?",
+        "createdAt" : "2020-09-25T13:15:49Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d2976d04-c2ce-41d5-9e32-f598cca62928",
+        "parentId" : "0c628048-18af-48a7-8e1c-60b108bd1b5d",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "```scala\r\ndef fn: Unit = // next line insert <INDENT=4>\r\n    if cond then   // next indent=2 which is < 4, NO indent\r\n  truep  //indent=2 which is less than previous 4, OUTDENT\r\n    else\r\n```",
+        "createdAt" : "2020-09-27T07:50:29Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4a9bdfd6-636c-4155-bc07-75fd80376663",
+        "parentId" : "0c628048-18af-48a7-8e1c-60b108bd1b5d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's add a comment with a link to an issue: https://github.com/lampepfl/dotty/issues/9790",
+        "createdAt" : "2020-09-29T13:57:58Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7842b649-582e-4466-9f0b-2c7a90c9cb6c",
+        "parentId" : "0c628048-18af-48a7-8e1c-60b108bd1b5d",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : ":+1: ",
+        "createdAt" : "2020-09-30T16:18:37Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 110,
+    "diffHunk" : "@@ -1,1 +108,112 @@    // Or accept mismatch with parsing rules and parse as 'if (cond) { truep } else {falsep }'\n    // Why error is thrown is described in mentioned issue.\n    val code = \"\"\"|def fn: Unit =\n                  |    if cond then\n                  |  truep"
+  }
+]

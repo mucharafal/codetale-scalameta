@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "8383d280-a378-4a87-86c1-0f27c223c6e2",
+    "prId" : 1190,
+    "comments" : [
+      {
+        "id" : "d79ae15f-0c86-4b9a-87ef-1572b29b7167",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Is this cache cleared anywhere?",
+        "createdAt" : "2017-12-11T20:05:33Z",
+        "updatedAt" : "2017-12-11T20:17:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "44d804f8-bc7b-463a-a3cc-f173e50e9825",
+        "parentId" : "d79ae15f-0c86-4b9a-87ef-1572b29b7167",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Good point.",
+        "createdAt" : "2017-12-11T20:14:58Z",
+        "updatedAt" : "2017-12-11T20:17:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "609f6a05ed70bda51555ea7c074ea5dad6de0573",
+    "line" : 154,
+    "diffHunk" : "@@ -1,1 +89,93 @@      } else {\n        val msym = uncached(sym)\n        symbolCache.put(sym, msym)\n        msym\n      }"
+  },
+  {
+    "id" : "add36475-1613-46aa-b18e-462aca3acb5e",
+    "prId" : 1190,
+    "comments" : [
+      {
+        "id" : "a3274b50-b2ba-4fce-9bc8-d6add22a4dbc",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we keep the original function unchanged except named `toSemanticUncached` and then create new `toSemantic` that uses caching? I feel it's difficult to follow the logic when the nesting is too deep. The big diff also makes it harder to review this change.",
+        "createdAt" : "2017-12-11T23:09:59Z",
+        "updatedAt" : "2017-12-11T23:10:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e3e3bb50-fcfb-4853-84c8-295a995eb48c",
+        "parentId" : "a3274b50-b2ba-4fce-9bc8-d6add22a4dbc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nevermind, I want to edit this method to fix #1194 ",
+        "createdAt" : "2017-12-13T13:43:00Z",
+        "updatedAt" : "2017-12-13T13:43:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "609f6a05ed70bda51555ea7c074ea5dad6de0573",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@  lazy val symbolCache = new HashMap[g.Symbol, m.Symbol]\n  implicit class XtensionGSymbolMSymbol(sym: g.Symbol) {\n    def toSemantic: m.Symbol = {\n      def uncached(sym: g.Symbol): m.Symbol = {\n        if (sym == null || sym == g.NoSymbol) return m.Symbol.None"
+  }
+]

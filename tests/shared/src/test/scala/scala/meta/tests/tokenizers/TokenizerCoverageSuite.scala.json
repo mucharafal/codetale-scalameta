@@ -1,0 +1,105 @@
+[
+  {
+    "id" : "e25469ef-05c1-48b6-b91f-5b2d16f58a61",
+    "prId" : 1498,
+    "comments" : [
+      {
+        "id" : "e70d568c-1682-467d-a5bd-b986000b0d72",
+        "parentId" : null,
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "this does not capture the semicolon",
+        "createdAt" : "2018-04-13T15:02:16Z",
+        "updatedAt" : "2018-04-18T19:23:55Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "338ecb39-8b79-4646-ae63-9a721b28a2fa",
+        "parentId" : "e70d568c-1682-467d-a5bd-b986000b0d72",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Semicolon is considered to be a statement separator, just like newline. I think it makes sense for it to not be part of any statements (or cases like below), just like newline.",
+        "createdAt" : "2018-04-13T15:25:29Z",
+        "updatedAt" : "2018-04-18T19:23:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7978594c9a78fea63dd7b67e2662e5e4a4e04869",
+    "line" : 76,
+    "diffHunk" : "@@ -1,1 +74,78 @@  check[Term.Ascribe](\"→(a)←: →(A)←\")\n  check[Term.Assign](\"→(a)← = →(b)←\")\n  check[Term.Block](\"{ →(a)←; →(b)← }\")\n  check[Term.Do](\"do →{d}← while (→p←)\")\n  check[Term.Eta](\"→(f)← _\")"
+  },
+  {
+    "id" : "63fc569e-f207-402c-aee9-1852d567d922",
+    "prId" : 1498,
+    "comments" : [
+      {
+        "id" : "0f7de60c-5510-4649-a2c6-901439bb21c9",
+        "parentId" : null,
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "this does capture the semicolon (why ?)",
+        "createdAt" : "2018-04-13T15:02:39Z",
+        "updatedAt" : "2018-04-18T19:23:55Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7978594c9a78fea63dd7b67e2662e5e4a4e04869",
+    "line" : 91,
+    "diffHunk" : "@@ -1,1 +89,93 @@  check[Term.NewAnonymous](\"new →(A){}←\")\n  check[Term.Param, Decl.Def](\"def f(→a←: →A← = →(da)←): A\")\n  check[Term.PartialFunction](\"{ →case x => x;← →case y => y← }\")\n  check[Term.Repeated, Term.Apply](\"f(→(x)←: _*)\")\n  check[Term.Return](\"return →(a)←\")"
+  },
+  {
+    "id" : "9b324a01-b9bb-4aa0-8136-59f12fb9c06d",
+    "prId" : 1498,
+    "comments" : [
+      {
+        "id" : "cf598623-c169-48ea-bc90-e9b9060e84df",
+        "parentId" : null,
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "semicolon ?",
+        "createdAt" : "2018-04-13T15:03:01Z",
+        "updatedAt" : "2018-04-18T19:23:55Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7978594c9a78fea63dd7b67e2662e5e4a4e04869",
+    "line" : 98,
+    "diffHunk" : "@@ -1,1 +96,100 @@  check[Term.This](\"→a←.this\")\n  check[Term.Throw](\"throw →(e)←\")\n  check[Term.Try](\"try (→f←) catch { →case x => x;← →case y => y← } finally →{ }←\")\n  check[Term.TryWithHandler](\"try (→f←) catch →(h)← finally →{ }←\")\n  check[Term.Tuple](\"(→(a)←, →(b)←)\")"
+  }
+]

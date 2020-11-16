@@ -1,0 +1,256 @@
+[
+  {
+    "id" : "4e57e15c-7b6a-494a-91f1-a37e9718f3cd",
+    "prId" : 2021,
+    "comments" : [
+      {
+        "id" : "c0fec517-5661-4967-a192-e2c4927f4c39",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Is this a backwards compatible change?",
+        "createdAt" : "2020-05-15T08:58:41Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d12facf4-f2ec-4fc5-bcb7-11a7f49c7d7f",
+        "parentId" : "c0fec517-5661-4967-a192-e2c4927f4c39",
+        "author" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "body" : "Yes.\nThis option suppresses `unknownFieldsSet` parameter to be added to sources.\n\nIf not added, lots of files needs modification and also needs copying older sources for Scala 2.11.\nI think such modification is harmful in terms of maintainability.",
+        "createdAt" : "2020-05-15T09:18:56Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "af3260a74c644efec19ee1a2c884a37cad1ff1ce",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +6,10 @@\noption (scalapb.options) = {\n  preserve_unknown_fields: false\n};\n"
+  },
+  {
+    "id" : "88b3e2c3-b674-4932-a90f-23c65f98e405",
+    "prId" : 1747,
+    "comments" : [
+      {
+        "id" : "0de0dc5f-45fe-4157-a47c-a4930bb9ebb1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It would make upgrades easier if we add a deprecated extension method `SymbolInformation.name` that forwards to `displayName`",
+        "createdAt" : "2018-08-20T09:04:32Z",
+        "updatedAt" : "2018-08-20T09:36:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "91eeebcc-0445-445d-be00-7c36c7b59439",
+        "parentId" : "0de0dc5f-45fe-4157-a47c-a4930bb9ebb1",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "On the other hand, compilation errors may force the upgrader to consider whether they want `SymbolInformation.name` or `sym.desc.name`. This was super valuable to me when I was upgrading Scalameta and Rsc.\r\n\r\nI don't mind either way though. Let me know your preference, and I'll submit a follow-up pull request if you'd prefer to have an extension method.",
+        "createdAt" : "2018-08-21T01:07:50Z",
+        "updatedAt" : "2018-08-21T01:07:54Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "41d6ff09-4220-4c66-8cbe-0aa576d93b2e",
+        "parentId" : "0de0dc5f-45fe-4157-a47c-a4930bb9ebb1",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I agree in this case it's fine to remove without deprecation, it's pretty nice that these APIs are internal 😉 ",
+        "createdAt" : "2018-08-23T08:23:57Z",
+        "updatedAt" : "2018-08-23T08:23:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "caf3e4e47976d7f2b3383f6d1c9402dde8a7285f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +271,275 @@  Kind kind = 3;\n  int32 properties = 4;\n  string display_name = 5;\n  Signature signature = 17;\n  repeated Annotation annotations = 13;"
+  },
+  {
+    "id" : "2db527ff-5bf6-47b6-b5a9-eedeef150307",
+    "prId" : 1709,
+    "comments" : [
+      {
+        "id" : "0eb8cd50-d854-4735-ba4d-87a00df23cc8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I agree that the current API is suboptimal when it comes to reconstructing a fully desugared tree. Let's open a ticket for that.",
+        "createdAt" : "2018-07-20T14:33:04Z",
+        "updatedAt" : "2018-07-20T19:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fe701e0e-a2b2-40ac-b7a5-ada8583cccfb",
+        "parentId" : "0eb8cd50-d854-4735-ba4d-87a00df23cc8",
+        "author" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "body" : "Not sure how to phrase the ticket",
+        "createdAt" : "2018-07-20T18:51:52Z",
+        "updatedAt" : "2018-07-20T19:33:36Z",
+        "lastEditedBy" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebdcb194-e7e1-4215-bb15-990437e0aa65",
+        "parentId" : "0eb8cd50-d854-4735-ba4d-87a00df23cc8",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This may be an indication that the problem is too abstract for now. In that case, the ticket would probably be not worth it.",
+        "createdAt" : "2018-07-20T19:17:58Z",
+        "updatedAt" : "2018-07-20T19:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "039342ea-8f59-4da0-94bd-c31bdc22b8a7",
+        "parentId" : "0eb8cd50-d854-4735-ba4d-87a00df23cc8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I took a stab at formulating the problem in https://github.com/scalameta/scalameta/issues/1727 Is that clear enough?",
+        "createdAt" : "2018-07-31T13:15:19Z",
+        "updatedAt" : "2018-07-31T13:21:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "83490885e2b7a475f3c13b29f0d0b094fbeb135a",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +322,326 @@  Range range = 1;\n  Tree tree = 2;\n}\n\nmessage Tree {"
+  },
+  {
+    "id" : "f395b302-a29f-4d78-9e54-394d7458c3b8",
+    "prId" : 1616,
+    "comments" : [
+      {
+        "id" : "e2cd1830-8f4c-42bd-b0cd-748a8ab82712",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "With the new oneof encoding, I can write ADTs in protobuf all day. Thank you so much, @olafurpg and @thesamet!",
+        "createdAt" : "2018-06-21T02:36:43Z",
+        "updatedAt" : "2018-06-21T05:47:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1096f995543652d3f0a898123732076e7695edfe",
+    "line" : 153,
+    "diffHunk" : "@@ -1,1 +151,155 @@    NullConstant nullConstant = 11;\n  }\n}\n\nmessage UnitConstant {"
+  },
+  {
+    "id" : "54cb4d28-7f4c-48fa-9d0b-9f17d90978a2",
+    "prId" : 1616,
+    "comments" : [
+      {
+        "id" : "ef99ee47-6a33-4f03-8d9f-41b016020e3d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "No more `info` in `ClassInfoType` 👍 ",
+        "createdAt" : "2018-06-21T02:37:06Z",
+        "updatedAt" : "2018-06-21T05:47:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1096f995543652d3f0a898123732076e7695edfe",
+    "line" : 206,
+    "diffHunk" : "@@ -1,1 +204,208 @@}\n\nmessage ClassSignature {\n  Scope type_parameters = 1;\n  repeated Type parents = 2;"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5989ddc5-bffa-477a-9662-7db1b30c8811",
+    "prId" : 960,
+    "comments" : [
+      {
+        "id" : "757f2c4d-265a-4b68-8bc5-7d546cd2eea7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks reasonable.",
+        "createdAt" : "2017-06-22T17:24:12Z",
+        "updatedAt" : "2017-06-22T17:24:15Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5b26b697ad358a8e6a9ab427ea4d7d929f8301a7",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +30,34 @@          else m.Symbol.Local(mpos.syntax)\n        }\n      }\n\n      val owner = sym.owner.toSemantic"
+  }
+]

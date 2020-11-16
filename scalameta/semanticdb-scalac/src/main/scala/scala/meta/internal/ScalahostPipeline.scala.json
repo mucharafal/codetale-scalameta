@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "37116b7e-198e-430d-8d29-dd767c7ecbc1",
+    "prId" : 1079,
+    "comments" : [
+      {
+        "id" : "3661ca9d-a9c6-4070-ae5a-2d1ea3b1cbbd",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How about renaming this to `semanticdb-compute`?",
+        "createdAt" : "2017-08-22T22:53:46Z",
+        "updatedAt" : "2017-08-23T11:33:33Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5fb99279-5a1f-4d75-88eb-2945ff3c9d35",
+        "parentId" : "3661ca9d-a9c6-4070-ae5a-2d1ea3b1cbbd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2017-08-23T10:34:22Z",
+        "updatedAt" : "2017-08-23T11:33:33Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a452a252cd25cb00d2ee4d16893856d5a7a9c4c1",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +63,67 @@  }\n\n  object SemanticdbComponent extends PluginComponent {\n    val global: SemanticdbPipeline.this.global.type = SemanticdbPipeline.this.global\n    val runsAfter = List(\"typer\")"
+  }
+]

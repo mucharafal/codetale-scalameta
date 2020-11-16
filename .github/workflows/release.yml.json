@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "0cf7688f-a0ab-479e-a9c4-ad6f792a5e5d",
+    "prId" : 1973,
+    "comments" : [
+      {
+        "id" : "e0d2f704-5b3d-4e79-a9aa-c274e764b84b",
+        "parentId" : null,
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Does scalameta-parsers also get published here? If so, should we also include that here?",
+        "createdAt" : "2020-02-05T10:16:58Z",
+        "updatedAt" : "2020-02-05T10:16:59Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4e2d8c0e-f92b-486d-902f-8cdfecc396e3",
+        "parentId" : "e0d2f704-5b3d-4e79-a9aa-c274e764b84b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "To npm? That module has so far been published manually I think. cc/ @gabro it would be nice to automate that publish step but we can do it separately",
+        "createdAt" : "2020-02-05T10:37:17Z",
+        "updatedAt" : "2020-02-05T10:37:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "83367389-d40a-4041-ae13-5786a3d82a3b",
+        "parentId" : "e0d2f704-5b3d-4e79-a9aa-c274e764b84b",
+        "author" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "body" : "Yup, to NPM. And sounds good! Was just curious.",
+        "createdAt" : "2020-02-05T10:47:22Z",
+        "updatedAt" : "2020-02-05T10:47:22Z",
+        "lastEditedBy" : {
+          "login" : "ckipp01",
+          "name" : "Chris Kipp",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/13974112?u=7b6a2ddab8eec6f99e4e40ae9b81f71cb5ba92e5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a840b3d9-6e1e-4b8b-88d1-a39e9d4f3f0e",
+        "parentId" : "e0d2f704-5b3d-4e79-a9aa-c274e764b84b",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Yeah, I've always been lazy and I've never got around automating that step, mostly because I'm probably the only one using that package (in AST Explorer) :P \r\n\r\nI agree it would be good to automate it",
+        "createdAt" : "2020-02-05T10:58:21Z",
+        "updatedAt" : "2020-02-05T10:58:21Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a90d9799221454074a6341902fb1083e5492ea2c",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@          sbt ci-release\n          sbt docs/docusaurusPublishGhpages\n        env:\n          GIT_USER: scalameta@scalameta.org\n          PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}"
+  }
+]

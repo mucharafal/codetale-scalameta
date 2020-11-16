@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "241bb943-b755-4b19-91c1-95b61d3f5850",
+    "prId" : 1422,
+    "comments" : [
+      {
+        "id" : "c32a8972-7731-49bb-bedb-da42d6709e90",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-03-10T11:43:00Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d2a4d472bf076e929228ea5770ca1e49a796cbf7",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1,5 @@package com.javacp;\n\npublic enum Coin {\n  PENNY(1), NICKEL(5), DIME(10), QUARTER(25);\n  Coin(int value) { this.value = value; }"
+  }
+]

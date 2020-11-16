@@ -1,0 +1,209 @@
+[
+  {
+    "id" : "ffdbd3f6-7f83-4ffc-9a26-c9fb6c7eabb9",
+    "prId" : 2153,
+    "comments" : [
+      {
+        "id" : "3a6d7658-71fb-40da-a019-05cf38677db3",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "changes were merged to dotty, bumping community-dotty should fix it",
+        "createdAt" : "2020-10-27T16:19:38Z",
+        "updatedAt" : "2020-10-27T16:19:38Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1387adea-2ea3-4740-9c33-cf83b8fa610f",
+        "parentId" : "3a6d7658-71fb-40da-a019-05cf38677db3",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It doesn't seem it was merged yet: https://github.com/lampepfl/dotty/pull/10081",
+        "createdAt" : "2020-10-27T17:37:56Z",
+        "updatedAt" : "2020-10-27T17:37:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1f647a48-ed18-4e5d-ba73-77b385f01e17",
+        "parentId" : "3a6d7658-71fb-40da-a019-05cf38677db3",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I referred to `lampepfl/dotty#10089` :) nvm, all good :+1: ",
+        "createdAt" : "2020-10-27T17:50:04Z",
+        "updatedAt" : "2020-10-27T17:50:04Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0d6e0ca420c4d937d3d9dcb7d30bca2a64f93a5e",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +180,184 @@    // - def (s: String).doesntStartWithAnyOfThese(c: Char*) = c.forall(char => !s.startsWith(char.toString))\n    \"test/scala/dotty/dokka/DottyTestRunner.scala\",\n    // - given as Context = ctx\n    \"main/scala/dotty/tools/dottydoc/Main.scala\"\n  )"
+  },
+  {
+    "id" : "94d60e72-c6d0-42a1-a3b6-451dacbecb66",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "93501ca2-ab5c-4168-81bd-80af5183e3c7",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Hah when I was working alone I knew what was scalameta issue and what was repo problem but now I see it is not clear for another person :D\r\nDo you think we can do comments:\r\n `// [scalameta]  error message` when something is wrong on scalameta side\r\n`// error message` when not a problem(xml syntax, already fixed in another PR, syntax changed, no longer valid)",
+        "createdAt" : "2020-10-23T21:20:50Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f6d0d02c-db4c-4838-b2b1-21658e480664",
+        "parentId" : "93501ca2-ab5c-4168-81bd-80af5183e3c7",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added `[scalameta]` to any issues we still need to fix.",
+        "createdAt" : "2020-10-24T10:46:57Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 49,
+    "diffHunk" : "@@ -1,1 +174,178 @@  )\n\n  final def scala3DocExclusionList = List(\n    // [scalameta] extension.getParameters.asScala(extension.get(MethodExtension).parametersListSizes(0))\n    \"main/scala/dotty/dokka/translators/ScalaSignatureProvider.scala\","
+  },
+  {
+    "id" : "d8278d1e-fcd3-4e56-a361-1c736ff0f085",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "42d35b83-1d70-4ef1-abdf-128dfae19d18",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "It still works in REPL,\r\n```\r\ndef fx[X[_], Y](lst: X[Y]): Int = 3\r\nfx[X=List, Y=Int](List(1,2,3))\r\n```\r\nA lot of changes on last minute ech :/",
+        "createdAt" : "2020-10-23T21:34:56Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "86581512-572e-4e59-a8ea-11db63d528e7",
+        "parentId" : "42d35b83-1d70-4ef1-abdf-128dfae19d18",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We can try to fix it later on if needed. I will leave it for now.",
+        "createdAt" : "2020-10-24T10:17:29Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +180,184 @@    \"main/scala/example/level2/Documentation.scala\",\n    // Below syntax is no longer valid\n    // val result: List[Int] = fmap[F = List, A = Int, B = Int](List(1,2,3))(i => i + 1)\n    \"main/scala/NamedTypeArguments.scala\",\n    // def (s: String).doesntStartWithAnyOfThese(c: Char*) = c.forall(char => !s.startsWith(char.toString))"
+  },
+  {
+    "id" : "f2a343a9-8453-4fb7-87fb-e164b87220e3",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "22b07c4b-ecd1-466e-a6a5-4b3b2f15e2bd",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Somehow this got lost - I think maybe we need to force checkout on a particular version of the repository.",
+        "createdAt" : "2020-10-14T15:23:10Z",
+        "updatedAt" : "2020-10-14T15:23:10Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "08a61fe5-d7cf-4137-a8d4-3129a589782a",
+        "parentId" : "22b07c4b-ecd1-466e-a6a5-4b3b2f15e2bd",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "we do force particular commit checkout",
+        "createdAt" : "2020-10-14T16:47:10Z",
+        "updatedAt" : "2020-10-14T16:47:10Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +179,183 @@    \"doc-tool/test/dotty/tools/dottydoc/GenDocs.scala\", // +: ^\"^-project\" +: \"Dotty\"\n    // Not fixable\n    \"tools/dotc/typer/Implicits.scala\" // if without then but using significant identation\n  )\n"
+  }
+]

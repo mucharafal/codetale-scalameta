@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "321040b9-098c-43f9-89db-12d4b51151fd",
+    "prId" : 711,
+    "comments" : [
+      {
+        "id" : "e3fb4ab2-b7d5-472e-8a02-1fccb4363eb1",
+        "parentId" : null,
+        "author" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "body" : "`F[B <: Tree]`",
+        "createdAt" : "2017-02-28T22:38:28Z",
+        "updatedAt" : "2017-03-01T08:15:02Z",
+        "lastEditedBy" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "82ba4f1c-b6a9-4b86-bcd2-2df815270b42",
+        "parentId" : "e3fb4ab2-b7d5-472e-8a02-1fccb4363eb1",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The reason I make it lowercase is because `x` is not a regular type parameter, it's only scoped inside the type param list. I saw `x` used in the same situation here: https://github.com/OlivierBlanvillain/monadic-html/blob/de78d4b147e39f5fdec300cce4c2b68e3596bf3a/monadic-html/src/main/scala/scala/xml/xml.scala#L180-L182\r\n\r\n",
+        "createdAt" : "2017-03-01T08:10:03Z",
+        "updatedAt" : "2017-03-01T08:18:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "def79d923770e546406342e053456e0d7afb9c90",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +39,43 @@\n    @inline\n    def contains[F[x <: Tree] <: TreeEquality[x]](toFind: Tree)(implicit conv: Tree => F[Tree],\n                                                                eqEv: Equal[F[Tree]]): Boolean =\n      TreeOps.contains(a)(toFind)"
+  }
+]

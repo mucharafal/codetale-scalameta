@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "c27a703e-232c-497d-b767-a60d2488b4b3",
+    "prId" : 1088,
+    "comments" : [
+      {
+        "id" : "fc22ca67-ca6f-4369-ab6b-44f2ecd08da2",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Would it make sense to move this to `.multiline` extension method that can be reused for all tests? ",
+        "createdAt" : "2017-08-25T07:47:48Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3a1e2786-85de-4abb-bf07-4bd91322754b",
+        "parentId" : "fc22ca67-ca6f-4369-ab6b-44f2ecd08da2",
+        "author" : {
+          "login" : "martijnhoekstra",
+          "name" : "Martijn Hoekstra",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/882449?u=97ba510cbf9af4649fa55b436398dd82e1d08df1&v=4"
+        },
+        "body" : "Maybe factor out the entire comparison to something like `sameLines`?",
+        "createdAt" : "2017-08-25T09:15:56Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "martijnhoekstra",
+          "name" : "Martijn Hoekstra",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/882449?u=97ba510cbf9af4649fa55b436398dd82e1d08df1&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f52a9c41-108b-4ebb-a018-e083e3b4460d",
+        "parentId" : "fc22ca67-ca6f-4369-ab6b-44f2ecd08da2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Agreed, that is even better ^^ 👍 ",
+        "createdAt" : "2017-08-25T09:18:19Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ecd184064ff8450fa731c72ee96bb8f17b09ccd5",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +23,27 @@    |\n    |^\n  \"\"\".trim.stripMargin.split('\\n').mkString(EOL))\n\n  test(\"\\n\")(\"\"\""
+  }
+]

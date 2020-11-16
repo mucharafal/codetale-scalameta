@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "78d99c00-c192-4d75-b515-ac3a41bee91c",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "ed0d8169-ef45-4a0c-bea0-87b6bc9dba8d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "So this one currently works in Dotty, reported it as weird here https://github.com/lampepfl/dotty/issues/10074",
+        "createdAt" : "2020-10-23T15:14:13Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e7db4d1a-779d-40ff-a334-50134fedb554",
+        "parentId" : "ed0d8169-ef45-4a0c-bea0-87b6bc9dba8d",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "we could add this as a bullet in dotty generic issue to catch up later as this one you will probably merge in a moment :)",
+        "createdAt" : "2020-10-23T21:50:06Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d679bc81-3016-40c3-b38a-523d97a85586",
+        "parentId" : "ed0d8169-ef45-4a0c-bea0-87b6bc9dba8d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added!",
+        "createdAt" : "2020-10-24T10:20:23Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +56,60 @@  }\n\n  test(\"given-anon-as\") {\n    runTestAssert[Stat](\"given as Context = ctx\", assertLayout = Some(\"given Context = ctx\"))(\n      Defn.GivenAlias(Nil, Name(\"\"), Nil, Nil, Type.Name(\"Context\"), Term.Name(\"ctx\"))"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "f219d23a-77ee-4a71-a598-37add67732fc",
+    "prId" : 858,
+    "comments" : [
+      {
+        "id" : "717cd840-7948-4200-99d4-0382f7c65d8d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we make this ut8 literal a variable someday? Not now, just a thought for the future.",
+        "createdAt" : "2017-05-12T06:54:32Z",
+        "updatedAt" : "2017-05-12T19:26:14Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d1ed437a-7141-4e75-8545-4f9e790921f4",
+        "parentId" : "717cd840-7948-4200-99d4-0382f7c65d8d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I wonder why it's not a constant in the JDK, given its importance.",
+        "createdAt" : "2017-05-12T19:23:30Z",
+        "updatedAt" : "2017-05-12T19:26:14Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0a7e405af5bcc37ff18d3106589e27d02584be1d",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +10,14 @@\n  def slurp(path: AbsolutePath): String =\n    slurp(path, Charset.forName(\"UTF-8\"))\n}"
+  }
+]

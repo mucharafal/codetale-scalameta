@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "e20bbff4-1679-4f25-9ed1-2aa98e57f34d",
+    "prId" : 1018,
+    "comments" : [
+      {
+        "id" : "bab31e8b-c104-4845-95f9-73a639410748",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "😿 It's worth it however, IMO ",
+        "createdAt" : "2017-07-12T11:52:17Z",
+        "updatedAt" : "2017-07-12T14:09:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e88cadc57e9e3921e0d953f7ab9082ff7e5f42f1",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +7,11 @@private[meta] trait Aliases {\n  type Token = scala.meta.tokens.Token\n  object Token {\n    type Ident = scala.meta.tokens.Token.Ident\n    val Ident = scala.meta.tokens.Token.Ident"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "65094a66-26d9-491b-85da-40dbfee7bb98",
+    "prId" : 2059,
+    "comments" : [
+      {
+        "id" : "57fa3650-298e-43e7-ba2a-725817bebefe",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Do we know `x` is always non-empty?",
+        "createdAt" : "2020-06-03T11:28:26Z",
+        "updatedAt" : "2020-06-03T16:38:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fb6ce4e3-c8b2-4193-a6c3-fa2de4b1c430",
+        "parentId" : "57fa3650-298e-43e7-ba2a-725817bebefe",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "i will add a test but if i read the `.rep(2)` above correctly, it should have at least 2 elements.",
+        "createdAt" : "2020-06-03T11:36:16Z",
+        "updatedAt" : "2020-06-03T16:38:20Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0895807bdd03f35efd545e4d45a450d65e089033",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +164,168 @@    val table = row.rep(2, sep = sep).map { x =>\n      // we'll trim the header later; we might need it if align is missing\n      val rest = x.tail.map(_.map(_.trim))\n      val alignRow = rest.head\n      val align = alignRow.flatMap(toAlign).toSeq"
+  }
+]

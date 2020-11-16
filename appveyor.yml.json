@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "fb9ce128-4a62-4c3f-8aa6-26c5d93195d8",
+    "prId" : 1096,
+    "comments" : [
+      {
+        "id" : "7ffc7b26-81d7-4b04-aa36-342b12ffee5b",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "🎉 ",
+        "createdAt" : "2017-08-29T19:39:20Z",
+        "updatedAt" : "2017-08-29T19:41:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "35fa984975a991fad1aaf24321f94b3fe1387a48",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +13,17 @@  - sbt version # dummy step, a build_script step is required by appveyor.\ntest_script:\n  - sbt testAll\ncache:\n  - C:\\Users\\appveyor\\.m2"
+  }
+]

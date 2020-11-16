@@ -1,0 +1,829 @@
+[
+  {
+    "id" : "25b98bb2-dc75-4344-90de-fe96d2b63e58",
+    "prId" : 1738,
+    "comments" : [
+      {
+        "id" : "30d00137-331e-4e1d-8c63-65331f2780c3",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👏 the words \"simple\", \"obviously\", \"clearly\" must disappear from all documentation",
+        "createdAt" : "2018-08-07T15:51:42Z",
+        "updatedAt" : "2018-08-07T16:03:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc08bebdb55343bea8b986c70d25db6741cecedf",
+    "line" : 165,
+    "diffHunk" : "@@ -1,1 +1135,1139 @@### Notation\n\nWe use a concise notation to describe SemanticDB entities.\nIn this notation, `M(v1, v2, ...)` corresponds a Protocol Buffers message\n`M` with fields set to values `v1`, `v2`, etc. Literals correspond to"
+  },
+  {
+    "id" : "e955f662-8992-4861-83c5-af6b664e63fb",
+    "prId" : 1712,
+    "comments" : [
+      {
+        "id" : "01a15f04-81c0-4826-812e-71c3bde0c766",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can you also update the `reserved` bit above?",
+        "createdAt" : "2018-07-25T17:44:56Z",
+        "updatedAt" : "2018-07-26T23:31:50Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e38c962-21b2-4cd7-a6c2-1436248270e8",
+        "parentId" : "01a15f04-81c0-4826-812e-71c3bde0c766",
+        "author" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "body" : "It was already reserved, so I didn't change that.",
+        "createdAt" : "2018-07-26T22:51:19Z",
+        "updatedAt" : "2018-07-26T23:31:50Z",
+        "lastEditedBy" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c475f189-9357-4800-82f2-be5fbe615f0b",
+        "parentId" : "01a15f04-81c0-4826-812e-71c3bde0c766",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Wow indeed.",
+        "createdAt" : "2018-07-26T23:45:20Z",
+        "updatedAt" : "2018-07-26T23:45:20Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ddc7c81e2f8aacd0ebf9c53dfe3d6295b75d883d",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +112,116 @@  repeated SymbolOccurrence occurrences = 6;\n  repeated Diagnostic diagnostics = 7;\n  repeated Synthetic synthetics = 12;\n}\n```"
+  },
+  {
+    "id" : "f187740a-7e5b-4ac6-8f43-d697c0596e9f",
+    "prId" : 1712,
+    "comments" : [
+      {
+        "id" : "904c5440-b42d-4f11-bc5a-524da636d4e6",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "`We may improve on this in the future.`",
+        "createdAt" : "2018-07-25T17:56:15Z",
+        "updatedAt" : "2018-07-26T23:31:50Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ddc7c81e2f8aacd0ebf9c53dfe3d6295b75d883d",
+    "line" : 441,
+    "diffHunk" : "@@ -1,1 +3547,3551 @@#### Synthetic\nAt this moment, there is no tool that supports Synthetic for\nthe Java language.\nWe intend to improve on this in the future.\n"
+  },
+  {
+    "id" : "fe6a1782-5a02-4d3e-97da-bc86880ec564",
+    "prId" : 1712,
+    "comments" : [
+      {
+        "id" : "7be471f0-eccb-468c-92dc-482b23b620b7",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Wow, I didn't know you could embed markdown code listings inside HTML markup inside markdown files 😍 I don't want to write `&gt;` ever again 😂 ",
+        "createdAt" : "2018-07-31T13:25:48Z",
+        "updatedAt" : "2018-07-31T13:29:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ddc7c81e2f8aacd0ebf9c53dfe3d6295b75d883d",
+    "line" : 195,
+    "diffHunk" : "@@ -1,1 +2482,2486 @@  <td>\n      \n```scala\nSynthetic(\n  <List>,"
+  },
+  {
+    "id" : "040c90b2-f9cd-4fd2-9506-c0c660fe24bf",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "f11279f1-4e4b-494a-9e67-e5339a7341c9",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can you also mention the same thing for Java fields?",
+        "createdAt" : "2018-07-02T02:55:09Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0e54607e-4695-4a92-84b9-60bbaeece15b",
+        "parentId" : "f11279f1-4e4b-494a-9e67-e5339a7341c9",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good idea, done.",
+        "createdAt" : "2018-07-02T08:14:06Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +1930,1934 @@* Method symbols support [all Scala accessibilities](#scala-accessibility).\n* The disambiguators for `m3()` and `m3(+1)` do not take into account overloaded\n  object `m3.`.\n\n**Macro definitions** [\\[51\\]][51] are represented with `MACRO` symbols"
+  },
+  {
+    "id" : "9bfe5b0f-805c-4925-8bec-578c3e59f77b",
+    "prId" : 1635,
+    "comments" : [
+      {
+        "id" : "064948d6-d6f7-4bf7-a32c-11b10ee323b4",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The spec is missing the definition of `Constant`",
+        "createdAt" : "2018-06-26T09:03:04Z",
+        "updatedAt" : "2018-06-27T21:12:48Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "414fd258-6543-4282-bc3e-6cea4169a743",
+        "parentId" : "064948d6-d6f7-4bf7-a32c-11b10ee323b4",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done. I meant to discuss whether the triviality of constants merits not including them in the spec, but it was simpler to just go ahead and add them.",
+        "createdAt" : "2018-06-27T21:13:18Z",
+        "updatedAt" : "2018-06-27T21:13:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0095a1a0d25f5e88e88bd4dc027689b421701b73",
+    "line" : 153,
+    "diffHunk" : "@@ -1,1 +454,458 @@```protobuf\nmessage ConstantType {\n  Constant constant = 1;\n}\n```"
+  },
+  {
+    "id" : "34ab36a3-9e5c-4dae-9670-f2edf9e310f2",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "fcfdb758-8b8a-4fa1-a71f-85b80c0b9f0f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Would it make sense to use `softlinks` instead? I already caught myself running `grep SoftlinkChildren` in the codebase as I don't associate \"sym\" as an opposite of \"hard\"",
+        "createdAt" : "2018-06-06T11:53:44Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f1a7d5b2-fe81-45c4-8258-6e66a28d5cad",
+        "parentId" : "fcfdb758-8b8a-4fa1-a71f-85b80c0b9f0f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Aren't softlinks and symlinks the same thing?",
+        "createdAt" : "2018-06-06T15:19:12Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a98078fa-c7b5-4323-9bfc-3555be729115",
+        "parentId" : "fcfdb758-8b8a-4fa1-a71f-85b80c0b9f0f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Talking with colleagues and reading `man ln` seems to indicate that symlinks are indeed opposites, fair enough 👍 ",
+        "createdAt" : "2018-06-06T15:56:11Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +254,258 @@```protobuf\nmessage Scope {\n  repeated string symlinks = 1;\n  repeated SymbolInformation hardlinks = 2;\n}"
+  },
+  {
+    "id" : "341d3434-e4b6-41ec-89b4-ad5d885c9771",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "fe34a31a-e854-41a2-b4f7-950d0aacea80",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Not sure why this was changed.",
+        "createdAt" : "2018-04-22T23:06:33Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f7fb4873-e0a0-4513-9e6e-81e29d7e400c",
+        "parentId" : "fe34a31a-e854-41a2-b4f7-950d0aacea80",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It was off sync with semanticdb3.proto. I looked into it since members, signature and and overrides have been removed.",
+        "createdAt" : "2018-04-23T12:06:18Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +470,474 @@```protobuf\nmessage SymbolInformation {\n  reserved 1, 2, 4, 5, 7, 8, 9, 15, 16;\n  string symbol = 1;\n  Language language = 16;"
+  },
+  {
+    "id" : "fc66b8e5-01d7-450e-bfde-4faef5d72022",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "efbe002a-f22f-4f3c-be36-aa6a50aad856",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Not sure why this was changed.",
+        "createdAt" : "2018-04-22T23:06:37Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dcf17ecb-cf88-4adb-862c-6cd986f8db0f",
+        "parentId" : "efbe002a-f22f-4f3c-be36-aa6a50aad856",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Ditto.",
+        "createdAt" : "2018-04-23T12:06:26Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +1196,1200 @@```protobuf\nmessage SymbolInformation {\n  reserved 1, 2, 4, 5, 7, 8, 9, 15, 16;\n  string symbol = 1;\n  Language language = 16;"
+  },
+  {
+    "id" : "a36c9fa9-2ca6-45fa-b197-e69e52400587",
+    "prId" : 1459,
+    "comments" : [
+      {
+        "id" : "ca981b85-094d-487f-82e3-0e67634db31e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Should this bullet appear in the top-level above \"JLS mandates\"?",
+        "createdAt" : "2018-03-27T13:43:24Z",
+        "updatedAt" : "2018-03-27T15:40:55Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c5523d87-6401-46c1-9831-9a89ae5cabd6",
+        "parentId" : "ca981b85-094d-487f-82e3-0e67634db31e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Enum fields are also synthetic, so I thought it would be good to group both them and the synthetic methods.",
+        "createdAt" : "2018-03-27T15:38:45Z",
+        "updatedAt" : "2018-03-27T15:40:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55a414b221b031fc9aefa63ec1b0bdeb42bbc033",
+    "line" : 543,
+    "diffHunk" : "@@ -1,1 +2727,2731 @@* JLS mandates the following synthetic members for enum declarations\n  [\\[86\\]][86]:\n  * Enum fields have kind `FIELD`, properties `FINAL`, `STATIC` and `ENUM`,\n    are named after the corresponding enum constants, have the type of the\n    enum declaration and `PUBLIC` accessibility."
+  },
+  {
+    "id" : "d28870ed-5b98-4ef3-b26b-38bd4260daf7",
+    "prId" : 1459,
+    "comments" : [
+      {
+        "id" : "8f4d6d49-4ff0-4482-8a56-3edc3b71d193",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Field declarations in interfaces can only be public and `STATIC` `FINAL`\r\nhttps://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.3\r\n\r\nMethod declarations in interfaces can only be public\r\nhttps://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.4\r\n\r\nNot sure if this should be mentioned in interfaces or in methods/fields.",
+        "createdAt" : "2018-03-27T13:53:04Z",
+        "updatedAt" : "2018-03-27T15:40:55Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8302cd9d-7dc0-4194-9326-027380dc5078",
+        "parentId" : "8f4d6d49-4ff0-4482-8a56-3edc3b71d193",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2018-03-27T15:40:49Z",
+        "updatedAt" : "2018-03-27T15:40:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55a414b221b031fc9aefa63ec1b0bdeb42bbc033",
+    "line" : 591,
+    "diffHunk" : "@@ -1,1 +2775,2779 @@  * `ABSTRACT`: implicitly set for all interface symbols.\n* Interface declarations support\n  [all Java accessibilities](#java-accessibility).\n* Interface members without explicit access modifiers have accessibility\n  `PUBLIC` by default instead of `PRIVATE_WITHIN`."
+  },
+  {
+    "id" : "c727980c-6e6b-4773-81d6-07c2c72eb622",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "5f88dfe1-dbf6-4d73-a10e-61402f42d682",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-03-09T12:00:14Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 736,
+    "diffHunk" : "@@ -1,1 +2142,2146 @@on this in the future, but this is highly unlikely.\n\n### Java\n\nJava `class` file format [\\[68\\]][68] can be mapped onto SemanticDB."
+  },
+  {
+    "id" : "85ebcfe3-6fa2-42ac-8775-4b3ccc065147",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "28dc1a40-a6e3-4c9d-88e6-e0d3f4705b84",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Repeating question from elsewhere, is there a property to distinguish the getter from the setter?",
+        "createdAt" : "2018-03-09T12:10:00Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c05875f4-d94e-42ad-a335-b72b154e8e39",
+        "parentId" : "28dc1a40-a6e3-4c9d-88e6-e0d3f4705b84",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Updated the spec.",
+        "createdAt" : "2018-03-09T15:03:44Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 478,
+    "diffHunk" : "@@ -1,1 +1330,1334 @@* Field symbol of kind `FIELD` is created for non-`ABSTRACT` member variables\n  to model the field generated by the Scala compiler.\n* Getter and setter symbols of kind `METHOD` are created for all\n  non-`PRIVATE_THIS` member variables to model the corresponding\n  getter and setter methods generated by the Scala compiler."
+  },
+  {
+    "id" : "daac538a-73c2-4165-ba97-d5fb2e102932",
+    "prId" : 1326,
+    "comments" : [
+      {
+        "id" : "c39db4fd-eb52-4b0b-91ab-b118d39c8c43",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It might be good to explicitly mention if case class parameters are any different or not. Does a blank case class field contain VALPARAM?",
+        "createdAt" : "2018-02-17T12:52:29Z",
+        "updatedAt" : "2018-02-17T13:07:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8422aa98-1b38-4df0-baa7-44a0699bf36b",
+        "parentId" : "c39db4fd-eb52-4b0b-91ab-b118d39c8c43",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "They are different. This will documented as part of a larger effort to comprehensively cover synthetics: https://github.com/scalameta/scalameta/issues/1329.",
+        "createdAt" : "2018-02-17T16:16:45Z",
+        "updatedAt" : "2018-02-17T16:16:45Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "098e876247bdeb8c5b579978b237091752344f2d",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +1651,1655 @@  * `IMPLICIT`: set for `implicit` parameters, as well as desugared context\n    bounds and view bounds (see above).\n  * `VALPARAM`: set for `val` parameters of primary constructors.\n  * `VARPARAM`: set for `var` parameters of primary constructors.\n* Unlike some other metaprogramming systems for Scala, we do not"
+  },
+  {
+    "id" : "c57f2702-ff7d-45e2-b12e-5e3189059862",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "3fbddfa0-a7ae-422e-86cd-1aff4ab6ab6d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I don't understand the last sentence",
+        "createdAt" : "2018-02-05T15:21:34Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d4e83760-1085-4941-b886-c34ac7aad69e",
+        "parentId" : "3fbddfa0-a7ae-422e-86cd-1aff4ab6ab6d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Fixed.",
+        "createdAt" : "2018-02-05T18:36:14Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c56b0bdf-94f5-403a-a94a-a605e9903a7d",
+        "parentId" : "3fbddfa0-a7ae-422e-86cd-1aff4ab6ab6d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-02-05T19:57:34Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 87,
+    "diffHunk" : "@@ -1,1 +284,288 @@In this notation, `M(v1, v2, ...)` corresponds a message `M` with fields set to values\n`v1`, `v2`, etc. Literals correspond to scalar values, and `List(x1, x2, ...)`\ncorresponds to repeated values. Moreover, `<X>` corresponds to a message that\nrepresents `X`.\n"
+  },
+  {
+    "id" : "006d6a07-a5aa-4ae9-8e65-8db9b28d509d",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "e532a946-3b64-4e3f-b768-1ac3388c7c60",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think you should be able to reference link 27 with\r\n```md\r\n[32] foobar\r\n\r\n[32]: http://example.com\r\n\r\n```\r\n\r\nThat gets rendered as\r\n\r\n[32] foobar\r\n\r\n[32]: http://example.com\r\n",
+        "createdAt" : "2018-02-05T15:23:12Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ded9d8e-515f-4794-8648-f54a95d39a35",
+        "parentId" : "e532a946-3b64-4e3f-b768-1ac3388c7c60",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I just wanted to have wrapping brackets like papers do :)",
+        "createdAt" : "2018-02-05T18:20:37Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 82,
+    "diffHunk" : "@@ -1,1 +279,283 @@In this section, we describe various alternatives of `Type`, providing example\nSemanticDB data that corresponds to different Scala types,\ninspired by the scala.reflect documentation [\\[27\\]][27].\n\nIn these examples, we will be using a simple notation to describe SemanticDB data."
+  },
+  {
+    "id" : "1908db49-1c69-44f1-9974-f97e319d7b02",
+    "prId" : 1253,
+    "comments" : [
+      {
+        "id" : "7e8ceb5a-6154-4941-88b4-e0669e70b4d5",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Instead of deprecating `range`, I removed it. This is an exceptional case, but that field never worked properly, and it was introduced just a couple days ago, so I think that it's alright to outright remove it.",
+        "createdAt" : "2018-02-03T21:35:31Z",
+        "updatedAt" : "2018-02-03T21:35:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "03efe49f-f7f5-42b0-9e27-e69f501c9220",
+        "parentId" : "7e8ceb5a-6154-4941-88b4-e0669e70b4d5",
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-02-05T06:07:22Z",
+        "updatedAt" : "2018-02-05T06:07:22Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c787ab1acc1b048e2f532befcc18c966e6423558",
+    "line" : 99,
+    "diffHunk" : "@@ -1,1 +228,232 @@  int32 properties = 4;\n  string name = 5;\n  Location location = 10;\n  TextDocument signature = 7;\n  repeated string members = 8;"
+  },
+  {
+    "id" : "adc2dc23-ffe1-4d4d-a599-6224a6ff1877",
+    "prId" : 1253,
+    "comments" : [
+      {
+        "id" : "32ef32ff-440d-41cb-8377-42449ee5491d",
+        "parentId" : null,
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "Above you suffix with the file.",
+        "createdAt" : "2018-02-04T11:05:46Z",
+        "updatedAt" : "2018-02-04T11:05:46Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8c2db470-90b8-4573-b06a-5f8d7b0893d6",
+        "parentId" : "32ef32ff-440d-41cb-8377-42449ee5491d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "The specification describes the contents of protobuf payloads (the so-called \"low-level semantic API\"). High-level APIs, e.g. the one implemented in `langmeta`, are free to apply custom transformations to these payloads.",
+        "createdAt" : "2018-02-04T20:23:31Z",
+        "updatedAt" : "2018-02-04T20:23:53Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c787ab1acc1b048e2f532befcc18c966e6423558",
+    "line" : 78,
+    "diffHunk" : "@@ -1,1 +199,203 @@to be unique across multiple documents. For example, at the time of writing\n`semanticdb-scalac` produces local symbols named `local0`, `local1`, etc,\nwith the counter resetting to zero for every new document.\n\nIn the future, we may extend SemanticDB to make local symbols more unique,"
+  }
+]

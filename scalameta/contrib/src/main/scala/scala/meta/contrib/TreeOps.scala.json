@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5a1dec10-82ab-4623-9cce-8950d73cfd2c",
+    "prId" : 702,
+    "comments" : [
+      {
+        "id" : "0790c3ff-9eef-41f2-96e1-35888e55394d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Sweet, this keeps the static methods (TreeOps.xx) in the `contrib` package.",
+        "createdAt" : "2017-02-26T16:36:56Z",
+        "updatedAt" : "2017-02-28T08:41:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3794cdb806af8f1eb10067da09f8841cbaa071cb",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +8,12 @@import scala.meta.contrib.implicits.Equality._\n\nobject TreeOps {\n\n  def contains[F[_ <: Tree]](tree: Tree)(toFind: Tree)(implicit conv: Tree => F[Tree],"
+  }
+]

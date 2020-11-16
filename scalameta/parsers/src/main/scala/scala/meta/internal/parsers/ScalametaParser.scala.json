@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "babdf32f-bc2a-405b-acaf-023fafce2e34",
+    "prId" : 498,
+    "comments" : [
+      {
+        "id" : "c6dd671e-343b-4996-b084-168882b8574c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "\"trait or object don't take params\" message\n",
+        "createdAt" : "2016-09-30T15:44:03Z",
+        "updatedAt" : "2016-09-30T16:08:42Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "108cd22521aab53650b42fbee9989166b56a6ba6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3109,3113 @@\n  def primaryCtor(owner: TemplateOwner): Ctor.Primary = autoPos {\n    if (owner.isClass || (owner.isTrait && dialect.allowTraitParameters)) {\n      val mods = constructorAnnots() ++ accessModifierOpt()\n      val name = atPos(in.tokenPos, in.prevTokenPos)(Ctor.Name(\"this\"))"
+  }
+]

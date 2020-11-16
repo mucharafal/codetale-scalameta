@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "e0a45081-5c10-464e-afe5-3fde63bebd97",
+    "prId" : 1190,
+    "comments" : [
+      {
+        "id" : "338330d9-0570-48f2-a203-5c1863b41982",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Wow, is that a speedup from 42% to 21% overhead?",
+        "createdAt" : "2017-12-11T20:06:14Z",
+        "updatedAt" : "2017-12-11T20:17:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "058de878-03e3-4197-ab49-3b1b7e0fdf01",
+        "parentId" : "338330d9-0570-48f2-a203-5c1863b41982",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "It's just 25% to 21% :)",
+        "createdAt" : "2017-12-11T20:14:22Z",
+        "updatedAt" : "2017-12-11T20:17:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "609f6a05ed70bda51555ea7c074ea5dad6de0573",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +39,43 @@QuickScalacBaseline            sample  35  1595.274 ± 15.263  ms/op\nQuickScalacRangepos            sample  35  1703.097 ± 25.044  ms/op  (6% overhead)\nQuickScalametaOpt              sample  15  1934.902 ± 29.232  ms/op  (21% overhead)\nQuickScalametaBaseline         sample  15  2020.256 ± 39.586  ms/op  (25% overhead)\nQuickScalametaFullContents     sample  15  2081.549 ± 38.977  ms/op  (30% overhead)"
+  }
+]

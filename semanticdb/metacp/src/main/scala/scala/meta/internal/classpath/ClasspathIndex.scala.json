@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "ae1d6ecd-0fb9-40cd-bea5-d8841bad3f00",
+    "prId" : 1723,
+    "comments" : [
+      {
+        "id" : "f6b82491-8ebf-4b19-abc5-855f343278f1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Is this helpful? In my experience the full classpath is too verbose and is not helpful in debugging a problem. I would prefer to expose the `Classpath` so that users can drill into `.entries` to investigate.",
+        "createdAt" : "2018-07-31T15:29:34Z",
+        "updatedAt" : "2018-07-31T15:46:06Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "674ccd35-86a7-49f4-be61-0af133d3ff0e",
+        "parentId" : "f6b82491-8ebf-4b19-abc5-855f343278f1",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "That was helpful to debug what classpath Scalafix receives from our Pants integration. Exposing classpath would've achieved the same goal, so I'm totally up for that.",
+        "createdAt" : "2018-07-31T18:10:24Z",
+        "updatedAt" : "2018-07-31T18:10:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dd80713ff87258a06af69e91efb6fbdf8d21e80b",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +38,42 @@\n  override def toString: String = {\n    s\"ClasspathIndex($classpath)\"\n  }\n}"
+  },
+  {
+    "id" : "3bc553af-fa1e-461e-9e3b-17eedfc2102b",
+    "prId" : 1723,
+    "comments" : [
+      {
+        "id" : "d4867153-fdc2-4c14-9677-28ad463aa66a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I propose we expose the ability to query into `dirs` somehow, either make it a val or add a method `getClassdir(path: String): Option[Classdir]`. Making it private makes it impossible to investigate problems such as the bugs I discovered in https://github.com/scalameta/scalameta/pull/169",
+        "createdAt" : "2018-07-31T15:33:09Z",
+        "updatedAt" : "2018-07-31T15:46:06Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "312878d2-26de-4eac-9d28-c52156204ddf",
+        "parentId" : "d4867153-fdc2-4c14-9677-28ad463aa66a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Discussion in https://github.com/scalameta/scalameta/issues/1729.",
+        "createdAt" : "2018-07-31T18:13:11Z",
+        "updatedAt" : "2018-07-31T18:13:11Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dd80713ff87258a06af69e91efb6fbdf8d21e80b",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +14,18 @@\n/** An index to lookup class directories and classfiles by their JVM names. */\nfinal class ClasspathIndex private (classpath: Classpath, dirs: collection.Map[String, Classdir]) {\n\n  /** Returns a classfile with the given path. */"
+  }
+]

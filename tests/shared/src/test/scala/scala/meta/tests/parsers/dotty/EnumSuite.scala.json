@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5beaeb88-e157-4b6c-b138-fc922c1d218d",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "09319159-467b-471b-8729-fe47d9bb8ece",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Could just add a default value `None` ?",
+        "createdAt" : "2020-06-04T11:29:56Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 95,
+    "diffHunk" : "@@ -1,1 +93,97 @@\n  test(\"enum-other-stat\") {\n    runTestAssert[Stat](\"enum C { val PI=3; def r: Int = 4; case R }\", assertLayout = None)(\n      Defn.Enum(\n        Nil,"
+  }
+]

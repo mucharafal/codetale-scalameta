@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "2f887335-1bf1-44ab-a867-516050aea4a8",
+    "prId" : 1000,
+    "comments" : [
+      {
+        "id" : "818bfea9-7b4c-46f1-920e-127c7e4e2a9d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I really like the simplification here.",
+        "createdAt" : "2017-07-09T23:02:51Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f02787558f288424196edc1806705543a14be6d6",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +55,59 @@  Range range = 1;\n  string syntax = 2;\n  repeated ResolvedName names = 3;\n}"
+  },
+  {
+    "id" : "17a88645-7930-41f1-9196-157a3d7b9d3d",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "e0b4e558-057c-43bd-95d3-93cb5dfb0d16",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Any chance to get a field for the file contents? As I've mentioned elsewhere, this would make a persisted database self-contained and more robust to outside factors like changing file contents. The way we parse an AttributedSource would then work like this\r\n\r\n- if path AND contents are non-empty, use Input.LabeledString\r\n- if only path is non-empty, use Input.File\r\n- if both are empty, ???\r\n\r\nAdditionally, we may want to add a `checksum` field that can be used in combination with Input.File to ensure that the read file contents match the file contents that produced this semanticdb.",
+        "createdAt" : "2017-04-21T08:21:28Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e068ecf-8577-4b92-af22-1b2946db6c28",
+        "parentId" : "e0b4e558-057c-43bd-95d3-93cb5dfb0d16",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Following discussions from https://github.com/scalameta/scalameta/issues/777 .\r\n\r\nI propose that we name this field `relative_path` and add a comment explaining that an absolute \"source root\" path is required at mirror construction time to turn `relative_path` into an absolute path.",
+        "createdAt" : "2017-04-27T08:14:40Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "89024d7c-c59e-45d5-a395-cacaf0276390",
+        "parentId" : "e0b4e558-057c-43bd-95d3-93cb5dfb0d16",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I suggest that we discuss this separately from this pull request. Initially, I planned to handle #777 here, but I quickly found that it's hairy. Later today, I will add my thoughts to that ticket.",
+        "createdAt" : "2017-04-27T18:43:11Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +14,18 @@message AttributedSource {\n  reserved 1;\n  string path = 5;\n  repeated ResolvedName names = 2;\n  repeated Message messages = 3;"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "03b09508-dc65-4441-8d7d-2cf7e81d876f",
+    "prId" : 692,
+    "comments" : [
+      {
+        "id" : "465d0175-1c0e-4912-aee7-0844fd06f9cb",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "How about we strip away the `Doc` prefix for definitions inside this object? Example `DocParam` => `Param`",
+        "createdAt" : "2017-02-16T22:49:04Z",
+        "updatedAt" : "2017-02-28T12:54:50Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c65cc4f2-ae19-4223-86e8-28c7e46a2981",
+        "parentId" : "465d0175-1c0e-4912-aee7-0844fd06f9cb",
+        "author" : {
+          "login" : "xavier-fernandez",
+          "name" : "Xavier Fernández Salas",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10242025?u=2650a5997018088295282d61cbb12a079232ea4c&v=4"
+        },
+        "body" : "Done",
+        "createdAt" : "2017-02-17T11:26:12Z",
+        "updatedAt" : "2017-02-28T12:54:50Z",
+        "lastEditedBy" : {
+          "login" : "xavier-fernandez",
+          "name" : "Xavier Fernández Salas",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/10242025?u=2650a5997018088295282d61cbb12a079232ea4c&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c272cfe67683fcc5d5313bc9d24e574113f222d3",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +37,41 @@  * @see http://docs.scala-lang.org/overviews/scaladoc/for-library-authors.html\n  */\nobject DocToken {\n\n  /**"
+  }
+]

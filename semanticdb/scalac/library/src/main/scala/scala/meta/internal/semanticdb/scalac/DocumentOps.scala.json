@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "a8df631e-3a57-453f-9af5-61847aaa9eb3",
+    "prId" : 1401,
+    "comments" : [
+      {
+        "id" : "cb12bce7-40f7-4115-88a8-4f1f5cf78f3d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 Thanks!",
+        "createdAt" : "2018-03-12T16:59:28Z",
+        "updatedAt" : "2018-03-12T17:01:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7e16889d8717b23287c369b905c29bf45a0e548",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +26,30 @@    if (!analyzerClassName.contains(\"HijackAnalyzer\")) {\n      sys.error(\n        s\"the compiler instance must use a hijacked analyzer, instead of $analyzerClassName\")\n    }\n    if (g.currentRun.phaseNamed(\"typer\") != NoPhase) {"
+  },
+  {
+    "id" : "adde4210-55c6-4eea-b252-46ceaf168963",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "a102ede0-b4c9-4ae9-ad01-05fa79a0a628",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good catch! I hadn't noticed any issues ",
+        "createdAt" : "2018-02-05T17:42:30Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +215,219 @@                  add(symbol, gsym)\n                }\n                if (gsym.isClass && !gsym.isTrait && mtree.isDefinition) {\n                  val gprim = gsym.primaryConstructor\n                  if (gprim != g.NoSymbol) {"
+  }
+]

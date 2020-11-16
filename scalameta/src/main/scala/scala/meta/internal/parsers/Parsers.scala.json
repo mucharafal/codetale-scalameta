@@ -1,0 +1,285 @@
+[
+  {
+    "id" : "6f99109a-4acd-4d03-82ba-4b3860221c0a",
+    "prId" : 212,
+    "comments" : [
+      {
+        "id" : "51af4fff-1733-425a-8e17-8e5e791530d8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Round braces are called parentheses :)\n",
+        "createdAt" : "2015-08-03T19:13:37Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "580436ba-9c7a-44bf-80d1-50fc70ae6cef",
+        "parentId" : "51af4fff-1733-425a-8e17-8e5e791530d8",
+        "author" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "body" : "Changed.\n",
+        "createdAt" : "2015-08-03T20:12:08Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bcbf2930c7194f4d53068c7e8e58fa0625d10b44",
+    "line" : 52,
+    "diffHunk" : "@@ -1,1 +580,584 @@  }\n\n  def unquote[T <: Tree : AstMetadata]: T = unquote[T](advance = true) // to write `unquote[T]` without round braces\n\n  /** Convert tree to formal parameter list. */"
+  },
+  {
+    "id" : "e8468a49-07fc-44a1-b534-01bb41231d3a",
+    "prId" : 212,
+    "comments" : [
+      {
+        "id" : "a8855405-8ecb-4ea6-b929-d0a72b6cb944",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Isn't this equivalent to `if (advance) unquote[T] else ahead(unquote[T])`? If yes, then why have a special version of `unquote` and `ellipsis`, if we can localize this special case to a single function?\n",
+        "createdAt" : "2015-08-03T19:26:49Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aeae05f5-a019-4c08-a6f1-8239fbcbc783",
+        "parentId" : "a8855405-8ecb-4ea6-b929-d0a72b6cb944",
+        "author" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "body" : "About method `name`: I thought that would be strange, if `advance` didn't have influence on both cases, `Unquote` and `Ellipsis`.\nAnd about method `unquote`: since I have had to add that `advance: Boolean = true`, compiler did not allow simple `unquote[T]` elsewhere, only with parentheses. So I added special version of `unquote`, to preserve old syntax. Note that it actually delegates to original `unquote`.\n",
+        "createdAt" : "2015-08-03T19:34:54Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "838c8dc7-8c92-422e-88e6-1bf4bd0c8e86",
+        "parentId" : "a8855405-8ecb-4ea6-b929-d0a72b6cb944",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yeah, sure the suggested change would have to be made to both branches. Then the `unquote` method would go back to its old form - without the parameter and without multiple overloads.\n",
+        "createdAt" : "2015-08-03T19:57:04Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c88622ac-0579-401d-b82c-63cbd4397e3a",
+        "parentId" : "a8855405-8ecb-4ea6-b929-d0a72b6cb944",
+        "author" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "body" : "In old form, `unquote` always drives iterator forward. However, sometimes that is not desired behaviour, so I added extra parameter with default value, for the future cases.\n",
+        "createdAt" : "2015-08-03T20:17:03Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2d8d2c34-5054-4a72-b5a9-4738ba1d6393",
+        "parentId" : "a8855405-8ecb-4ea6-b929-d0a72b6cb944",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I suggest we discuss this in voice. Ping me when you're up for that.\n",
+        "createdAt" : "2015-08-04T06:18:39Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bcbf2930c7194f4d53068c7e8e58fa0625d10b44",
+    "line" : 210,
+    "diffHunk" : "@@ -1,1 +998,1002 @@      res\n    case token: Unquote =>\n      unquote[T](advance)\n    case _ =>\n      syntaxErrorExpected[Ident]"
+  },
+  {
+    "id" : "74b4a889-ffd1-412a-b7cb-af0dff63a0a3",
+    "prId" : 212,
+    "comments" : [
+      {
+        "id" : "1c079d68-aff1-43f9-8624-6dc1997665a0",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Where did this `CaseIntro` come from?\n",
+        "createdAt" : "2015-08-03T19:34:52Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5f57c588-ca79-49ea-9780-6bd18d93a00a",
+        "parentId" : "1c079d68-aff1-43f9-8624-6dc1997665a0",
+        "author" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "body" : "It is used to handle situations like\n`val q\"$expr match { case bar => baz; ..case $casez; case q => w}\" = q\"foo match { case bar => baz; case _ => foo ; case q => w }\"`\n",
+        "createdAt" : "2015-08-03T19:40:18Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "566f3ca7-2076-4fa2-b150-721fbbe6bbe6",
+        "parentId" : "1c079d68-aff1-43f9-8624-6dc1997665a0",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why `CaseIntro` and not `case` like it was before?\n",
+        "createdAt" : "2015-08-03T20:02:42Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6286666c-9337-45b5-b6a9-110a145ed4fc",
+        "parentId" : "1c079d68-aff1-43f9-8624-6dc1997665a0",
+        "author" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "body" : "Same reason as with `StatSep` vs `;`. `CaseIntro` is most general form of `case` that can be applied here.\n",
+        "createdAt" : "2015-08-03T20:24:01Z",
+        "updatedAt" : "2015-08-04T15:04:51Z",
+        "lastEditedBy" : {
+          "login" : "Dveim",
+          "name" : "Oleksandr Olgashko",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/3515147?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "bcbf2930c7194f4d53068c7e8e58fa0625d10b44",
+    "line" : 302,
+    "diffHunk" : "@@ -1,1 +1707,1711 @@  def caseClauses(): List[Case] = {\n    val cases = new ListBuffer[Case]\n    while (token.is[CaseIntro] || token.is[Ellipsis]) {\n      if (token.is[Ellipsis]) {\n        cases += ellipsis(1, unquote[Case], accept[`case`])"
+  },
+  {
+    "id" : "ca505a20-8bec-4377-b29d-5c72c3e9cbfd",
+    "prId" : 138,
+    "comments" : [
+      {
+        "id" : "68746ba9-ddf9-44f7-ae74-7220699313af",
+        "parentId" : null,
+        "author" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "body" : "Hey, I think there is a small error there:\n\n```\nscala> \"23.45F\".parse[Term].show[Raw]\nres5: String = Lit.Float(23.0f)\n```\n\nI guess it should be `value.toFloat`, and should be changed  for Double (below) as well.\n",
+        "createdAt" : "2015-05-28T20:59:25Z",
+        "updatedAt" : "2015-05-28T20:59:25Z",
+        "lastEditedBy" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18d4d602-92e0-482a-9207-207b76621453",
+        "parentId" : "68746ba9-ddf9-44f7-ae74-7220699313af",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Fixed in https://github.com/scalameta/scalameta/pull/139. I shouldnt've skipped the tests, regardless of how obvious they seemed.\n",
+        "createdAt" : "2015-05-29T10:48:28Z",
+        "updatedAt" : "2015-05-29T10:48:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f01dff595ad49add82a2feba8375022156c10b2b",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +1087,1091 @@        if (value > Float.MaxValue) syntaxError(\"floating point number too large\", at = token)\n        else if (value < Float.MinValue) syntaxError(\"floating point number too small\", at = token)\n        else Lit.Float(value.toLong)\n      case token: Literal.Double  =>\n        val value = if (isNegated) -token.value else token.value"
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "id" : "0962821b-3313-43f0-812e-a8e71fef4ce6",
+    "prId" : 1285,
+    "comments" : [
+      {
+        "id" : "974e9a4a-384c-43a6-803b-b8360d78b522",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Are these renames necessary anymore?",
+        "createdAt" : "2018-02-12T20:06:30Z",
+        "updatedAt" : "2018-02-12T20:06:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4785b9c105674fe5fc29f889839a2868e27d01d",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +6,10 @@import scala.util.Properties.versionNumberString\nimport org.scalatest.FunSuite\nimport scala.meta.internal.metac.{Main => Metac}\nimport scala.meta.internal.metap.{Main => Metap}\nimport scala.meta.testkit.DiffAssertions"
+  },
+  {
+    "id" : "6cc0f060-1784-4587-86d4-aa424eee3455",
+    "prId" : 1271,
+    "comments" : [
+      {
+        "id" : "f980c35f-6fe9-4cf4-86d0-61e08bf7c92e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg This is potentially controversial, but we don't provide any [compatibility guarantees](https://github.com/scalameta/scalameta/blob/master/COMPATIBILITY.md) for the file layout.",
+        "createdAt" : "2018-02-08T23:51:39Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "79a2f367-2015-4b56-8440-bd30307c292e",
+        "parentId" : "f980c35f-6fe9-4cf4-86d0-61e08bf7c92e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Review of our tools:\r\n  * `semanticdb-scala` [already does the same](https://github.com/scalameta/semanticdb-sbt/blob/master/sbthost/nsc/src/main/scala/scala/meta/internal/sbthost/ConfigOps.scala#L10).\r\n  * `scalafix` [uses Database.load](https://github.com/scalacenter/scalafix/blob/master/scalafix-cli/src/main/scala/scalafix/cli/CliRunner.scala#L345), which in turn [calls v.Database.toSchema](https://github.com/scalameta/scalameta/blob/master/langmeta/langmeta/shared/src/main/scala/org/langmeta/semanticdb/Database.scala#L47), which [doesn't care about on-disk filenames](https://github.com/scalameta/scalameta/blob/master/langmeta/langmeta/shared/src/main/scala/org/langmeta/semanticdb/internal/vfs/Database.scala#L22) as long as [they end with \"semanticdb\"](https://github.com/scalameta/scalameta/blob/master/langmeta/langmeta/shared/src/main/scala/org/langmeta/semanticdb/internal/vfs/SemanticdbPaths.scala#L13).\r\n  * `metadoc` already does the same (multiple links don't fit here).\r\n  * `metals` doesn't care about filenames at all as long as the file ends with `.semanticdb`.",
+        "createdAt" : "2018-02-09T00:08:24Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "34c1f98e-1a90-4aa6-8fc5-5678b255cced",
+        "parentId" : "f980c35f-6fe9-4cf4-86d0-61e08bf7c92e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Just do it. I don't rely on the filenames because the URI is embedded in the proto message",
+        "createdAt" : "2018-02-09T11:34:13Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c447025772d8549c3a2b12e808553ffd8de5be24",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +21,25 @@  \"\"\".getBytes(UTF_8))\n  val target = Files.createTempDirectory(\"target_\")\n  val helloWorldSemanticdb = target.resolve(\"META-INF/semanticdb/HelloWorld.scala.semanticdb\")\n\n  test(\"metac \" + helloWorldScala) {"
+  },
+  {
+    "id" : "6408f04f-3783-4a28-9253-73df0274954c",
+    "prId" : 1238,
+    "comments" : [
+      {
+        "id" : "3d1129f9-52d4-428e-b518-a848ccedfc0d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg In this pull request, I've finally upstreamed my personal helper tools: `metac` (compile Scala files into SemanticDB) and `metap` (decompile SemanticDB files). See this test suite for an example of how these tools work.",
+        "createdAt" : "2018-01-31T21:07:03Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c312387-b403-45ad-9538-542e89636ebf",
+        "parentId" : "3d1129f9-52d4-428e-b518-a848ccedfc0d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "🎉 ",
+        "createdAt" : "2018-02-01T12:02:59Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0295ec5950b1f4dad650d2b602c7cbe9e15b136f",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@package scala.meta.tests.cli\n\nimport java.io._"
+  },
+  {
+    "id" : "1d3f1433-190b-44b2-b895-357a9f02daa0",
+    "prId" : 1238,
+    "comments" : [
+      {
+        "id" : "2447b16d-7e85-4b2a-960d-2c6f7c0ac5ab",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "line/column is arguably more pleasant to read 👍 ",
+        "createdAt" : "2018-02-01T12:04:08Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0295ec5950b1f4dad650d2b602c7cbe9e15b136f",
+    "line" : 96,
+    "diffHunk" : "@@ -1,1 +94,98 @@      |\n      |Occurrences:\n      |[1:11..1:21): HelloWorld <= _empty_.HelloWorld.\n      |[2:10..2:14): main <= _empty_.HelloWorld.main([Ljava/lang/String;)V.\n      |[2:15..2:19): args <= local0"
+  }
+]

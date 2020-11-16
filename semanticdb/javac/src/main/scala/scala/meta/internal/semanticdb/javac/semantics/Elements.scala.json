@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "5adde0cd-07c0-43eb-9f95-7f0cc0584d54",
+    "prId" : 1738,
+    "comments" : [
+      {
+        "id" : "7b455dd5-fde3-47c7-8e3f-9efca708b2fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think we should consider using the `scalapb.no_box = true` option, that would avoid further problems like this. Worth squeezing into v4?",
+        "createdAt" : "2018-08-07T16:00:23Z",
+        "updatedAt" : "2018-08-07T16:03:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa3328c0-ad01-40fd-8d86-55ae2a1d56e7",
+        "parentId" : "7b455dd5-fde3-47c7-8e3f-9efca708b2fa",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's open a ticket and defer to post-v4? If we do no_box here, maybe we'd want to do no_box in other places, too, and it'd be great to do that kind of change at once.",
+        "createdAt" : "2018-08-07T17:34:57Z",
+        "updatedAt" : "2018-08-07T17:34:58Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "806fd26d-80b3-4878-b427-6a49286f7424",
+        "parentId" : "7b455dd5-fde3-47c7-8e3f-9efca708b2fa",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I opened https://github.com/scalameta/scalameta/issues/1741",
+        "createdAt" : "2018-08-08T09:05:50Z",
+        "updatedAt" : "2018-08-08T09:37:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc08bebdb55343bea8b986c70d25db6741cecedf",
+    "line" : 55,
+    "diffHunk" : "@@ -1,1 +179,183 @@          }\n          s.TypeSignature(\n            typeParameters = Some(s.Scope()),\n            upperBound = bounds\n          )"
+  },
+  {
+    "id" : "64a6e36b-4517-4e02-b724-9f969ed3eeb4",
+    "prId" : 1687,
+    "comments" : [
+      {
+        "id" : "41d6bf0b-5f08-429f-8a70-3bc8180f3968",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I guess we're guaranteed constructors have `<init>` names?\r\n\r\n",
+        "createdAt" : "2018-07-11T22:44:19Z",
+        "updatedAt" : "2018-07-12T22:50:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a56450a9-c9b3-4c76-bc3c-b1c449d0b106",
+        "parentId" : "41d6bf0b-5f08-429f-8a70-3bc8180f3968",
+        "author" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "body" : "Yes. From the javac api:\r\n```\r\nFor a constructor, the name {@code \"<init>\"} is\r\nreturned, for a static initializer, the name {@code \"<clinit>\"}\r\nis returned, and for an anonymous class or instance\r\ninitializer, an empty name is returned.\r\n```",
+        "createdAt" : "2018-07-12T18:03:39Z",
+        "updatedAt" : "2018-07-12T22:50:40Z",
+        "lastEditedBy" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebf93f31-c696-4ec1-a325-415edbe2f9f5",
+        "parentId" : "41d6bf0b-5f08-429f-8a70-3bc8180f3968",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-07-12T22:02:27Z",
+        "updatedAt" : "2018-07-12T22:50:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b0973584339fb8bf0394ef751d63ac00c8b2ea9a",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +70,74 @@          fullName.substring(fullName.lastIndexOf('.') + 1)\n        }\n      case elem => elem.getSimpleName.toString\n    }\n"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "311fa4c6-3c23-4709-bd9f-0413ba6cafbd",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "a5c7f996-e4a6-4178-b521-3346f544499f",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`type Tuple = [X] =>> (X, X)`",
+        "createdAt" : "2020-10-23T15:14:40Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +107,111 @@\n  def TypeLambda(tree: Type.Lambda, parent: Tree, destination: String): Boolean = {\n    parent.is[Type] || parent.is[Defn.Type]\n  }\n"
+  }
+]

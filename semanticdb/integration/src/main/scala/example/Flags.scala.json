@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "6e4e7f4f-8e0e-4ecb-9583-4b1b76f80067",
+    "prId" : 1238,
+    "comments" : [
+      {
+        "id" : "269be661-b2db-451e-9371-64c783741eca",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nice! Golf coding, how many modifiers can you fit in the smaller number of definitions? 😄 ",
+        "createdAt" : "2018-02-01T16:14:06Z",
+        "updatedAt" : "2018-02-01T16:17:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3eadba86-437c-425a-99f6-030406969714",
+        "parentId" : "269be661-b2db-451e-9371-64c783741eca",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "🤣 ",
+        "createdAt" : "2018-02-01T16:20:40Z",
+        "updatedAt" : "2018-02-01T16:20:40Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0295ec5950b1f4dad650d2b602c7cbe9e15b136f",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1,5 @@package flags\n\npackage object p {\n  private lazy val x = 1\n  protected implicit var y: Int = 2"
+  }
+]

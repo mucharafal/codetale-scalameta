@@ -1,0 +1,133 @@
+[
+  {
+    "id" : "b10c5501-515b-41b7-88df-67407bfe7289",
+    "prId" : 1616,
+    "comments" : [
+      {
+        "id" : "d2dce5bc-a3fb-41e9-bd56-64467ffeeda1",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This is one of the beautiful things about the Type/Signature split. We not only refine the type of `SymbolInformation.signature` (previously, `SymbolInformation.tpe`), but also gain precision in a lot of other places, e.g. here. Concretely, we observe that `toSemanticTpe` doesn't need linkMode, which is non-obvious and neat.",
+        "createdAt" : "2018-06-21T02:32:44Z",
+        "updatedAt" : "2018-06-21T05:47:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1096f995543652d3f0a898123732076e7695edfe",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +8,12 @@trait TypeOps { self: Scalacp =>\n  implicit class XtensionTypeSType(tpe: Type) {\n    def toSemanticTpe: s.Type = {\n      def loop(tpe: Type): s.Type = {\n        tpe match {"
+  },
+  {
+    "id" : "96203cca-9a61-4752-b8a3-19fda894fdcf",
+    "prId" : 1616,
+    "comments" : [
+      {
+        "id" : "a71c61fd-acff-467e-bb08-fae3ec5bc692",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "😍 Thanks for the idea to split constant types even further!",
+        "createdAt" : "2018-06-21T02:33:12Z",
+        "updatedAt" : "2018-06-21T05:47:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cc5259c5-0ab1-4345-aec0-d1cfc2987dfb",
+        "parentId" : "a71c61fd-acff-467e-bb08-fae3ec5bc692",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm glad it came out nicely 👍 ",
+        "createdAt" : "2018-06-21T08:12:32Z",
+        "updatedAt" : "2018-06-21T08:22:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1096f995543652d3f0a898123732076e7695edfe",
+    "line" : 76,
+    "diffHunk" : "@@ -1,1 +55,59 @@          case ConstantType(const) =>\n            val sconst = s.Constant(const)\n            s.ConstantType(sconst)\n          case RefinedType(sym, parents) =>\n            val sparents = parents.map(loop)"
+  },
+  {
+    "id" : "fed020dc-7d05-4ed8-ac7a-fcaa9710233f",
+    "prId" : 1606,
+    "comments" : [
+      {
+        "id" : "22c09bd9-e96d-476d-9c87-b69bfe8b2363",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can't wait till I have time to work on https://github.com/scalameta/scalameta/issues/1605.",
+        "createdAt" : "2018-06-16T18:40:24Z",
+        "updatedAt" : "2018-06-16T19:34:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a4c3e380cc2f67e0f333fe575330554340a09a56",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +24,28 @@            s.TypeRef(spre, ssym, sargs)\n          case SingleType(pre, sym) =>\n            val stag = st.SYMBOL\n            val spre = if (tpe.hasNontrivialPrefix) loop(pre) else s.NoType\n            val ssym = {"
+  },
+  {
+    "id" : "5b3dcfc7-01a8-475b-976c-2df98db9b62e",
+    "prId" : 1606,
+    "comments" : [
+      {
+        "id" : "a53772a1-ebaa-4f47-8e32-68f5b4f9f808",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Ditto.",
+        "createdAt" : "2018-06-16T18:40:56Z",
+        "updatedAt" : "2018-06-16T19:34:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a4c3e380cc2f67e0f333fe575330554340a09a56",
+    "line" : 139,
+    "diffHunk" : "@@ -1,1 +85,89 @@                s.SingletonType(st.NULL, s.NoType, Symbols.None, 0, \"\")\n              case other =>\n                sys.error(s\"unsupported const $other\")\n            }\n          case RefinedType(sym, parents) =>"
+  }
+]

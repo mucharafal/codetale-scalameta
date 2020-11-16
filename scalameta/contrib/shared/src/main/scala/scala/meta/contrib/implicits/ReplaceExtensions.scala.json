@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "bf0398ee-b018-4795-a626-8c3ac621335c",
+    "prId" : 820,
+    "comments" : [
+      {
+        "id" : "5c8661e4-59aa-404d-b38d-764f6ea9ffbc",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "withStats and withMods is nice 👍 ",
+        "createdAt" : "2017-05-01T20:29:45Z",
+        "updatedAt" : "2017-05-01T20:31:07Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "13f4b469cbbb380b3ae0dd0ffcb05253f8898645",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@trait ReplaceExtensions {\n  implicit class ExtensionReplacers[A](a: A) {\n    def withStats(bs: Seq[Stat])(implicit ev: Replace[A, Stat]): A = ev.replace(a, bs)\n    def withMods(bs: Seq[Mod])(implicit ev: Replace[A, Mod]): A = ev.replace(a, bs)\n  }"
+  }
+]

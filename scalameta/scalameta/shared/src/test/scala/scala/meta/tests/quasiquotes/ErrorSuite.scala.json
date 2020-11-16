@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "5d2f5223-d2a8-4e05-935b-ccb80ec43490",
+    "prId" : 1088,
+    "comments" : [
+      {
+        "id" : "21db1b4f-5504-4f66-a3b1-9ae090ab8e34",
+        "parentId" : null,
+        "author" : {
+          "login" : "martijnhoekstra",
+          "name" : "Martijn Hoekstra",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/882449?u=97ba510cbf9af4649fa55b436398dd82e1d08df1&v=4"
+        },
+        "body" : "@olafurpg maybe you can shed some light on what's happening here: typecheckError seems to emit mixed line endings. My best guess is that line endings are getting inlined from a different compile-time Platform in XtensionPositionFormatMessage but by best guess isn't very good.",
+        "createdAt" : "2017-08-25T09:35:46Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "martijnhoekstra",
+          "name" : "Martijn Hoekstra",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/882449?u=97ba510cbf9af4649fa55b436398dd82e1d08df1&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f137e9c0-88c2-4913-856d-2513cb24e07a",
+        "parentId" : "21db1b4f-5504-4f66-a3b1-9ae090ab8e34",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Hmm, I am not sure what is happening here. If typecheckError is defined in scalameta, then I'm happy to move the replace there instead of at every callsite.",
+        "createdAt" : "2017-08-25T09:39:04Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ecd184064ff8450fa731c72ee96bb8f17b09ccd5",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +13,17 @@      import scala.meta.dialects.Scala211\n      val q\"type $name[$X] = $Y\" = q\"type List[+A] = List[A]\"\n    \"\"\").replace(\"\\r\", \"\") === \"\"\"\n      |<macro>:4: not found: value X\n      |      val q\"type $name[$X] = $Y\" = q\"type List[+A] = List[A]\""
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "cc256360-223e-45a8-826a-6eec970235ec",
+    "prId" : 1172,
+    "comments" : [
+      {
+        "id" : "5eaf9bf7-9e48-43b1-9fd7-3a9740abf9e2",
+        "parentId" : null,
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "It would be helpful to store the classpath, compiler version, and compiler options in the document to help determine when it needs to be rebuilt.",
+        "createdAt" : "2017-11-30T22:43:35Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d0c868c6-7b93-4585-8d81-c6b1bea82f9d",
+        "parentId" : "5eaf9bf7-9e48-43b1-9fd7-3a9740abf9e2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That is a separate concern from this small utility.",
+        "createdAt" : "2017-11-30T22:55:40Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4de09e23c9751d3ac1ba94e978bd6040876d5d2a",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +20,24 @@\n  /** Construct new presentation compiler with given classpath and scalac flags. */\n  def newCompiler(classpath: String, scalacOptions: List[String]): Global = {\n    val vd = new VirtualDirectory(\"(memory)\", None)\n    val settings = new Settings"
+  },
+  {
+    "id" : "953f58a7-82ae-4247-a938-2ff3d29ff9fa",
+    "prId" : 1172,
+    "comments" : [
+      {
+        "id" : "8cc22ad8-eb1d-4f46-807a-18c26a1584c8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How is the filename parameter used by the PC?",
+        "createdAt" : "2017-11-30T22:48:14Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bbd130fd-7f2a-44b0-9ae0-f0c947cac226",
+        "parentId" : "8cc22ad8-eb1d-4f46-807a-18c26a1584c8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "the PC keeps internal state with open files etc, so you should use unique names from an editor with multiple buffers. For basic cases like testing it's nice to have a default.",
+        "createdAt" : "2017-11-30T22:56:38Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4de09e23c9751d3ac1ba94e978bd6040876d5d2a",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +37,41 @@\n  def toDocument(compiler: Global, code: String): Document =\n    toDocument(compiler, code, \"interactive.scala\", 10000)\n\n  /**"
+  },
+  {
+    "id" : "03984362-0fbf-4e5d-85ca-f0e5bbd9a517",
+    "prId" : 1172,
+    "comments" : [
+      {
+        "id" : "a19e6fc0-de61-4a3e-9cdd-d1e15b7ed93e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What's the environment in which this method is supposed to be used?",
+        "createdAt" : "2017-11-30T22:50:56Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "52e1497f-e022-49ba-bccf-5da9fd016672",
+        "parentId" : "a19e6fc0-de61-4a3e-9cdd-d1e15b7ed93e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "whenever this classloader is URLClassloader like when testing in sbt? It's there for convenience to be able to quickly build semanticdbs without any ceremony.",
+        "createdAt" : "2017-11-30T22:57:36Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4de09e23c9751d3ac1ba94e978bd6040876d5d2a",
+    "line" : 103,
+    "diffHunk" : "@@ -1,1 +101,105 @@  }\n\n  private def thisClasspath: String = this.getClass.getClassLoader match {\n    case url: URLClassLoader =>\n      url.getURLs.map(_.toURI.getPath).mkString(File.pathSeparator)"
+  }
+]

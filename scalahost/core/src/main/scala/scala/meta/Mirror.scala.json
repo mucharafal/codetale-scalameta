@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "1153e365-9b62-4b96-8603-dc8f142730d4",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "1f75e7ad-5582-4bc5-85ed-6d8985446a2c",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Is it called `scalahost-nsc` or `scalahost`?",
+        "createdAt" : "2017-03-30T14:42:17Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3e03275e-ae06-472e-a017-6a5b672a666b",
+        "parentId" : "1f75e7ad-5582-4bc5-85ed-6d8985446a2c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`scalahost-nsc` is the compiler plugin that emits semanticdb. `scalahost` is the core library used by `scalahost-nsc` AND used by libraries like scalafix that construct the offline mirror.",
+        "createdAt" : "2017-03-30T15:00:37Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cefb172048f800b780cf8d8330ee10ebd8e3ad9a",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +20,24 @@    * @param classpath java.io.File.pathSeparator separated list of jar files\n    *                 or directories containing classfiles and `semanticdb` files.\n    *                 The `semanticdb` files are emitted by the scalahost-nsc\n    *                 compiler plugin and are necessary for the semantic API to\n    *                 function. The classfiles + jar files are necessary for"
+  }
+]

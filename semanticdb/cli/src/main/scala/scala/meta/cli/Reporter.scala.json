@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "1f4c14c1-691e-467f-8121-7cf02678296b",
+    "prId" : 1726,
+    "comments" : [
+      {
+        "id" : "0ea52ff2-eaf6-4111-bdb6-06b2cebe38c5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nitpick: I find it weird to use the builder pattern with methods that are not named \"withX\". I would have named this method `withSilentOut`",
+        "createdAt" : "2018-07-31T17:25:27Z",
+        "updatedAt" : "2018-07-31T17:35:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a4f82efa-fd5a-4000-a44a-b5ba2dbdbe68",
+        "parentId" : "0ea52ff2-eaf6-4111-bdb6-06b2cebe38c5",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Will fix.",
+        "createdAt" : "2018-08-03T19:51:56Z",
+        "updatedAt" : "2018-08-03T19:51:56Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "222bcbfd13d6416abb5f7ce96289c4b734cb550c",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +13,17 @@  }\n\n  def silenceOut(): Reporter = {\n    withOut(devnull)\n  }"
+  }
+]

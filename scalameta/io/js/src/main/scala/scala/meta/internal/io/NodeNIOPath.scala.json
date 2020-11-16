@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "9cf54048-11cd-4f8a-82be-76585756c483",
+    "prId" : 1005,
+    "comments" : [
+      {
+        "id" : "935cd529-7903-4ba1-a212-c59c48160c60",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2017-07-09T22:06:46Z",
+        "updatedAt" : "2017-07-10T13:22:49Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12e54689df442e582ad929548142512d36b6f244",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +30,34 @@  override def toAbsolutePath: Path =\n    if (JSPath.isAbsolute(filename)) this\n    else PathIO.workingDirectory.toNIO.resolve(this)\n  override def relativize(other: Path): Path =\n    NodeNIOPath(JSPath.relative(filename, other.toString))"
+  }
+]

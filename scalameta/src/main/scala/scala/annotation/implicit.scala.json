@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "1358426f-7185-413e-8c28-f9a06f284d01",
+    "prId" : 137,
+    "comments" : [
+      {
+        "id" : "6a844e82-8e9b-4a9e-992e-e4d31560dd82",
+        "parentId" : null,
+        "author" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "body" : "T_T\n",
+        "createdAt" : "2015-05-27T18:37:32Z",
+        "updatedAt" : "2015-05-27T18:37:32Z",
+        "lastEditedBy" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ef22b7668eb22bb594bedd6852537123c6d2c671",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1,5 @@package scala.annotation\n\nclass `implicit` extends scala.annotation.StaticAnnotation"
+  }
+]

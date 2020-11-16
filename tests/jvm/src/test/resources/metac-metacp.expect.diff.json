@@ -1,0 +1,520 @@
+[
+  {
+    "id" : "b5db3d59-f500-4f5a-b55c-36ad93431881",
+    "prId" : 1606,
+    "comments" : [
+      {
+        "id" : "5f0319f8-b713-4dcb-9f7a-6fe47e19952c",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What does `prefix {` do here?",
+        "createdAt" : "2018-06-16T18:49:38Z",
+        "updatedAt" : "2018-06-16T19:34:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3ed00df3-8e8b-49db-9c99-10ab45cdcea3",
+        "parentId" : "5f0319f8-b713-4dcb-9f7a-6fe47e19952c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That's a good question. It seems caused by the removal of `Option[T]` wrapping. Currently, we're producing roughly the equivalent of `TypeRef(Some(Type.defaultMessage), ...)` which is not the same as `TypeRef(None, ...`. I think we need to change the behavior of the no_box option to guard against the case when `Some(defaultValue) == None`, seems fixable but unrelated to the sealed oneof PR. It should likely be a PR changing the `(scalapb.field).no_box` option.",
+        "createdAt" : "2018-06-16T19:33:08Z",
+        "updatedAt" : "2018-06-16T19:35:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3276cd2b-7286-4af3-ba8d-fed413796cfe",
+        "parentId" : "5f0319f8-b713-4dcb-9f7a-6fe47e19952c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Please open a ticket for this. Otherwise LGTM.",
+        "createdAt" : "2018-06-16T19:44:23Z",
+        "updatedAt" : "2018-06-16T19:44:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bfcc9c05-0a57-4860-85cb-6cce94003fbf",
+        "parentId" : "5f0319f8-b713-4dcb-9f7a-6fe47e19952c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done. https://github.com/scalameta/scalameta/issues/1607",
+        "createdAt" : "2018-06-16T19:51:12Z",
+        "updatedAt" : "2018-06-16T19:51:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a4c3e380cc2f67e0f333fe575330554340a09a56",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@+++ metacp\n                   typeRef {\n                     prefix {\n-                    symbol: \"local14\"\n+                    symbol: \"advanced.D#_#\""
+  },
+  {
+    "id" : "6c27ffd0-9f83-43fd-802c-9ba967d4e777",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "14f84a73-2b4a-4d15-adad-e594e895e417",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The objective of metac-metacp.expect.diff is to become empty but in this case it's expected that the local symbols differ. Question if we should normalize `\"local.*\"` strings in `.toProtoString` so reduce this redundant diff.",
+        "createdAt" : "2018-06-06T11:58:09Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f502c44b-ad1a-4fbc-8017-57996e6f4f8a",
+        "parentId" : "14f84a73-2b4a-4d15-adad-e594e895e417",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I thought I submitted a ticket for that, but it turns out that I didn't. Maybe, like the design of hardlinks, this was part of my dream the other night 🤣 ",
+        "createdAt" : "2018-06-06T15:19:49Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "128cdf85-bdb8-44cf-ba5b-ce1e138fc979",
+        "parentId" : "14f84a73-2b4a-4d15-adad-e594e895e417",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1587",
+        "createdAt" : "2018-06-06T15:21:41Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +30,34 @@               tag: TYPE_REF\n               typeRef {\n-                symbol: \"local7\"\n+                symbol: \"local0\"\n         declarations {"
+  },
+  {
+    "id" : "560dfe5f-c9e1-4f75-ab99-9017ed56e062",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "0da3b455-87fa-4785-a481-0bf85c0aa51f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This seems like a legitimate metacp bug, `advanced.Test.T#` does not exist.",
+        "createdAt" : "2018-06-06T11:59:47Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6193a474-73a8-48ee-851f-0aa79fbfd120",
+        "parentId" : "0da3b455-87fa-4785-a481-0bf85c0aa51f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yeah, and an unfixable one at that, as long as we're using Scalap: https://github.com/scalameta/scalameta/issues/1586.",
+        "createdAt" : "2018-06-06T15:18:56Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 216,
+    "diffHunk" : "@@ -1,1 +119,123 @@                   typeRef {\n-                    symbol: \"local8\"\n+                    symbol: \"advanced.Test.T#\"\n             declarations {\n               hardlinks {"
+  },
+  {
+    "id" : "f5483f1e-9b0a-4edd-bc74-e48736cae014",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "d2b830c3-4774-4777-8cdb-53d0b57aa933",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Unrelated to this PR. I've wondered if `$default$` symbols should be included in SemanticDB 🤔 In a way, they can be treated as a compiler implementation detail. OTOH, the program below seems to compile OK so I guess we need to store those symbols\r\n\r\n```scala\r\nobject Foo {\r\n  case class A(a: Int = 2)\r\n  new A(2).copy$default$1\r\n}\r\n```",
+        "createdAt" : "2018-06-06T12:50:40Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c968c973-e017-4558-b0cc-1cda0d9bb82f",
+        "parentId" : "d2b830c3-4774-4777-8cdb-53d0b57aa933",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Synthetics are a gray area for Scala, but here's my personal rule of thumb. \r\n\r\nThere are synthetics that are necessary for typer to operate (e.g. implicit evidences, default getters, etc), and there are synthetics that are not necessary for typer to operate (e.g. extension methods from value classes, MODULE$, etc). In my opinion, all synthetics from the first category should be included and specified in SemanticDB.\r\n\r\nAlso, interestingly, default getters are included in SLS: https://www.scala-lang.org/files/archive/spec/2.12/04-basic-declarations-and-definitions.html#default-arguments.",
+        "createdAt" : "2018-06-06T15:32:53Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "585e53ba-e1c9-40c0-8d97-9fc3cdca2030",
+        "parentId" : "d2b830c3-4774-4777-8cdb-53d0b57aa933",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Interesting, I wasn't aware the spec mentioned the encoding of default params. I agree with your assessment that some synthetics are unavoidable, and it seems default method fall in that camp 😢 ",
+        "createdAt" : "2018-06-06T16:08:15Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 274,
+    "diffHunk" : "@@ -1,1 +163,167 @@\n============================\nclasses.C4#copy$default$1().\n============================\n--- metac"
+  },
+  {
+    "id" : "db62b59b-539b-405f-b51e-f080215d6e73",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "f74d8b37-fa76-4284-8051-8abbacf8777e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Seems like a legitimate metacp bug.",
+        "createdAt" : "2018-06-06T12:53:32Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b924d364-f80a-459b-a8e6-1f420ff00b46",
+        "parentId" : "f74d8b37-fa76-4284-8051-8abbacf8777e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yeah, this is also an instance of https://github.com/scalameta/scalameta/issues/1586.",
+        "createdAt" : "2018-06-06T15:33:43Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 49,
+    "diffHunk" : "@@ -1,1 +18,22 @@       symlinks: \"advanced.D#[CC]\"\n     declarations {\n+      symlinks: \"advanced.D#_#\"\n       symlinks: \"advanced.D#`<init>`().\"\n"
+  },
+  {
+    "id" : "ff2ee309-d139-41d7-bd59-6932f6f079d1",
+    "prId" : 1458,
+    "comments" : [
+      {
+        "id" : "caf8e3d2-9773-4cdf-8d6d-6dbc13a9590f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 \r\n\r\nThis passed our scrutiny, `x#` makes no sense",
+        "createdAt" : "2018-03-27T14:03:14Z",
+        "updatedAt" : "2018-03-28T17:43:54Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d4a155a9bbde2cac46f5359e30762e34787b3c39",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +1077,1081 @@         string: \"\"\n-    symbol: \"types.P#x().\"\n+    symbol: \"types.P#x.\"\n     primitive: 0\n     string: \"\""
+  },
+  {
+    "id" : "30c9e206-6e56-439c-98bc-5a5f685a096c",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "861de55a-4c1d-40f8-808a-6e7622bef713",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I hit on this before, I was surprised that `.isJavaDefined == true` for package symbols. I'm not sure what makes most sense here, a package symbol belongs to neither language IMO.",
+        "createdAt" : "2018-03-09T11:44:00Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "baa0e534-a169-467f-8c87-b11f74800926",
+        "parentId" : "861de55a-4c1d-40f8-808a-6e7622bef713",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1420",
+        "createdAt" : "2018-03-09T15:10:57Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e69d7bff-4be1-4d6c-b525-b959bf7811c5",
+        "parentId" : "861de55a-4c1d-40f8-808a-6e7622bef713",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Cool, that one passed by me.",
+        "createdAt" : "2018-03-09T15:42:24Z",
+        "updatedAt" : "2018-03-09T15:43:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +38,42 @@ owner: \"_root_.com.\"\n-language: SCALA\n+language: JAVA\n\n"
+  },
+  {
+    "id" : "d5f0f97b-716b-4476-9e72-3ed81b7194f7",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "e3c0a714-8e57-47e1-a279-ccfc83fc424c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Seems metac and metacp still disagree on FIELD/METHOD for private[this] vals\r\n\r\n```\r\nmetac:  _root_.example.Vals#xzlm(). => private[this] lazy val field xzlm: Int\r\nmetacp: _root_.example.Vals#xzlm(). => private[this] lazy val method xzlm: : Int\r\n```",
+        "createdAt" : "2018-03-09T11:46:20Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "73030a76-17d7-4058-9b87-9bcd173728be",
+        "parentId" : "e3c0a714-8e57-47e1-a279-ccfc83fc424c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1328",
+        "createdAt" : "2018-03-09T15:11:13Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 247,
+    "diffHunk" : "@@ -1,1 +715,719 @@ symbol: \"_root_.example.Vals#xzm().\"\n-kind: FIELD\n+kind: METHOD\n properties: 1088\n name: \"xzm\""
+  },
+  {
+    "id" : "7ac9392e-4ec2-4b82-9f2f-259a12bc0b79",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "ca5ead4a-b696-4b48-9b5f-2a40860ca67c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Seems we emit a constructor for java interfaces 🤔 ",
+        "createdAt" : "2018-03-09T12:18:44Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "45c3d788-c899-4dd3-a601-f5adb7a330fb",
+        "parentId" : "ca5ead4a-b696-4b48-9b5f-2a40860ca67c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1419",
+        "createdAt" : "2018-03-09T14:57:01Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6af5da2e-e09d-4d6c-83b0-b81da11f578d",
+        "parentId" : "ca5ead4a-b696-4b48-9b5f-2a40860ca67c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Missed that one too!",
+        "createdAt" : "2018-03-09T15:42:40Z",
+        "updatedAt" : "2018-03-09T15:43:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +47,51 @@+++ metacp\n         symbol: \"_root_.java.lang.Object#\"\n-    declarations: \"_root_.com.javacp.Interface#`<init>`().\"\n accessibility {\n"
+  }
+]

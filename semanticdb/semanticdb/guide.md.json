@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "1ef46f58-8fad-4ea6-8649-1e65e037281b",
+    "prId" : 1621,
+    "comments" : [
+      {
+        "id" : "804a2dc3-2982-42a1-bbf9-49ac704355c4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's open a ticket about keeping Scalameta version in sync with guide.md.",
+        "createdAt" : "2018-06-21T15:23:19Z",
+        "updatedAt" : "2018-06-21T15:28:01Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "84b47c8b-699b-48a3-b877-35f891019f03",
+        "parentId" : "804a2dc3-2982-42a1-bbf9-49ac704355c4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This diff is unrelated to the scalameta version, I think it's exceptional enough that the cache location changed to not have to keep a not around here.",
+        "createdAt" : "2018-06-21T15:41:47Z",
+        "updatedAt" : "2018-06-21T15:41:48Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fb7ea958ac079e7cde8865804668dcb34c4fff4b",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +439,443 @@    [directories-jvm](https://github.com/soc/directories-jvm).\n    For example, on macOS the location for scala-library would be\n    `$HOME/Library/Caches/org.scalameta.SemanticDB/3.7.4/scala-library-FINGERPRINT.jar`.\n  * Class directories. Never cached to avoid overflowing the cache with\n    transient results."
+  }
+]

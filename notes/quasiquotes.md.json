@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "c341d093-ef5f-400e-aa87-6e5787dddc68",
+    "prId" : 546,
+    "comments" : [
+      {
+        "id" : "1fa53404-66f9-4221-a463-5db0b56b7b42",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Is the change from `..$` to `$` accidental or intentional?\n",
+        "createdAt" : "2016-11-15T21:50:15Z",
+        "updatedAt" : "2016-11-15T21:50:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e07f7c77-4e89-4868-8dcf-5ca49aed3c05",
+        "parentId" : "1fa53404-66f9-4221-a463-5db0b56b7b42",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "/cc @olafurpg \n",
+        "createdAt" : "2016-11-15T21:50:24Z",
+        "updatedAt" : "2016-11-15T21:50:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6fba3cca-e154-4e6b-bcb9-1774b47bf0d5",
+        "parentId" : "1fa53404-66f9-4221-a463-5db0b56b7b42",
+        "author" : {
+          "login" : "mpollmeier",
+          "name" : "Michael Pollmeier",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/506752?u=4948eb1040fa3c4b03d2844bc33972ab2e978c6a&v=4"
+        },
+        "body" : "Accidental. Good catch! Will submit a fix shortly.\n",
+        "createdAt" : "2016-11-15T23:23:34Z",
+        "updatedAt" : "2016-11-15T23:23:34Z",
+        "lastEditedBy" : {
+          "login" : "mpollmeier",
+          "name" : "Michael Pollmeier",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/506752?u=4948eb1040fa3c4b03d2844bc33972ab2e978c6a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f6c59b0bf4db14de7449c3cc76881ab6c0a39170",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +154,158 @@ Macro          | `q\"..$mods def $name[..$tparams](...$paramss): $tpeopt = macro $expr\"`\n Type           | `q\"..$mods type $tname[..$tparams] = $tpe\"`\n Class          | `q\"..$mods class $tname[..$tparams] $ctorMods (...$paramss) extends $template\"`\n Trait          | `q\"..$mods trait $tname[..$tparams] extends $template\"`\n Object         | `q\"..$mods object $name extends $template\"`"
+  }
+]

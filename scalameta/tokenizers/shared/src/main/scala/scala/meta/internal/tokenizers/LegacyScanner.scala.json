@@ -1,0 +1,105 @@
+[
+  {
+    "id" : "c4f622c1-5eb7-4107-b750-efa6ec2ad625",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "4361c1b1-0a03-4b3b-8cf4-6adffa783b8b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "How does it deal with things like `\" This is the ${value}\"` ?",
+        "createdAt" : "2020-06-01T11:01:01Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "32f9152e-99a7-47ec-a086-0105a17b9111",
+        "parentId" : "4361c1b1-0a03-4b3b-8cf4-6adffa783b8b",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "a little above you have:\r\n`    if (inStringInterpolation) return fetchStringPart()`\r\nbasically this cose is not called when in string interpolation",
+        "createdAt" : "2020-06-01T12:55:03Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +340,344 @@          putChar(ch)\n          nextChar()\n          if (prevChar == '$' && ch == '{' && dialect.allowWhiteboxMacro) {\n            token = MACROSPLICE\n            setStrVal()"
+  },
+  {
+    "id" : "8e02f57f-dd7d-4fe4-9561-67f45368fc99",
+    "prId" : 1004,
+    "comments" : [
+      {
+        "id" : "e0c4dece-7467-4f8b-8dce-f358c43cc524",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Weird.",
+        "createdAt" : "2017-07-07T16:33:47Z",
+        "updatedAt" : "2017-07-07T16:34:01Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0073bff1bbfcb08a17e49392edf1f66286f9d9df",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +4,8 @@\nimport scala.annotation.{ switch, tailrec }\nimport scala.collection. mutable \nimport Chars._\nimport LegacyToken._"
+  },
+  {
+    "id" : "55c40995-4607-446d-82ee-bd261e71e62b",
+    "prId" : 823,
+    "comments" : [
+      {
+        "id" : "303d2b7c-cecc-4a6b-8494-e3f0b1c0c070",
+        "parentId" : null,
+        "author" : {
+          "login" : "allanrenucci",
+          "name" : "Allan Renucci",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/4996324?u=67c597149723b5c3a27b376013df0a970f8389a2&v=4"
+        },
+        "body" : "I did this because both `fetchStringPart` and `fetchXmlPart` were relying on offset to be set. This was not the case in `fetchXmlPart ` before and so we were emitting wrong tokens",
+        "createdAt" : "2017-05-02T15:37:26Z",
+        "updatedAt" : "2017-05-02T18:51:46Z",
+        "lastEditedBy" : {
+          "login" : "allanrenucci",
+          "name" : "Allan Renucci",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/4996324?u=67c597149723b5c3a27b376013df0a970f8389a2&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dc6deadf596cfcafab3cf4911dd353eed05ca5b0",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +311,315 @@\n    if (inStringInterpolation) return fetchStringPart()\n    else if (inXmlLiteral) return fetchXmlPart()\n\n    (ch: @switch) match {"
+  }
+]

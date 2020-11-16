@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "47b2b1c4-bf44-4af1-9d0b-dd90b77c1e51",
+    "prId" : 1280,
+    "comments" : [
+      {
+        "id" : "05b20868-07d2-4132-85f1-72eabf0c9f2d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Is this supposed to go into the stdout of our CI?",
+        "createdAt" : "2018-02-08T18:52:21Z",
+        "updatedAt" : "2018-02-10T11:46:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1c00ec3c-93f6-4580-915e-da9398f73822",
+        "parentId" : "05b20868-07d2-4132-85f1-72eabf0c9f2d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It's helpful to know the directory to check out the generated semanticdb files when running this locally. It doesn't matter much for our CI",
+        "createdAt" : "2018-02-09T11:59:49Z",
+        "updatedAt" : "2018-02-10T11:46:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d306c0fb420f4dd7692ccaac47db886ee1bf15f8",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +42,46 @@      ) ++ files\n    )\n    println(out)\n    sys.exit(code)\n  }"
+  }
+]

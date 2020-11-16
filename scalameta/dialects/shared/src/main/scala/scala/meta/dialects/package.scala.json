@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "bd0fef6c-0fdf-4f84-8473-6cdf56dd0d3e",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "38340b7f-73e8-4d80-93fc-a432999443c2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe we should no longer copy Scala213 but define a totally separate dialect?",
+        "createdAt" : "2020-05-25T11:45:11Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0fd7e974-d019-48ed-b12a-ea463ece8e50",
+        "parentId" : "38340b7f-73e8-4d80-93fc-a432999443c2",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I have no preferences, let me know if you want it to be separate dialect and I will squash all settings.\r\nIt will be Dialect(a, b, c).withX(..).withY(..) - some parameters go with constructor, other are only exposed via `withX` ",
+        "createdAt" : "2020-05-27T10:58:14Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa46e4ad-281d-4afc-9618-6d5f8d3dfa88",
+        "parentId" : "38340b7f-73e8-4d80-93fc-a432999443c2",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's leave it as is.",
+        "createdAt" : "2020-05-28T09:58:57Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 68,
+    "diffHunk" : "@@ -1,1 +106,110 @@    .withAllowExtensionMethods(true)\n    .withAllowOpenClass(true)\n    .withAllowWhiteboxMacro(true)\n    .withAllowToplevelStatements(true)\n    .withAllowOpaqueTypes(true)"
+  },
+  {
+    "id" : "f4b4ad66-17a8-48df-8388-9f0fad73a4a2",
+    "prId" : 929,
+    "comments" : [
+      {
+        "id" : "c65b488d-3a2f-4852-b10f-798b316a304c",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Is this supported in Dotty? Let's have a test for this, too.",
+        "createdAt" : "2017-06-09T18:22:27Z",
+        "updatedAt" : "2017-06-09T19:18:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c3d34f87-154a-4801-bbae-75818928500b",
+        "parentId" : "c65b488d-3a2f-4852-b10f-798b316a304c",
+        "author" : {
+          "login" : "jonas",
+          "name" : "Jonas Fonseca",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/8417?u=fd2f29f433df62751b5690a1bddee04bb4627d21&v=4"
+        },
+        "body" : "I get\r\n```\r\n15:11:10 ~ > dotc -repl\r\nWelcome to Scala.next (pre-alpha, git-hash: 05aeeb5)  (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_73).\r\nType in expressions to have them evaluated.\r\nType :help for more information.\r\nscala> case class A\r\n-- [E004] Syntax Error: <console>:4:11 -----------------------------------------\r\n4 |case class A\r\n  |           ^\r\n  |           A case class must have at least one parameter list\r\n\r\nlonger explanation available when compiling with `-explain`\r\n```",
+        "createdAt" : "2017-06-09T19:17:58Z",
+        "updatedAt" : "2017-06-09T19:18:31Z",
+        "lastEditedBy" : {
+          "login" : "jonas",
+          "name" : "Jonas Fonseca",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/8417?u=fd2f29f433df62751b5690a1bddee04bb4627d21&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "86ef6d8c7ab147c657cfcac963789ac9a839bcd5",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +23,27 @@  // Can case classes be declared without a parameter list?\n  // Deprecated in 2.10, not supported in 2.11 and newer.\n  allowCaseClassWithoutParameterList: Boolean,\n\n  // Are extractor varargs specified using colons, i.e. is `case Extractor(xs: _*)` legal or not?"
+  },
+  {
+    "id" : "e1308b2e-5aac-4418-b2bd-398498312300",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "7a3b14c1-182f-4041-b610-b231c6f2d3db",
+        "parentId" : null,
+        "author" : {
+          "login" : "dwijnand",
+          "name" : "Dale Wijnand",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/344610?u=e620300a97e79cdb29b3b8793d27d2e9649178e5&v=4"
+        },
+        "body" : "Thanks, @xeno-by.",
+        "createdAt" : "2017-04-30T10:44:46Z",
+        "updatedAt" : "2017-04-30T10:44:46Z",
+        "lastEditedBy" : {
+          "login" : "dwijnand",
+          "name" : "Dale Wijnand",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/344610?u=e620300a97e79cdb29b3b8793d27d2e9649178e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +150,154 @@    // NOTE: support for literal types is tentatively scheduled for 2.12.3\n    // https://github.com/scala/scala/pull/5310#issuecomment-290617202\n    allowLiteralTypes = false,\n    allowTrailingCommas = true\n  )"
+  }
+]

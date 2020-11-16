@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "e457e1cf-a790-4b86-a534-03b4265347fe",
+    "prId" : 1065,
+    "comments" : [
+      {
+        "id" : "b76fdcfb-6c7e-49cc-b640-b8aa755eeef4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : ":D",
+        "createdAt" : "2017-08-15T16:07:25Z",
+        "updatedAt" : "2017-08-17T07:40:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "289075db486562df06dd1570b145c80c5afc96f2",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +12,16 @@  case object None extends Symbol {\n    override def toString = syntax\n    override def syntax = \"\"\n    override def structure = s\"\"\"Symbol.None\"\"\"\n  }"
+  }
+]

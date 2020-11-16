@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "74bd0175-baa5-44e5-8670-23ee5ed68d98",
+    "prId" : 958,
+    "comments" : [
+      {
+        "id" : "5ded22a1-bb85-426f-8a29-de3ebfd8e78d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Would it make sense to throw an exception here instead of fallback to Scala211? It's not idiomatic Scala to silently fall back to Scala211, but maybe it makes more sense in js.",
+        "createdAt" : "2017-06-23T12:54:29Z",
+        "updatedAt" : "2017-06-23T13:30:12Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9733f47b-44ac-4c4d-9108-1760e42308ce",
+        "parentId" : "5ded22a1-bb85-426f-8a29-de3ebfd8e78d",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Right, probably if you pass a wrong one you want to know. It makes sense I'll report an error (instead of throwing an exception)",
+        "createdAt" : "2017-06-23T13:20:45Z",
+        "updatedAt" : "2017-06-23T13:30:12Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a5a6a9ed01e0743b85c7c1172481e37744430fea",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +216,220 @@         |  2,\n         |)\"\"\".stripMargin\n    val parsedDefaultDialect = JSFacade.parseStat(code, js.Dictionary(\"dialect\" -> \"wrong\"))\n    val expected = d(\n      \"error\" -> \"'wrong' is not a valid dialect.\""
+  }
+]

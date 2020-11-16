@@ -1,0 +1,445 @@
+[
+  {
+    "id" : "f3da0979-ffe1-45e1-97d3-bfadc9ad7394",
+    "prId" : 1422,
+    "comments" : [
+      {
+        "id" : "a3750aa9-0b54-477d-af47-8ba72db71d0c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why not `k.ENUM`?",
+        "createdAt" : "2018-03-10T11:44:39Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bae622aa-07c0-4ff5-b658-26b307112fcc",
+        "parentId" : "a3750aa9-0b54-477d-af47-8ba72db71d0c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Because it applies both to classes and fields.",
+        "createdAt" : "2018-03-10T15:15:01Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "35e6598a-7086-49b1-8e17-af2274167a94",
+        "parentId" : "a3750aa9-0b54-477d-af47-8ba72db71d0c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Still seems inconsistent with k.INTERFACE/k.CLASS. Why do enum fields need to have p.ENUM? Class fields don't have p.CLASS",
+        "createdAt" : "2018-03-10T15:27:14Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "058d8518-f722-4156-88c7-e4ff96cda400",
+        "parentId" : "a3750aa9-0b54-477d-af47-8ba72db71d0c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Not all enum fields have p.ENUM - only those that represent enum constants. ",
+        "createdAt" : "2018-03-10T15:29:51Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "26f9b81e-30a7-4a0d-9097-683ff60be2c1",
+        "parentId" : "a3750aa9-0b54-477d-af47-8ba72db71d0c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "It is indeed inconsistent. We might as well have k.ENUM_CLASS and k.ENUM_FIELD. I think, however that p.ENUM is more economical. Let's try this approach out, and if it doesn't work well, we can always try an alternative.",
+        "createdAt" : "2018-03-10T15:31:29Z",
+        "updatedAt" : "2018-03-10T16:13:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d2a4d472bf076e929228ea5770ca1e49a796cbf7",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +209,213 @@    STATIC = 0x1000;\n    PRIMARY = 0x2000;\n    ENUM = 0x4000;\n  }\n  reserved 2, 6, 10, 12;"
+  },
+  {
+    "id" : "bc217e21-d266-46ef-800b-037eecdcd9b6",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "8422dcd7-ed4d-46f7-8f13-0e49bdcd8e02",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "How do you envision we add `languageVersion: String`? It would be a shame to break `info.language == l.JAVA`",
+        "createdAt" : "2018-03-09T11:29:12Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bc8127d6-585a-4c1a-a791-de44eecb0035",
+        "parentId" : "8422dcd7-ed4d-46f7-8f13-0e49bdcd8e02",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "No idea. But maybe we won't need that at all, since we don't have a usecase at the moment.",
+        "createdAt" : "2018-03-09T14:50:20Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "daf74b7b-97f3-4369-8086-2970eaa59271",
+        "parentId" : "8422dcd7-ed4d-46f7-8f13-0e49bdcd8e02",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Fair enough. I love the current `info.language == l.JAVA` so I'd rather not complicate it. In JDT they encode the version number (java 8/9) in the \"project model\", maybe it's not necessary to do it at the symbol level.",
+        "createdAt" : "2018-03-09T15:38:34Z",
+        "updatedAt" : "2018-03-09T15:43:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +24,28 @@}\n\nenum Language {\n  UNKNOWN_LANGUAGE = 0;\n  SCALA = 1;"
+  },
+  {
+    "id" : "1d0723b7-112a-44ef-9045-0323caec073f",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "7b85c3e6-b978-4306-b5dd-46b78e0c267a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why is this commented out?",
+        "createdAt" : "2018-03-09T11:29:26Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "004278d2-5da8-432e-ac2b-3e5ea6099706",
+        "parentId" : "7b85c3e6-b978-4306-b5dd-46b78e0c267a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Only supported in protobuf 3.5.0.",
+        "createdAt" : "2018-03-09T14:50:38Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b9cc40ac-9a24-4328-9a98-13a8e960d1b3",
+        "parentId" : "7b85c3e6-b978-4306-b5dd-46b78e0c267a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Aha, fair enough.",
+        "createdAt" : "2018-03-09T15:38:42Z",
+        "updatedAt" : "2018-03-09T15:43:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 41,
+    "diffHunk" : "@@ -1,1 +61,65 @@    TYPE_TYPE = 14;\n  }\n  // reserved 3, 4, 5, 6;\n  Tag tag = 1;\n  TypeRef typeRef = 2;"
+  },
+  {
+    "id" : "82197a2f-1c40-40d5-bda5-ecafd511f530",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "1473ac3a-cb98-496d-906c-8d45e8301776",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "ditto",
+        "createdAt" : "2018-03-09T11:29:49Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "17ffa6ee-e13f-4b04-8504-ce9a25c52ef8",
+        "parentId" : "1473ac3a-cb98-496d-906c-8d45e8301776",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "^",
+        "createdAt" : "2018-03-09T14:50:45Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 79,
+    "diffHunk" : "@@ -1,1 +175,179 @@message SymbolInformation {\n  enum Kind {\n    // reserved 1, 2, 4, 5, 15, 16;\n    UNKNOWN_KIND = 0;\n    LOCAL = 19;"
+  },
+  {
+    "id" : "99265fd7-e05d-4c93-b6fa-5fb4a4710342",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "d0790a67-2c7e-46ff-b0c3-383222c8cc7f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We should add a comment to the sources that this encoding is inconvenient. I think it should be possible to replace `Type` with `bytes tpe [(scalapb.option).type = \"Type\"];` https://scalapb.github.io/customizations.html#custom-types I think that would \r\n- make the API more user-friendly\r\n- save tons of `None` fields for every `Type` reference\r\n\r\nDoesn't have to happen in this PR, but might be worth to document what has been tried and what might potentially solve the problem.",
+        "createdAt" : "2018-02-05T15:18:29Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "608170d8-a7fc-4dfe-acb7-19650a8354c8",
+        "parentId" : "d0790a67-2c7e-46ff-b0c3-383222c8cc7f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I'll open a ticket once we get the PR in.",
+        "createdAt" : "2018-02-05T18:22:43Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4286920e-7b20-4f66-ab09-44d47c08c5be",
+        "parentId" : "d0790a67-2c7e-46ff-b0c3-383222c8cc7f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1262",
+        "createdAt" : "2018-02-05T20:36:11Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +35,39 @@}\n\nmessage Type {\n  enum Tag {\n    UNKNOWN_TAG = 0;"
+  },
+  {
+    "id" : "64e434a0-549a-4f34-aecc-ebe9f38ec979",
+    "prId" : 1238,
+    "comments" : [
+      {
+        "id" : "18bb4cfc-5a1a-4e8b-8961-286a03ecfc17",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Based on the feedback in https://github.com/scalameta/scalameta/pull/1220, this is the only controversial change in the pullrequest. Here's a quick refresher:\r\n  * Discussion thread: https://github.com/scalameta/scalameta/pull/1220#discussion_r162564442\r\n  * Performance results: https://github.com/scalameta/scalameta/pull/1220#discussion_r164602743",
+        "createdAt" : "2018-01-31T03:22:06Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8a4ca9ca-0f26-49f6-859f-e2ca0c1e4612",
+        "parentId" : "18bb4cfc-5a1a-4e8b-8961-286a03ecfc17",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "let's just do line/character",
+        "createdAt" : "2018-02-01T11:54:28Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0295ec5950b1f4dad650d2b602c7cbe9e15b136f",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +27,31 @@  int32 start_character = 2;\n  int32 end_line = 3;\n  int32 end_character = 4;\n}\n"
+  },
+  {
+    "id" : "67ea91c4-b9e5-45f0-bf43-bc517ec7d4c5",
+    "prId" : 1238,
+    "comments" : [
+      {
+        "id" : "f34fbee9-2f1b-4c33-9e52-48a6efe5411a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm starting to have doubts about the merit of this field. We can keep for now and remove later, but I have a feeling it will become redundant once we have a symbol table.",
+        "createdAt" : "2018-02-01T11:56:20Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "da1d7205-0c92-4619-9682-7364ef028a7c",
+        "parentId" : "f34fbee9-2f1b-4c33-9e52-48a6efe5411a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Sounds good.",
+        "createdAt" : "2018-02-01T14:56:49Z",
+        "updatedAt" : "2018-02-01T16:00:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0295ec5950b1f4dad650d2b602c7cbe9e15b136f",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +68,72 @@  Range range = 6;\n  TextDocument signature = 7;\n  repeated string members = 8;\n  repeated string overrides = 9;\n}"
+  }
+]

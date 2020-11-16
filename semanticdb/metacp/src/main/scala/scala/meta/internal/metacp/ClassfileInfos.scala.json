@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "290f4f97-c9f2-4d1f-a4dc-22e91e945eb9",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "13e35891-8bd8-4720-9c9a-780d9b770085",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's either inline this method or make it private.",
+        "createdAt" : "2018-07-08T05:50:09Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e7910d2-6372-4958-9879-c55dad1f1c30",
+        "parentId" : "13e35891-8bd8-4720-9c9a-780d9b770085",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done",
+        "createdAt" : "2018-07-10T12:17:11Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +14,18 @@    language: s.Language,\n    infos: List[s.SymbolInformation]) {\n  def toTextDocuments: s.TextDocuments = {\n    val semanticdbDocument = s.TextDocument(\n      schema = s.Schema.SEMANTICDB4,"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "888b44f3-4625-4b0b-b019-993d46e10218",
+    "prId" : 1363,
+    "comments" : [
+      {
+        "id" : "c7a0c0a1-6bcb-4734-b5e4-9ab639ddfc39",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg This is pretty outrageous, but I didn't have time to think of a proper solution. Gotta crash now.",
+        "createdAt" : "2018-02-26T06:56:47Z",
+        "updatedAt" : "2018-02-26T06:56:52Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2e795795-36e4-4367-b71d-d7f14095506b",
+        "parentId" : "c7a0c0a1-6bcb-4734-b5e4-9ab639ddfc39",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Every field on asm nodes is nullable, so i'm not surprised one bit. Can take a look.",
+        "createdAt" : "2018-02-26T11:32:56Z",
+        "updatedAt" : "2018-02-26T12:01:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a9c720a9-05e7-45d4-8538-861b4b11327d",
+        "parentId" : "c7a0c0a1-6bcb-4734-b5e4-9ab639ddfc39",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Fixed in #1367",
+        "createdAt" : "2018-02-27T09:12:14Z",
+        "updatedAt" : "2018-02-27T09:12:15Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37bdfffae3069ae6dfb60f98e0fba3879587aa53",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +169,173 @@        try c.parents.map(_.toType)\n        catch {\n          case _: NullPointerException => Nil\n        }\n      case _ => Nil"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "9a520b0e-965b-44dd-9172-7119b84cb994",
+    "prId" : 100,
+    "comments" : [
+      {
+        "id" : "0f8412f5-9f2c-463a-8098-b3b3b9188972",
+        "parentId" : null,
+        "author" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "body" : "`name` is not var, it's a val. Overloading of notation doesn't work.\n",
+        "createdAt" : "2015-02-12T11:31:58Z",
+        "updatedAt" : "2015-02-12T11:31:58Z",
+        "lastEditedBy" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c559368433caafc2d80210789ba1a40f21de9b3b",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +113,117 @@-------------------|------------------------------\n Wildcard          | `pt\"_\"`\n Var               | `pt\"name\"`\n Name              | `pt\"`name`\"`\n Selection         | `pt\"$ref.$tname\"`"
+  },
+  {
+    "id" : "5f54e1b9-c8d8-4498-9fcb-1281d3d089c6",
+    "prId" : 51,
+    "comments" : [
+      {
+        "id" : "807cc67a-f1d8-4045-b550-7eb6e9d6cc70",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Ты ж вроде хотел отсортировать по шортханду? Так наверное быстрее будет искать?\n",
+        "createdAt" : "2014-10-22T18:25:02Z",
+        "updatedAt" : "2014-10-22T18:25:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "22fd5386-386f-448a-b62d-e76a88397f51",
+        "parentId" : "807cc67a-f1d8-4045-b550-7eb6e9d6cc70",
+        "author" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "body" : "Иначе намного хуже искать. По типу намного понятней сортировка.\n",
+        "createdAt" : "2014-10-22T18:28:34Z",
+        "updatedAt" : "2014-10-22T18:28:34Z",
+        "lastEditedBy" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f9e554f2e94636f9a06365fa0cd0c8dc8ccbbc2b",
+    "line" : 132,
+    "diffHunk" : "@@ -1,1 +227,231 @@ meta.Type.Name | `$tname`  | `t`          \n meta.TypeParam | `$tparam` | `tparam`     \n                | `$lit`    | `q` \n\n### Suffix name modifiers"
+  }
+]

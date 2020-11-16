@@ -1,0 +1,803 @@
+[
+  {
+    "id" : "17ba13b9-8744-4a2a-81d3-5bf9bc5ae3df",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "15269815-cef9-419e-9292-6a9a2f22d7fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "Aren't you missing term params of enums, here?",
+        "createdAt" : "2020-04-24T15:55:00Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e0713fe2-7404-4a53-bdff-a7182b4a8976",
+        "parentId" : "15269815-cef9-419e-9292-6a9a2f22d7fa",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "It should be available in `Ctor.Primary`, e.g.\r\n`\"enum C(i: Int) { case R, G }\"` ->\r\n`Defn.Enum(Nil, pname(\"C\"), Nil, ctorp(List(tparam(\"i\", \"Int\"))), tpl(List(RGCase))))`",
+        "createdAt" : "2020-04-27T07:58:37Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 49,
+    "diffHunk" : "@@ -1,1 +304,308 @@      mods: List[Mod],\n      name: scala.meta.Type.Name,\n      tparams: List[scala.meta.Type.Param],\n      ctor: Ctor.Primary,\n      templ: Template"
+  },
+  {
+    "id" : "adf074cb-abc4-4246-9af6-4e2d29a88888",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "3096554c-28ca-4b2b-bfa4-a71240799a14",
+        "parentId" : null,
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "I assume `Name`s can represent *anonymous* things?",
+        "createdAt" : "2020-04-24T15:56:20Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "76a8c9a1-d450-4704-bd20-a3296b30226f",
+        "parentId" : "3096554c-28ca-4b2b-bfa4-a71240799a14",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "There is `scala.meta.Name.Anonymous()` \r\nhttps://github.com/scalameta/scalameta/blob/4bf5dfd1e7afc3bc7d6a305690dd5b737afd08e6/scalameta/trees/shared/src/main/scala/scala/meta/Trees.scala#L38",
+        "createdAt" : "2020-04-24T17:06:39Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +303,307 @@  @ast class Enum(\n      mods: List[Mod],\n      name: scala.meta.Type.Name,\n      tparams: List[scala.meta.Type.Param],\n      ctor: Ctor.Primary,"
+  },
+  {
+    "id" : "833fb238-55ed-4477-b9c6-a0f4e9c99493",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "037e51df-48b3-4100-a2a5-29b1dfd12acc",
+        "parentId" : null,
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "For extension methods, how do you store whether they are declared as infix (without `.`) or as dot methods (with a `.`)?",
+        "createdAt" : "2020-04-24T15:57:49Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "91b8b705-9dad-451d-893d-352855e5e65e",
+        "parentId" : "037e51df-48b3-4100-a2a5-29b1dfd12acc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We distinguish `Term.ApplyInfix` and `Term.Apply` so it would make sense to distinguish them here as well 👍 ",
+        "createdAt" : "2020-04-24T17:07:49Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c495f74a-2bc9-4d1e-b448-a803295cf09f",
+        "parentId" : "037e51df-48b3-4100-a2a5-29b1dfd12acc",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "okay added Infix version too",
+        "createdAt" : "2020-04-28T09:18:27Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 82,
+    "diffHunk" : "@@ -1,1 +337,341 @@      templ: Template\n  ) extends Defn\n  @ast class ExtensionMethod(\n      mods: List[Mod],\n      eparam: Term.Param,"
+  },
+  {
+    "id" : "c7fed469-2956-4b8c-9e07-13142b2b9ce9",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "b869ad15-2703-4efc-94b0-a23db60782e0",
+        "parentId" : null,
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "Why would `Using()` be a modifier?",
+        "createdAt" : "2020-04-24T16:00:24Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d12cd92-945d-408d-8ef3-386455b9b3a8",
+        "parentId" : "b869ad15-2703-4efc-94b0-a23db60782e0",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "It behaves as modifier `def f(x: String)(using Int)(y: String)(using b: Int)`\r\nDo you think it would be better to represent it in other way?",
+        "createdAt" : "2020-04-27T08:02:04Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e73e7e86-1365-4e91-8b4a-f2d5a7cd7ee9",
+        "parentId" : "b869ad15-2703-4efc-94b0-a23db60782e0",
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "It is kind of a modifier, but it applies to the whole parameter *list*, not just one parameter (unlike the other modifiers above). In dotty itself it's a flag of the parameter list, not a modifier of each parameter.",
+        "createdAt" : "2020-04-27T09:43:08Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "659264c7-7fbf-4a38-b218-bf60c903559e",
+        "parentId" : "b869ad15-2703-4efc-94b0-a23db60782e0",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Yeah well this is a little messy and I am not sure how to make it properly.\r\nThere are 2 situations, definition and usage.\r\nFor method definition we store `paramss: List[List[Term.Param]]`. I can't really do much here without bigger changes, I decided to add `Using` modifier to each param that is in a list if `using` modifier was found in this list. It was nice during parsing, but now I hit terrible problems with printing this structure(no idea how to do it yet)\r\nOn method call it is much better, because we have `Apply(term, List[Term]`, I just added `ApplyUsing(term, List[Term])` and it covers it nicely\r\n\r\nI can imagine having `sparams: List[List[Term.Param]]` changed to\r\n`sparams: List[TreeList[Term.Param]]` where\r\n`TermList <: TreeList` and `TermListUsing <: TreeList` but I don't think it is doable in reasonable effort not talking about compatibility :/",
+        "createdAt" : "2020-04-27T10:53:34Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "57f56d3f-a464-45b9-9296-b6d7c434ea1e",
+        "parentId" : "b869ad15-2703-4efc-94b0-a23db60782e0",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Ok actually it is similar to `implicit` we have in scala2, I will take inspiration from there :P",
+        "createdAt" : "2020-04-27T11:02:34Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c9c5857e-ac4c-4c36-8b91-8bc21fbb94d3",
+        "parentId" : "b869ad15-2703-4efc-94b0-a23db60782e0",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "reworked it to keep it the same way as implicit.",
+        "createdAt" : "2020-05-27T11:28:36Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 134,
+    "diffHunk" : "@@ -1,1 +493,497 @@  @ast class VarParam() extends Mod\n  @ast class Inline() extends Mod\n  @ast class Using() extends Mod\n  @ast class Opaque() extends Mod\n}"
+  },
+  {
+    "id" : "147148fe-d2d4-4efb-8f6b-568f0f6013ec",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "e8dc7a68-f4b6-40a3-a50c-9c53b09fa138",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This is a binary breaking change, can you elaborate on the use-case here? If this is Dotty-only syntax then I propose we introduce a new class instead so that we don't break existing usage of `Defn.Type`",
+        "createdAt" : "2020-05-02T09:59:09Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "41c33624-992a-4c94-9656-31d850a8e7de",
+        "parentId" : "e8dc7a68-f4b6-40a3-a50c-9c53b09fa138",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "needed for opaque type aliases `opaque type A <: B = C`\r\n\r\nhttps://dotty.epfl.ch/docs/reference/other-new-features/opaques.html\r\n\r\nYes it is a new syntax, I will introduce a new type.",
+        "createdAt" : "2020-05-02T12:18:45Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "739c4598-f2b5-46ec-a9d2-091e3ead8557",
+        "parentId" : "e8dc7a68-f4b6-40a3-a50c-9c53b09fa138",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "created completely new type `OpaqueTypeAlias`",
+        "createdAt" : "2020-05-05T12:42:25Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 113,
+    "diffHunk" : "@@ -1,1 +381,385 @@      name: scala.meta.Type.Name,\n      tparams: List[scala.meta.Type.Param],\n      bounds: scala.meta.Type.Bounds,\n      body: scala.meta.Type\n  ) extends Defn"
+  },
+  {
+    "id" : "6f496459-d94b-43d9-b502-fa84beb5a958",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "41005e50-4141-42db-a613-72e47aec9898",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Does it still need to be a modifier if we have ApplyUsing ?",
+        "createdAt" : "2020-05-22T11:41:44Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "53c87ab6-5614-4865-8c03-378a7d89f013",
+        "parentId" : "41005e50-4141-42db-a613-72e47aec9898",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach, nevermind. I get the issue here.",
+        "createdAt" : "2020-05-25T15:10:37Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c658c632-b5c2-42d5-a5e4-a245636a149c",
+        "parentId" : "41005e50-4141-42db-a613-72e47aec9898",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : ":+1: ",
+        "createdAt" : "2020-05-27T11:28:51Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 134,
+    "diffHunk" : "@@ -1,1 +493,497 @@  @ast class VarParam() extends Mod\n  @ast class Inline() extends Mod\n  @ast class Using() extends Mod\n  @ast class Opaque() extends Mod\n}"
+  },
+  {
+    "id" : "a2507f2b-bc28-4be7-a81a-5bee3ef82f9f",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "16c83fac-a0b2-44e6-898c-6969be4ce1f4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "What about annotation?",
+        "createdAt" : "2020-05-22T12:29:22Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "43afc35e-d440-4c4c-bd43-274b1a1e34bb",
+        "parentId" : "16c83fac-a0b2-44e6-898c-6969be4ce1f4",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "will add test +1",
+        "createdAt" : "2020-05-27T12:07:22Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +314,318 @@      tparams: List[scala.meta.Type.Param],\n      ctor: Ctor.Primary,\n      inits: List[Init]\n  ) extends Defn\n      with Member.Term"
+  },
+  {
+    "id" : "0b9912d8-446d-4afb-8e57-067e8e9673cc",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "d93b9888-ae74-4997-a17f-3f5bac421d8c",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "What about annotations?",
+        "createdAt" : "2020-05-22T12:30:48Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ec6bb6bc-03ca-45ae-8659-eb108f4860d5",
+        "parentId" : "d93b9888-ae74-4997-a17f-3f5bac421d8c",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "will add test :+1:",
+        "createdAt" : "2020-05-27T12:07:08Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 64,
+    "diffHunk" : "@@ -1,1 +319,323 @@  @ast class RepeatedEnumCase(\n      mods: List[Mod],\n      cases: List[Term.Name]\n  ) extends Defn\n  @ast class GivenAlias("
+  },
+  {
+    "id" : "5bdc6e63-48b9-4e81-b625-2d1b92f42c48",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "acd59b0f-73fb-4577-9b42-dd038ac498cb",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Could we include method def here and lose the other fields?",
+        "createdAt" : "2020-05-22T12:46:24Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b8d21672-f03b-4871-a39d-bea1940531ce",
+        "parentId" : "acd59b0f-73fb-4577-9b42-dd038ac498cb",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe it's better to leave it as is actually.",
+        "createdAt" : "2020-05-25T15:35:50Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4e6649bb-f3f2-4738-af9d-636769963384",
+        "parentId" : "acd59b0f-73fb-4577-9b42-dd038ac498cb",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "ok leaving it as it is then",
+        "createdAt" : "2020-05-27T11:57:41Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 90,
+    "diffHunk" : "@@ -1,1 +345,349 @@      decltpe: Option[scala.meta.Type],\n      body: Term\n  ) extends Defn\n      with Member.Term\n  @ast class ExtensionMethodInfix("
+  },
+  {
+    "id" : "b7db0119-74ac-4e19-9de6-e256a30d6a25",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "8b116df6-7c05-4c1a-8613-d9a9617459ab",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This would correspond to something like `$x` in a normal code? I don't think this is actually used.",
+        "createdAt" : "2020-05-25T14:53:30Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "40f6a8d9-6c62-42b3-94ca-90f167295a36",
+        "parentId" : "8b116df6-7c05-4c1a-8613-d9a9617459ab",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "This corresponds to: `'[ List[${ summon[Type[T]] }] ]`\r\ncheck test: `macro-quote-type`",
+        "createdAt" : "2020-05-26T08:46:38Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +174,178 @@    checkParent(ParentChecks.TypeLambda)\n  }\n  @ast class Macro(body: Term) extends Type\n  @ast class Method(paramss: List[List[Term.Param]], tpe: Type) extends Type {\n    checkParent(ParentChecks.TypeMethod)"
+  },
+  {
+    "id" : "d512e106-dcd8-4ef7-86e1-7c6019905c5b",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "da0ce29d-8870-4441-b2d7-395a8b65712e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We should check if opaque is in the mods.",
+        "createdAt" : "2020-05-25T15:10:13Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "210fdbe9-e0c9-4f41-a68e-53598f3fa150",
+        "parentId" : "da0ce29d-8870-4441-b2d7-395a8b65712e",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : ":+1: ",
+        "createdAt" : "2020-05-27T11:57:59Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 115,
+    "diffHunk" : "@@ -1,1 +383,387 @@      bounds: scala.meta.Type.Bounds,\n      body: scala.meta.Type\n  ) extends Defn\n      with Member.Type {\n    checkFields(mods.exists(_.is[Mod.Opaque]))"
+  },
+  {
+    "id" : "e73b59a9-bb7c-432c-b3b0-9363d515040d",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "bc788e20-9c42-4f74-8239-631973eedfcf",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Let's maybe check if using is defined in all mods or args.",
+        "createdAt" : "2020-05-25T15:11:38Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "40703194-5918-4224-9499-c77eeb23f32b",
+        "parentId" : "bc788e20-9c42-4f74-8239-631973eedfcf",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Term has no name or mods :) That was a topic of discussion in issue I created. That's why we wrap it in `ApplyUsing` instead of just using `Apply`",
+        "createdAt" : "2020-05-27T11:04:51Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +82,86 @@  }\n  @ast class Apply(fun: Term, args: List[Term]) extends Term\n  @ast class ApplyUsing(fun: Term, args: List[Term]) extends Term\n  @ast class ApplyType(fun: Term, targs: List[Type] @nonEmpty) extends Term\n  @ast class ApplyInfix(lhs: Term, op: Name, targs: List[Type], args: List[Term]) extends Term"
+  },
+  {
+    "id" : "f1da4a1e-7f15-4521-8262-0eac7255f380",
+    "prId" : 907,
+    "comments" : [
+      {
+        "id" : "e576a0e7-71a6-4c44-b6b0-1a77f663b900",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`Name.Indeterminate` is still not entirely hidden from users\r\n\r\n```scala\r\nq\"import a.b\".structure\r\nres6: String = Import(List(Importer(Term.Name(\"a\"), List(Importee.Name(Name.Indeterminate(\"b\"))))))\r\n```\r\nHow about updating Structure to emit a `Name(\"b\")` which calls `Name.apply(value: String): Name = Name.Indeterminate(value)`?",
+        "createdAt" : "2017-06-05T13:55:49Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0d2015f5-2118-4d6e-9b3a-0aae37ce49fb",
+        "parentId" : "e576a0e7-71a6-4c44-b6b0-1a77f663b900",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Additionally, can we expose a `Name(): Name = Name.Anonymous()` constructor? Structure should then also print out `Name()` instead of `Name.Anonymous()`.",
+        "createdAt" : "2017-06-05T14:03:12Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "503f7a84-900d-4352-80b5-1c5d53562c4f",
+        "parentId" : "e576a0e7-71a6-4c44-b6b0-1a77f663b900",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I like this idea. However, instead of `Name()`, I'll do `Name(\"_\")` in order to be symmetric with pattern matching.",
+        "createdAt" : "2017-06-27T00:28:19Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5abea73a-1799-4700-a856-3f64d6be1991",
+        "parentId" : "e576a0e7-71a6-4c44-b6b0-1a77f663b900",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Actually, I have another idea. How about we merge `Name.Anonymous` and `Name.Indeterminate` into just `Name`?! I'll prototype this today or tomorrow and will report back with results.",
+        "createdAt" : "2017-06-27T00:42:00Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6671021ca31de70beb5653b516169540d2300121",
+    "line" : 715,
+    "diffHunk" : "@@ -1,1 +389,393 @@object Importee {\n  @ast class Wildcard() extends Importee\n  @ast class Name(name: scala.meta.Name) extends Importee {\n    checkFields(name.is[scala.meta.Name.Quasi] || name.is[scala.meta.Name.Indeterminate])\n  }"
+  }
+]

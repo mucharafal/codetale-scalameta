@@ -1,0 +1,181 @@
+[
+  {
+    "id" : "6a4249c0-a3d2-4ff8-8cbc-5ad6c0c6ce73",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "3275a21c-31a5-4b90-9922-a87936ea134b",
+        "parentId" : null,
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "You're adding a printer for `Mod.Open`, but not for `Mod.Opaque` nor `Mod.Using`. Is that intentional?",
+        "createdAt" : "2020-04-24T16:01:10Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "def012a1-0dbc-4bf2-b85b-57efd781fab6",
+        "parentId" : "3275a21c-31a5-4b90-9922-a87936ea134b",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "missed that, good catch :+1:",
+        "createdAt" : "2020-04-27T08:04:16Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 196,
+    "diffHunk" : "@@ -1,1 +1023,1027 @@      case _: Mod.Final => kw(\"final\")\n      case _: Mod.Sealed => kw(\"sealed\")\n      case _: Mod.Open => kw(\"open\")\n      case _: Mod.Opaque => kw(\"opaque\")\n      case _: Mod.Using => kw(\"using\")"
+  },
+  {
+    "id" : "a7e1547d-a89b-40cf-8b68-f82610a8b2fa",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "8d4c2f20-06db-4e02-878e-7113764104b0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should it not be similar to implicit like:\r\n`w(\"using \", r(params, \", \"), params.exists(_.mods.exists(_.is[Mod.Using])))`\r\n?",
+        "createdAt" : "2020-06-01T11:21:46Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "74d398aa-e16e-41f0-804a-d1963ef1447e",
+        "parentId" : "8d4c2f20-06db-4e02-878e-7113764104b0",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "it doesn't matter, we already did this check line above and we know using is there",
+        "createdAt" : "2020-06-01T12:59:36Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 231,
+    "diffHunk" : "@@ -1,1 +1122,1126 @@      def usingImplicit(params: List[Term.Param]): Show.Result = {\n        if (params.exists(_.mods.exists(_.is[Mod.Using])))\n          s(\"using \", r(params, \", \"))\n        else\n          w(\"implicit \", r(params, \", \"), params.exists(_.mods.exists(_.is[Mod.Implicit])))"
+  },
+  {
+    "id" : "2ae2ace5-7b2f-421b-ab1a-df14e8e606f5",
+    "prId" : 907,
+    "comments" : [
+      {
+        "id" : "67732304-e49f-4785-a71c-967075ac3042",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "On the topic of cleanups, I'm eager to get rid of TreeSyntax in favor of a prettyprinter built with paiges #892",
+        "createdAt" : "2017-06-05T12:51:36Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "02c3387d-1a1b-43ca-bed8-271df6754be7",
+        "parentId" : "67732304-e49f-4785-a71c-967075ac3042",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Our current prettyprinter is outrageously inadequate - it is both slow and buggy - so I agree that it should be rewritten from scratch. However, I'm not sure about the exact strategy.\r\n\r\nMy concern about using `typelevel/paiges` is that the 3-5x slowdown advertised in the readme is not really competitive (even though the readme tries to convince the readers otherwise). It would be a shame to invest significant time into a rewrite only to discover that the new version is inadequate, too.\r\n\r\n@olafurpg @DavidDudson What do you think?\r\n\r\n/cc @densh, since he seems to have experimented with prettyprinters a lot with native. Denys, I see that you're currently using an imperative prettyprinter. Are you happy with it? Do you plan to change it in the future?",
+        "createdAt" : "2017-06-27T01:33:13Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0342cb9b-fd18-4f1c-b7c0-741afe37b96f",
+        "parentId" : "67732304-e49f-4785-a71c-967075ac3042",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think you are misunderstanding the 3-5x slowdown as being caused by non-imperativeness. The [underlying implementation](https://github.com/typelevel/paiges/blob/78777cbc6d7f95fd909141d7fe7a7346bd2a19fb/core/src/main/scala/org/typelevel/paiges/Chunk.scala) is imperative. It's ~4x slower than `.mkString` because it implements line wrapping, which is non-trivial and highly valuable IMO for pretty-printers.\r\n\r\nThe complexity in TreeSyntax is partly caused it trying to implement line-wrapping in some places. For example, see `s(stats.head).toString.contains(EOL)` [here](https://github.com/scalameta/scalameta/blob/d0804413ab1845fc9603ef73282bed1c0616970d/scalameta/trees/shared/src/main/scala/scala/meta/internal/prettyprinters/TreeSyntax.scala#L492). I suspect a paiges based line wrapper might be an order of magnitude faster than the current TreeSyntax, and even if TreeSyntax is terribly slow I think performance is not its biggest issue. ",
+        "createdAt" : "2017-06-27T11:55:12Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f3c9f496-f919-401b-a36c-4d756595ea2f",
+        "parentId" : "67732304-e49f-4785-a71c-967075ac3042",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "btw, this output here https://gist.github.com/olafurpg/44ee2d0a8c5b8330702cf00d23d0978a which was pretty-printing output from `.structure` rendered in ~300ms. It took me 10 mins to implement that pretty printer. Scalafmt would choke on that input, despite months of optimization efforts.",
+        "createdAt" : "2017-06-27T11:57:52Z",
+        "updatedAt" : "2017-07-06T03:59:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6671021ca31de70beb5653b516169540d2300121",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +16,20 @@import scala.compat.Platform.EOL\n\nobject TreeSyntax {\n  def apply[T <: Tree](dialect: Dialect): Syntax[T] = {\n    object syntaxInstances {"
+  }
+]

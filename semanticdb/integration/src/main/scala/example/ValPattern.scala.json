@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "8ffebf1a-8c88-44e0-ac3f-d21427c4520f",
+    "prId" : 1822,
+    "comments" : [
+      {
+        "id" : "badaa3a2-92ac-4412-961c-fd807ea03cbd",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "The commit message has a typo in the desugaring listing. Should say `val b = x$1._2`.",
+        "createdAt" : "2019-01-29T20:13:51Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "082f29ac-7f2d-4ac5-b88f-527dd723d021",
+        "parentId" : "badaa3a2-92ac-4412-961c-fd807ea03cbd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Fixed, I reworded the commit message",
+        "createdAt" : "2019-01-29T20:26:44Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80f7ad644ac37d3f71706bf89fdbae41694fbd0a",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +40,44 @@        )\n      )\n    }\n  }\n"
+  }
+]

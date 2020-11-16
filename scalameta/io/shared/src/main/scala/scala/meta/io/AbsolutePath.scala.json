@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "2eb764ff-2bed-4b54-ba73-d4434cb9f4df",
+    "prId" : 1890,
+    "comments" : [
+      {
+        "id" : "9e89b704-824d-4fb5-8d6d-b7b48b3a09fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We will need to keep the old method overload `def toURI: URI` for backwards compatibility with existing clients. Otherwise, we would have to release a Scalameta v5 version.\r\n\r\nSomething like this should do the trick\r\n```diff\r\n+ import java.nio.file.Files\r\n...\r\n+  def toURI: URI = toURI(Files.isDirectory(toNIO))\r\n  def toURI(isDirectory: Boolean): URI = {\r\n```",
+        "createdAt" : "2019-08-15T14:30:23Z",
+        "updatedAt" : "2019-08-15T15:35:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "521aa43e580edade95f1ed6f9c9beb639640f93d",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +17,21 @@  def toFile: File = toNIO.toFile\n  def toURI: URI = toURI(Files.isDirectory(toNIO))\n  def toURI(isDirectory: Boolean): URI = {\n    val uri = toNIO.toUri\n    if (isDirectory && !uri.getPath.endsWith(\"/\")) {"
+  }
+]

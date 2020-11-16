@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "32f4eeae-d494-4e47-98a2-2e5a8c2da689",
+    "prId" : 1229,
+    "comments" : [
+      {
+        "id" : "20dae687-083b-4263-b027-1380a4e0a9eb",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Great idea! How does the updated `bench/README.md` file look like with this change?",
+        "createdAt" : "2018-01-23T19:04:12Z",
+        "updatedAt" : "2018-01-23T19:04:29Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2c29fb56-7db6-4271-8638-b3ffafdac564",
+        "parentId" : "20dae687-083b-4263-b027-1380a4e0a9eb",
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "```\r\nBenchmark                      Mode    Cnt Score\r\nQuickScalacBaseline            sample  50  1042.956 ± 17.837 ms/op   \r\nQuickScalacRangepos            sample  50  1089.995 ± 11.297 ms/op   (+5%)\r\nQuickScalametaBaseline         sample  40  1294.257 ± 22.686 ms/op   (+25%)\r\nQuickScalametaFullContents     sample  40  1295.044 ± 11.326 ms/op   (+25%)\r\nQuickScalametaFullDenotations  sample  40  1395.760 ± 12.056 ms/op   (+34%)\r\nQuickScalametaFullOverrides    sample  38  1427.002 ± 21.510 ms/op   (+37%)\r\nQuickScalametaFullSynthetics   sample  40  1345.795 ± 15.959 ms/op   (+30%)\r\n```",
+        "createdAt" : "2018-01-24T09:27:14Z",
+        "updatedAt" : "2018-01-24T09:27:15Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0c7163973dfbfa643c99172d03624467ff895401",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +54,58 @@      else:\n        overhead = \"(+ {}%)\".format(int(math.ceil((ops / firstOps - 1) * 100)))\n        row = row + (overhead, )\n      rows.append(row)\n"
+  }
+]

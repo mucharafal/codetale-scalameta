@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "6104d602-b250-4804-9ff9-a6300673d1f4",
+    "prId" : 1674,
+    "comments" : [
+      {
+        "id" : "0603bf3b-61f8-4a86-a956-ab9f2bfa1e93",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Note for the future, for optimization we may want to share the symbol index per global classpath instead of classpath element. This will require having a better hash function than `scalap/Symbol#hashCode`",
+        "createdAt" : "2018-07-05T10:58:02Z",
+        "updatedAt" : "2018-07-05T12:19:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3c012530b36d03419f3e882d24d6eeb3b34eb75",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@\nfinal class SymbolIndex private (classpathIndex: ClasspathIndex) {\n  private lazy val lookupCache = mutable.Map.empty[Symbol, SymbolLookup]\n  def lookup(sym: ExternalSymbol): SymbolLookup = {\n    lookupCache.getOrElseUpdate(sym, {"
+  }
+]

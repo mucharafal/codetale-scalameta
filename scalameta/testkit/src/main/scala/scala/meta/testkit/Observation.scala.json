@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "18fdc703-e986-484c-8b27-a0dafd76a6e9",
+    "prId" : 569,
+    "comments" : [
+      {
+        "id" : "4c9e0f66-bea2-482c-a7f7-d7fc24263b5a",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why have this type-parameterized?",
+        "createdAt" : "2016-12-15T12:17:03Z",
+        "updatedAt" : "2016-12-15T12:50:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "17d199a1-ebf4-4fc3-a6f2-15111791ec1c",
+        "parentId" : "4c9e0f66-bea2-482c-a7f7-d7fc24263b5a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "So that you can define a custom adt for each experiment. Any better suggestion?",
+        "createdAt" : "2016-12-15T12:48:57Z",
+        "updatedAt" : "2016-12-15T12:50:50Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4a57bb62-a8c1-4fd7-a9ac-8f4c8d44230b",
+        "parentId" : "4c9e0f66-bea2-482c-a7f7-d7fc24263b5a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think that's fine.",
+        "createdAt" : "2016-12-15T13:01:05Z",
+        "updatedAt" : "2016-12-15T13:01:06Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "68a2c6cb2d82537061a5b5dec3e64c7cc3c3b696",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@  *             or sealed ADTs\n  */\ncase class Observation[T](msg: String, line: Int, kind: T)\n\nobject Observation {"
+  }
+]

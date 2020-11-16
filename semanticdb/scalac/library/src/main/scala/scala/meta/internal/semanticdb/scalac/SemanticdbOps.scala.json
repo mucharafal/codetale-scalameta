@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "0ceb8c07-0814-4b82-832b-31405c5cb630",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "54dfdf54-e042-4c91-baa7-e92ef4ad56d4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Am I right in thinking that you didn't plan to address https://github.com/scalameta/scalameta/issues/1671 in this pull request?",
+        "createdAt" : "2018-07-10T19:38:50Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e3ced18-19e6-4c3e-991f-a1a33104316f",
+        "parentId" : "54dfdf54-e042-4c91-baa7-e92ef4ad56d4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Correct, this PR is already large enough and the required changes in metac are mostly unrelated.",
+        "createdAt" : "2018-07-10T20:34:18Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +19,23 @@  val global: Global\n  var config: SemanticdbConfig = SemanticdbConfig.default\n}"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "d279c6e2-e950-4494-8c2b-fbdb90f2caa0",
+    "prId" : 742,
+    "comments" : [
+      {
+        "id" : "c17ce1e6-9b8b-4a4e-907c-0b25decf892a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Add test for `def foo = {2}`?",
+        "createdAt" : "2017-04-05T16:47:22Z",
+        "updatedAt" : "2017-04-06T05:17:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f214022a-893a-4913-b566-1ecc3b8c3c24",
+        "parentId" : "c17ce1e6-9b8b-4a4e-907c-0b25decf892a",
+        "author" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "body" : "Done",
+        "createdAt" : "2017-04-06T05:04:18Z",
+        "updatedAt" : "2017-04-06T05:17:02Z",
+        "lastEditedBy" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0341c8f06937bceef76e61ac65193cc2c2b137d3",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +23,27 @@\n  test(\"Test extract def stats\") {\n    val stats = q\"def foo = {}\".extract[Stat]\n    assert(stats == Nil)\n  }"
+  }
+]

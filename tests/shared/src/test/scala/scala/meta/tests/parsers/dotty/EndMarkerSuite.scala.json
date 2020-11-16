@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "2ba6c50b-687a-4d5e-b982-1cebb7d6db43",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "926342a6-b9f0-492e-9246-10f5d3b4e0f1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe let's write a comment about why this is?",
+        "createdAt" : "2020-08-17T10:08:51Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9e1caf51-46a2-4626-8396-83d72b028dbb",
+        "parentId" : "926342a6-b9f0-492e-9246-10f5d3b4e0f1",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2020-08-21T06:51:41Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +78,82 @@  }\n\n  test(\"end-for-no-indent\") {\n    // to make parser more permissive 'end' is treated as independent statement\n    // that doesn't need to be bound to any indentation"
+  },
+  {
+    "id" : "253df974-9883-432f-bd1c-81734b2e8c94",
+    "prId" : 2090,
+    "comments" : [
+      {
+        "id" : "f7d9933f-a228-45d5-9d6b-0a64fa903905",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should the end marker by a separate entity? Shouldn't we maybe have `TemplateWithEnd` and `BlockWithEnd` ?\r\n\r\nOr alternatively, we could just ignore it in the parser? Especially I imagine when doing some scalafix rules or scalafmt formatting we will not want to have to search for the end token. ",
+        "createdAt" : "2020-07-09T15:15:30Z",
+        "updatedAt" : "2020-07-13T10:43:55Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "380449b9-350b-4153-b032-ba62e57f6d78",
+        "parentId" : "f7d9933f-a228-45d5-9d6b-0a64fa903905",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "As discussed offline for now let's keep it separated and get back to it when we have significant indentation implemented and if `TemplateWithEnd` / `BlockWithEnd` are a way to go.",
+        "createdAt" : "2020-07-13T10:02:39Z",
+        "updatedAt" : "2020-07-13T10:43:55Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "704a2f46c43d6d71fa5b588f6c052a4701e7be13",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +36,40 @@        List(\n          Defn.Object(Nil, Term.Name(\"a\"), Template(Nil, Nil, Self(Name(\"\"), None), Nil)),\n          Term.EndMarker(Term.Name(\"a\")),\n          Defn.Type(Nil, Type.Name(\"K\"), Nil, Type.Name(\"Map\"))\n        )"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "39486e34-364e-4adc-929e-ad70c6d97a5f",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "f49624f6-90e1-4303-aca9-fe964c0e06f3",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Am I right in thinking that the change from `.bytes` to `.inputStream` here is done for optimization purposes?",
+        "createdAt" : "2017-07-07T03:34:56Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ddb40110-a5f7-47b3-bef6-2d8cfa2521e1",
+        "parentId" : "f49624f6-90e1-4303-aca9-fe964c0e06f3",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Correct.",
+        "createdAt" : "2017-07-07T07:50:35Z",
+        "updatedAt" : "2017-07-07T07:50:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +19,23 @@class Database(entries: List[Entry]) {\n  def toSchema: s.Database = {\n    val sentries = entries.flatMap(ventry => s.Database.parseFrom(ventry.inputStream).entries)\n    s.Database(sentries)\n  }"
+  }
+]

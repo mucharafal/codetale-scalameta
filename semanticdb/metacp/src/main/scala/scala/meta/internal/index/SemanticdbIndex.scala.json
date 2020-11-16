@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5a91323c-a7e6-4db5-99d1-7e9b3c137d35",
+    "prId" : 1674,
+    "comments" : [
+      {
+        "id" : "77bdc4be-b6b4-4c9e-b779-02115e158cc9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Thank you 🙏 The generic `Index` name was annoying when using \"Open class\" in IntelliJ",
+        "createdAt" : "2018-07-05T10:59:07Z",
+        "updatedAt" : "2018-07-05T12:19:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3c012530b36d03419f3e882d24d6eeb3b34eb75",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.meta.io._\n\nclass SemanticdbIndex {\n  private val packages = mutable.Map[String, mutable.Set[String]]()\n  private val toplevels = mutable.Map[String, String]()"
+  }
+]

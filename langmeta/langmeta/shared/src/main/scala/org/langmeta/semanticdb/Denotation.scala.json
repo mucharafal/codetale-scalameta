@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "58819c6b-ac61-405c-8519-5e01aabf6fb7",
+    "prId" : 1316,
+    "comments" : [
+      {
+        "id" : "a02768eb-860b-45c0-87c8-677990615a06",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why do we still bother with apply when we can use the primary ctor?",
+        "createdAt" : "2018-02-15T10:09:52Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "21cab48c-3a84-44fd-9bf8-c1e3c2e185c7",
+        "parentId" : "a02768eb-860b-45c0-87c8-677990615a06",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't know. For me it's inertia. I'm fine with either.",
+        "createdAt" : "2018-02-15T17:02:37Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3090112e-dbfc-47d5-af3f-e4c1d0763da0",
+        "parentId" : "a02768eb-860b-45c0-87c8-677990615a06",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think we we should not bother with apply anymore.",
+        "createdAt" : "2018-02-15T17:14:14Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "09bb50fb-9b47-4a03-bccf-7393733fa461",
+        "parentId" : "a02768eb-860b-45c0-87c8-677990615a06",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "as in, we should not keep on adding new apply constructors. What we should have done in v3.0.0 was to remove all the boilerplate and add `.withAnnotations()` builder methods.",
+        "createdAt" : "2018-02-15T17:16:08Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e38f5f1d7e7e09abb297f26cdb09e0a5e7d354a1",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +135,139 @@    new Denotation(flags, name, signature, names, members, overrides, tpe)\n\n  def apply(flags: Long,\n            name: String,\n            signature: String,"
+  }
+]

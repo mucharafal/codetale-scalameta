@@ -1,0 +1,208 @@
+[
+  {
+    "id" : "6598d488-6f79-4f57-8f66-a4b3daa4903d",
+    "prId" : 1734,
+    "comments" : [
+      {
+        "id" : "ab90da19-973a-4b52-843a-0c7347a0ff44",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-08-03T15:48:14Z",
+        "updatedAt" : "2018-08-03T15:48:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "eff80ef3b1fc1ec66b1d0272860d8869886a2ebf",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +153,157 @@        .withOut(AbsolutePath(target))\n        .withClasspath(Classpath(AbsolutePath(in)))\n        .withUsejavacp(true)\n        .withScalaLibrarySynthetics(false)\n      val reporter = Reporter().withOut(out).withErr(err)"
+  },
+  {
+    "id" : "c89f3b50-e2e3-43cd-80c4-398f53f89fed",
+    "prId" : 1399,
+    "comments" : [
+      {
+        "id" : "78b16480-d779-41fe-b478-ac1a971d2016",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg I would prefer the new methods from `ExpectHelpers` to be moved directly into this object, since they aren't used anywhere else.",
+        "createdAt" : "2018-03-08T00:06:29Z",
+        "updatedAt" : "2018-03-08T00:06:37Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e291668c412004029e2d27b5602b184c8b798016",
+    "line" : 99,
+    "diffHunk" : "@@ -1,1 +258,262 @@}\n\nobject MetacMetacpDiffExpect extends ExpectHelpers {\n  def filename: String = \"metac-metacp.diff\"\n  def loadObtained: String = {"
+  },
+  {
+    "id" : "a837c3c3-80c4-4e8f-b70e-d8ee4140dbc1",
+    "prId" : 1395,
+    "comments" : [
+      {
+        "id" : "fd6b6550-785c-4727-b235-31bfd4796781",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Seems we need `PathIO.toUnix(entry.uri)` on the right hand side to please Appveyor.",
+        "createdAt" : "2018-03-07T22:22:17Z",
+        "updatedAt" : "2018-03-08T00:57:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bd402c4f-2f66-4900-ae6f-a801c8e2f669",
+        "parentId" : "fd6b6550-785c-4727-b235-31bfd4796781",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done on the generator side.",
+        "createdAt" : "2018-03-08T00:25:53Z",
+        "updatedAt" : "2018-03-08T00:57:40Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f66ad367eba5d3307e2dfe61035d34647e8019",
+    "line" : 107,
+    "diffHunk" : "@@ -1,1 +237,241 @@      buf.append(\"==========\" + EOL)\n      index.toplevels.sortBy(_.symbol).foreach { entry =>\n        buf.append(s\"${entry.symbol} => ${entry.uri}\" + EOL)\n      }\n      buf.toString"
+  },
+  {
+    "id" : "b765901c-271d-46f3-aaf1-19d8f6efd907",
+    "prId" : 1395,
+    "comments" : [
+      {
+        "id" : "6262d2d4-44de-4905-9d5a-91c98121cf1e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "FYI, I had this method in ExpectHelpers because I was in fact reusing it between two test suites at one point, but then I figured out how to make the other suite redundant.",
+        "createdAt" : "2018-03-08T11:36:19Z",
+        "updatedAt" : "2018-03-08T11:50:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f66ad367eba5d3307e2dfe61035d34647e8019",
+    "line" : 67,
+    "diffHunk" : "@@ -1,1 +118,122 @@  }\n\n  protected def normalizedSymbols(path: Path): Map[String, s.SymbolInformation] = {\n    for {\n      file <- FileIO.listAllFilesRecursively(AbsolutePath(path)).iterator"
+  },
+  {
+    "id" : "c9def12b-e1bb-4463-9822-24daab8ae027",
+    "prId" : 1395,
+    "comments" : [
+      {
+        "id" : "498a00bf-2b0d-4921-9bda-0c92e4a7769e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-03-08T11:37:02Z",
+        "updatedAt" : "2018-03-08T11:50:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f66ad367eba5d3307e2dfe61035d34647e8019",
+    "line" : 74,
+    "diffHunk" : "@@ -1,1 +125,129 @@      sym <- doc.symbols\n    } yield {\n      val normalizedSym = sym.copy(\n        language = None,\n        signature = None,"
+  },
+  {
+    "id" : "bfad52f7-148b-48f3-9f6d-0d093aca706d",
+    "prId" : 1376,
+    "comments" : [
+      {
+        "id" : "2b217a4b-c16d-4a2b-9399-2bc19984efc1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`walk` works with `jarRoot` so why do we deflate to tmp directory?",
+        "createdAt" : "2018-02-28T11:14:13Z",
+        "updatedAt" : "2018-02-28T13:24:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a497bf7-97c3-4ad6-b3d4-c1fa87cecd78",
+        "parentId" : "2b217a4b-c16d-4a2b-9399-2bc19984efc1",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Because metap doesn't support jars.",
+        "createdAt" : "2018-02-28T15:30:03Z",
+        "updatedAt" : "2018-02-28T15:30:04Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "452b259e539064f1eedb9d397712e9a524d97f1f",
+    "line" : 47,
+    "diffHunk" : "@@ -1,1 +80,84 @@      } else {\n        val tempDir = Files.createTempDirectory(\"jar_\")\n        val jarRoot = FileIO.jarRootPath(AbsolutePath(dirOrJar.toAbsolutePath.toString)).toNIO\n        Files.walk(jarRoot).iterator.asScala.foreach { jarPath =>\n          if (jarPath.toString.endsWith(\".semanticdb\")) {"
+  }
+]

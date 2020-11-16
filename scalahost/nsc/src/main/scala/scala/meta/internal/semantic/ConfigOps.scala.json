@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "fd7247c0-09a1-4e88-9b47-d0a58e692c6c",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "2d94a9e2-fc3a-4987-adf2-b96d529f3660",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This implementation looks inconsistent with `SemanticdbMode.unapply`.",
+        "createdAt" : "2017-07-07T03:28:24Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +25,29 @@  def unapply(arg: String): Option[FailureMode] = {\n    val lower = arg.toLowerCase()\n    all.find(_.name == lower)\n  }\n  case object Error extends FailureMode"
+  },
+  {
+    "id" : "d1cff4f0-8427-4e8a-89bb-ada6f162e9fc",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "09172c9e-1f76-4936-9833-044d12f0a56f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Shall we split this file into several and then create a dedicated package for all this functionality, like we did with `Vfs.scala` and `Schema.scala`?",
+        "createdAt" : "2017-05-15T16:33:22Z",
+        "updatedAt" : "2017-05-15T18:38:46Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4ca30b07-259b-4f08-b4b0-d2df3087bc63",
+        "parentId" : "09172c9e-1f76-4936-9833-044d12f0a56f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm not convinced it's worth it.\r\n\r\n- a `config` package will conflict with the `config` variable\r\n- this is not really public api, it's only used in scalahost-nsc\r\n\r\nWDYT?",
+        "createdAt" : "2017-05-15T18:31:44Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "29a0d8c5-d820-4993-897c-04062be58d01",
+        "parentId" : "09172c9e-1f76-4936-9833-044d12f0a56f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't mind either way, just wanted to figure out your preferences wrt this aspect of code organization.",
+        "createdAt" : "2017-05-16T18:36:54Z",
+        "updatedAt" : "2017-05-16T18:36:54Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 2,
+    "diffHunk" : "@@ -1,1 +0,4 @@package scala.meta.internal\npackage semantic\n\nimport scala.meta.internal.scalahost.ScalahostPlugin"
+  }
+]

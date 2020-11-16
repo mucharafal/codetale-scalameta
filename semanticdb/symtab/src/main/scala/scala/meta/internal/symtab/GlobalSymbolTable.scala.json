@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "57f89b9b-cb66-458f-b789-fe3e6a9647f6",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "dcfbebdb-135e-4d73-8333-0013e9af3ae6",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What's the difference between a trie map and a usual map?",
+        "createdAt" : "2018-07-10T19:40:05Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff650a77-935d-4551-ab36-67d2cbdf854d",
+        "parentId" : "dcfbebdb-135e-4d73-8333-0013e9af3ae6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`TrieMap` is the only concurrent Map in the Scala stdlib I'm aware of, I wanted to make `info().` thread-safe and opted to not use Java collections.",
+        "createdAt" : "2018-07-10T20:40:06Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +14,18 @@final class GlobalSymbolTable(classpathIndex: ClasspathIndex) extends SymbolTable {\n\n  private val symbolCache = TrieMap.empty[String, SymbolInformation]\n  Scalalib.synthetics.foreach(enter)\n"
+  },
+  {
+    "id" : "313d4197-e6d6-4ab8-aa68-d8c324549c63",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "66a44506-1123-4647-ac5f-8bcfb6e8a5e4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This takes care of scalalib synthetics, but doesn't take RootPackage and EmptyPackage into account.",
+        "createdAt" : "2018-07-10T21:59:07Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5786c0f5-8f41-4bf3-a6c8-fd2191dbcd67",
+        "parentId" : "66a44506-1123-4647-ac5f-8bcfb6e8a5e4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I've added handling for root and empty package.",
+        "createdAt" : "2018-07-10T23:29:17Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +15,19 @@\n  private val symbolCache = TrieMap.empty[String, SymbolInformation]\n  Scalalib.synthetics.foreach(enter)\n\n  override def toString: String = s\"GlobalSymbolTable($classpathIndex)\""
+  }
+]

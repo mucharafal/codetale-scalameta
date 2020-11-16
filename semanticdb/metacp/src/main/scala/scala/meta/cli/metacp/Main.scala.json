@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "f1890ee5-ca49-405b-b64b-a81eae106426",
+    "prId" : 1271,
+    "comments" : [
+      {
+        "id" : "200822db-d3bc-4bd1-8f29-e6c65ca98c3a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Use `InputStreamIO.readBytes`",
+        "createdAt" : "2018-02-08T09:37:42Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8370103f-6db2-4245-a78a-3cd449e020e1",
+        "parentId" : "200822db-d3bc-4bd1-8f29-e6c65ca98c3a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done. Forgot that this method exists.",
+        "createdAt" : "2018-02-08T20:48:26Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c447025772d8549c3a2b12e808553ffd8de5be24",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +30,34 @@      try {\n        val bytecode = {\n          val is = fragment.uri.toURL.openStream()\n          try ByteCode(InputStreamIO.readBytes(is))\n          finally is.close()"
+  },
+  {
+    "id" : "dfb4c943-c751-4bc3-ad1f-fa028b67c7fa",
+    "prId" : 1271,
+    "comments" : [
+      {
+        "id" : "1242139e-b733-41f0-8679-c7a94a1f3aec",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Should we have a `SymbolBuilder` API that works like `StringBuilder` but with `.appendTermParameter()/appendTypeParameter/..`?",
+        "createdAt" : "2018-02-08T09:45:49Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cf0aa77a-e36e-448f-b83e-b936bd364c71",
+        "parentId" : "1242139e-b733-41f0-8679-c7a94a1f3aec",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "To tell the truth, I've been quite burned by all the abstractions that we built around SemanticDB v1/v2, and now I'm enjoying bare metal stuff. I suggest we let things evolve for the time being, and then deduplicate / abstract as appropriate once we see the patterns emerge.",
+        "createdAt" : "2018-02-08T20:54:17Z",
+        "updatedAt" : "2018-02-09T12:47:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c447025772d8549c3a2b12e808553ffd8de5be24",
+    "line" : 126,
+    "diffHunk" : "@@ -1,1 +124,128 @@        prefix + encodedName + \"#\"\n      case k.PARAMETER =>\n        prefix + \"(\" + encodedName + \")\"\n      case k.TYPE_PARAMETER =>\n        prefix + \"[\" + encodedName + \"]\""
+  }
+]

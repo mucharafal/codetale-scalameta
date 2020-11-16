@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "d3d6afa6-7581-41ec-8089-e97fd791a7ad",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "eebe10b1-eeaa-4d1f-8284-12b31750abf2",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Note to self. We should harden our expect tests to catch bugs like this in the future. One idea, assert that all symbol occurrences have a SymbolInformation with a naive symbol table implementation.",
+        "createdAt" : "2018-06-06T13:34:43Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +107,111 @@      else \"`\" + methodName + \"`\"\n    }\n    val methodSymbol = classSymbol + encodedMethodName + \"().\"\n    val tparams = tparamDsls.map { tparamName =>\n      val tparamSymbol = methodSymbol + \"[\" + tparamName + \"]\""
+  }
+]

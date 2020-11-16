@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "39f4fd92-d0f4-42be-883d-9c32d193a6b3",
+    "prId" : 1723,
+    "comments" : [
+      {
+        "id" : "e0d90dc5-5d57-4175-8e35-8329e1c7ba6a",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 I already implemented this in Scalafix and I agree it should be in the public API. \r\n\r\nHowever, we should decide what to do when the column numbers exceed the column width in the actual input. This implementation is not LSP compliant, where `column=Int.MaxValue` will translate to the largest possible column for the corresponding line number. I opened https://github.com/scalameta/scalameta/issues/1728 to discuss this better.",
+        "createdAt" : "2018-07-31T15:34:29Z",
+        "updatedAt" : "2018-07-31T15:46:06Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "418dc570-5faa-48a1-9249-7df906f6c8b7",
+        "parentId" : "e0d90dc5-5d57-4175-8e35-8329e1c7ba6a",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Great catch!! Thank you for following up!",
+        "createdAt" : "2018-07-31T18:13:53Z",
+        "updatedAt" : "2018-07-31T18:13:53Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dd80713ff87258a06af69e91efb6fbdf8d21e80b",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +50,54 @@        endLine: Int,\n        endColumn: Int): Position.Range = {\n      val start = input.lineToOffset(startLine) + startColumn\n      val end = input.lineToOffset(endLine) + endColumn\n      Range(input, start, end)"
+  }
+]

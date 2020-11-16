@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5b4c5dc9-17fa-45bd-93e3-44bda8c61131",
+    "prId" : 1059,
+    "comments" : [
+      {
+        "id" : "25d96992-f0db-40f2-9ae4-e2d49b65a735",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2017-08-07T08:08:04Z",
+        "updatedAt" : "2017-08-07T08:36:56Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e8013d78f4a7e7232f6428c27cb9ce5d370a0d07",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +16,20 @@  def endsWith(other: Path): Boolean\n  def endsWith(other: String): Boolean\n  def normalize(): Path\n  def resolve(other: Path): Path\n  def resolve(other: String): Path"
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "id" : "41979687-0220-4cc2-97a8-7fe7b1af4655",
+    "prId" : 1145,
+    "comments" : [
+      {
+        "id" : "27120895-5c67-49b4-b54b-c591b17d89cc",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "@fikovnik Anything else you can recommend for future contributors? Or any other question you'd like to see addressed here? :) ",
+        "createdAt" : "2017-11-03T11:55:00Z",
+        "updatedAt" : "2017-11-06T13:15:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "75ed9298-9bb1-4e64-8806-bb664b717545",
+        "parentId" : "27120895-5c67-49b4-b54b-c591b17d89cc",
+        "author" : {
+          "login" : "fikovnik",
+          "name" : "Filip Krikava",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/374674?u=e7f2d2b3bb17e7579ac8a05f9733e9ef6c3cc8fd&v=4"
+        },
+        "body" : "You guys actually did really nice set up. I used did exactly that - started with a simple copy of `SemanticSuite` (added a `println` of the obtained variable in `synthetics`) and ran sbt with `-jvmdebug` with attached debuggr. It was very smooth!\r\n\r\nSorry, I did not realized the alphabetic naming of the test objects :-|",
+        "createdAt" : "2017-11-03T13:54:26Z",
+        "updatedAt" : "2017-11-06T13:15:24Z",
+        "lastEditedBy" : {
+          "login" : "fikovnik",
+          "name" : "Filip Krikava",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/374674?u=e7f2d2b3bb17e7579ac8a05f9733e9ef6c3cc8fd&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a56505f235f79dcfac5ed4dfde77e17b37f00263",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +4,8 @@import scala.meta.internal.semanticdb.SemanticdbMode\n\n// Contributing tips:\n// - Create another suite like YYY.scala that extends DatabaseSuite,\n//   add YYY.scala to your .gitignore, and run `> ~semanticdbScala/testOnly *YYY`."
+  },
+  {
+    "id" : "287a7b35-5587-4dc0-a672-1db483a16b4b",
+    "prId" : 1145,
+    "comments" : [
+      {
+        "id" : "9ae60ef1-0a83-43f3-89bd-0adbbe085e7f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Great idea! 👍 ",
+        "createdAt" : "2017-11-03T16:15:25Z",
+        "updatedAt" : "2017-11-06T13:15:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a56505f235f79dcfac5ed4dfde77e17b37f00263",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +4,8 @@import scala.meta.internal.semanticdb.SemanticdbMode\n\n// Contributing tips:\n// - Create another suite like YYY.scala that extends DatabaseSuite,\n//   add YYY.scala to your .gitignore, and run `> ~semanticdbScala/testOnly *YYY`."
+  },
+  {
+    "id" : "55facef1-b8fc-45b4-8596-5f6eb83daeb3",
+    "prId" : 1109,
+    "comments" : [
+      {
+        "id" : "0eecfb24-e4fa-4004-bc6d-48491a59cd71",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Kudos @xeno-by for `targeted`, it's incredibly powerful in cases like this.",
+        "createdAt" : "2017-09-06T07:59:39Z",
+        "updatedAt" : "2017-09-06T07:59:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6a04a8f459e11b3f8de89b21d4553599240f4855",
+    "line" : 202,
+    "diffHunk" : "@@ -1,1 +867,871 @@      |  trait Foo\n      |  val x = new Foo {\n      |    val <<y>> = 2\n      |    def <<z>>[T](e: T) = e\n      |  }"
+  },
+  {
+    "id" : "49b8cbf6-af70-48c7-b3e6-ec6dc3d7dab0",
+    "prId" : 1094,
+    "comments" : [
+      {
+        "id" : "b927cea3-5868-44d2-a4ab-220da953dcb2",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I like this name very much. Thank you, @olafurpg, @ShaneDelmore and @gabro!",
+        "createdAt" : "2017-08-25T17:34:58Z",
+        "updatedAt" : "2017-08-28T08:30:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7312d91a-fc73-4fc9-bd4d-68cbe3860acf",
+        "parentId" : "b927cea3-5868-44d2-a4ab-220da953dcb2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I agree, very nice :) ",
+        "createdAt" : "2017-08-28T08:27:39Z",
+        "updatedAt" : "2017-08-28T08:30:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "95c8cc06-01c5-48c6-86bf-60e6fe5adbe1",
+        "parentId" : "b927cea3-5868-44d2-a4ab-220da953dcb2",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "💯 \r\n\r\nBe careful with the dryer 🤓 ",
+        "createdAt" : "2017-08-28T08:48:21Z",
+        "updatedAt" : "2017-08-28T08:48:21Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "200894e1656e1855c673f442ce23857245f2241b",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +593,597 @@  )\n\n  synthetics(\n    \"\"\"|object s {\n       |  def apply() = 2"
+  }
+]

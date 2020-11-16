@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "8df37a9c-afc4-471a-b07c-b13b05e301c3",
+    "prId" : 742,
+    "comments" : [
+      {
+        "id" : "a478ffee-80a1-4e44-8e1f-abb1852f55a5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We can probably abstract over this boilerplate with a ClassTag. However, this is fine by me.",
+        "createdAt" : "2017-04-05T16:43:11Z",
+        "updatedAt" : "2017-04-06T05:17:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3d7cf8fb-08f1-41a8-8032-1f49565f3aea",
+        "parentId" : "a478ffee-80a1-4e44-8e1f-abb1852f55a5",
+        "author" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "body" : "Hmmm. we could indeed",
+        "createdAt" : "2017-04-06T05:01:07Z",
+        "updatedAt" : "2017-04-06T05:17:02Z",
+        "lastEditedBy" : {
+          "login" : "DavidDudson",
+          "name" : "David Dudson",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2680733?u=3e40263c328680f557dd3284244f22575aae99a5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0341c8f06937bceef76e61ac65193cc2c2b137d3",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@trait ExtractStatSubtypeInstances {\n  implicit def extractDefsFromStats[A](implicit ev: Extract[A, Stat]): Extract[A, Defn.Def] =\n    Extract(a => ev.extract(a).collect { case d: Defn.Def => d })\n\n  implicit def extractValsFromStats[A](implicit ev: Extract[A, Stat]): Extract[A, Defn.Val] ="
+  }
+]

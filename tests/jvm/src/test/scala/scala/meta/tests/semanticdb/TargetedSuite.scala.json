@@ -1,0 +1,209 @@
+[
+  {
+    "id" : "c5394311-0634-4721-b242-61bdabc871b4",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "7e6f28ec-40bc-4b67-a505-17ebc57a9963",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "note to self, we should move 2.11/2.12 specific tests to scala-2.11/scala-2.12 specific source directories",
+        "createdAt" : "2018-05-29T12:51:52Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 770,
+    "diffHunk" : "@@ -1,1 +975,979 @@  val ListBufferDeclsInString = \"+39 decls\"\n  lazy val ListBufferDeclsActual: String = {\n    if (scalaVersion.startsWith(\"2.11\")) \"+36 decls\"\n    else ListBufferDeclsInString\n  }"
+  },
+  {
+    "id" : "c79969fa-fb96-4f63-b6f5-af3b86066fa4",
+    "prId" : 1502,
+    "comments" : [
+      {
+        "id" : "a9643aae-bb4f-4701-83b3-ae993b7dcaa4",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "For consistency with https://github.com/scalameta/scalameta/pull/1501#discussion_r181561316, maybe make this `kind.isLocal`?\r\n\r\n(That also saves you the import)",
+        "createdAt" : "2018-04-15T13:12:09Z",
+        "updatedAt" : "2018-04-15T13:12:35Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "98277a40-0be5-4f14-8fe1-4ee46e7e1ec2",
+        "parentId" : "a9643aae-bb4f-4701-83b3-ae993b7dcaa4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That's a good point, I agree. Gonna merge nevertheless so @andyscott can get a t-shirt 😂 ",
+        "createdAt" : "2018-04-15T13:31:59Z",
+        "updatedAt" : "2018-04-15T13:31:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8fdfd996-e9bf-4a9d-b397-655c6ff95cbd",
+        "parentId" : "a9643aae-bb4f-4701-83b3-ae993b7dcaa4",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I won't stand between a man and his t-shirt 😂",
+        "createdAt" : "2018-04-15T13:32:40Z",
+        "updatedAt" : "2018-04-15T13:32:40Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4c695c64-5bb8-4d71-865a-f205e7fd9be8",
+        "parentId" : "a9643aae-bb4f-4701-83b3-ae993b7dcaa4",
+        "author" : {
+          "login" : "andyscott",
+          "name" : "Andy Scott",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/310363?u=dd689366a68d968c08b568b1d73da2adb97fcc1f&v=4"
+        },
+        "body" : "👕👍 ",
+        "createdAt" : "2018-04-15T14:08:13Z",
+        "updatedAt" : "2018-04-15T14:08:14Z",
+        "lastEditedBy" : {
+          "login" : "andyscott",
+          "name" : "Andy Scott",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/310363?u=dd689366a68d968c08b568b1d73da2adb97fcc1f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6227fddf4d1fc48442ad7add597b91edfe481cbb",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +1330,1334 @@      val kind = denot.skind\n\n      assert(kind == k.LOCAL)\n    }\n  )"
+  },
+  {
+    "id" : "89acedec-c810-441e-ae95-e236e32b12bd",
+    "prId" : 1477,
+    "comments" : [
+      {
+        "id" : "044512b5-9e14-4ca4-83a2-3c38517eecd5",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This is a wtf, but I believe we have a ticket for that.",
+        "createdAt" : "2018-04-08T21:19:40Z",
+        "updatedAt" : "2018-04-08T21:20:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "51e7f047-56c5-4600-aa53-9a94769494d4",
+        "parentId" : "044512b5-9e14-4ca4-83a2-3c38517eecd5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Yup, there is already a ticket for it.",
+        "createdAt" : "2018-04-08T21:21:51Z",
+        "updatedAt" : "2018-04-08T21:21:51Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21b41e6c84d84575561dfa16c16833fad3c589b9",
+    "line" : 315,
+    "diffHunk" : "@@ -1,1 +890,894 @@       |_empty_.ac.y(). => val method y: Class[_]\n       |_empty_.ac.y. => private val field y: Class[_]\n       |_empty_.ac.y._$1# => abstract type _$1\n       |scala.Int. => final object Int\n       |scala.Int.MaxValue(). => final val method MaxValue: Int"
+  },
+  {
+    "id" : "884a488d-0d2e-438a-8b4d-65a0b7c3892f",
+    "prId" : 1323,
+    "comments" : [
+      {
+        "id" : "629d1fed-5365-46ed-8ba6-466d61b28d52",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we add a targeted test like this here to highlight the disambiguation like `List+1`/`List+2`? It's covered in the expect tests but I think it deserves highlighting in the targeted suite as @MasseGuillaume pointed out.",
+        "createdAt" : "2018-02-16T10:55:38Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6e5d8981-cb75-4dcf-ac3d-03decb8c5538",
+        "parentId" : "629d1fed-5365-46ed-8ba6-466d61b28d52",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2018-02-16T17:59:56Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "808c93b6dbfc05c054223b4278b4fb325e60c102",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +94,98 @@      |}\n    \"\"\".trim.stripMargin, { (db, copy, age) =>\n      assert(copy === Symbol(\"_root_.e.User#copy(String,Int).\"))\n      assert(age === Symbol(\"_root_.e.User#copy(String,Int).(age)\"))\n    }"
+  }
+]

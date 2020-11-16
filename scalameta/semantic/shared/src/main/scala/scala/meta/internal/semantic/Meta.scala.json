@@ -1,0 +1,153 @@
+[
+  {
+    "id" : "4102d649-435a-4096-901a-b975b4aac946",
+    "prId" : 854,
+    "comments" : [
+      {
+        "id" : "88be5ce8-46e9-4adf-b2b6-70b49e9f9acc",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we try to use consistent names? I thought `m` was `meta`.",
+        "createdAt" : "2017-05-11T08:32:18Z",
+        "updatedAt" : "2017-05-11T21:10:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "593b0482-4f7b-436e-b336-adaa2a5df9ac",
+        "parentId" : "88be5ce8-46e9-4adf-b2b6-70b49e9f9acc",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "It is. But in this project, we don't yet have an umbrella `package object meta extends Everything`.",
+        "createdAt" : "2017-05-11T18:08:47Z",
+        "updatedAt" : "2017-05-11T21:10:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cf100c1f-0f74-4f1e-9aa7-47d60c9fa32d",
+        "parentId" : "88be5ce8-46e9-4adf-b2b6-70b49e9f9acc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2017-05-11T21:30:17Z",
+        "updatedAt" : "2017-05-11T21:31:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ed5af9cd9004a6db68a119de7a748eb491429856",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@import scala.meta.io._\nimport scala.meta.internal.semantic.{schema => s}\nimport scala.meta.{semantic => m}\nimport scala.meta.{Dialect => mDialect}\nimport scala.meta.inputs.{Input => mInput, Position => mPosition, Point => mPoint}"
+  },
+  {
+    "id" : "fde2f8ad-f8c4-4463-865f-cf84fb323d94",
+    "prId" : 854,
+    "comments" : [
+      {
+        "id" : "8794c2bf-baee-4f2a-9dba-efebad456385",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "What's the motivation for this rename? This gets shadowed by the `mDialect` extractor below.",
+        "createdAt" : "2017-05-11T08:33:01Z",
+        "updatedAt" : "2017-05-11T21:10:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4c0ab320-2dde-432f-9f11-25ab9a223dda",
+        "parentId" : "8794c2bf-baee-4f2a-9dba-efebad456385",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Aah, is it to get the `object mDialect { def unapply(dialect: mDialect) }` sync between the extractor and the parameter type names? If so, then I'm not sure it's worth it.",
+        "createdAt" : "2017-05-11T08:53:26Z",
+        "updatedAt" : "2017-05-11T21:10:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "353be53f-6aa4-4ac0-a948-c141b70dc2b5",
+        "parentId" : "8794c2bf-baee-4f2a-9dba-efebad456385",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Fixed.",
+        "createdAt" : "2017-05-11T18:13:34Z",
+        "updatedAt" : "2017-05-11T21:10:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e14f9f85-e49b-49d9-b463-adfa475a1324",
+        "parentId" : "8794c2bf-baee-4f2a-9dba-efebad456385",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2017-05-11T21:30:24Z",
+        "updatedAt" : "2017-05-11T21:31:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ed5af9cd9004a6db68a119de7a748eb491429856",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +10,14 @@import scala.meta.internal.semantic.{schema => s}\nimport scala.meta.{semantic => m}\nimport scala.meta.{Dialect => mDialect}\nimport scala.meta.inputs.{Input => mInput, Position => mPosition, Point => mPoint}\n"
+  }
+]

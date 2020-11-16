@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "c34473b2-9e42-475d-b801-ae6f228f9a19",
+    "prId" : 736,
+    "comments" : [
+      {
+        "id" : "d28e51e1-59f5-42c4-bdd8-accc15f87a72",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why was this necessary?",
+        "createdAt" : "2017-03-10T01:55:09Z",
+        "updatedAt" : "2017-03-10T01:55:12Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4606e82a-a9d3-4218-bb00-89e3bb29a523",
+        "parentId" : "d28e51e1-59f5-42c4-bdd8-accc15f87a72",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Because the command kept crashing. I don't know why this behavior changed, it could be caused by the git version installed on the docker image. ",
+        "createdAt" : "2017-03-11T18:30:23Z",
+        "updatedAt" : "2017-03-11T18:30:27Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f0eb1e37257bd87d18b1a59d9af29be9bd372e",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +127,131 @@\n  def distance(from: String, to: String): Int = {\n    shell.check_output(s\"git rev-list $to $from --count\", cwd = \".\").trim.toInt\n  }\n"
+  }
+]

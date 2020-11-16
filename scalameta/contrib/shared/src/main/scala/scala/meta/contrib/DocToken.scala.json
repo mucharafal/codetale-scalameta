@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "94dddf8a-49bc-4438-a50d-1f603ad18e37",
+    "prId" : 1094,
+    "comments" : [
+      {
+        "id" : "4058e616-d3e3-4355-b9c8-f6d93c1ca878",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks unintended.",
+        "createdAt" : "2017-08-25T17:33:07Z",
+        "updatedAt" : "2017-08-28T08:30:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5b799561-980a-496e-a72f-8fdfb5acbd0f",
+        "parentId" : "4058e616-d3e3-4355-b9c8-f6d93c1ca878",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Reverted.\r\n",
+        "createdAt" : "2017-08-28T08:26:01Z",
+        "updatedAt" : "2017-08-28T08:30:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "200894e1656e1855c673f442ce23857245f2241b",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +176,180 @@    * Document an entity to one author.\n    */\n  case object Author extends TagKind(\"@author\", numberParameters = 1)\n\n  /**"
+  }
+]

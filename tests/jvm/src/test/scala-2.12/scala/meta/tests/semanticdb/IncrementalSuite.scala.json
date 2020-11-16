@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "c5e2584c-3808-4678-833e-5b2528b07e1b",
+    "prId" : 1656,
+    "comments" : [
+      {
+        "id" : "9e7c6653-1543-4a92-b7b6-c4399e1351ec",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Note, these symbols will be removed after #1647",
+        "createdAt" : "2018-07-03T14:14:56Z",
+        "updatedAt" : "2018-07-03T14:14:56Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "80c0f6ee-3126-47b2-926f-795b44da18cf",
+        "parentId" : "9e7c6653-1543-4a92-b7b6-c4399e1351ec",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Sounds good.",
+        "createdAt" : "2018-07-03T19:07:07Z",
+        "updatedAt" : "2018-07-03T19:09:15Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69f04d314ab711c4bbd0f647eac1750017071bee",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +36,40 @@       |Toplevels:\n       |==========\n       |_empty_. => src/A.scala.semanticdb\n       |_empty_.A. => src/A.scala.semanticdb\n       |\"\"\".stripMargin"
+  },
+  {
+    "id" : "56b782e1-68ef-411b-9bc9-3b4c34ccb7c1",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "a70c3a8f-8c58-4656-b3db-af8eebcfcdb9",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-07-02T02:57:24Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +151,155 @@    assertIndexMatches(A)\n  }\n\n}"
+  }
+]

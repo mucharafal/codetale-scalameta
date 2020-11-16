@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "633af642-cd01-4886-8d1d-99389665a245",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "b9a969f7-e6f6-4855-986a-bba43d3d7cfa",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "nice!! :+1: :+1: ",
+        "createdAt" : "2020-10-09T13:45:01Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +55,59 @@  }\n\n  test(\"dotty-derives-transform\") {\n\n    import scala.meta.dialects.Dotty"
+  },
+  {
+    "id" : "5ad01c44-48d9-4435-ba56-bd9b44516201",
+    "prId" : 1793,
+    "comments" : [
+      {
+        "id" : "82f0eed5-cad2-4a78-9e80-c8b256ecbe70",
+        "parentId" : null,
+        "author" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "body" : "no changes to the code below... I just separated the transformer's tests from the traverser's",
+        "createdAt" : "2018-10-07T17:30:29Z",
+        "updatedAt" : "2018-10-14T19:32:32Z",
+        "lastEditedBy" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a495e7edce914ba3ebe507f904124d27aceba367",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@package scala.meta.tests.transversers\n\nimport org.scalatest._"
+  }
+]

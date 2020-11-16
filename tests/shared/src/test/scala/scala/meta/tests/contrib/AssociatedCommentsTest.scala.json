@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "2a874b92-2778-4dcb-a5a6-36cc8af9c524",
+    "prId" : 1534,
+    "comments" : [
+      {
+        "id" : "db7760df-e094-4ff3-9573-41d440933364",
+        "parentId" : null,
+        "author" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "body" : "the fix makes the outcome for this scenario consistent with the one where multiple leading comments appear after BOF. This means that all comments (regardless of how many lines they are in) are associated to the closest non-trivia token. Please let me know if you think this is not correct",
+        "createdAt" : "2018-05-17T23:37:26Z",
+        "updatedAt" : "2018-05-17T23:48:48Z",
+        "lastEditedBy" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5d40492a-61d1-462e-9f56-585736542eaf",
+        "parentId" : "db7760df-e094-4ff3-9573-41d440933364",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This looks great!",
+        "createdAt" : "2018-05-22T09:10:52Z",
+        "updatedAt" : "2018-05-22T09:13:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7925cb15b8d5da59a34a7bf28cc93b46ef5156a5",
+    "line" : 132,
+    "diffHunk" : "@@ -1,1 +145,149 @@         |/* trailing 2 */\n         |// trailing 3\n         |\"\"\".stripMargin.parse[Source].get\n\n    val defnTrait = input.find(_.is[Defn.Trait]).get"
+  },
+  {
+    "id" : "b256c590-6b88-465d-9df8-a051fdc5e0a6",
+    "prId" : 1534,
+    "comments" : [
+      {
+        "id" : "9b827bea-380f-4a04-9ea9-646540c42f0f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "What happens to comments 2 and 3? I would expect comment 2 to be leading for `foo` and comment 3 leading for `0`. Looks like a bug unrelated to this PR.",
+        "createdAt" : "2018-05-22T09:12:17Z",
+        "updatedAt" : "2018-05-22T09:13:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d24a05f6-ea13-445e-923c-d582ab3a7395",
+        "parentId" : "9b827bea-380f-4a04-9ea9-646540c42f0f",
+        "author" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "body" : "@olafurpg that's something that got me confused too. It turns out that the parsing logic associates comments to **tokens**. If you inspect the internal state you will see that comments 2 and 3 are there:\r\n\r\n```\r\nAssociatedComments(\r\n  Leading =\r\n    val [28..31) => List(/*∙comment∙1∙*/)\r\n\r\n  Trailing =\r\n    val [28..31) => List(/*∙comment∙2∙*/)\r\n    = [52..53) => List(/*∙comment∙3∙*/)\r\n    0 [70..71) => List(/*∙comment∙4∙*/)\r\n)\r\n```\r\n\r\nHowever, the public api lets you query comments associated to **trees**. The `leading` and `trailing` methods only search for comments associated to the first and last tokens (respectively) of the given tree node. Comments 2 and 3 are neither associated to one or the other of any tree. Not sure if this is a bug though. Wdyt?",
+        "createdAt" : "2018-05-22T10:50:45Z",
+        "updatedAt" : "2018-05-22T12:07:33Z",
+        "lastEditedBy" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b2d033ab-297a-438c-b6cf-8f6f0139b7ce",
+        "parentId" : "9b827bea-380f-4a04-9ea9-646540c42f0f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think this is a bug, good catch. I opened https://github.com/scalameta/scalameta/issues/1539 to track it.",
+        "createdAt" : "2018-05-22T17:18:59Z",
+        "updatedAt" : "2018-05-22T17:19:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7925cb15b8d5da59a34a7bf28cc93b46ef5156a5",
+    "line" : 185,
+    "diffHunk" : "@@ -1,1 +198,202 @@    val input =\n      \"\"\"|object A {\n         | /* comment 1 */ val /* comment 2 */ foo = /* comment 3 */ 0 /* comment 4 */\n         |}\n         |\"\"\".stripMargin.parse[Source].get"
+  }
+]

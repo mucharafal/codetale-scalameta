@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "cbf7c8b4-e312-4912-ae12-b79af4a04eaf",
+    "prId" : 1474,
+    "comments" : [
+      {
+        "id" : "b34aafb9-89be-4ca1-81be-727140a93889",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't mind this bit. If our tests deadlock, that's fine.",
+        "createdAt" : "2018-04-05T09:39:29Z",
+        "updatedAt" : "2018-04-05T09:47:40Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a5fb035e1fbccecd7e386bcafed858d55ffc490c",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +15,19 @@  def checkMetacp(name: String, classpath: () => Classpath): Unit = {\n    test(name) {\n      val settings = Settings().withClasspath(classpath()).withCacheDir(tmp).withPar(true)\n      val reporter = Reporter().withOut(System.out).withErr(System.err)\n      val result = Metacp.process(settings, reporter)"
+  }
+]

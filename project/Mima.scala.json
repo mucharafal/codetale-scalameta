@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "7bd85e90-c6bb-47ae-b31f-e18d5f8c49b7",
+    "prId" : 2157,
+    "comments" : [
+      {
+        "id" : "7d9a5a9a-1f55-44cf-a5da-47d0e98f6017",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "added it as bullet in `scala3 parser support issue`",
+        "createdAt" : "2020-11-08T08:32:08Z",
+        "updatedAt" : "2020-11-09T10:20:47Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "59aa7a11cf5e3906d24cf0412aa9609af9a804cc",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +32,36 @@    ProblemFilters.exclude[MissingClassProblem](\"scala.meta.testkit.DiffAssertions$DiffFailure$\"),\n    ProblemFilters.exclude[MissingTypesProblem](\"scala.meta.testkit.DiffAssertions\"),\n    // Dotty related exceptions - To be removed upon releasing 4.3.25 or 4.4\n    ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.Template.derives\"),\n    ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.Template.setDerives\"),"
+  },
+  {
+    "id" : "81b9ba0b-b4bf-40ec-8e02-bbad08542c3e",
+    "prId" : 1473,
+    "comments" : [
+      {
+        "id" : "cf2b0250-044d-4b28-81fa-0a5d30d469c7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg Let's open a ticket to remove these filters once we release the next major version.",
+        "createdAt" : "2018-04-05T10:22:02Z",
+        "updatedAt" : "2018-04-05T10:22:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cf884716-b9fa-40ac-934e-3904eed43832",
+        "parentId" : "cf2b0250-044d-4b28-81fa-0a5d30d469c7",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I propose we make it part of our release process instead.",
+        "createdAt" : "2018-04-05T10:39:23Z",
+        "updatedAt" : "2018-04-05T10:39:23Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5f411b1f-9806-4f1c-90ac-fd8fce0c84df",
+        "parentId" : "cf2b0250-044d-4b28-81fa-0a5d30d469c7",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What do you have in mind?",
+        "createdAt" : "2018-04-08T22:36:22Z",
+        "updatedAt" : "2018-04-08T22:36:23Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "46bb751548c99ea59fa9d96eab1214352d7269d4",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +38,42 @@    // `Symbol.Multi.{toString,syntax}`, which would have unconditionally resulted in an exception.\n    ProblemFilters.exclude[IncompatibleResultTypeProblem](\"org.langmeta.semanticdb.Symbol#Multi.toString\"),\n    ProblemFilters.exclude[IncompatibleResultTypeProblem](\"org.langmeta.semanticdb.Symbol#Multi.syntax\")\n  )\n}"
+  },
+  {
+    "id" : "f9b37cda-ae2f-4f68-ac28-e8b0b076886a",
+    "prId" : 1126,
+    "comments" : [
+      {
+        "id" : "535274b9-d758-4009-979a-33e4dac0c4ee",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How do we deal with these issues in the future? Under what conditions do we allow adding new rules here?",
+        "createdAt" : "2017-09-21T15:41:00Z",
+        "updatedAt" : "2017-09-21T15:41:14Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "afcf3c93-db05-442e-8d3f-45cfc2cea11d",
+        "parentId" : "535274b9-d758-4009-979a-33e4dac0c4ee",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We use our common sense to determine if these reported ABI issues affect downstream users. In this case I think it's pretty clear that no regular user will be affected.",
+        "createdAt" : "2017-09-21T15:43:02Z",
+        "updatedAt" : "2017-09-21T15:43:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "240f551aeb0adf271899ac956957d5674af7ff42",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@      ProblemFilters.exclude[Problem](\"scala.meta.internal.*\"),\n      ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.parsers.Parsed.*\"),\n      ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.tokenizers.Tokenized.*\")\n    )\n  }"
+  }
+]

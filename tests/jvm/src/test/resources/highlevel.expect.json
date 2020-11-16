@@ -1,0 +1,152 @@
+[
+  {
+    "id" : "56ce19e2-cef0-4f1a-ac5d-441ba3ef6143",
+    "prId" : 1477,
+    "comments" : [
+      {
+        "id" : "f113baf4-a224-4f5c-b77d-8d420faa9c7e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Later, we'll have to deal with instabilities in gensyms when pieces of code get moved around. But for this PR, the current situation with synthetic names is okay.",
+        "createdAt" : "2018-04-08T21:16:46Z",
+        "updatedAt" : "2018-04-08T21:20:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21b41e6c84d84575561dfa16c16833fad3c589b9",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +944,948 @@  [67..68): T => example.Methods#[T]\n  [72..79): Nothing => scala.Nothing#\nexample.Methods#m7b(List,Function1).(evidence$2) => implicit param evidence$2: Function1[U, T]\n  [0..9): Function1 => scala.Function1#\n  [10..11): U => example.Methods#m7b(List,Function1).[U]"
+  },
+  {
+    "id" : "a68d9eda-2d4b-4eb3-94a5-ff62b00f6fea",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "70145c63-75ce-4b26-88ec-70aa805311b4",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "What is the canonical way to distinguish between the `var method` getter and setter?\r\n\r\n```\r\n +_root_.flags.p.package.AA#`z_=`(Int). => var method z_=: (x$1: Int): Unit \r\n +_root_.flags.p.package.AA#z(). => var method z: Int \r\n```\r\nIt does not seem to be possible to distinguish them with kind/properties alone.",
+        "createdAt" : "2018-03-09T11:41:00Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f2d83f77-5232-49d6-8c62-9958f20356a7",
+        "parentId" : "70145c63-75ce-4b26-88ec-70aa805311b4",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "SLS mandates the `_=` suffix for setters, so that should be a canonical way.",
+        "createdAt" : "2018-03-09T14:51:29Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 147,
+    "diffHunk" : "@@ -1,1 +256,260 @@_root_.flags.p.package.AA#`<init>`(Int,Int,Int).(z) => var param z: Int\n  [0..3): Int => _root_.scala.Int#\n_root_.flags.p.package.AA#`z_=`(Int). => var method z_=: (x$1: Int): Unit\n  [6..9): Int => _root_.scala.Int#\n  [12..16): Unit => _root_.scala.Unit#"
+  },
+  {
+    "id" : "62b97a06-aa9d-40c1-a0b0-056a1348cdf6",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "8cab6fa5-581f-4ba9-82ce-6e3a07883830",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "😍 ",
+        "createdAt" : "2018-03-09T00:14:24Z",
+        "updatedAt" : "2018-03-09T00:24:15Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +385,389 @@[63..72): MetacJava => _root_.com.javacp.MetacJava#\n[73..84): StaticInner => _root_.com.javacp.MetacJava#StaticInner#\n[85..93): isStatic => _root_.com.javacp.MetacJava#StaticInner#isStatic().\n[102..108): javacp => _root_.com.javacp.\n[109..118): MetacJava => _root_.com.javacp.MetacJava#"
+  },
+  {
+    "id" : "8825ca78-ed00-4cc2-b40e-bb346f248165",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "bb6825e3-cafb-4a0c-b112-43e4308d9af7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "`abstract` and `sealed` are interesting additions. `final` is pretty nuts. Looking forward to getting this sorted out in https://github.com/scalameta/scalameta/issues/1162.",
+        "createdAt" : "2018-03-09T00:15:30Z",
+        "updatedAt" : "2018-03-09T00:24:15Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d1ddf9a6-a447-438d-af09-e9e8c92fb9d1",
+        "parentId" : "bb6825e3-cafb-4a0c-b112-43e4308d9af7",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "haha yes, `abstract final` makes no sense :joy:",
+        "createdAt" : "2018-03-09T11:12:39Z",
+        "updatedAt" : "2018-03-09T11:21:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 148,
+    "diffHunk" : "@@ -1,1 +1265,1269 @@_root_.java.nio. => package nio\n_root_.java.nio.file. => package file\n_root_.java.nio.file.LinkOption# => abstract final sealed javadefined class LinkOption\n_root_.java.nio.file.LinkOption#NOFOLLOW_LINKS. => final javadefined val NOFOLLOW_LINKS: LinkOption\n  [0..10): LinkOption => _root_.java.nio.file.LinkOption#"
+  }
+]

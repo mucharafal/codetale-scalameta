@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "23152f12-1906-435b-8100-1dbeebdc7eda",
+    "prId" : 1512,
+    "comments" : [
+      {
+        "id" : "d31c34c2-d3d7-4f58-ad49-38047c151fba",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg Do we still need `scala.meta.Symbol`?",
+        "createdAt" : "2018-04-24T21:53:21Z",
+        "updatedAt" : "2018-04-24T22:29:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "13c42691-cca4-4691-a21b-fe5891a8cba5",
+        "parentId" : "d31c34c2-d3d7-4f58-ad49-38047c151fba",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Yes, `Symbol` will need to live with us another cycle, although we might want to deprecate it 🤔 ",
+        "createdAt" : "2018-04-24T21:54:21Z",
+        "updatedAt" : "2018-04-24T22:29:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37727363b8efee331d138e78187339dee46b9221",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +-1,3 @@package scala.meta.semanticdb\n\nimport scala.compat.Platform.EOL"
+  }
+]

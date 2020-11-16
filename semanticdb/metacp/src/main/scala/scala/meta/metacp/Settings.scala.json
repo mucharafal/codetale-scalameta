@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "76fc9994-7916-496f-93f5-0acde90bac30",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "ec5a9358-4d2c-4085-b9c5-12fabad4d3ee",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Given what we discussed earlier today, how about changing `classpath: Classpath` to `in: AbsolutePath`?",
+        "createdAt" : "2018-07-10T19:36:24Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa7d6894-50e0-4d1b-a1e1-cb1ed5cb077d",
+        "parentId" : "ec5a9358-4d2c-4085-b9c5-12fabad4d3ee",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I vote for \"no\" because\r\n\r\n- we use `Classpath` in `ConvertSuite`\r\n- running `Classpath.entries.map(Metacp.process)` has a big performance penalty because `ClasspathIndex` needs to be re-created every time\r\n\r\nI would prefer to come up with a scheme so that metacp produces one jar per classpath entry.",
+        "createdAt" : "2018-07-10T20:31:49Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "95520ca6-c682-4ae1-b843-186e38890fd5",
+        "parentId" : "ec5a9358-4d2c-4085-b9c5-12fabad4d3ee",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Alright, let's have metacp produce one jar per classpath entry.",
+        "createdAt" : "2018-07-10T21:58:39Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "10cf124d-7dd2-4667-8bea-aedd41639807",
+        "parentId" : "ec5a9358-4d2c-4085-b9c5-12fabad4d3ee",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2018-07-10T23:28:57Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +8,12 @@final class Settings private (\n    val out: AbsolutePath,\n    val classpath: Classpath,\n    val dependencyClasspath: Classpath,\n    val scalaLibrarySynthetics: Boolean,"
+  }
+]

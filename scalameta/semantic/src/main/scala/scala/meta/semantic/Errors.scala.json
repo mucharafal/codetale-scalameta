@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "cd0932c5-467a-466e-bc0c-467a1ec842e5",
+    "prId" : 566,
+    "comments" : [
+      {
+        "id" : "e5665754-8388-4d42-a0e3-297fc37c1aa8",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why did you go with the name `Completed`?",
+        "createdAt" : "2016-12-14T10:17:59Z",
+        "updatedAt" : "2016-12-14T10:17:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e66edd96-fc38-480c-8eb4-4e880d7c65fe",
+        "parentId" : "e5665754-8388-4d42-a0e3-297fc37c1aa8",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Internally, scalac calls the process of obtaining semantic information `completion`. Therefore, I just took this name and rolled with it. \r\n\r\nJudging by your reaction, this name is obscure, which is not good. Any ideas about replacing it?",
+        "createdAt" : "2016-12-14T10:23:58Z",
+        "updatedAt" : "2016-12-14T10:23:58Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "55bb8846-6b91-4b77-8893-9f49a948c548",
+        "parentId" : "e5665754-8388-4d42-a0e3-297fc37c1aa8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Well, if scalac uses that name then I guess it's fine. Maybe a short explanation in the docstring could help.",
+        "createdAt" : "2016-12-14T11:22:16Z",
+        "updatedAt" : "2016-12-14T11:22:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "64f509d5a1212170ee64e2d0f4e589356d0f32cc",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@import scala.meta.internal.inputs._\n\n@root trait Completed[+T] {\n  def get: T = this match {\n    case Completed.Success(tree) => tree"
+  }
+]

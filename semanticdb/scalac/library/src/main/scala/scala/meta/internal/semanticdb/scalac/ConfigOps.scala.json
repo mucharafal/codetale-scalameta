@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "a6325452-42ea-4745-a99d-6f03320630cc",
+    "prId" : 1743,
+    "comments" : [
+      {
+        "id" : "89e033d2-7e04-4189-936d-351ea89563bb",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Uh oh. I wonder how I missed that before 😅 ",
+        "createdAt" : "2018-08-08T17:36:06Z",
+        "updatedAt" : "2018-08-08T19:30:42Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "96148448-19b5-4a9a-9106-19d71d49fbaa",
+        "parentId" : "89e033d2-7e04-4189-936d-351ea89563bb",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Same here, sloppy copy-paste. I hope the new `ConfigSuite` lowers the barrier for testing new config options that we catch similar errors in the future.",
+        "createdAt" : "2018-08-08T18:42:53Z",
+        "updatedAt" : "2018-08-08T19:36:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b9e64ef770e5af1853a6334977620aa0ac707c4",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +56,60 @@  private val SetTargetroot = \"targetroot:(.*)\".r\n  private val SetText = \"text:(.*)\".r\n  private val SetMd5 = \"md5:(.*)\".r\n  private val SetSymbols = \"symbols:(.*)\".r\n  private val SetDiagnostics = \"diagnostics:(.*)\".r"
+  },
+  {
+    "id" : "f3dee42e-5d57-48ae-9f0a-2c9d87396e1d",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "d5c24126-7f1c-4251-aeea-233a8026bcc5",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I suggest we don't tiptoe around this, since it looks like our next release is going to be 4.0.0-M1 anyway. Same suggestion for deprecation warnings - let's outright remove all the high-level APIs in this very PR.",
+        "createdAt" : "2018-04-22T22:59:43Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "97786a18-6e63-497d-a289-e5a876f4dc8d",
+        "parentId" : "d5c24126-7f1c-4251-aeea-233a8026bcc5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'd like to remove this at the same time when we remove the deprecated classes, it's helpful to have customized error messages instead of a mysterious \"screw you, you did something wrong\"",
+        "createdAt" : "2018-04-23T11:44:08Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 105,
+    "diffHunk" : "@@ -1,1 +91,95 @@          s\"-P:semanticdb:$option is deprecated. \" +\n            s\"Use -P:semanticdb:symbols:{definitions,all,none} instead.\")\n        config = config.copy(symbols = denotations)\n      case SetSymbolInformation(SymbolMode(infos)) =>\n        config = config.copy(symbols = infos)"
+  },
+  {
+    "id" : "2f1ac762-dbe4-415d-a01d-173defc9366a",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "a951d020-0015-4376-9309-ce67ddddd3da",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : ":tada: It's been a long journey to reach here, glad we finally made it 👏 ",
+        "createdAt" : "2018-02-27T08:26:17Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +43,47 @@    SemanticdbMode.Fat,\n    FailureMode.Warning,\n    DenotationMode.Definitions,\n    SignatureMode.New,\n    MemberMode.None,"
+  }
+]

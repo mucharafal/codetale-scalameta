@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "adb97156-0904-45f6-862f-d32e081e7692",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "e95a7c78-0af6-4d79-b4c3-6f5d0751eca1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nitpick. I personally think `toX` extension methods should be pure data transformations and not do I/O. I think java.nio and scala.concurrent get this right by making unsafe/blocking operations static methods on objects like `Await.result` and `Files.readAllBytes`.",
+        "createdAt" : "2018-02-27T10:23:13Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +8,12 @@package object metacp {\n  implicit class XtensionAsmPathOps(path: Path) {\n    def toClassNode: ClassNode = {\n      val node = new ClassNode()\n      val bytes = Files.readAllBytes(path)"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "a9c7a1e9-ffef-4dee-808d-12b605959692",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "0f429f6a-8389-49b5-905f-b1d7a4b87887",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "😱 ",
+        "createdAt" : "2018-04-22T22:11:11Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e4330b8b-d7f1-4cdd-8667-a78bdf60d659",
+        "parentId" : "0f429f6a-8389-49b5-905f-b1d7a4b87887",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Overeager optimization? I don't want to repeat `new String(char)` 100s of times for virtual files.",
+        "createdAt" : "2018-04-23T09:42:30Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "836f9072-d158-4d65-85a1-b5338eecfd98",
+        "parentId" : "0f429f6a-8389-49b5-905f-b1d7a4b87887",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I was just surprised that I haven't thought about this before.",
+        "createdAt" : "2018-04-23T19:13:47Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +73,77 @@  final case class VirtualFile(path: scala.Predef.String, value: scala.Predef.String) extends Input {\n    lazy val chars = value.toArray\n    override def text: scala.Predef.String = value\n    override def toString = s\"\"\"Input.VirtualFile(\"$path\", \"$value\")\"\"\"\n  }"
+  }
+]

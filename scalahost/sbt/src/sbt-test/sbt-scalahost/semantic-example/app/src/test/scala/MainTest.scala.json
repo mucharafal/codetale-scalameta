@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "806af7ad-23be-401f-bd56-c6e7789cd339",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "829bc1e6-35a2-45ea-8469-c22699f2021f",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "Question: have you experienced a performance hit because of this forking? In theory, it should be slower.",
+        "createdAt" : "2017-05-15T22:12:58Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "13764e2f-8b45-475d-ac8a-934ba175e00c",
+        "parentId" : "829bc1e6-35a2-45ea-8469-c22699f2021f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I haven't. But these tests run via scripted so the overhead of forking here is negligible compared to scripted slowness.",
+        "createdAt" : "2017-05-16T07:06:25Z",
+        "updatedAt" : "2017-05-16T07:21:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +25,29 @@    )\n    // parent because fork := true\n    val workingDir = Paths.get(sys.props(\"user.dir\")).getParent\n    paths.foreach { path =>\n      val relpath = Paths.get(path.replaceAllLiterally(\"/\", java.io.File.separator))"
+  }
+]

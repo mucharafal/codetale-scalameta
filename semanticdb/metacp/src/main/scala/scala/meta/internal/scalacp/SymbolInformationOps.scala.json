@@ -1,0 +1,114 @@
+[
+  {
+    "id" : "40c49fc8-9f8f-4afb-b14d-697d520585e4",
+    "prId" : 1670,
+    "comments" : [
+      {
+        "id" : "b84e30f7-0c40-4a90-a857-5fbc3f69e9d7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "😍 ",
+        "createdAt" : "2018-07-04T17:15:34Z",
+        "updatedAt" : "2018-07-04T17:21:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e183ff3feb4b555e8bae06f69dfeb80af68e4bbb",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +61,65 @@          } else {\n            k.CLASS\n          }\n        case NoSymbol =>\n          k.UNKNOWN_KIND"
+  },
+  {
+    "id" : "1c55c2c3-f54c-443e-bc6a-591648418f01",
+    "prId" : 1660,
+    "comments" : [
+      {
+        "id" : "d0603d7d-787e-49e4-b9dc-c53162869e21",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "You can ignore the commit 0c5c84b03f2a6910376e624b828051afcfebbb72. I got greedy in 1e3a73bf326538ffa53db726b7465f815b097c50 and tried to fix an issue unrelated to this PR. ",
+        "createdAt" : "2018-07-03T20:54:36Z",
+        "updatedAt" : "2018-07-03T21:21:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7bc6b31dd8bc62da133ef9d400b8868b1e144ff1",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +69,73 @@          def isScalaObject: Boolean = isModuleClass && !sym.isJavaDefined\n          if (sym.isPackageAccordingToClasspath) k.PACKAGE\n          else if (hasTermName || isScalaObject) k.OBJECT\n          else k.CLASS\n        case NoSymbol =>"
+  },
+  {
+    "id" : "65686873-9c8e-4c6b-a2ca-96cb873ea444",
+    "prId" : 1646,
+    "comments" : [
+      {
+        "id" : "cff5ba2d-34ca-478f-908a-f662547f03ce",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This needs to be changed to accommodate the recent changes in the symbol format. It should say `scala/reflect/macros/internal/macroImpl#`.",
+        "createdAt" : "2018-07-04T17:34:17Z",
+        "updatedAt" : "2018-07-04T17:48:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d901255ffe94016490189415caa3c15737743666",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +217,221 @@\n    private val syntheticAnnotationsSymbols = Set(\n      \"scala.reflect.macros.internal.macroImpl#\"\n    )\n    private def syntheticAnnotations(annot: s.Annotation): Boolean = {"
+  },
+  {
+    "id" : "7ca608e7-d6fa-468b-979b-b25c18a2124f",
+    "prId" : 1638,
+    "comments" : [
+      {
+        "id" : "e6d1723c-6c3c-4404-8227-96c0faf6fba4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 👍 👍 ",
+        "createdAt" : "2018-06-28T19:21:53Z",
+        "updatedAt" : "2018-06-29T08:27:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9b78e59e3a1e60fd5cbfd409249c560f6264a6b6",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +68,72 @@          val isModuleClass = sym.entry.entryType == 10\n          def isScalaObject: Boolean = isModuleClass && !sym.isJavaDefined\n          if (hasTermName || isScalaObject) k.OBJECT\n          else k.CLASS\n        case NoSymbol =>"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "dba26e54-9de5-4e25-b5da-2b061d78b380",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "3c8672bd-7fb2-4dde-a9c8-61daf0fdf840",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Really great to have this trait.",
+        "createdAt" : "2017-04-26T11:53:26Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +14,18 @@import scala.meta.semantic._\n\ntrait CommonMirror extends Mirror {\n  // NOTE: Implemented differently by online and offline mirrors\n  def dialect: Dialect"
+  }
+]

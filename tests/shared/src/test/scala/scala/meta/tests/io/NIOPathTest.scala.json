@@ -1,0 +1,106 @@
+[
+  {
+    "id" : "e00266d3-ce97-49d3-a29c-0e332c67f055",
+    "prId" : 1899,
+    "comments" : [
+      {
+        "id" : "920aedc9-9956-449d-b457-8cea0dedd9b9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm not sure if the expected behavior here is `endsWith(\"hello/\")` or `endsWith(\"hello\")`. I don't mind either way however, as long as `toURI` doesn't crash.",
+        "createdAt" : "2019-08-26T01:19:53Z",
+        "updatedAt" : "2019-08-26T01:19:54Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24a0f2a7-fd1e-42e3-a1f6-6c78e42df266",
+        "parentId" : "920aedc9-9956-449d-b457-8cea0dedd9b9",
+        "author" : {
+          "login" : "jameskoch",
+          "name" : "James Koch",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/168110?v=4"
+        },
+        "body" : "Given the comments over [here](https://github.com/scalameta/scalameta/blob/47a08dd299d33aa6574f1eaef83c06df6d193d1a/scalameta/io/shared/src/main/scala/scala/meta/io/AbsolutePath.scala#L21-L32) about URI.resolve behavior pivoting on existence of a trailing slash, it seems that we'd prefer `hello/`.  If the slash is not there, then there's a risk that subsequent attempts to resolve within `hello` actually return something that's outside of it. Something like `hello.resolve(\"goodbye\")` right here might demonstrate the issue (assuming it's not some quirk of a particular JVM version or filesystem).\r\n\r\nI can take a closer look tomorrow.",
+        "createdAt" : "2019-08-26T15:24:55Z",
+        "updatedAt" : "2019-08-26T15:24:55Z",
+        "lastEditedBy" : {
+          "login" : "jameskoch",
+          "name" : "James Koch",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/168110?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d5f7cd09-2e35-48aa-b6c9-0764b4d5d271",
+        "parentId" : "920aedc9-9956-449d-b457-8cea0dedd9b9",
+        "author" : {
+          "login" : "jameskoch",
+          "name" : "James Koch",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/168110?v=4"
+        },
+        "body" : "Experimenting more this AM, resolving URIs relative to a `jar:` behaves... surprisingly.\r\n\r\n```\r\n// jar: prefix seems to prevent meaningful relative resolve() ...\r\nscala> URI.create(\"jar:file:///tmp/foo.jar!/hello\").resolve(\"foo\")\r\nres19: java.net.URI = foo\r\n\r\n// Trailing slash does not help.\r\nscala> URI.create(\"jar:file:///tmp/foo.jar!/hello/\").resolve(\"foo\")\r\nres20: java.net.URI = foo\r\n\r\n// If we drop the jar: prefix we're back to meaningful relative resolve() ...\r\nscala> URI.create(\"file:///tmp/foo.jar!/hello/\").resolve(\"foo\")\r\nres21: java.net.URI = file:/tmp/foo.jar!/hello/foo\r\n\r\n// ... but trailing slash still required for \"resolve relative to a directory\"\r\nscala> URI.create(\"file:///tmp/foo.jar!/hello\").resolve(\"foo\")\r\nres22: java.net.URI = file:/tmp/foo.jar!/foo\r\n```\r\n\r\nNot sure what, if anything, to do w/ this. Still feels marginally more consistent to return a trailing slash from `toURI(isDirectory = true)`, but actual impact downstream in the case of a JAR FS is unclear to me.",
+        "createdAt" : "2019-08-27T14:16:25Z",
+        "updatedAt" : "2019-08-27T14:16:26Z",
+        "lastEditedBy" : {
+          "login" : "jameskoch",
+          "name" : "James Koch",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/168110?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1199a714-866b-4854-9e9d-5d0eb6c8f640",
+        "parentId" : "920aedc9-9956-449d-b457-8cea0dedd9b9",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I agree, it's not clear to me exactly how URIs inside jars should behave. I don't think we currently use them for anything meaningful, my primary motivation for this PR was just to at least avoid the exception.",
+        "createdAt" : "2019-08-27T18:07:08Z",
+        "updatedAt" : "2019-08-27T18:07:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "336c6e08-d20d-44ad-9ce4-3722bd4de26e",
+        "parentId" : "920aedc9-9956-449d-b457-8cea0dedd9b9",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I agree that `hello/` would be more suitable but I wouldn't worry about it since directory entries inside jar files are not used for any application that I'm aware of. I hit on this issue only while experimenting with something and I did a `println(path.toURI)`",
+        "createdAt" : "2019-08-27T18:09:35Z",
+        "updatedAt" : "2019-08-27T18:09:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1040556d62af3352f9f9a164d95f9395c356be4f",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +96,100 @@        val hello = root.resolve(\"hello\")\n        Files.createDirectories(hello.toNIO)\n        assert(hello.toURI.toString.endsWith(\"hello\"))\n      }\n    }"
+  }
+]

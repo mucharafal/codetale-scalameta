@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "644cb003-3044-41cb-89ed-d880ba22a4e1",
+    "prId" : 1124,
+    "comments" : [
+      {
+        "id" : "f3481e29-e2a8-434d-a843-6b3b636e5747",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Wow TIL about stripLineEnd",
+        "createdAt" : "2017-09-20T19:52:18Z",
+        "updatedAt" : "2017-09-20T19:52:38Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a8b1e1fb-732d-4d7e-a284-f3fdb8386931",
+        "parentId" : "f3481e29-e2a8-434d-a843-6b3b636e5747",
+        "author" : {
+          "login" : "magicknot",
+          "name" : "David Duarte",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/3694454?u=c8bf867e8cf3065c44982dda76a8481fe072dfaa&v=4"
+        },
+        "body" : "Me too! :)",
+        "createdAt" : "2017-09-21T22:21:48Z",
+        "updatedAt" : "2017-09-21T22:21:48Z",
+        "lastEditedBy" : {
+          "login" : "magicknot",
+          "name" : "David Duarte",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/3694454?u=c8bf867e8cf3065c44982dda76a8481fe072dfaa&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a0fe4c8bbb1c77a523fb7b3393a0b0a841caf491",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +16,20 @@          val notEof = start < input.chars.length\n          val end = if (notEof) input.lineToOffset(pos.startLine + 1) else start\n          new String(input.chars, start, end - start).stripLineEnd\n        }\n        var caret = \" \" * pos.startColumn + \"^\""
+  }
+]

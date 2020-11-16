@@ -1,0 +1,387 @@
+[
+  {
+    "id" : "f6d420f1-de91-44de-9195-e701a3b96634",
+    "prId" : 1575,
+    "comments" : [
+      {
+        "id" : "727820c4-efd8-4dfa-9ad9-4017998d14c1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "why not `syms.map(ssymbol)`?",
+        "createdAt" : "2018-05-31T21:25:06Z",
+        "updatedAt" : "2018-05-31T21:28:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "92d201a2-3737-4f4a-8bde-7f225af5f166",
+        "parentId" : "727820c4-efd8-4dfa-9ad9-4017998d14c1",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This implementation gets an upgrade in a subsequent commit. It looks dumb when introduced, but that allows for an easier to read diff later on.",
+        "createdAt" : "2018-05-31T21:59:21Z",
+        "updatedAt" : "2018-05-31T21:59:21Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "af63cb8745825d9c2b9aa7109289aed5169a1f7a",
+    "line" : 100,
+    "diffHunk" : "@@ -1,1 +505,509 @@  case class SemanticdbDecls(syms: List[Symbol]) {\n    lazy val ssyms: List[String] = {\n      val sbuf = List.newBuilder[String]\n      syms.foreach { sym =>\n        val ssym = ssymbol(sym)"
+  },
+  {
+    "id" : "de86ff75-3985-49d4-a7cb-15141d0558af",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "d555a12e-46d6-47ca-bd8c-22b3b04a3c3c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm a bit on the fence about scalapb lenses, I like the idea of using the generated classes as vanilla classes (no case) + `.withFieldName(FieldType)` builders. I guess we can refactor this code if we end up using another code generator",
+        "createdAt" : "2018-05-29T11:18:33Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0e35a513-3784-48aa-9160-bfdd843c175c",
+        "parentId" : "d555a12e-46d6-47ca-bd8c-22b3b04a3c3c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I suppose once #1262 is fixed, we will have much less (if any) need in lenses.",
+        "createdAt" : "2018-05-29T16:11:55Z",
+        "updatedAt" : "2018-05-29T16:11:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 122,
+    "diffHunk" : "@@ -1,1 +316,320 @@      } else if (sym.isConstructor) {\n        val tpe = loop(sym.infoType)\n        tpe.map(_.update(_.methodType.optionalReturnType := None))\n      } else if (sym.isScalacField) {\n        val stag = t.METHOD_TYPE"
+  },
+  {
+    "id" : "ccfb24a0-a79f-4a84-9fa2-1813be1a7ea4",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "8a3ba548-9859-485f-97f4-368ff1438678",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`skind(sym).isPackageObject` (but I don't feel strongly about it)",
+        "createdAt" : "2018-05-29T12:03:25Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 85,
+    "diffHunk" : "@@ -1,1 +163,167 @@  private def sname(sym: Symbol): String = {\n    val ssym = ssymbol(sym)\n    if (skind(sym) == k.PACKAGE_OBJECT) ssym.owner.desc.name\n    else ssym.desc.name\n  }"
+  },
+  {
+    "id" : "4b58ccd9-3be5-4c89-955b-cdac3d906cc2",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "13114a18-d604-467e-8a1a-054ab4a571da",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "⚠️ Warning: handwavy perf comment\r\n\r\nThis seems like a heavy hammer for a small problem. I see you moved `loop` to another place, I'm not sure exactly what the consequences for this refactoring are but it seems to be doing much more work now for the same functionality with a special case only for package object 🤔 ",
+        "createdAt" : "2018-05-29T12:09:14Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 84,
+    "diffHunk" : "@@ -1,1 +162,166 @@\n  private def sname(sym: Symbol): String = {\n    val ssym = ssymbol(sym)\n    if (skind(sym) == k.PACKAGE_OBJECT) ssym.owner.desc.name\n    else ssym.desc.name"
+  },
+  {
+    "id" : "d407e20a-64dd-435f-bec3-d4d53caeb35b",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "49a7c61e-c2bb-4513-b950-9ecc31a617fd",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "⚠️ handwavy\r\n\r\nThis seems like a heavy hammer for a small task, and on a hot path",
+        "createdAt" : "2018-05-29T12:13:11Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 227,
+    "diffHunk" : "@@ -1,1 +441,445 @@    }\n    def isUselessField: Boolean = {\n      val peers = sym.parent.map(_.children.toList).getOrElse(Nil)\n      val getter = peers.find(m => m.isAccessor && m.name == sym.name.stripSuffix(\" \"))\n      sym.isScalacField && getter.nonEmpty"
+  },
+  {
+    "id" : "28c436d8-983a-4b48-9bc1-2a3af2ea6803",
+    "prId" : 1458,
+    "comments" : [
+      {
+        "id" : "d012445d-52c5-404c-860e-9d90151d6a48",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "should we also take care of `hasNonTrivialPrefix`? For the same corner case it currently returns `true` instead of `false`, because the `isObject` test fails.",
+        "createdAt" : "2018-03-27T08:48:07Z",
+        "updatedAt" : "2018-03-28T17:43:54Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "01c8365e-6658-43a4-a942-549358266a11",
+        "parentId" : "d012445d-52c5-404c-860e-9d90151d6a48",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Do you have a test case in mind? Either is now looking good:\r\n\r\n```\r\n  symbols {\r\n    symbol: \"_empty_.C#Either().\"\r\n    kind: METHOD\r\n    properties: 0\r\n    name: \"Either\"\r\n    tpe {\r\n      tag: METHOD_TYPE\r\n      methodType {\r\n        return_type {\r\n          tag: SINGLETON_TYPE\r\n          singletonType {\r\n            tag: SYMBOL\r\n            symbol: \"scala.util.Either.\"\r\n            primitive: 0\r\n            string: \"\"\r\n          }\r\n        }\r\n      }\r\n    }\r\n```",
+        "createdAt" : "2018-03-28T17:51:55Z",
+        "updatedAt" : "2018-03-28T17:51:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2687bbe-e661-4f02-bcfc-2ad6d1dbc8fe",
+        "parentId" : "d012445d-52c5-404c-860e-9d90151d6a48",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "ah, strange. Given the change, I would expect the prefix to be still there. 👍 then",
+        "createdAt" : "2018-03-29T09:33:15Z",
+        "updatedAt" : "2018-03-29T09:33:15Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d4a155a9bbde2cac46f5359e30762e34787b3c39",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +194,198 @@          val stpe = {\n            val stag = st.SYMBOL\n            val spre = if (tpe.hasNontrivialPrefix) loop(pre) else None\n            val ssym = {\n              // NOTE: Due to some unclear reason, Scalac sometimes saves"
+  },
+  {
+    "id" : "fe1a5197-5a7c-420c-bd57-6ba100c4a795",
+    "prId" : 1458,
+    "comments" : [
+      {
+        "id" : "f49fa6c9-66bc-4e76-b7b2-573bc9831cf9",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I would link to #1392 in the comment for extra context",
+        "createdAt" : "2018-03-27T08:49:04Z",
+        "updatedAt" : "2018-03-28T17:43:54Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d4a155a9bbde2cac46f5359e30762e34787b3c39",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +196,200 @@            val spre = if (tpe.hasNontrivialPrefix) loop(pre) else None\n            val ssym = {\n              // NOTE: Due to some unclear reason, Scalac sometimes saves\n              // (or Scalap sometimes loads) single types that point to\n              // companion classes, not module classes (see #1392)."
+  },
+  {
+    "id" : "d437c15c-05db-4852-98eb-2308708b6fe6",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "bc182c1f-82bd-46a2-b4c2-9fd4b2f895a6",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nitpick. I find it a bit weird to make as much as possible private in the internal package. These methods are not protected by any bincompat guarantees. ",
+        "createdAt" : "2018-02-27T10:05:27Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6b75523e-0e42-4c49-9529-2280a98691dc",
+        "parentId" : "bc182c1f-82bd-46a2-b4c2-9fd4b2f895a6",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This emphasizes that the methods aren't part of the interface between metacp, javacp and scalacp. However if you'd like, I can make them public again.",
+        "createdAt" : "2018-02-27T20:33:36Z",
+        "updatedAt" : "2018-02-27T20:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "be97de59-15d3-4bb1-808e-89b4f0054509",
+        "parentId" : "bc182c1f-82bd-46a2-b4c2-9fd4b2f895a6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I hit on myself the other day that I wanted to access a private method in Metap from external repo. In this particular case it's probably better to come up with a better public API for metap than un-private methods. Nothing to act upon now.",
+        "createdAt" : "2018-02-27T20:42:19Z",
+        "updatedAt" : "2018-02-27T20:42:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +35,39 @@  }\n\n  private def spackages(sym: SymbolInfoSymbol): List[s.SymbolInformation] = {\n    val directPackagePath = {\n      val topLevelPath = sym.symbolInfo.owner.path.replace(\"<empty>\", \"_empty_\")"
+  },
+  {
+    "id" : "276474f9-1e11-4f3f-8a17-cac5795b3966",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "dd0dfc37-1b85-4e36-963c-ac690f0ee8ba",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think we should consider making `language`  an enum and add a `version: String` field. I find it awkward to hardcode `\"Scala\"` and `\"Java\"` all over the place and it opens up a can of worms related to equality (case-sensitivity etc.)",
+        "createdAt" : "2018-02-27T10:30:44Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "808fb599-1f4c-4a22-bc4d-a34bd477b955",
+        "parentId" : "dd0dfc37-1b85-4e36-963c-ac690f0ee8ba",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yep, I was thinking about that yesterday. I've opened a ticket: https://github.com/scalameta/scalameta/issues/1374.",
+        "createdAt" : "2018-02-27T20:28:31Z",
+        "updatedAt" : "2018-02-27T20:28:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +60,64 @@      s.SymbolInformation(\n        symbol = transitivePackagePath + \".\",\n        language = Some(s.Language(\"Scala\")),\n        kind = k.PACKAGE,\n        name = name,"
+  }
+]

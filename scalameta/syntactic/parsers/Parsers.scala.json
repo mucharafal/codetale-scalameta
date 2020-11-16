@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "a90d5266-ad09-464b-890b-30e61de92754",
+    "prId" : 53,
+    "comments" : [
+      {
+        "id" : "b2630c00-f47a-4fb7-8794-7b217f157a7d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Whitespace after underscore?\n",
+        "createdAt" : "2014-10-23T12:15:58Z",
+        "updatedAt" : "2014-10-23T12:33:40Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2a1527ec-edb2-49d2-936d-17fae07ca67d",
+        "parentId" : "b2630c00-f47a-4fb7-8794-7b217f157a7d",
+        "author" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "body" : "If I name class as just `_` it fails to compile for some weird reason:\n\n```\n[error] /Users/Denys/Proj/meta/scalameta/syntactic/parsers/Tok.scala:101: class Any is abstract; cannot be instantiated\n[error]   case class `_`(offset: Int) extends Delim with ExprIntro with TypeIntro\n[error]              ^\n```\n\nProbably another name mangling bug.\n",
+        "createdAt" : "2014-10-23T12:32:12Z",
+        "updatedAt" : "2014-10-23T12:33:40Z",
+        "lastEditedBy" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f2717794a0be317790a077c8fce0811c716ead5",
+    "line" : 639,
+    "diffHunk" : "@@ -1,1 +844,848 @@      tok match {\n        case _: Ident   => termName()\n        // case _: `_ ` => freshPlaceholder()       // ifonly etapolation\n        case _: `{`     => dropTrivialBlock(expr()) // dropAnyBraces(expr0(Local))\n        case _: `this`  => next(); Term.This(None)"
+  },
+  {
+    "id" : "80bb244c-3ccf-4964-8160-0647ff107fab",
+    "prId" : 53,
+    "comments" : [
+      {
+        "id" : "573860da-3320-4504-9e56-de62532bef63",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Wat?\n",
+        "createdAt" : "2014-10-23T12:16:10Z",
+        "updatedAt" : "2014-10-23T12:33:40Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6f2717794a0be317790a077c8fce0811c716ead5",
+    "line" : 651,
+    "diffHunk" : "@@ -1,1 +855,859 @@    interpolate[Pat, Pat.Interpolate](arg = () => dropAnyBraces(pattern()), result = Pat.Interpolate(_, _, _))\n\n/* ------------- NEW LINES ------------------------------------------------- */\n\n  def newLineOpt(): Unit = {"
+  }
+]

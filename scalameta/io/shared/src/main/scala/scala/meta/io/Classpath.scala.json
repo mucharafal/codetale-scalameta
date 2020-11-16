@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "8d8c6623-6aea-475c-a74b-28a73dc97d78",
+    "prId" : 1638,
+    "comments" : [
+      {
+        "id" : "695a9e54-145a-4afa-86cb-1c7ac020c827",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I wanted this method multiple times in the past :)",
+        "createdAt" : "2018-06-28T18:52:03Z",
+        "updatedAt" : "2018-06-29T08:27:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9b78e59e3a1e60fd5cbfd409249c560f6264a6b6",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +6,10 @@\n  def ++(other: Classpath): Classpath =\n    Classpath(entries ++ other.entries)\n\n  @deprecated(\"Use .entries instead\", \"4.0.0\")"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "fd84873a-8d25-43d3-bae1-74b3112d84d2",
+    "prId" : 588,
+    "comments" : [
+      {
+        "id" : "10100057-85a6-49e7-9d6a-83580e82f71d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Just in case, can we add a fallback case when `part` is not a string?",
+        "createdAt" : "2017-01-22T11:38:12Z",
+        "updatedAt" : "2017-01-22T11:38:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c898c7f4-a5b9-4892-8970-0b64f57e63c5",
+        "parentId" : "10100057-85a6-49e7-9d6a-83580e82f71d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "to avoid matcherror",
+        "createdAt" : "2017-01-22T11:38:26Z",
+        "updatedAt" : "2017-01-22T11:38:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9df33c20-2808-46f3-afef-c88b3af5e5a8",
+        "parentId" : "10100057-85a6-49e7-9d6a-83580e82f71d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nevermind, there's no fallback in term.interpolate. LGTM",
+        "createdAt" : "2017-01-22T11:41:36Z",
+        "updatedAt" : "2017-01-22T11:41:50Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ff33e488411939b05ff9c9ecec50ffccb816eea4",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +355,359 @@          }))\n        case t: Pat.Interpolate      =>\n          val parts = t.parts.map{ case Lit(part: String) => part }\n          val zipped = parts.zip(t.args).map {\n            case (part, id: Name) if !guessIsBackquoted(id) => s(part, \"$\", id.value)"
+  }
+]

@@ -1,0 +1,1740 @@
+[
+  {
+    "id" : "205fb744-3b1b-44ed-aea8-a3095c2b3936",
+    "prId" : 1918,
+    "comments" : [
+      {
+        "id" : "8d2dc57b-d170-4fde-be1f-b79b73920ffe",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "we can remove unidoc if it's causing problems, the plugin is not really used",
+        "createdAt" : "2019-12-02T10:00:24Z",
+        "updatedAt" : "2019-12-07T18:25:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4cf7397d62b716220cfccae5f00dd304110f23e",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +32,36 @@nonPublishableSettings\ncrossScalaVersions := Nil\nenablePlugins(ScalaUnidocPlugin)\naddCommandAlias(\"benchAll\", benchAll.command)\naddCommandAlias(\"benchLSP\", benchLSP.command)"
+  },
+  {
+    "id" : "f6c7902b-4982-4872-8b92-54fbbd2bb626",
+    "prId" : 1901,
+    "comments" : [
+      {
+        "id" : "99214a24-7073-4ba6-a406-ec237ed617d7",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This is not strictly related, but since 2.1.1 is now published for 2.12.10, we don't need to fall back to 2.12.9 anymore",
+        "createdAt" : "2019-09-14T15:22:45Z",
+        "updatedAt" : "2019-09-14T15:22:46Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "794c06d04865bb06635db4d60a237069ea98090c",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +515,519 @@  libraryDependencies ++= {\n    if (isScala213.value) Nil\n    else List(compilerPlugin(\"org.scalamacros\" % s\"paradise\" % \"2.1.1\" cross CrossVersion.full))\n  },\n  scalacOptions ++= {"
+  },
+  {
+    "id" : "67d7b940-135c-4db5-bcc8-83d2236a6aa1",
+    "prId" : 1743,
+    "comments" : [
+      {
+        "id" : "170e62e0-7fd9-487c-981a-b93a0ccc737c",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "😍 ",
+        "createdAt" : "2018-08-08T17:11:01Z",
+        "updatedAt" : "2018-08-08T19:30:42Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b9e64ef770e5af1853a6334977620aa0ac707c4",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +880,884 @@  // disable fatal warnings in doc to avoid \"dropping dependency on node with no phase object: mixin\",\n  // see https://github.com/scala-js/scala-js/issues/635\n  scalacOptions.in(Compile, doc) -= \"-Xfatal-warnings\",\n  nativeGC := \"immix\",\n  nativeMode := \"release\","
+  },
+  {
+    "id" : "405187e3-27cc-4700-8f6b-015ce81660ce",
+    "prId" : 1690,
+    "comments" : [
+      {
+        "id" : "0e1612d9-2a77-41cb-8259-a80cadb4c999",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This looks pretty tedious, but unfortunately I don't know of a better way.",
+        "createdAt" : "2018-07-12T18:18:37Z",
+        "updatedAt" : "2018-07-13T15:06:47Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1539ce8f-3eed-4fe6-9bf7-e3f3584e3d0f",
+        "parentId" : "0e1612d9-2a77-41cb-8259-a80cadb4c999",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It's worse if you do it for jvm+js+native https://github.com/typelevel/paiges/blob/0d041ceacb3af1a396a315db256fbcb6cad1cffb/build.sbt#L119-L142",
+        "createdAt" : "2018-07-12T22:12:19Z",
+        "updatedAt" : "2018-07-13T15:06:47Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "03def7a684ca67a7dd7df13ae7d342831d4096d3",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +229,233 @@  // FIXME: https://github.com/scalameta/scalameta/issues/1688\n  .disablePlugins(BackgroundRunPlugin)\n  .aggregate(semanticdbJVM, cliJVM, ioJVM)\n  .dependsOn(semanticdbJVM, cliJVM, ioJVM)\n"
+  },
+  {
+    "id" : "29ec0dbb-874d-474e-b483-c785e6ec45b8",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "e6730cd4-4386-4e66-b7fe-0fac720b8c87",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍",
+        "createdAt" : "2018-07-08T05:39:48Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +188,192 @@  .settings(\n    publishableSettings,\n    description := \"Scala 2.x and Java classpath to SemanticDB converter\",\n    libraryDependencies ++= List(\n      \"org.scala-lang\" % \"scalap\" % scalaVersion.value"
+  },
+  {
+    "id" : "95edcaf0-77f9-45f8-a5f7-2a950d74ed67",
+    "prId" : 1606,
+    "comments" : [
+      {
+        "id" : "d211e549-6cac-40d3-9af6-76277dc3f545",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Wasn't this obviated by one of the recent fixes to Intellij?",
+        "createdAt" : "2018-06-16T18:31:10Z",
+        "updatedAt" : "2018-06-16T19:34:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "74459f8c-40a8-4739-b9fa-e6e7b04bd260",
+        "parentId" : "d211e549-6cac-40d3-9af6-76277dc3f545",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It was, but this settings speeds up IntelliJ import regardless since it avoids exporting/indexing native projects. Should probably do the same for JS sources.",
+        "createdAt" : "2018-06-16T19:02:46Z",
+        "updatedAt" : "2018-06-16T19:35:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a4c3e380cc2f67e0f333fe575330554340a09a56",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +792,796 @@\nlazy val nativeSettings = Seq(\n  SettingKey[Boolean](\"ide-skip-project\") := true,\n  scalaVersion := LatestScala211,\n  crossScalaVersions := List(LatestScala211),"
+  },
+  {
+    "id" : "19f34975-8070-45e0-b72a-d79d88774913",
+    "prId" : 1580,
+    "comments" : [
+      {
+        "id" : "a8637169-6951-4ad5-ae5e-5d2cba5fffec",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I love this change ❤️ Been meaning to come up with a solution for this problem for a long time. Thank you @laughedelic for the SO answer!",
+        "createdAt" : "2018-06-06T13:32:55Z",
+        "updatedAt" : "2018-06-06T16:26:32Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3c581e165334c532a8783b351597731da4ed18e8",
+    "line" : 70,
+    "diffHunk" : "@@ -1,1 +474,478 @@    libraryDependencies += \"com.lihaoyi\" %%% \"fansi\" % \"0.2.5\" % \"test\",\n    libraryDependencies += \"org.scalatest\" %%% \"scalatest\" % \"3.2.0-SNAP10\" % \"test\",\n    testOptions.in(Test) += Tests.Argument(\"-l\", \"org.scalatest.tags.Slow\"),\n    inConfig(Slow)(Defaults.testTasks),\n    testOptions.in(Slow) -= Tests.Argument(\"-l\", \"org.scalatest.tags.Slow\"),"
+  },
+  {
+    "id" : "73dd729f-d45f-494a-9b60-5f599104c4dc",
+    "prId" : 1558,
+    "comments" : [
+      {
+        "id" : "9ccd2a30-d42b-4e7d-a7d1-ce22ac62a480",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks like the same change will have to be made to the Scalafix build.",
+        "createdAt" : "2018-05-27T21:48:12Z",
+        "updatedAt" : "2018-05-27T21:48:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d44325c-fa28-4913-85d5-b2c152560f9e",
+        "parentId" : "9ccd2a30-d42b-4e7d-a7d1-ce22ac62a480",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This is only necessary when publishing to maven from local machine. Scalafix is only released via ci. ",
+        "createdAt" : "2018-05-28T02:52:37Z",
+        "updatedAt" : "2018-05-28T02:52:37Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7bf90570e6a8ecc55b0f22cde4fededc795ef404",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +642,646 @@    if (isCustomRepository) \"adhoc\" at adhocRepoUri\n    // NOTE: isSnapshot.value does not work with sbt-dynver\n    else if (version.value.endsWith(\"SNAPSHOT\")) Opts.resolver.sonatypeSnapshots\n    else Opts.resolver.sonatypeStaging\n  },"
+  },
+  {
+    "id" : "96117076-130f-48c7-a5d4-883f3a752771",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "053a5dfe-a99a-4c92-9b9d-2c1dc8003584",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's add a ticket that reminds us to remove this line in 4.0.",
+        "createdAt" : "2018-04-22T22:10:01Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2606609e-b9cb-49d4-bd4e-c1d5bf848fb4",
+        "parentId" : "053a5dfe-a99a-4c92-9b9d-2c1dc8003584",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done #1508 ",
+        "createdAt" : "2018-04-23T09:41:29Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +214,218 @@    publishableSettings,\n    description := \"Langmeta umbrella module that includes all public APIs\",\n    scalacOptions -= \"-Xfatal-warnings\", // suppress deprecation warnings\n    libraryDependencies += \"com.lihaoyi\" %%% \"pprint\" % \"0.5.3\"\n  )"
+  },
+  {
+    "id" : "36e58644-d579-4764-9705-297a8a3cbd3a",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "eddd4d66-b667-4efc-ae01-f1ba6b15f5eb",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Do we still need `symbols:all`?",
+        "createdAt" : "2018-04-22T22:10:29Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c934258f-5cc7-4dd0-abae-cc3ee2fd6b16",
+        "parentId" : "eddd4d66-b667-4efc-ae01-f1ba6b15f5eb",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We use it for the expect tests.",
+        "createdAt" : "2018-04-23T09:41:52Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +410,414 @@        s\"-P:semanticdb:failures:error\", // fail fast during development.\n        s\"-P:semanticdb:exclude:Exclude.scala\",\n        s\"-P:semanticdb:symbols:all\",\n        s\"-P:semanticdb:types:all\",\n        s\"-Xplugin-require:semanticdb\""
+  },
+  {
+    "id" : "4b5f0f61-4372-47c2-a5c7-e09a4a937051",
+    "prId" : 1478,
+    "comments" : [
+      {
+        "id" : "31a91108-6ea4-4484-b26c-80ad1812ca44",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks like build.sbt has been inadvertently reformatted.",
+        "createdAt" : "2018-04-08T21:14:39Z",
+        "updatedAt" : "2018-04-08T21:21:27Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ca3fa1e2-d08d-49a4-96fd-032a4867be01",
+        "parentId" : "31a91108-6ea4-4484-b26c-80ad1812ca44",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Yes, that may have been caused by vscode reformatting on save 😅 I've added build.sbt to .scalafmt.conf",
+        "createdAt" : "2018-04-08T21:43:17Z",
+        "updatedAt" : "2018-04-08T21:43:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1473e20f66891c65981848f8e3ac5e3ee5ab9976",
+    "line" : 152,
+    "diffHunk" : "@@ -1,1 +855,859 @@    PgpKeys.pgpPassphrase := sys.env.get(\"PGP_PASSPHRASE\").map(_.toCharArray())\n  )\n)"
+  },
+  {
+    "id" : "f2498da2-51c8-43b1-81eb-a8fb31b52dbd",
+    "prId" : 1316,
+    "comments" : [
+      {
+        "id" : "81118c52-0e14-41bd-9c27-cf442c466221",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-02-15T18:31:50Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e38f5f1d7e7e09abb297f26cdb09e0a5e7d354a1",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +69,73 @@  \"testsJVM/test:runMain scala.meta.tests.semanticdb.MetacScalaLibrary\" :: s\n}\ncommands += Command.command(\"save-expect\") { s =>\n  \"semanticdbScalacPlugin/compile\" ::\n  \"semanticdbIntegration/clean\" ::"
+  },
+  {
+    "id" : "1db99a4c-a75d-491f-b7c4-b6c88bd4bd8f",
+    "prId" : 1304,
+    "comments" : [
+      {
+        "id" : "c07a9c8c-5f49-4849-a4e5-d5fddead3379",
+        "parentId" : null,
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "`% Test`",
+        "createdAt" : "2018-02-14T09:51:21Z",
+        "updatedAt" : "2018-02-14T13:45:53Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e1605521-d30c-4ed5-9769-f472b6d79067",
+        "parentId" : "c07a9c8c-5f49-4849-a4e5-d5fddead3379",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This project contains only test sources",
+        "createdAt" : "2018-02-14T12:16:17Z",
+        "updatedAt" : "2018-02-14T13:45:53Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a0733f371e336cbe4d6533dd70b9ab034bd81f30",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +439,443 @@  .jvmSettings(\n    libraryDependencies ++= List(\n      \"io.get-coursier\" %% \"coursier\" % coursier.util.Properties.version,\n      \"io.get-coursier\" %% \"coursier-cache\" % coursier.util.Properties.version\n    )"
+  },
+  {
+    "id" : "4f35cff5-157d-4cf9-9b87-c1a20c86eac0",
+    "prId" : 1280,
+    "comments" : [
+      {
+        "id" : "5b1004a7-f363-4867-9225-6fad7c3570d7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can we also delete `target/scala-library` afterwards? Or maybe create this in a temporary directory?",
+        "createdAt" : "2018-02-08T18:51:26Z",
+        "updatedAt" : "2018-02-10T11:46:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b6849170-71d5-4c76-8986-29bd6b857962",
+        "parentId" : "5b1004a7-f363-4867-9225-6fad7c3570d7",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Dowloading+unzipping takes a while to run and if it was deleted on every run then that would slow when running this multiple times locally. We only unzip `src/library` so it's not that bloated. I prefer to keep the directory.",
+        "createdAt" : "2018-02-09T11:58:13Z",
+        "updatedAt" : "2018-02-10T11:46:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d306c0fb420f4dd7692ccaac47db886ee1bf15f8",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +67,71 @@    )\n  }\n  \"testsJVM/test:runMain scala.meta.tests.semanticdb.MetacScalaLibrary\" :: s\n}\n// NOTE: These tasks are aliased here in order to support running \"tests/test\""
+  },
+  {
+    "id" : "d63ad79f-cd41-42a7-942b-6ecc71f98e3b",
+    "prId" : 1280,
+    "comments" : [
+      {
+        "id" : "7516a3f1-3827-4c62-be28-79acec1892f4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-02-08T18:51:32Z",
+        "updatedAt" : "2018-02-10T11:46:19Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d306c0fb420f4dd7692ccaac47db886ee1bf15f8",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +58,62 @@  s\n}\ncommands += Command.command(\"ci-metac\") { s =>\n  val out = file(\"target/scala-library\")\n  if (!out.exists()) {"
+  },
+  {
+    "id" : "5b40f0f0-edca-4615-9d25-4c0b0cf69c7b",
+    "prId" : 1268,
+    "comments" : [
+      {
+        "id" : "6e453ba2-d92c-4c42-b3e9-cb1c0f11f81f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@sjrd Is there a better way to do this?",
+        "createdAt" : "2018-02-07T22:36:07Z",
+        "updatedAt" : "2018-02-07T22:36:08Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8179297b-084f-4b55-bcec-c35005588b4e",
+        "parentId" : "6e453ba2-d92c-4c42-b3e9-cb1c0f11f81f",
+        "author" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "body" : "> Here's my second best guess, but it doesn't work due to some reason\r\n\r\nThat's because `CrossVersion.binary` is a `def` which returns a new instance of `CrossVersion` every time, and in sbt 0.13.x, `==` is useless on `CrossVersion`s (it's equivalent to `eq`).\r\n\r\nThere is no elegant way to test the platform of a project in the most general case. The closest you can get is testing for the presence (or absence) of `scalajs-library` or `nativelib` in the `libraryDependencies` of the project.\r\n\r\nAlternatively, in your own build, you could define your own very simple `lazy val platform = settingKey[String]` and configure it to your liking.\r\n\r\nYou could also test whether `thisProject.value.id` (or whatever it's called) ends with `\"JVM\"`, `\"JS\"` or `Native`.\r\n\r\nAnd I'm sure you can invent other creative ways to do it.",
+        "createdAt" : "2018-02-07T22:46:29Z",
+        "updatedAt" : "2018-02-07T22:46:29Z",
+        "lastEditedBy" : {
+          "login" : "sjrd",
+          "name" : "Sébastien Doeraene",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/535934?u=837d8ccc05f624946f9fbec6a81ecb1eb519031b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9a36bd41-e7e1-44e2-a145-35e70e99f749",
+        "parentId" : "6e453ba2-d92c-4c42-b3e9-cb1c0f11f81f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Thanks for the swift response!",
+        "createdAt" : "2018-02-07T22:47:31Z",
+        "updatedAt" : "2018-02-07T22:47:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a640f8e09c1d42cf92011897c57c49b7a69b0e28",
+    "line" : 57,
+    "diffHunk" : "@@ -1,1 +577,581 @@        val isNative = platformDepsCrossVersion.value == ScalaNativeCrossVersion.binary\n        !isJS && !isNative\n      }\n      if (isJVM) {\n        previousVersion.map { previousVersion =>"
+  },
+  {
+    "id" : "ec49f8c9-c879-4b26-b875-414c5f2559f4",
+    "prId" : 1263,
+    "comments" : [
+      {
+        "id" : "e6a5044b-891c-4d97-a848-899a07fb000d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "So, `semanticdb3Native/nativeLink` works great now thanks to Sébastien's fix to sbt-crossproject and Denys's fix to Scala Native.\r\n\r\nHowever it looks like we need help again. It seems that `semanticdb3Native/publish` misbehaves by publishing artifacts with wrong the target prefix. Here's a reproduction:\r\n\r\n```\r\n$ git clone https://github.com/xeno-by/scalameta.git\r\n$ cd scalameta\r\n$ git checkout repro/crossproject\r\n$ sbt 'semanticdb3Native/publishLocal'\r\n...\r\n[info] \tpublished semanticdb3_2.11 to /Users/eburmako/.ivy2/local/org.scalameta/semanticdb3_2.11/3.0.0/poms/semanticdb3_2.11.pom\r\n[info] \tpublished semanticdb3_2.11 to /Users/eburmako/.ivy2/local/org.scalameta/semanticdb3_2.11/3.0.0/jars/semanticdb3_2.11.jar\r\n[info] \tpublished semanticdb3_2.11 to /Users/eburmako/.ivy2/local/org.scalameta/semanticdb3_2.11/3.0.0/srcs/semanticdb3_2.11-sources.jar\r\n[info] \tpublished semanticdb3_2.11 to /Users/eburmako/.ivy2/local/org.scalameta/semanticdb3_2.11/3.0.0/docs/semanticdb3_2.11-javadoc.jar\r\n[info] \tpublished ivy to /Users/eburmako/.ivy2/local/org.scalameta/semanticdb3_2.11/3.0.0/ivys/ivy.xml\r\n[success] Total time: 11 s, completed Feb 5, 2018 9:46:27 PM\r\n```\r\n\r\n@densh @sjrd Do you guys have an idea what could go wrong here?",
+        "createdAt" : "2018-02-06T05:48:09Z",
+        "updatedAt" : "2018-02-06T05:53:59Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "387f006b-9d77-4e10-867b-b1bd9f55e2af",
+        "parentId" : "e6a5044b-891c-4d97-a848-899a07fb000d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Mystery solved: https://github.com/scalameta/scalameta/pull/1263/commits/21c5568cb0a32bb8c42ef5dc798e273e93dd7a14. @olafurpg Do you remember why we added this to the build?",
+        "createdAt" : "2018-02-06T05:55:44Z",
+        "updatedAt" : "2018-02-06T05:55:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7f1a6a89-8d82-4a0b-b1b3-30a0b0a2f0e3",
+        "parentId" : "e6a5044b-891c-4d97-a848-899a07fb000d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I don't remember why we have that setting, might be worth to try and remove it.",
+        "createdAt" : "2018-02-06T09:23:05Z",
+        "updatedAt" : "2018-02-06T09:23:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "39413e08-d62e-4940-88e3-7e1c194ee0f4",
+        "parentId" : "e6a5044b-891c-4d97-a848-899a07fb000d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Sure I'll try",
+        "createdAt" : "2018-02-06T16:06:20Z",
+        "updatedAt" : "2018-02-06T16:06:20Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21c5568cb0a32bb8c42ef5dc798e273e93dd7a14",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +96,100 @@lazy val semanticdb3JVM = semanticdb3.jvm\nlazy val semanticdb3JS = semanticdb3.js\nlazy val semanticdb3Native = semanticdb3.native\n\nlazy val semanticdbScalacCore = project"
+  },
+  {
+    "id" : "a74e27c8-f011-4dd9-b38a-2ba7f589a5ae",
+    "prId" : 1263,
+    "comments" : [
+      {
+        "id" : "ac7b1790-af4c-425b-aa8e-cee178740dc2",
+        "parentId" : null,
+        "author" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "body" : "you should send a PR to scalapb.",
+        "createdAt" : "2018-02-06T09:09:38Z",
+        "updatedAt" : "2018-02-06T09:09:38Z",
+        "lastEditedBy" : {
+          "login" : "MasseGuillaume",
+          "name" : "Guillaume Massé",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/921490?u=1ea96b0787a224aed96b7091c354e76d0f55960c&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c1a5d958-8319-438d-bea1-1cfdd475126e",
+        "parentId" : "ac7b1790-af4c-425b-aa8e-cee178740dc2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It's best to way until the next stable native release where there won't be a need to rebuild dependencies unless the IR changes. ",
+        "createdAt" : "2018-02-06T09:22:50Z",
+        "updatedAt" : "2018-02-06T09:22:50Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d14b8b4c-e4b4-4c64-9986-6b7f4765d910",
+        "parentId" : "ac7b1790-af4c-425b-aa8e-cee178740dc2",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Sounds good",
+        "createdAt" : "2018-02-06T16:04:48Z",
+        "updatedAt" : "2018-02-06T16:04:48Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "21c5568cb0a32bb8c42ef5dc798e273e93dd7a14",
+    "line" : 217,
+    "diffHunk" : "@@ -1,1 +655,659 @@  nativeLinkStubs := false,\n  // These builds are published from my private fork of Scala Native\n  // https://github.com/xeno-by/scalapb/commits/topic/scalameta\n  libraryDependencies -= \"com.thesamet.scalapb\" %%% \"scalapb-runtime\" % scalapbVersion,\n  libraryDependencies += \"com.github.xenoby\" %%% \"scalapb-runtime\" % scalapbVersion"
+  },
+  {
+    "id" : "afbe70ac-0712-4a07-9373-45bf5d3a5a91",
+    "prId" : 1253,
+    "comments" : [
+      {
+        "id" : "7d70a14a-8c87-4b2b-9bc9-1389634dabd3",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@thesamet Are there best practices for achieving source/binary compatibility of ScalaPB-generated code during compatible Protobuf schema evolution?\r\n\r\nFor example, this pull request removes the `range` field and adds the `location` field to the `SymbolInformation` message. As far as I understand, this change is both backward and forward compatible in the sense that old Protobuf payloads are valid under the new schema and new Protobuf payloads are valid under the old schema.\r\n\r\nHowever, the changes to the `SymbolInformation` Scala class generated by ScalaPB are not compatible (so I had to disable [MiMa](https://github.com/lightbend/migration-manager) for this project), which is regrettable. Can you provide recommendations for dealing with this?",
+        "createdAt" : "2018-02-03T02:12:02Z",
+        "updatedAt" : "2018-02-03T20:32:25Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7c948dd7-6230-4bc8-9304-8c7cb6d950b7",
+        "parentId" : "7d70a14a-8c87-4b2b-9bc9-1389634dabd3",
+        "author" : {
+          "login" : "thesamet",
+          "name" : "Nadav Samet",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/307373?u=f7475d72d32f7adfcd8e8df42f0783f4abce5c4b&v=4"
+        },
+        "body" : "AFAIK there is no way around the binary compatibility issue as long as ScalaPB generates case classes. It has been suggested that we switch to normal classes, but there wasn't much of a demand for that.",
+        "createdAt" : "2018-02-03T02:34:48Z",
+        "updatedAt" : "2018-02-03T20:32:25Z",
+        "lastEditedBy" : {
+          "login" : "thesamet",
+          "name" : "Nadav Samet",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/307373?u=f7475d72d32f7adfcd8e8df42f0783f4abce5c4b&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3abef0b1-b470-45aa-9c51-2e326175f008",
+        "parentId" : "7d70a14a-8c87-4b2b-9bc9-1389634dabd3",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Thank you! I think we'll just bite the bullet for now, since this is an internal API anyway.",
+        "createdAt" : "2018-02-04T20:17:12Z",
+        "updatedAt" : "2018-02-04T20:17:12Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c787ab1acc1b048e2f532befcc18c966e6423558",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +79,83 @@  .settings(\n    publishableSettings,\n    ignoreMimaSettings,\n    protobufSettings,\n    PB.protoSources.in(Compile) := Seq(file(\"semanticdb/semanticdb3\")),"
+  },
+  {
+    "id" : "2f7e849d-56cd-4169-83f1-df1ea027d030",
+    "prId" : 1225,
+    "comments" : [
+      {
+        "id" : "9ddabcf9-51d3-4366-b903-b9f14dff2d58",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Are these the usual SNAPSHOT releases, which make sbt do updates like crazy, or there's something special about them, since we seem to be publishing them to Sonatype releases?",
+        "createdAt" : "2018-01-19T17:14:37Z",
+        "updatedAt" : "2018-01-19T17:15:07Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b4a3491d-2a57-4fcb-974a-934f7e446419",
+        "parentId" : "9ddabcf9-51d3-4366-b903-b9f14dff2d58",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "it's possible to configure sbt to treat -SNAPSHOT versions like normal versions, we never overwrite an old release because every merge has a unique commit that is included in the version number.",
+        "createdAt" : "2018-01-19T17:20:23Z",
+        "updatedAt" : "2018-01-19T17:20:23Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "65addba315d9f5f826b80d44502952eca429234a",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +25,29 @@    else \"\"\n  customVersion.getOrElse(old.replace('+', '-') + suffix)\n}\nname := {\n  println(s\"[info] Welcome to scalameta ${version.value}\")"
+  },
+  {
+    "id" : "20177cae-8028-43ad-931e-c2cfd52f6d50",
+    "prId" : 1187,
+    "comments" : [
+      {
+        "id" : "d2be74ed-8dd1-47cf-a0cc-5d2e641a833d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`plz $ciScalaVersion test` should do this for you ;) but I don't mind as long as it works!",
+        "createdAt" : "2017-12-11T16:01:44Z",
+        "updatedAt" : "2017-12-11T16:02:29Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a12e7f4e5075d9a8a754a0404d6bf8d8c06eccdf",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +32,36 @@commands += Command.command(\"ci-fast\") { s =>\n  if (ciScalaVersion.startsWith(\"2.10\")) {\n    s\"wow $ciScalaVersion\" :: \"langmetaTestsJVM/test\" :: s\n  } else {\n    s\"wow $ciScalaVersion\" ::"
+  },
+  {
+    "id" : "76e5df70-8948-4e1c-91db-6e31f1cc6334",
+    "prId" : 1159,
+    "comments" : [
+      {
+        "id" : "0de2de47-272a-4c3d-b59b-cdd37faf2ddd",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How about `semanticdbScalacLibrary`?",
+        "createdAt" : "2017-11-09T19:07:45Z",
+        "updatedAt" : "2017-11-09T19:14:18Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ae321610-c055-41d4-935f-f19fac202591",
+        "parentId" : "0de2de47-272a-4c3d-b59b-cdd37faf2ddd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "semanticdbScalac is better IMO since it matches the directory name and I run `semanticdbScalac/test` from the console all the time (which is already too long IMO), writing `Library` on top is just annoying. ",
+        "createdAt" : "2017-11-09T19:12:19Z",
+        "updatedAt" : "2017-11-09T19:15:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "70a39849-9dfe-4849-9369-6105bc733a91",
+        "parentId" : "0de2de47-272a-4c3d-b59b-cdd37faf2ddd",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Fair enough. lgtm.",
+        "createdAt" : "2017-11-09T20:06:51Z",
+        "updatedAt" : "2017-11-09T20:06:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a9ae1c1f02e207e9c2096aada241761d10b1cb4a",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +287,291 @@\n\nlazy val semanticdbScalac = project\n  .in(file(\"scalameta/semanticdb-scalac\"))\n  .settings("
+  },
+  {
+    "id" : "960f38a2-65c6-47b5-bdaa-5d10831b72a3",
+    "prId" : 1065,
+    "comments" : [
+      {
+        "id" : "336a2806-b32c-442d-ad80-0ea3d80dcda1",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I'm very surprised it's so easy!!",
+        "createdAt" : "2017-08-15T16:07:42Z",
+        "updatedAt" : "2017-08-17T07:40:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "289075db486562df06dd1570b145c80c5afc96f2",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +87,91 @@lazy val langmetaSettings = List(\n  crossScalaVersions := List(LatestScala210, LatestScala211, LatestScala212)\n)\n\nlazy val langmetaIo = crossProject"
+  },
+  {
+    "id" : "fd940b9d-5315-4485-8c0a-0103702c122e",
+    "prId" : 1028,
+    "comments" : [
+      {
+        "id" : "1a6c995f-e054-47c9-bd98-05aa9d42ffa7",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This change should not break your setup @xeno-by ",
+        "createdAt" : "2017-07-14T12:26:51Z",
+        "updatedAt" : "2017-07-14T12:26:51Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "aeb441964c493ad1d3ba494dd0d1a087a7938d8e",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +535,539 @@  publishTo := {\n    if (publishToBintray) publishTo.in(bintray).value\n    else if (isCustomRepository) Some(\"adhoc\" at adhocRepoUri)\n    else publishTo.value // Sonatype.\n  },"
+  },
+  {
+    "id" : "fab2e058-8920-448e-a4c3-b3d3ea82cc6b",
+    "prId" : 1021,
+    "comments" : [
+      {
+        "id" : "9c14e740-e9ef-47c1-ae7f-d93523e1dde8",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Just checking that these compile, as long as they compile we should be able to use git bisect to track down regressions in case something goes wrong.",
+        "createdAt" : "2017-07-12T16:18:05Z",
+        "updatedAt" : "2017-07-12T19:13:34Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b3596c8a949b18e63b0fe51b7a12d9b61bd58094",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +72,76 @@  val runContribTests = test.in(contribJVM, Test).value\n  val runTests = test.in(testsJVM, Test).value\n  val propertyTests = compile.in(testkit, Test).value\n  val runDocs = test.in(readme).value\n}"
+  },
+  {
+    "id" : "a58ebbeb-28db-42f7-8112-2d675dd1f613",
+    "prId" : 1017,
+    "comments" : [
+      {
+        "id" : "9a571910-727f-4b99-b831-339cdc7bad0c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can you validate this fixes the custom repository setup @xeno-by ?",
+        "createdAt" : "2017-07-11T15:57:27Z",
+        "updatedAt" : "2017-07-11T15:57:27Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c11428c-6fe7-4753-8650-fc31938bc0c4",
+        "parentId" : "9a571910-727f-4b99-b831-339cdc7bad0c",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yes, this works for us at Twitter. \r\n\r\nI'm getting a new warning saying `[warn] You must run bintrayRelease once all artifacts are staged`, but I can live with it.",
+        "createdAt" : "2017-07-11T16:06:22Z",
+        "updatedAt" : "2017-07-11T16:06:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a6ec1eb0c6e8fa3e1978ae5ec243b2ce32601cc2",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +556,560 @@  publishArtifact.in(Test) := false,\n  publishMavenStyle := true,\n  bintrayReleaseOnPublish := !isCustomRepository,\n  pomIncludeRepository := { x =>\n    false"
+  },
+  {
+    "id" : "8d4dceb8-b102-4e1b-ae21-f990e12b8024",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "cc7dbb8c-2e14-43c5-8cac-7058c435efbb",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "Note: will hack incremental testing this week.",
+        "createdAt" : "2017-05-15T22:05:43Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3d871d98-e9a5-46ad-9dcf-0ea2435767ae",
+        "parentId" : "cc7dbb8c-2e14-43c5-8cac-7058c435efbb",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That would be awesome!",
+        "createdAt" : "2017-05-16T06:58:54Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +261,265 @@    publishMavenStyle := false, // necessary for pre-releases to work with addSbtPlugin\n    bintrayRepository := \"maven\", // sbtPlugin overrides this to sbt-plugins\n    testQuick.in(IntegrationTest) := {\n      // runs tests for 2.11 only, avoiding the need to publish for 2.12\n      RunSbtCommand(s\"; plz $ScalaVersion publishLocal \" +"
+  },
+  {
+    "id" : "5059bc8b-3729-4eb6-ac25-b8b43f9df55a",
+    "prId" : 862,
+    "comments" : [
+      {
+        "id" : "1f9ca8e7-6343-4183-acf3-ca7294f39bcb",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "@xeno-by I couldn't find where publishTo is set to sonatype for stable releases, this field should only be false when publishing to Bintray.",
+        "createdAt" : "2017-05-14T14:57:40Z",
+        "updatedAt" : "2017-05-14T14:57:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cf5594bd-443a-4cfc-a8e7-4b7cfbf63ffb",
+        "parentId" : "1f9ca8e7-6343-4183-acf3-ca7294f39bcb",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I never got to reinstating this part of our build. Currently doing this manually (ugh!).",
+        "createdAt" : "2017-05-14T16:41:32Z",
+        "updatedAt" : "2017-05-14T16:41:32Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4c6e40db3064371ebea4919d79e6e7096d0c8129",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +256,260 @@    sbt.ScriptedPlugin.scriptedSettings,\n    sbtPlugin := true,\n    publishMavenStyle := false, // necessary for pre-releases to work with addSbtPlugin\n    bintrayRepository := \"maven\", // sbtPlugin overrides this to sbt-plugins\n    testQuick := {"
+  },
+  {
+    "id" : "e7301793-8acd-4bce-9aaf-22f6343f8c24",
+    "prId" : 861,
+    "comments" : [
+      {
+        "id" : "0533f151-4252-4c9d-9f00-368553d51d25",
+        "parentId" : null,
+        "author" : {
+          "login" : "allanrenucci",
+          "name" : "Allan Renucci",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/4996324?u=67c597149723b5c3a27b376013df0a970f8389a2&v=4"
+        },
+        "body" : "@olafurpg This breaks scalatex. Do you have any idea why? To reproduce:\r\n```\r\nsbt readme/doc\r\n```",
+        "createdAt" : "2017-05-14T16:18:13Z",
+        "updatedAt" : "2017-05-15T09:37:01Z",
+        "lastEditedBy" : {
+          "login" : "allanrenucci",
+          "name" : "Allan Renucci",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/4996324?u=67c597149723b5c3a27b376013df0a970f8389a2&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1e898e6f-0277-4f27-b7e9-66555e60e8b9",
+        "parentId" : "0533f151-4252-4c9d-9f00-368553d51d25",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I opened https://github.com/lihaoyi/Scalatex/pull/52 and published a pre-release of scalatex to our bintray repo with that fix. We can use the pre-release until the official scalatex is out\r\n\r\n```scala\r\n// project/plugins.sbt\r\nresolvers += Resolver.bintrayIvyRepo(\"scalameta\", \"sbt-plugins\") // only needed for scalatex 0.3.8-pre\r\naddSbtPlugin(\"com.lihaoyi\" % \"scalatex-sbt-plugin\" % \"0.3.8-pre\")\r\n// build.sbt\r\nresolvers += Resolver.bintrayRepo(\"scalameta\", \"maven\") // under sharedSettings\r\n```",
+        "createdAt" : "2017-05-15T06:36:29Z",
+        "updatedAt" : "2017-05-15T09:37:01Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4ef790bc07d30a971e387fa1e17406b2ef442e93",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +137,141 @@    publishableSettings,\n    description := \"Scalameta APIs for tokenization and their baseline implementation\",\n    libraryDependencies += \"com.lihaoyi\" %%% \"fastparse\" % \"0.4.3\",\n    enableMacros\n  )"
+  },
+  {
+    "id" : "736ba8b1-535e-41f2-9eef-955f0b970c23",
+    "prId" : 781,
+    "comments" : [
+      {
+        "id" : "198b0eba-b7c8-4a5d-835a-5bc68b85d9f1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This line will fail if the main Scala version becomes 2.12, the scripted test depends on a 2.11 Scala version. ",
+        "createdAt" : "2017-03-31T22:55:42Z",
+        "updatedAt" : "2017-04-01T06:53:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7fe9f133ff1f706e326b58493ebb6ee27d6ba0a",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +269,273 @@    testQuick := {\n      // runs tests for 2.11 only, avoiding the need to publish for 2.12\n      RunSbtCommand(s\"; plz $ScalaVersion publishLocal \" +\n        \"; such scalahostSbt/scripted sbt-scalahost/semantic-example\")(state.value)\n    },"
+  },
+  {
+    "id" : "bec863d0-e739-4b05-af11-5189b8f9d697",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "0b961332-f396-479d-b9bb-6fd6aad6decf",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why do we need this project at all?",
+        "createdAt" : "2017-03-30T14:40:03Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3fda8a3b-46ba-4e69-8d14-5d3a2ca7e359",
+        "parentId" : "0b961332-f396-479d-b9bb-6fd6aad6decf",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Scalafix will depend on this project to construct an offline mirror. See https://github.com/scalacenter/scalafix/issues/100 for why scalafix can't depend on scalahost-nsc directly.",
+        "createdAt" : "2017-03-30T14:53:26Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "47c4a297-64e8-4220-80ae-152b143cd7ee",
+        "parentId" : "0b961332-f396-479d-b9bb-6fd6aad6decf",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Also, paradise will depend on this project. At the moment, `addCompilerPlugin(paradise)` enables scalahost-nsc as well.",
+        "createdAt" : "2017-03-30T14:59:43Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cefb172048f800b780cf8d8330ee10ebd8e3ad9a",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +223,227 @@    libraryDependencies += \"org.scala-lang\" % \"scala-compiler\" % scalaVersion.value\n  )\n  .dependsOn(scalametaJVM)\n\nlazy val scalahostNsc = project"
+  },
+  {
+    "id" : "a475fdb7-23bc-4747-a8a3-4a096b303d90",
+    "prId" : 775,
+    "comments" : [
+      {
+        "id" : "5d9cf451-06a0-4d16-bd1f-f48372ffe547",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Nice!",
+        "createdAt" : "2017-03-30T14:40:44Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f334ea64-833d-42c0-b614-763759a6e593",
+        "parentId" : "5d9cf451-06a0-4d16-bd1f-f48372ffe547",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Btw how about a newline after this lazy val?",
+        "createdAt" : "2017-03-30T14:40:52Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c0aca9eb-2acc-4d27-ab44-db956f1d9571",
+        "parentId" : "5d9cf451-06a0-4d16-bd1f-f48372ffe547",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2017-03-30T14:53:55Z",
+        "updatedAt" : "2017-03-30T16:38:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cefb172048f800b780cf8d8330ee10ebd8e3ad9a",
+    "line" : 165,
+    "diffHunk" : "@@ -1,1 +644,648 @@    base / (\"scala-\" + scalaVersion.value)\n  }\n)\n\nlazy val hasLargeIntegrationTests = Seq("
+  },
+  {
+    "id" : "3d654df2-ada3-473d-9ec7-f71aa9f8f4b9",
+    "prId" : 769,
+    "comments" : [
+      {
+        "id" : "16e7a7d2-9368-418d-8398-1417ddbbcf21",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The publish task would hang on this line waiting for a username/password combo to be typed into the repl.",
+        "createdAt" : "2017-03-28T10:52:59Z",
+        "updatedAt" : "2017-03-28T10:53:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "923667e5052abd7d9ba3a17ccb98b7623bd32fad",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +369,373 @@          val httpAuthentication = s\"$username:$password@\"\n          val authenticatedUrl = s\"https://${httpAuthentication}github.com/scalameta/scalameta.github.com\"\n          os.shell.call(s\"git push $authenticatedUrl master\", cwd = repo.getAbsolutePath)\n      }\n    } catch {"
+  },
+  {
+    "id" : "6866ee44-ad74-4b11-9a6e-6f5baf4e5335",
+    "prId" : 761,
+    "comments" : [
+      {
+        "id" : "57373253-5144-426e-aad2-5fa275ddef2a",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can there be situations when tests work on the JVM and don't on JS?",
+        "createdAt" : "2017-03-25T06:58:13Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2e29e0d5-2e34-4ca6-8de6-07009a9c6d02",
+        "parentId" : "57373253-5144-426e-aad2-5fa275ddef2a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Absolutely. For example, if you use `java.io.File`.\r\n\r\nHowever, I left JS out because it's slow, see https://github.com/scala-js/scala-js/issues/2827 Sometimes, incremental can take 3-4 minutes to link before running. The cause seems to be that the Scala.js linker struggles with inlining the thousand `test` method calls to Scalatest. I suggest we leave this for the CI server to catch.",
+        "createdAt" : "2017-03-25T16:07:20Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "785a5006f1e8aaf901c65a8eb4f8255cad118785",
+    "line" : 108,
+    "diffHunk" : "@@ -1,1 +44,48 @@aggregate.in(test) := false\ntest := {\n  // `test` by default only runs on the JVM\n  val runScalametaTests = test.in(scalametaJVM, Test).value\n  val runScalahostTests = test.in(scalahost, Test).value"
+  },
+  {
+    "id" : "06da9fce-5755-422c-aef0-8ef80316dad1",
+    "prId" : 761,
+    "comments" : [
+      {
+        "id" : "7b006ae1-4dd7-49da-9976-ab5f818402ac",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Same about `in`. These are supposedly idiomatic uses of the SBT DSL copied from the official documentation.",
+        "createdAt" : "2017-03-25T07:07:17Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "908f23ce-cfdb-4d33-b5df-240d86e97326",
+        "parentId" : "7b006ae1-4dd7-49da-9976-ab5f818402ac",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The official sbt docs also do\r\n```scala\r\nval foo = (project in file(\"bar\").\r\n  settings(...)\r\n```\r\n\r\nI'm strongly against infix application with multiple arguments since they can be hard to parse in my head. Regular Term.Apply is easier to read and it scales more nicely for additional arguments/chained calls. For example, the old `) dependsOn (common)` infix usage made it annoying to append another `.addPlugins (ScalaJSPluginb)` line at the end. For uniformity, I refactored all `in` calls to non-infix. Are you OK with keeping this?",
+        "createdAt" : "2017-03-25T16:19:35Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a3dc015-816d-4e54-bf85-b17232355475",
+        "parentId" : "7b006ae1-4dd7-49da-9976-ab5f818402ac",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't have a strong opinion. My only serious concern now is familiarity for newcomers.",
+        "createdAt" : "2017-03-27T15:06:17Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "785a5006f1e8aaf901c65a8eb4f8255cad118785",
+    "line" : 795,
+    "diffHunk" : "@@ -1,1 +436,440 @@  scalacOptions.in(Compile, doc) ++= Seq(\"-skip-packages\", \"\"),\n  scalacOptions.in(Compile, doc) ++= Seq(\"-implicits\", \"-implicits-hide:.\"),\n  scalacOptions.in(Compile, doc) ++= Seq(\"-groups\"),\n  scalacOptions ++= Seq(\"-Xfatal-warnings\"),\n  parallelExecution.in(Test) := false, // hello, reflection sync!!"
+  },
+  {
+    "id" : "ceeff1f1-d78c-4556-acc6-459b1985b83d",
+    "prId" : 761,
+    "comments" : [
+      {
+        "id" : "a8fea3bb-d1db-41da-9f1e-4a26c121087b",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Same question as for `sonatypeCredentials`",
+        "createdAt" : "2017-03-25T07:14:00Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6fcb8950-f5f2-4037-8368-8af9d4e97cde",
+        "parentId" : "a8fea3bb-d1db-41da-9f1e-4a26c121087b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The reason I refactored the build so much is because the crossProject changes made some settings evaluate twice or three times on build reload. While moving things around, I got weird compiler errors when around `Def.taskDyn` which I believe are attributed to being inside the `:=` macro. Even if this is only called once I think it's clearer to move it outside of the long `publishableSettings` sequence. \r\n\r\nI can move it back if you want. I honestly think there's way to much logic in this build.sbt which should be refactored into an sbt plugin, but that's for another PR.",
+        "createdAt" : "2017-03-25T16:25:05Z",
+        "updatedAt" : "2017-03-28T16:33:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "785a5006f1e8aaf901c65a8eb4f8255cad118785",
+    "line" : 1000,
+    "diffHunk" : "@@ -1,1 +654,658 @@}\n\nlazy val compilePublish: Def.Initialize[Task[Unit]] = Def.taskDyn {\n  if (shouldPublishToBintray) {\n    Def.task {"
+  },
+  {
+    "id" : "db33533c-ef60-4cea-89c4-56c6f88cae76",
+    "prId" : 752,
+    "comments" : [
+      {
+        "id" : "74ad1a03-2705-4a08-95cd-4938828255bf",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I suggest we deduplicate this with https://github.com/scalameta/scalameta/blob/d38a0f9cd5e58373967d31e2a9ebe1ee67662690/build.sbt#L50-L51.",
+        "createdAt" : "2017-03-16T11:22:56Z",
+        "updatedAt" : "2017-03-16T11:22:56Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cdd4caec-5cc2-4013-862b-9545d2c6dea1",
+        "parentId" : "74ad1a03-2705-4a08-95cd-4938828255bf",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I reused noPublish in scalametaRoot: https://github.com/scalameta/scalameta/pull/753/files#diff-fdc3abdfd754eeb24090dbd90aeec2ceR24\r\n\r\n",
+        "createdAt" : "2017-03-16T13:08:25Z",
+        "updatedAt" : "2017-03-16T13:08:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b031ae47f2c4afd122e2a2e0da1b591df0bc631b",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +537,541 @@  publish := {},\n  publishLocal := {}\n)\n\ndef exposePaths(projectName: String, config: Configuration) = {"
+  },
+  {
+    "id" : "99071233-fab1-4c62-b917-69b7229bb804",
+    "prId" : 680,
+    "comments" : [
+      {
+        "id" : "b6216446-e438-4328-a367-722700793277",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nice!",
+        "createdAt" : "2017-02-14T09:05:02Z",
+        "updatedAt" : "2017-02-14T09:27:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c73a8ace2ee18ab80d1f5341c5ab19672d924b71",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +189,193 @@  libraryDependencies += \"org.scala-lang\" % \"scala-compiler\" % scalaVersion.value,\n  pomPostProcess := { node =>\n    new RuleTransformer(new RewriteRule {\n      private def isScalametaDependency(node: XmlNode): Boolean = {\n        def isArtifactId(node: XmlNode, fn: String => Boolean) = node.label == \"artifactId\" && fn(node.text)"
+  },
+  {
+    "id" : "5d8dbe1c-1dd2-4ccc-a690-71c73ec7a091",
+    "prId" : 590,
+    "comments" : [
+      {
+        "id" : "7ebf0754-2a59-49ae-8e7b-d689db3d1836",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@dwijnand What's the right way of doing this?",
+        "createdAt" : "2017-01-25T22:37:35Z",
+        "updatedAt" : "2017-01-25T22:37:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8a1dd1e8-5b1b-467f-aca2-8e0fc3370a4d",
+        "parentId" : "7ebf0754-2a59-49ae-8e7b-d689db3d1836",
+        "author" : {
+          "login" : "dwijnand",
+          "name" : "Dale Wijnand",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/344610?u=e620300a97e79cdb29b3b8793d27d2e9649178e5&v=4"
+        },
+        "body" : "Try using [sLog](http://www.scala-sbt.org/release/sxr/sbt/Keys.scala.html#sbt.Keys.sLog), but you'll have to be in the RHS of `publish in Compile`. Not sure if outside or inside Def.taskDyn though..",
+        "createdAt" : "2017-01-25T22:41:20Z",
+        "updatedAt" : "2017-01-25T22:41:21Z",
+        "lastEditedBy" : {
+          "login" : "dwijnand",
+          "name" : "Dale Wijnand",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/344610?u=e620300a97e79cdb29b3b8793d27d2e9649178e5&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8f60f1c3cbe960e1df18bf22902f4e7215dced01",
+    "line" : 309,
+    "diffHunk" : "@@ -1,1 +307,311 @@      else \"publishing disabled\"\n    }\n    println(s\"[info] Welcome to scala.meta $LibraryVersion ($publishingStatus)\")\n    publish in Compile := (Def.taskDyn {\n      if (shouldPublishToBintray) Def.task { publish.value }"
+  }
+]

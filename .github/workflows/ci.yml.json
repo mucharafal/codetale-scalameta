@@ -1,0 +1,86 @@
+[
+  {
+    "id" : "3caa06a9-ee86-406c-90ed-51400e520234",
+    "prId" : 2093,
+    "comments" : [
+      {
+        "id" : "a75c40c7-51d4-4429-b4c1-c4fbbb2ffdd1",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "3 lines below:\r\n`download-scala-library ++2.12.11 testsJVM/slow:test` -> `download-scala-library ++2.12.12 testsJVM/slow:test`",
+        "createdAt" : "2020-07-13T09:49:33Z",
+        "updatedAt" : "2020-07-13T10:52:15Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9218c390ac5a22ae66f6b7a9d0d9bee05cf4efb7",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +19,23 @@          - \"++2.12.12 testsJS/test\"\n          - \"++2.13.1 testsJVM/test\"\n          - \"++2.13.2 testsJVM/test\"\n          - \"++2.13.3 testsJVM/test\"\n          - \"++2.13.3 testsJS/test\""
+  },
+  {
+    "id" : "2fc371d0-92f4-4d6b-a9b6-68909adf8954",
+    "prId" : 2093,
+    "comments" : [
+      {
+        "id" : "58dbf803-08f4-44d6-b7c8-a5c738d81e64",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "looks like we run JVM tests for all versions and JS only for latest.\r\nSuggestion if that is the case:\r\nremove `\"++2.12.11 testsJS/test\"`\r\nadd `\"++2.12.12 testsJVM/test\"`",
+        "createdAt" : "2020-07-13T09:50:45Z",
+        "updatedAt" : "2020-07-13T10:52:15Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9218c390ac5a22ae66f6b7a9d0d9bee05cf4efb7",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +17,21 @@          - \"++2.12.11 testsJVM/test\"\n          - \"++2.12.12 testsJVM/test\"\n          - \"++2.12.12 testsJS/test\"\n          - \"++2.13.1 testsJVM/test\"\n          - \"++2.13.2 testsJVM/test\""
+  },
+  {
+    "id" : "a91dce4d-9ac4-48d0-847f-a90e3b1f1611",
+    "prId" : 2093,
+    "comments" : [
+      {
+        "id" : "87c7605d-e023-4712-842c-3404718c758c",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "a few lines below is:\r\n`run: sbt ++2.12.11 testsJVM/test` \r\nthis should also probably be updated to `2.12.12`?",
+        "createdAt" : "2020-07-13T09:51:47Z",
+        "updatedAt" : "2020-07-13T10:52:15Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9218c390ac5a22ae66f6b7a9d0d9bee05cf4efb7",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +20,24 @@          - \"++2.13.1 testsJVM/test\"\n          - \"++2.13.2 testsJVM/test\"\n          - \"++2.13.3 testsJVM/test\"\n          - \"++2.13.3 testsJS/test\"\n          - \"download-scala-library ++2.13.3 testsJVM/slow:test\""
+  }
+]

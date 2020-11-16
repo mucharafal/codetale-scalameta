@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "429a66cc-b2e6-47b6-b69f-a5892096f63c",
+    "prId" : 696,
+    "comments" : [
+      {
+        "id" : "078b0094-5658-4bf3-b6de-61b41da22a4b",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "When would one use `-Dscalahost.version`?",
+        "createdAt" : "2017-02-21T02:09:57Z",
+        "updatedAt" : "2017-02-21T18:45:46Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e436833a-816f-4e05-8e95-8fdc07a0ab5c",
+        "parentId" : "078b0094-5658-4bf3-b6de-61b41da22a4b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I use this all the time for local development on sbt-scalahost. Without it, I would need to republish all packages on every build reload.",
+        "createdAt" : "2017-02-21T14:13:19Z",
+        "updatedAt" : "2017-02-21T18:45:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bdbd3a9f-c97c-4166-b02b-867f751f23a5",
+        "parentId" : "078b0094-5658-4bf3-b6de-61b41da22a4b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The way I use this is start sbt with `sbt -Dscalahost.version=1.6-SNAPSHOT`.",
+        "createdAt" : "2017-02-21T14:32:20Z",
+        "updatedAt" : "2017-02-21T18:45:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b0caa2702eb21b462e8442b1dba22486d252d8ab",
+    "line" : 138,
+    "diffHunk" : "@@ -1,1 +122,126 @@  // Defaults to version.value of in scala.meta's build.sbt\n  private val scalahostVersion: String =\n    sys.props.getOrElse(\"scalahost.version\", BuildInfo.version)\n  private val scalametaDependencies: SettingKey[Seq[ProjectRef]] =\n    settingKey[Seq[ProjectRef]]("
+  },
+  {
+    "id" : "e12da785-0c89-4acd-832a-f6e865dac4df",
+    "prId" : 683,
+    "comments" : [
+      {
+        "id" : "0d24e97b-5f3d-46d5-a7dd-1cc2c13cff9e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "When can this happen?",
+        "createdAt" : "2017-02-15T15:02:36Z",
+        "updatedAt" : "2017-02-15T15:02:37Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9a4c99ec-5ff2-4fcb-a586-51d5c0ebf319",
+        "parentId" : "0d24e97b-5f3d-46d5-a7dd-1cc2c13cff9e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "When the update report does not contain scalahost.jar in an expected format.",
+        "createdAt" : "2017-02-15T15:04:34Z",
+        "updatedAt" : "2017-02-15T15:04:34Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9ace03932d00ef5518d4c708195502fe20696404",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +41,45 @@                   |Scala version: ${scalaVersion.value}\n                   |Cross version: ${crossScalaVersions.value}\n                   |Jar regex: $jarRegex\n                   |All jars: $allJars\n                   |\"\"\".stripMargin"
+  }
+]

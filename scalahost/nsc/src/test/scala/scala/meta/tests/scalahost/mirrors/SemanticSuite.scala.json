@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "774eef2c-581e-44ea-a934-b8347df377d0",
+    "prId" : 1000,
+    "comments" : [
+      {
+        "id" : "30a3d546-38bb-48cf-8650-af80f30d22fe",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I like the new name!",
+        "createdAt" : "2017-07-09T22:55:13Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f02787558f288424196edc1806705543a14be6d6",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +246,250 @@    \"\"\"\n      |[201..201): *[Int, List[Int]]\n      |  [0..1): * => _star_.\n      |[209..209): *(scala.collection.immutable.List.canBuildFrom[Int])\n      |  [0..1): * => _star_."
+  },
+  {
+    "id" : "a210d066-44e9-4627-ae0c-c8f706da1327",
+    "prId" : 848,
+    "comments" : [
+      {
+        "id" : "0e0e5ce0-09c4-4df7-a7d0-05ec01eba39f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This is still `B.this.X`. Are we happy with that?",
+        "createdAt" : "2017-05-10T15:22:51Z",
+        "updatedAt" : "2017-05-10T15:23:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4d856242-2480-454f-b850-545035f3d1cc",
+        "parentId" : "0e0e5ce0-09c4-4df7-a7d0-05ec01eba39f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That's fine, it typechecks which is the most important part.",
+        "createdAt" : "2017-05-10T15:41:52Z",
+        "updatedAt" : "2017-05-10T15:41:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "410f66da-450c-408d-88a0-5b7c6c80726e",
+        "parentId" : "0e0e5ce0-09c4-4df7-a7d0-05ec01eba39f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Maybe we can use g.showCode to improve the pretty printing, but I wouldn't block a release for this.",
+        "createdAt" : "2017-05-10T15:42:28Z",
+        "updatedAt" : "2017-05-10T15:42:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e58c2afcdfb047488bb378adecf82f4b10f2e82c",
+    "line" : 50,
+    "diffHunk" : "@@ -1,1 +266,270 @@      |_empty_.B# => trait B\n      |_empty_.B#X# => abstract type X\n      |_empty_.B#x()Ljava/lang/Object;. => abstract def x: B.this.X\n      |_empty_.D# => class D\n      |_empty_.D#X# => type X: scala.collection.mutable.HashSet[Int]"
+  },
+  {
+    "id" : "684c07c5-be20-4c11-99f3-2e9c87952e22",
+    "prId" : 847,
+    "comments" : [
+      {
+        "id" : "d7c3d597-8314-479a-8137-32a61d6ff3a2",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Correct @gabro, we use the Database.syntax to test this here. ",
+        "createdAt" : "2017-05-10T13:26:57Z",
+        "updatedAt" : "2017-05-10T15:47:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e216649-467e-463e-b3e8-bb6b67593267",
+        "parentId" : "d7c3d597-8314-479a-8137-32a61d6ff3a2",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "👍 cool!",
+        "createdAt" : "2017-05-10T13:44:27Z",
+        "updatedAt" : "2017-05-10T15:47:22Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "43e6e9574ee4abfac2b14c0df34d840465d52439",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +302,306 @@      |[31..34): Int => _root_.scala.Int#\n      |[36..43): Boolean => _root_.scala.Boolean#\n      |[53..56): foo => _empty_.tup.foo.\n      |[68..71): foo => _empty_.tup.foo.\n      |[72..77): apply => _root_.scala.Function1#apply(Ljava/lang/Object;)Ljava/lang/Object;."
+  }
+]

@@ -1,0 +1,575 @@
+[
+  {
+    "id" : "27f3f25e-3cd8-4476-9504-a6414812c734",
+    "prId" : 1670,
+    "comments" : [
+      {
+        "id" : "78f1ce54-d9ee-4628-b336-61a10be6d05f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How about renaming this to `missingSymbols`?",
+        "createdAt" : "2018-07-04T17:13:34Z",
+        "updatedAt" : "2018-07-04T17:21:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e183ff3feb4b555e8bae06f69dfeb80af68e4bbb",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +21,25 @@\n  lazy val classpathIndex = ClasspathIndex(settings.fullClasspath)\n  private val isReportedMissingSymbol = mutable.Set.empty[String]\n\n  def process(): Option[Classpath] = {"
+  },
+  {
+    "id" : "b5c0d5ca-d56b-460f-ad2a-f4a6d9639bd3",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "ffca74a4-2099-48ff-b336-0ea96215ff5f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why doesn't metacp use `Locator`?",
+        "createdAt" : "2018-05-29T11:01:54Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8fdf3b3f-e908-47ba-b93a-4e865308c40c",
+        "parentId" : "ffca74a4-2099-48ff-b336-0ea96215ff5f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Metacp is going through .class files, as opposed to .semanticdb files. It also needs additional caching facilities as well as parallel processing, so I figured I wouldn't overabstract.",
+        "createdAt" : "2018-05-29T16:08:26Z",
+        "updatedAt" : "2018-05-29T16:08:26Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +65,69 @@    }\n\n    classpath.foreach { entry =>\n      if (entry.isDirectory) {\n        val out = AbsolutePath(Files.createTempDirectory(\"semanticdb\"))"
+  },
+  {
+    "id" : "300544f5-a8c2-4083-a274-b26212a4c02c",
+    "prId" : 1483,
+    "comments" : [
+      {
+        "id" : "6bb12e1f-7967-49ef-8cd4-0301851f7770",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Shall we crash instead?",
+        "createdAt" : "2018-04-09T15:25:35Z",
+        "updatedAt" : "2018-04-09T15:25:38Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "58189d22-269a-4267-8ee4-097774105f79",
+        "parentId" : "6bb12e1f-7967-49ef-8cd4-0301851f7770",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We have no guarantee on which systems ATOMIC_MOVE is not supported, but I would prefer to run successfully on those systems instead of making it impossible to use metacp. Errors from reading half-complete symbols will still be reported.",
+        "createdAt" : "2018-04-09T15:31:11Z",
+        "updatedAt" : "2018-04-09T15:31:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1da14584-9dff-4e2c-83ab-9140aebf24c1",
+        "parentId" : "6bb12e1f-7967-49ef-8cd4-0301851f7770",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "btw, using `move` even without atomic significantly reduces the chances or reproducing the error compared to the previous behavior where we write directly to the target jar while processing.",
+        "createdAt" : "2018-04-09T15:33:30Z",
+        "updatedAt" : "2018-04-09T15:33:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ba352a87832f5b371579c48dc5bd78c9c907d2bb",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +46,50 @@        )\n      } catch {\n        case _: AtomicMoveNotSupportedException =>\n          Files.move(\n            tmp,"
+  },
+  {
+    "id" : "a4230685-ca91-4b7f-8fe0-0e155e82dc25",
+    "prId" : 1367,
+    "comments" : [
+      {
+        "id" : "e5213818-99a5-48ce-9806-f8a23be42d62",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Do we still need sorting? If not, let's go back to having all logic in `visitFile`.",
+        "createdAt" : "2018-02-26T17:33:57Z",
+        "updatedAt" : "2018-02-26T19:50:09Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "12e80393-9ca7-41fa-a9f0-89ed3cb71337",
+        "parentId" : "e5213818-99a5-48ce-9806-f8a23be42d62",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We still need sorting in order to ensure we visit `Foo.class` before `Foo$Inner.class`. I propose we keep this unchanged for now.",
+        "createdAt" : "2018-02-26T18:34:42Z",
+        "updatedAt" : "2018-02-26T19:50:09Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f88c8927b5cfe762380655296e526691a5f27a47",
+    "line" : 42,
+    "diffHunk" : "@@ -1,1 +130,134 @@              !isVisited(f) &&\n              Files.isRegularFile(f)\n            }\n            .foreach(handleFile)\n          FileVisitResult.CONTINUE"
+  },
+  {
+    "id" : "1441afe8-a374-47fb-b7e4-b758ef48c792",
+    "prId" : 1363,
+    "comments" : [
+      {
+        "id" : "5b1a71d0-6eb8-451a-992d-fdf52490a537",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "What do you think about synthesizing these on the fly at runtime instead of re-generating scala/Any.class and friends for every entry in each classpath?",
+        "createdAt" : "2018-02-26T11:46:54Z",
+        "updatedAt" : "2018-02-26T12:01:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0149206d-5569-4b18-a276-4b4f5506bdd5",
+        "parentId" : "5b1a71d0-6eb8-451a-992d-fdf52490a537",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's continue the discussion at https://github.com/scalameta/scalameta/issues/1368.",
+        "createdAt" : "2018-02-26T21:32:37Z",
+        "updatedAt" : "2018-02-26T21:32:37Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37bdfffae3069ae6dfb60f98e0fba3879587aa53",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +146,150 @@    }\n    locally {\n      def synthesizeBuiltin(name: String): s.SymbolInformation = {\n        val parent = s.TypeRef(None, \"_root_.scala.Any#\", Nil)\n        val tpe = s.ClassInfoType(Nil, List(s.Type(tag = t.TYPE_REF, typeRef = Some(parent))), Nil)"
+  },
+  {
+    "id" : "6da61b60-a055-4f83-ae35-dd65f562c0b1",
+    "prId" : 1363,
+    "comments" : [
+      {
+        "id" : "7c160d43-a7a4-4a34-8770-780b7031c8d6",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Looks like the logic inside this try body can be extracted into a method. I like it best when the try body is as small as possible `try process(foo) catch ...`",
+        "createdAt" : "2018-02-26T11:48:08Z",
+        "updatedAt" : "2018-02-26T12:01:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ebbd6e39-c920-44e7-85d2-0525adac5aeb",
+        "parentId" : "7c160d43-a7a4-4a34-8770-780b7031c8d6",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Could you elaborate on the reasons? Is this a purely stylistic preference, or this also influences IDE support and/or runtime performance?",
+        "createdAt" : "2018-02-26T22:02:51Z",
+        "updatedAt" : "2018-02-26T22:02:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e97adcca-7f53-44a5-afeb-f5d1fc30069c",
+        "parentId" : "7c160d43-a7a4-4a34-8770-780b7031c8d6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Stylistic reasons, I get uneasy with massive try/catch blocks",
+        "createdAt" : "2018-02-27T09:13:32Z",
+        "updatedAt" : "2018-02-27T09:13:33Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37bdfffae3069ae6dfb60f98e0fba3879587aa53",
+    "line" : 140,
+    "diffHunk" : "@@ -1,1 +528,532 @@\n    try {\n      if (sym.isAlias) {\n        def preprocess(info: Type): Type = {\n          info match {"
+  },
+  {
+    "id" : "1cf9c8f6-18f8-4feb-bce0-a5cccb6ac0c2",
+    "prId" : 1363,
+    "comments" : [
+      {
+        "id" : "fa0959de-fec2-458e-a2a1-1a2f8f732651",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Opened https://github.com/scalameta/scalameta/issues/1364 to track this.",
+        "createdAt" : "2018-02-26T12:00:17Z",
+        "updatedAt" : "2018-02-26T12:01:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "37bdfffae3069ae6dfb60f98e0fba3879587aa53",
+    "line" : 75,
+    "diffHunk" : "@@ -1,1 +160,164 @@      def synthesizeAny(): List[s.SymbolInformation] = {\n        val decls = {\n          // TODO: Implement me.\n          // lazy val Any_==       = enterNewMethod(AnyClass, nme.EQ, AnyTpe :: Nil, BooleanTpe, FINAL)\n          // lazy val Any_!=       = enterNewMethod(AnyClass, nme.NE, AnyTpe :: Nil, BooleanTpe, FINAL)"
+  },
+  {
+    "id" : "b5a4729c-f677-4cde-b1e3-99dcf3b7435f",
+    "prId" : 1326,
+    "comments" : [
+      {
+        "id" : "8c38a237-fc3f-45fa-8274-3e61bb92d2b8",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we give magic variables names and store them in some object?",
+        "createdAt" : "2018-02-17T10:20:13Z",
+        "updatedAt" : "2018-02-17T13:07:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2ec825e8-2b1a-4820-982e-10b8be673838",
+        "parentId" : "8c38a237-fc3f-45fa-8274-3e61bb92d2b8",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's do this next time when we fork scalap / get rid of scalap. (We'll have to, because scalap doesn't support some language features).",
+        "createdAt" : "2018-02-17T16:20:35Z",
+        "updatedAt" : "2018-02-17T16:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "098e876247bdeb8c5b579978b237091752344f2d",
+    "line" : 40,
+    "diffHunk" : "@@ -1,1 +152,156 @@          if (sym.isAccessor && sym.name.endsWith(\"_$eq\")) k.SETTER\n          else if (sym.isAccessor) k.GETTER\n          else if (sym.hasFlag(0x00008000)) k.MACRO\n          else k.DEF\n        }"
+  },
+  {
+    "id" : "72d08edc-95f5-453a-9655-246d77338c94",
+    "prId" : 1323,
+    "comments" : [
+      {
+        "id" : "f26fa2c0-8eb8-4506-81d1-dfe6d88d6823",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Do we have any ordering guarantees on `Symbol.children`? What is the chance that `+1` and `+2` get mixed up?",
+        "createdAt" : "2018-02-16T10:31:21Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2affd9b9-a273-43a7-89c6-c50c76ae642d",
+        "parentId" : "f26fa2c0-8eb8-4506-81d1-dfe6d88d6823",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "To the best of my knowledge, pickling preserves the order of symbols in scopes. Scalac namer enters symbols in the order of their appearance in source code. Also see https://github.com/retronym/scalac-stability/issues/1.",
+        "createdAt" : "2018-02-16T17:38:17Z",
+        "updatedAt" : "2018-02-16T18:06:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "808c93b6dbfc05c054223b4278b4fb325e60c102",
+    "line" : 161,
+    "diffHunk" : "@@ -1,1 +439,443 @@      val kindred = sym.parent.get.children.filter(other => skind(other) == skind(sym))\n      val siblings = kindred.filter(_.name == sym.name)\n      val synonyms = siblings.filter(_.descriptor == sym.descriptor)\n      val suffix = {\n        if (synonyms.length == 1) \"\""
+  },
+  {
+    "id" : "c6d04e98-7a21-422e-bc4e-42c56f2d9c93",
+    "prId" : 1316,
+    "comments" : [
+      {
+        "id" : "ccb87b5a-47df-45f5-956e-7ca2d8275a76",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "😭 seems we'll need to roll our own solution sooner or later",
+        "createdAt" : "2018-02-15T10:12:59Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e38f5f1d7e7e09abb297f26cdb09e0a5e7d354a1",
+    "line" : 355,
+    "diffHunk" : "@@ -1,1 +403,407 @@\n  def sanns(sym: SymbolInfoSymbol): List[s.Annotation] = {\n    // TODO: Not supported by scalap.\n    Nil\n  }"
+  },
+  {
+    "id" : "58483c50-3e7f-4873-803c-7a5b8dda7a2d",
+    "prId" : 1314,
+    "comments" : [
+      {
+        "id" : "7fe7dc6f-91dd-4119-94d6-30218ccd234d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "The prefix must be non-empty here as per the updated spec, but I'll take care of that myself when working on implementing the spec.",
+        "createdAt" : "2018-02-14T17:55:00Z",
+        "updatedAt" : "2018-02-14T17:55:04Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2885ea2ac65917d7daa08730db7632fe5b750020",
+    "line" : 10,
+    "diffHunk" : "@@ -1,1 +256,260 @@            val sargs = sarg :: Nil\n            s.Type(tag = stag, typeRef = Some(s.TypeRef(None, ssym, sargs)))\n          }\n        case ConstantType(const) =>\n          def floatBits(x: Float) = java.lang.Float.floatToRawIntBits(x).toLong"
+  },
+  {
+    "id" : "779c460a-85ab-446d-a393-dc5933571e49",
+    "prId" : 1304,
+    "comments" : [
+      {
+        "id" : "b8336cf2-eff7-44ab-a5ca-a0ed2dffdd04",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "When can this happen?",
+        "createdAt" : "2018-02-14T02:15:36Z",
+        "updatedAt" : "2018-02-14T13:45:53Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ae33f2cf-7a1c-4945-b432-6f4e4ac4b7dd",
+        "parentId" : "b8336cf2-eff7-44ab-a5ca-a0ed2dffdd04",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This was the most frequent error, you can uncomment the line and run metacp suite to investigate.",
+        "createdAt" : "2018-02-14T12:16:50Z",
+        "updatedAt" : "2018-02-14T13:45:53Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a0733f371e336cbe4d6533dd70b9ab034bd81f30",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +70,74 @@\n  private def sinfo(sym: SymbolInfoSymbol): Option[s.SymbolInformation] = {\n    if (sym.parent.get == NoSymbol) return None\n    if (sym.isSynthetic) return None\n    if (sym.isModuleClass) return None"
+  },
+  {
+    "id" : "b62a94eb-e506-46ec-8f44-06617e995bc1",
+    "prId" : 1304,
+    "comments" : [
+      {
+        "id" : "99dede7c-56ae-49e9-ab09-d85ea3141dd4",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Do you happen to have a reproduction?",
+        "createdAt" : "2018-02-14T02:16:08Z",
+        "updatedAt" : "2018-02-14T13:45:53Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "302fbe66-e073-4f98-b751-0cf3bc67531d",
+        "parentId" : "99dede7c-56ae-49e9-ab09-d85ea3141dd4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "scala-library and scalameta jars reproduce it 100s of times, but I don't have a minimal reproduction. `scala.matching` was one case I remember. Once we have these tests + diff tests against metac we'll have plenty of opportunity to extract minimal reproductions. For now I think it's most important that new changes to metacp are tested against a large input to prevent further blatant crashes.",
+        "createdAt" : "2018-02-14T12:15:34Z",
+        "updatedAt" : "2018-02-14T13:45:53Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a0733f371e336cbe4d6533dd70b9ab034bd81f30",
+    "line" : 49,
+    "diffHunk" : "@@ -1,1 +176,180 @@            nameEntryType == 1\n          } else {\n            false\n          }\n        }"
+  }
+]

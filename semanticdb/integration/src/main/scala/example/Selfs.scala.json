@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "fd5de9d4-a036-4064-b672-487777cec125",
+    "prId" : 1617,
+    "comments" : [
+      {
+        "id" : "3d22a0e1-efbd-48dc-97b9-68aa0a36a770",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we test that the name of the symbol is kept even when it's not `self`? For example, `class A { hello => }`?",
+        "createdAt" : "2018-06-21T08:27:02Z",
+        "updatedAt" : "2018-06-21T12:39:42Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7a67309c-6533-42cc-81ce-8a41e5204439",
+        "parentId" : "3d22a0e1-efbd-48dc-97b9-68aa0a36a770",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done. The name is not kept in signatures though (because ScalaSignatures don't have the capacity to save it), only in occurrences.",
+        "createdAt" : "2018-06-21T12:41:13Z",
+        "updatedAt" : "2018-06-21T12:41:13Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b6edf6e7990d81b8ddedf5933d23b491230ca5f0",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@}\n\nclass C3 extends B { self: B with Int =>\n}\n"
+  }
+]

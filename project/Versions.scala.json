@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "98f98e56-91d5-4b4d-b3c9-ab8ba616d7d0",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "e8e51478-8ff5-4e58-8105-7efa303616b2",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "👍 This is one of those things I'd like to see in a sbt common package that every build depends on.",
+        "createdAt" : "2017-05-15T22:06:59Z",
+        "updatedAt" : "2017-05-15T22:16:42Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2a593ce-a651-4dd4-9b88-3276026f19f3",
+        "parentId" : "e8e51478-8ff5-4e58-8105-7efa303616b2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I totally agree, I do this in almost every build. I'm not sure if we would use it in this build however since the scala version is very important for us.",
+        "createdAt" : "2017-05-16T07:00:16Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c5f59780-6653-4b2b-8841-838b00c7190b",
+        "parentId" : "e8e51478-8ff5-4e58-8105-7efa303616b2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Although, I can imagine that might make sbt version upgrades harder since upgrading sbt would mean upgrading to latest Scala. Not sure if it's a good thing or bad.",
+        "createdAt" : "2017-05-16T07:01:10Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +-1,3 @@object Versions {\n  val LatestScala210 = \"2.10.6\"\n  val LatestScala211 = \"2.11.11\""
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "c72776fe-514f-4c2a-b849-c1c922ad02e1",
+    "prId" : 2065,
+    "comments" : [
+      {
+        "id" : "5016b83b-bd05-4994-8b92-195936b7e0f9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "FYI the `override` here shouldn't be necessary, I think you can remove `val semanticdbReporter = None` in `ReporterOps` and it will still work ",
+        "createdAt" : "2020-06-05T10:24:44Z",
+        "updatedAt" : "2020-06-05T10:24:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3d6d6169-204d-4b74-839f-7f5fd1ad5bcc",
+        "parentId" : "5016b83b-bd05-4994-8b92-195936b7e0f9",
+        "author" : {
+          "login" : "ingarabr",
+          "name" : "Ingar Abrahamsen",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2236693?v=4"
+        },
+        "body" : "We need to have a reference to pick it up in `ReporterOps`. Your proposal can be done if we change `val semanticdbReporter:Option[SemanticdbReporter] = None` to `def semanticdbReporter: Option[SemanticdbReporter]` in `ReporterOps`. By doing so it's not an override and it can be removed. ",
+        "createdAt" : "2020-06-05T10:43:19Z",
+        "updatedAt" : "2020-06-05T10:43:19Z",
+        "lastEditedBy" : {
+          "login" : "ingarabr",
+          "name" : "Ingar Abrahamsen",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/2236693?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "afd96eea5f1209648d6c116be6d51c42ff0f3023",
+    "line" : 12,
+    "diffHunk" : "@@ -1,1 +13,17 @@  val description = SemanticdbPlugin.description\n\n  override val semanticdbReporter = hijackReporter()\n\n  val components = {"
+  },
+  {
+    "id" : "c8981561-965e-488b-aa46-1173383db754",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "ce8c8ed0-6442-4e4b-a28e-90af0fdeec08",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-04-22T23:02:07Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +26,30 @@  override def init(options: List[String], errFn: String => Unit): Boolean = {\n    val originalOptions = options.map(option => \"-P:\" + name + \":\" + option)\n    val parsedConf = SemanticdbConfig.parse(originalOptions, errFn, g.reporter)\n    config = amendTargetRoot(parsedConf)\n    true"
+  }
+]

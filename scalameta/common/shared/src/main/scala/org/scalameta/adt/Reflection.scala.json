@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "d5655a97-7ce7-4aed-adda-c7feaf180367",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "50302927-0b70-4b2a-8b1c-376083bcc4b8",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is added so that we can represent binary compat values as fields and mostly need in one place.",
+        "createdAt" : "2020-10-09T12:26:44Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +122,126 @@  }\n  class Field(val sym: Symbol) {\n    if (!sym.isField && !sym.hasAnnotation[AstMetadata.binaryCompatField])\n      sys.error(s\"$sym is not a field\")\n    def owner: Leaf = sym.owner.asLeaf"
+  }
+]

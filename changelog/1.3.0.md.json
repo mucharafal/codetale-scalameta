@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "6ae5c3cb-586f-499c-871f-9052bf405ee0",
+    "prId" : 522,
+    "comments" : [
+      {
+        "id" : "d414edf7-d9fa-4f9a-8e1f-a34ef19055a3",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why is it `Type.Refine` and not `Type.Structural`?\n",
+        "createdAt" : "2016-10-18T09:26:29Z",
+        "updatedAt" : "2016-10-18T09:27:12Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "56669c5e-e24c-4140-a95d-19ae445b9ec1",
+        "parentId" : "d414edf7-d9fa-4f9a-8e1f-a34ef19055a3",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "I think it's because the spec considers them _Refinements_: http://scala-lang.org/files/archive/spec/2.11/03-types.html#compound-types\n",
+        "createdAt" : "2016-10-18T09:57:54Z",
+        "updatedAt" : "2016-10-18T09:58:09Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "63e59c58-8823-44cd-988a-2be833d6e98c",
+        "parentId" : "d414edf7-d9fa-4f9a-8e1f-a34ef19055a3",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "The thing in curly braces is called type refinement in the Scala Language Specification.\n",
+        "createdAt" : "2016-10-18T09:57:58Z",
+        "updatedAt" : "2016-10-18T09:57:58Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a546f67f70db1aed1084f0b09334de54ba5d60c9",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@    res0: String = Type.With(Type.Name(\"A\"), Type.Name(\"B\"))\n\n    scala> t\"{ def x: Int }\".structure\n    res1: String = Type.Refine(None, Seq(Decl.Def(Nil, Term.Name(\"x\"), Nil, Nil, Type.Name(\"Int\"))))\n"
+  }
+]

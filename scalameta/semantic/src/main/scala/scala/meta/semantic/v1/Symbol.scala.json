@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "11a73550-6831-4e98-8375-9d1631c8de89",
+    "prId" : 748,
+    "comments" : [
+      {
+        "id" : "098ebc59-f9a4-4d24-8aec-b99b07c4e50f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Neat!",
+        "createdAt" : "2017-03-15T18:07:52Z",
+        "updatedAt" : "2017-03-15T22:11:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7ebedc4580ffc91ea45155279b688f37f0c43b95",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +229,233 @@  def unapply(arg: String): Option[Symbol] =\n    scala.util.Try(apply(arg)).toOption\n}\n\n@root trait Signature {"
+  },
+  {
+    "id" : "0f9af456-1e68-48d8-95e7-8bccda04c768",
+    "prId" : 680,
+    "comments" : [
+      {
+        "id" : "021fc338-7fe7-4995-b819-4f01c7c9700c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why not unsupported like for None?",
+        "createdAt" : "2017-02-14T09:09:05Z",
+        "updatedAt" : "2017-02-14T09:27:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dc99513a-96bf-4c92-9a4a-2bb2b0f624a5",
+        "parentId" : "021fc338-7fe7-4995-b819-4f01c7c9700c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Aha, because it's \"not yet implemented\" as opposed to \"it won't be implemented\". Nevermind",
+        "createdAt" : "2017-02-14T09:26:05Z",
+        "updatedAt" : "2017-02-14T09:27:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c73a8ace2ee18ab80d1f5341c5ab19672d924b71",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +44,48 @@    override def syntax = s\"${addr.syntax}@$start..$end\"\n    override def structure = s\"\"\"Symbol.Local(${addr.structure}, $start, $end)\"\"\"\n    override def name: Name = ???\n    override def fullName: Ref = ???\n  }"
+  },
+  {
+    "id" : "52b0b79f-a7b8-45ce-958f-e2501f7edba7",
+    "prId" : 680,
+    "comments" : [
+      {
+        "id" : "949f7157-4485-44fe-91fa-42a403413161",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we try to avoid using `return` in the future? I never use it myself, took me a while to understand where this line even returns to.",
+        "createdAt" : "2017-02-14T09:11:01Z",
+        "updatedAt" : "2017-02-14T09:34:26Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3b67acab-435b-4dea-b60b-6bae2e299dbb",
+        "parentId" : "949f7157-4485-44fe-91fa-42a403413161",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Also, why `scala.None` instead of `None`?",
+        "createdAt" : "2017-02-14T09:24:03Z",
+        "updatedAt" : "2017-02-14T09:27:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c73a8ace2ee18ab80d1f5341c5ab19672d924b71",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +67,71 @@        val nameChain = ownerChain(this).map {\n          case Symbol.Global(_, Signature.Term(name)) => name\n          case _ => return scala.None\n        }\n        def loop(names: List[String]): Option[Term.Ref] = names match {"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "faaccc0b-6e0b-479e-a56d-dc9e749798cc",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "d13f856f-cd15-43bb-935a-98d8bf7a8eb5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Should this be a `@data` class? The constructor is unsafe and an \"offline mirror\" is a lot more than just a container for two string fields. I think this is another place where an `abstract sealed` class might make sense. Make it impossible to create an offline mirror without passing validation.\r\n\r\n",
+        "createdAt" : "2017-04-21T08:36:06Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3931807a-7949-4deb-a999-ed88de2fe6d4",
+        "parentId" : "d13f856f-cd15-43bb-935a-98d8bf7a8eb5",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "That's an interesting way of looking at this. I think I agree that involved classes like that shouldn't be `@data`.",
+        "createdAt" : "2017-04-27T23:23:12Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 22,
+    "diffHunk" : "@@ -1,1 +20,24 @@        s\"If you use sbt-scalahost, make sure your project defines \" +\n        s\"`dependsOn(<projectname> % Scalameta)` for at least one <projectname>.\")\n  if (classpath == null || classpath == \"\") failEmpty(\"classpath\")\n  if (sourcepath == null || sourcepath == \"\") failEmpty(\"sourcepath\")\n"
+  },
+  {
+    "id" : "04323e9f-8251-41bc-aee5-a3f3a2caa1c9",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "066febd1-8eef-4303-9f15-cda0be4a62ed",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 This was not done before",
+        "createdAt" : "2017-04-26T11:56:21Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 34,
+    "diffHunk" : "@@ -1,1 +32,36 @@    val scalaFiles = mutable.ListBuffer[File]()\n    def addFile(file: File): Unit = {\n      if (!file.getPath.endsWith(\".scala\")) return\n      scalaFiles += file\n    }"
+  }
+]

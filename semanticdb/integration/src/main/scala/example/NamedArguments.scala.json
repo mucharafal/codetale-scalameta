@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "11b260f4-4061-4111-8155-6a67773e8b21",
+    "prId" : 1822,
+    "comments" : [
+      {
+        "id" : "12aaa6be-0ca2-4334-a799-d1f523f0e8f9",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Is this #1790 though?",
+        "createdAt" : "2019-01-29T20:13:14Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a60540bd-017f-4232-a280-537c50ca7ce6",
+        "parentId" : "12aaa6be-0ca2-4334-a799-d1f523f0e8f9",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good catch! It's supposed to be #1787",
+        "createdAt" : "2019-01-29T20:25:17Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80f7ad644ac37d3f71706bf89fdbae41694fbd0a",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@  User(name = \"John\")\n  User.apply(name = \"John\")\n}"
+  }
+]

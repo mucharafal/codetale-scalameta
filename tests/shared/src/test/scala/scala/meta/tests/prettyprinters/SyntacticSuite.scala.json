@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "39d808e0-4bc2-4bae-837d-2d9e440f3157",
+    "prId" : 1663,
+    "comments" : [
+      {
+        "id" : "ae37e761-a4fb-4f7d-9953-b85cf096662d",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "What happens in the following cases?\r\n```scala\r\n    assert(q\"val `//` = 2\".syntax == \"val `//` = 2\")\r\n    assert(q\"val `/*` = 2\".syntax == \"val `/*` = 2\")\r\n```\r\n\r\niirc, in akka-http they have backticked identifiers with `/*`\r\n\r\nIn scala-syntax we use https://github.com/scalacenter/scala-syntax/blob/7352163153066bf9594d63c8e78d62aaa9123656/format/src/main/scala/org/scalafmt/internal/Identifier.scala that we adapted from the Ammonite codebase.",
+        "createdAt" : "2018-07-04T08:22:02Z",
+        "updatedAt" : "2018-07-04T09:13:55Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "36850e57f28cc44197c956ad93111094368a8c93",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +647,651 @@    assert(q\"val `a+` = 2\".syntax == \"val `a+` = 2\")\n    assert(q\"val `a-b` = 2\".syntax == \"val `a-b` = 2\")\n    assert(q\"val `a:b` = 2\".syntax == \"val `a:b` = 2\")\n\n    // Comments must be handled carefully"
+  }
+]

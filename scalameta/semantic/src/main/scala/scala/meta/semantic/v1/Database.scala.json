@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "dee36a5d-2c92-4681-a5f5-fed938ff4b3e",
+    "prId" : 749,
+    "comments" : [
+      {
+        "id" : "fc3a471e-2fde-4de5-a4b9-f8d0402211d8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Very nice! I like the unification.",
+        "createdAt" : "2017-03-15T18:18:22Z",
+        "updatedAt" : "2017-03-20T09:43:21Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8d63b958-5b49-4fb2-9c6b-6d1383b51edc",
+        "parentId" : "fc3a471e-2fde-4de5-a4b9-f8d0402211d8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "By changing this pretty-printed representation, we'd need to update the parser accordingly in #748. I want to keep the pretty-printer, but being able to parse the toString back into same database I care less about. For this reason, I removed the parser. ",
+        "createdAt" : "2017-03-15T20:54:03Z",
+        "updatedAt" : "2017-03-20T09:43:21Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c68125f5a53fdf0a3dfb0458ed0a8802ec5e0384",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +40,44 @@        val snippet = content.substring(start, end)\n        buf ++= (s\"[$start..$end): $snippet => $syntax\" + EOL)\n      }\n      buf ++= EOL\n    })"
+  }
+]

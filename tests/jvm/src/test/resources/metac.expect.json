@@ -1,0 +1,143 @@
+[
+  {
+    "id" : "d6defe69-f83b-4f3b-bcc4-46c6db34ac47",
+    "prId" : 1656,
+    "comments" : [
+      {
+        "id" : "ebc25720-fda8-45a8-8f65-dd16cf3c67f2",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "TODO, this should not be here",
+        "createdAt" : "2018-07-02T17:25:33Z",
+        "updatedAt" : "2018-07-03T10:39:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "06ed595f-7265-4803-ab18-a7aa37b8338c",
+        "parentId" : "ebc25720-fda8-45a8-8f65-dd16cf3c67f2",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Decided to push this to a separate ticket instead https://github.com/scalameta/scalameta/issues/1659\r\n\r\nI think we need to come up with a consistent solution for how to handle these situations.",
+        "createdAt" : "2018-07-03T10:18:54Z",
+        "updatedAt" : "2018-07-03T10:49:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69f04d314ab711c4bbd0f647eac1750017071bee",
+    "line" : 212,
+    "diffHunk" : "@@ -1,1 +1170,1174 @@  List => scala.collection.immutable.List#\n  Int => scala.Int#\nlocal0 => val local C1$1: C1\n  C1 => classes.C1#\nlocal1 => val local C2$1: C2"
+  },
+  {
+    "id" : "2288fbaf-f7c5-4271-a94f-fdf8ace1be18",
+    "prId" : 1656,
+    "comments" : [
+      {
+        "id" : "b0e117bf-4495-43d2-85a0-b9cde534a3fe",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "TODO, this should not be here",
+        "createdAt" : "2018-07-02T17:25:46Z",
+        "updatedAt" : "2018-07-03T10:39:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7114b138-54ce-41a6-96d9-cafbc88e51e9",
+        "parentId" : "b0e117bf-4495-43d2-85a0-b9cde534a3fe",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Moved to #1659",
+        "createdAt" : "2018-07-03T10:23:34Z",
+        "updatedAt" : "2018-07-03T10:49:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69f04d314ab711c4bbd0f647eac1750017071bee",
+    "line" : 382,
+    "diffHunk" : "@@ -1,1 +2648,2652 @@  List => scala.package.List#\nlocal13 => typeparam T\nlocal14 => val local RepeatedType$1: RepeatedType\n  RepeatedType => types.Test.C#RepeatedType#\nlocal2 => abstract method k: Int"
+  },
+  {
+    "id" : "469237f5-9e70-4617-970e-29943446eb26",
+    "prId" : 1656,
+    "comments" : [
+      {
+        "id" : "b1a22d69-149b-43c6-bb3c-988c6b83552b",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg Can we open a ticket for these guys as well?",
+        "createdAt" : "2018-07-03T19:12:14Z",
+        "updatedAt" : "2018-07-03T19:12:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f58e1dd0-3c8f-4fdb-b619-891e73050329",
+        "parentId" : "b1a22d69-149b-43c6-bb3c-988c6b83552b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done https://github.com/scalameta/scalameta/issues/1662\r\n\r\nI didn't observe these were generated from the wildcards, I agree they should not be persisted.",
+        "createdAt" : "2018-07-03T19:37:19Z",
+        "updatedAt" : "2018-07-03T19:37:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "69f04d314ab711c4bbd0f647eac1750017071bee",
+    "line" : 358,
+    "diffHunk" : "@@ -1,1 +2461,2465 @@local3 => selfparam x$1\nlocal4 => selfparam x$2: B\n  B => selfs.B#\nselfs. => package selfs\nselfs.B# => class B extends AnyRef { +1 decls }"
+  }
+]

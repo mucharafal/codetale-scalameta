@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "8cf8c120-a3de-4e22-b059-d07b2247ea2e",
+    "prId" : 1172,
+    "comments" : [
+      {
+        "id" : "4b6b8b05-c754-4f05-a07a-e3431f6c261c",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍",
+        "createdAt" : "2017-11-30T22:49:23Z",
+        "updatedAt" : "2017-12-01T11:06:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4de09e23c9751d3ac1ba94e978bd6040876d5d2a",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +34,38 @@            }\n          case gfile: VirtualFile =>\n            m.Input.VirtualFile(gfile.path, gsource.content.mkString)\n          case other =>\n            m.Input.None"
+  }
+]

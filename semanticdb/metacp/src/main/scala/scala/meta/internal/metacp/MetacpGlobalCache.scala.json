@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "f7480274-8276-4fdf-99ec-107ee073de8e",
+    "prId" : 1674,
+    "comments" : [
+      {
+        "id" : "d1dd29f8-08f7-410c-bcae-751cfaa89562",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "> If the compute function returns true (indicating successful completion), the temporary file ...\r\n> If the compute function returns false (indicating failed completions), nothing happens.",
+        "createdAt" : "2018-07-05T10:49:49Z",
+        "updatedAt" : "2018-07-05T12:19:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3c012530b36d03419f3e882d24d6eeb3b34eb75",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +29,33 @@    * @param computeFunction The expensive compute function that writes its results into the\n    *                        callback argument path, which points to a non-existing temporary file.\n    *                        Once the compute function has completed successfully, the temporary file\n    *                        is moved to the target cache location.\n    */"
+  },
+  {
+    "id" : "4aa6fd51-5d05-45a7-9508-bdcf7cd9078d",
+    "prId" : 1674,
+    "comments" : [
+      {
+        "id" : "e8f44c06-c473-42e6-b0d7-ab5676f4f353",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good guard! ",
+        "createdAt" : "2018-07-05T11:01:09Z",
+        "updatedAt" : "2018-07-05T12:19:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e3c012530b36d03419f3e882d24d6eeb3b34eb75",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +39,43 @@      if (!Files.exists(cacheTarget)) {\n        val tmp = Files.createTempDirectory(\"metacp\").resolve(cacheTarget.getFileName)\n        if (computeFunction(tmp)) {\n          tryAtomicMove(tmp, cacheTarget)\n        }"
+  }
+]

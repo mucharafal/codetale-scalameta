@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "fa732bbb-d1f0-430b-b053-46b43fc3808e",
+    "prId" : 1009,
+    "comments" : [
+      {
+        "id" : "b2747d0d-2617-4405-9b9d-65e38ba8eb02",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This is due to an off-by-one error getting fixed hehe 😅 ",
+        "createdAt" : "2017-07-09T15:19:33Z",
+        "updatedAt" : "2017-07-09T15:19:33Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "231ff750-0979-4807-80af-7a0124fbe3e5",
+        "parentId" : "b2747d0d-2617-4405-9b9d-65e38ba8eb02",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Neat! So I'm longer gonna need this: https://github.com/xeno-by/scalamacros/blob/master/.scalafmt.conf#L6.",
+        "createdAt" : "2017-07-09T20:42:29Z",
+        "updatedAt" : "2017-07-09T20:42:29Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8f311ca64c365724b8409f4bcb8c60324b2ccc34",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +30,34 @@            // Adds the parsed token to the list of tokens and parse the rest of the string recursively.\n            if (remainingScaladoc.take(2) == \"\\n\\n\") {\n              List(p.value, DocToken(Paragraph)) ++ parseRec(remainingScaladoc.dropWhile(_ == '\\n'))\n            } else {\n              List(p.value) ++ parseRec(remainingScaladoc.dropWhile(c => c == ' ' || c == '\\n'))"
+  }
+]

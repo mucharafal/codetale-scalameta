@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "505a9ae8-31ff-4466-b366-2fb96967f7a8",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "e7ffd592-66dd-4b49-b768-2554fe0749be",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This line is problematic, I hit on an error (with stacktrace https://gist.github.com/olafurpg/aa8a42c186bce4e51d79e637420b60bf) which I suspect was caused by a for-comprehension. The culprit code looked something like \r\n```scala\r\n    val patches = for {\r\n      s <- mirror.database.sources\r\n      (Anchor(_, start, _), sugar) <- s.sugars\r\n      if !sugar.startsWith(\"[\")\r\n      patch <- tokensByOffset.get(start).toList.map {\r\n        case tok @ Trivia() =>\r\n          ctx.addLeft(tok, sugar.trimSugar)\r\n        case tok =>\r\n          ctx.addRight(tok, sugar.trimSugar)\r\n      }\r\n    } yield patch\r\n```",
+        "createdAt" : "2017-04-26T13:46:11Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b77d1938-a90d-4dbc-87d6-235ef015adc5",
+        "parentId" : "e7ffd592-66dd-4b49-b768-2554fe0749be",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This is a bug in scalahost. We shouldn't get here with a non-range position.",
+        "createdAt" : "2017-04-28T00:29:59Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +23,27 @@  implicit class XtensionGPositionAnchor(pos: GPosition) {\n    def toAnchor: m.Anchor = {\n      assert(pos.isRange)\n      m.Anchor(pos.source.toAbsolutePath, pos.start, pos.end)\n    }"
+  }
+]

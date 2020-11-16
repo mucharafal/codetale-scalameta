@@ -1,0 +1,293 @@
+[
+  {
+    "id" : "7b2bdcb6-fe59-480f-b97c-cb9f024719c9",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "f3858d36-422e-477e-946f-e4bba71932dd",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why is this a `<?>`?",
+        "createdAt" : "2018-03-09T00:18:02Z",
+        "updatedAt" : "2018-03-09T00:24:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2b469a2d-0c3e-4632-abb6-f33b2a12c28d",
+        "parentId" : "f3858d36-422e-477e-946f-e4bba71932dd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Not sure, looking at lowlevel.expect there seems to be quite a few other `<?>` which seem unrelated to this PR. I opened https://github.com/scalameta/scalameta/issues/1418 to track fixing these. I don't think this is a blocker at the moment.",
+        "createdAt" : "2018-03-09T11:16:35Z",
+        "updatedAt" : "2018-03-09T11:21:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 67,
+    "diffHunk" : "@@ -1,1 +559,563 @@  a => _root_.com.javacp.MetacJava#overload(A+2).(a)\n  Unit => _root_.scala.Unit#\n_root_.com.javacp.MetacJava#overload(A+3). => def overload: (a: <?>): Unit\n  a => _root_.com.javacp.MetacJava#overload(A+3).(a)\n  Unit => _root_.scala.Unit#"
+  },
+  {
+    "id" : "f394b505-12f9-4199-9678-417051134fb0",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "2ab6fe07-4ada-4da5-aba8-2985ccaf3965",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-03-09T00:18:46Z",
+        "updatedAt" : "2018-03-09T00:24:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 161,
+    "diffHunk" : "@@ -1,1 +1259,1263 @@  extends Enum[LinkOption]\n  extends OpenOption\n  extends CopyOption\n_root_.java.nio.file.LinkOption#NOFOLLOW_LINKS. => final val NOFOLLOW_LINKS: NOFOLLOW_LINKS.type\n  NOFOLLOW_LINKS => _root_.java.nio.file.LinkOption#NOFOLLOW_LINKS."
+  },
+  {
+    "id" : "51ce4855-0d9e-4084-bee8-1cc51e0926df",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "4a2cc994-6225-4f4e-8e8e-f807047c8dd5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👏 ",
+        "createdAt" : "2018-02-27T08:27:26Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +122,126 @@  Int => _root_.scala.Int#\n_root_.scala. => package scala\n_root_.scala.Array# => final class Array[T: <?>].{+6 decls}\n  extends AnyRef\n  extends Serializable"
+  },
+  {
+    "id" : "e5af6153-2cb5-487f-b859-bc295f887aaf",
+    "prId" : 1326,
+    "comments" : [
+      {
+        "id" : "f7313490-0550-4dd6-a8db-f2a7086c9b7f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm a bit sad to see all val/var accesses become references to getters 😢 the uniformity between syntax and symbols was nice",
+        "createdAt" : "2018-02-17T12:41:01Z",
+        "updatedAt" : "2018-02-17T13:07:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d5d8cfdd-72c8-4ed0-9c5f-e530ce3a68db",
+        "parentId" : "f7313490-0550-4dd6-a8db-f2a7086c9b7f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yeah, that's what I meant by \"fun consequences\". Unfortunately, that's how the specification works.\r\n\r\nScalac has to do funny things as well - the entire `STABLE` flag and associated business is a direct consequence of this design.",
+        "createdAt" : "2018-02-17T16:19:04Z",
+        "updatedAt" : "2018-02-17T16:19:04Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "098e876247bdeb8c5b579978b237091752344f2d",
+    "line" : 421,
+    "diffHunk" : "@@ -1,1 +1001,1005 @@  Int => _root_.scala.Int#\n_root_.scala.language. => final object language\n_root_.scala.language.existentials(). => implicit lazy val existentials: existentials\n  existentials => _root_.scala.languageFeature.existentials#\n_root_.scala.language.higherKinds(). => implicit lazy val higherKinds: higherKinds"
+  },
+  {
+    "id" : "de7d11c5-32dc-4f38-af2e-48fd64df1a4a",
+    "prId" : 1316,
+    "comments" : [
+      {
+        "id" : "08585e26-2766-4406-9dd2-53335d6fee59",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why `@deprecated` twice?",
+        "createdAt" : "2018-02-15T10:20:03Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a424d173-ec3e-4d68-bc54-66a78fa1d4dc",
+        "parentId" : "08585e26-2766-4406-9dd2-53335d6fee59",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "You wouldn't believe: https://github.com/scala/scala/blob/c2a5883891a68180b143eb462c8b0cebc8d3b021/src/compiler/scala/tools/nsc/symtab/classfile/ClassfileParser.scala#L828-L831.",
+        "createdAt" : "2018-02-15T17:03:26Z",
+        "updatedAt" : "2018-02-15T19:38:58Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e38f5f1d7e7e09abb297f26cdb09e0a5e7d354a1",
+    "line" : 93,
+    "diffHunk" : "@@ -1,1 +115,119 @@_root_.scala.collection. => package collection\n_root_.scala.collection.mutable. => package mutable\n_root_.scala.collection.mutable.Stack# => @deprecated @deprecated class Stack.{+20 decls}\n  extends AbstractSeq[Stack#[A]\n  extends Seq[Stack#[A]"
+  },
+  {
+    "id" : "6cd3d8a4-596a-4fc9-8de0-70c40c403faf",
+    "prId" : 1278,
+    "comments" : [
+      {
+        "id" : "3f8305c2-e85a-49cd-a147-c4da3751632f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "@xeno-by do you know why there are two colons `: :`? I expected there to be only one colon, the type is\r\n```scala\r\ntag: METHOD_TYPE\r\nmethodType {\r\n  result {\r\n    tag: LITERAL_TYPE\r\n    literalType {\r\n      tag: ENUM\r\n      primitive: 0\r\n      string: \"_root_.java.nio.file.LinkOption.NOFOLLOW_LINKS.\"\r\n    }\r\n  }\r\n}\r\n```",
+        "createdAt" : "2018-02-08T14:38:19Z",
+        "updatedAt" : "2018-02-09T14:09:57Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "76028cda-d8bc-4c63-bce2-956c858cf26f",
+        "parentId" : "3f8305c2-e85a-49cd-a147-c4da3751632f",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "`: T` corresponds to `NullaryMethodType`, which is the signature of the underlying getter.",
+        "createdAt" : "2018-02-08T17:39:22Z",
+        "updatedAt" : "2018-02-09T14:09:57Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a342aa48214370cf60327c899eabd7cf017c2d33",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +620,624 @@  X => _root_.types.P#X#\n_root_.types.Test.Literal. => final object Literal\n_root_.types.Test.Literal.bool. => final val bool: : true\n\n_root_.types.Test.Literal.char. => final val char: : 'a'"
+  },
+  {
+    "id" : "53647330-5361-4fe1-ab4e-990151f0e37d",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "cf437094-478b-40a0-ad49-7707601e2ee0",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Do we have any secondary constructors?",
+        "createdAt" : "2018-02-05T20:32:56Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "de0b1031-b3cd-4031-b6a7-7e7ba2294daf",
+        "parentId" : "cf437094-478b-40a0-ad49-7707601e2ee0",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Sure, plenty.",
+        "createdAt" : "2018-02-05T20:37:08Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 398,
+    "diffHunk" : "@@ -1,1 +396,400 @@_root_.types. => package types.{+8 members}\n_root_.types.B# => class B\n_root_.types.B#`<init>`()V. => primaryctor <init>: (): B\n  B => _root_.types.B#\n_root_.types.C# => class C.{+1 decls}"
+  }
+]

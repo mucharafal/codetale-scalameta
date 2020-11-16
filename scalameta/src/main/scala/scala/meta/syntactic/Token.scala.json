@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "574a1ff0-f8f7-48a1-9f31-305003e25b79",
+    "prId" : 142,
+    "comments" : [
+      {
+        "id" : "b744a2bf-e405-4fae-bc0d-00326d4083cb",
+        "parentId" : null,
+        "author" : {
+          "login" : "Duhemm",
+          "name" : "Martin Duhem",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1765926?u=025ccd7d65512bc68d5a0b24bb857dabd6dd381d&v=4"
+        },
+        "body" : "If I understand correctly, the redirection mechanism in `customMatcher` will see that we're trying to lift `Unquote` and use directly `liftUnquote` instead of generating a new one which would require a Liftable for `Any`? Nice!\n",
+        "createdAt" : "2015-06-02T07:18:04Z",
+        "updatedAt" : "2015-06-02T07:18:04Z",
+        "lastEditedBy" : {
+          "login" : "Duhemm",
+          "name" : "Martin Duhem",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1765926?u=025ccd7d65512bc68d5a0b24bb857dabd6dd381d&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5979917f-3660-47e4-87ad-97027e369ed4",
+        "parentId" : "b744a2bf-e405-4fae-bc0d-00326d4083cb",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yes, that's right. Ideally, we shouldn't have this `customMatcher` at all and the materializer should simply account for the implicits in scope. In the future, I'll get to implementing that.\n",
+        "createdAt" : "2015-06-02T08:41:45Z",
+        "updatedAt" : "2015-06-02T08:41:45Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ee20d0514261c7ede3dbc5c9e0d14dbb1c5567a1",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +164,168 @@// To combat that, we have TokenLiftables right here, guaranteeing that there won't be problems\n// if someone wants to refactor/rename something later.\ntrait TokenLiftables extends tokens.Liftables {\n  val c: scala.reflect.macros.blackbox.Context\n  override lazy val u: c.universe.type = c.universe"
+  }
+]

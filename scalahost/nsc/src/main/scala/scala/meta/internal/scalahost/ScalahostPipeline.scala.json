@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "28bb69a9-2a11-45d0-aaf0-b378557075a9",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "1ec56984-c865-465e-95c0-86c9549c5917",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks like an unused import.",
+        "createdAt" : "2017-07-07T03:23:52Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2fee0e62-d3fa-4402-8c94-5c9ef7d9ac4c",
+        "parentId" : "1ec56984-c865-465e-95c0-86c9549c5917",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I've removed all unused imports in the build https://github.com/scalameta/scalameta/pull/1004",
+        "createdAt" : "2017-07-07T07:30:38Z",
+        "updatedAt" : "2017-07-07T07:30:38Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +15,19 @@import scala.meta.internal.semantic.{schema => s}\nimport scala.tools.nsc.doc.ScaladocGlobal\nimport scala.meta.internal.semantic.schema.Message.Severity\n\ntrait ScalahostPipeline extends DatabaseOps { self: ScalahostPlugin =>"
+  },
+  {
+    "id" : "a618d6bd-5444-4231-bfd5-5862a6cc0fd3",
+    "prId" : 854,
+    "comments" : [
+      {
+        "id" : "be30994e-1203-4044-bd8e-753a9aaacdd0",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nice!",
+        "createdAt" : "2017-05-11T21:31:04Z",
+        "updatedAt" : "2017-05-11T21:31:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ed5af9cd9004a6db68a119de7a748eb491429856",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +52,56 @@            val msg = new StringWriter()\n            val path = unit.source.file.path\n            msg.write(s\"failed to generate semanticdb for $path:$EOL\")\n            ex.printStackTrace(new PrintWriter(msg))\n            global.reporter.error(g.NoPosition, msg.toString)"
+  }
+]

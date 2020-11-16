@@ -1,0 +1,190 @@
+[
+  {
+    "id" : "1d182d1c-061c-42f3-bacb-b5f5ae681e90",
+    "prId" : 736,
+    "comments" : [
+      {
+        "id" : "a8cd1d9d-8b20-4aba-9061-913f2b0384cd",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What does `extras` mean?",
+        "createdAt" : "2017-03-10T01:51:44Z",
+        "updatedAt" : "2017-03-10T01:55:12Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9d0ce24a-6452-4182-98cc-3c8fc350925a",
+        "parentId" : "a8cd1d9d-8b20-4aba-9061-913f2b0384cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "No idea, @jvican came up with the name. I think a more appropriate name would be `scalacenter/platform`. ",
+        "createdAt" : "2017-03-11T17:47:58Z",
+        "updatedAt" : "2017-03-11T18:30:27Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a8e95823-fcfe-4b39-95bf-20592c328e31",
+        "parentId" : "a8cd1d9d-8b20-4aba-9061-913f2b0384cd",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "`scala-extras` is not the image meant to be used for the platform, we already have one for that already.\r\n  \r\nThis has been named after the fact that it does not only bundle scala and sbt, but contains extra stuff like jekyll, git, and all sort of utils that may be handy to do scripting in sbt.",
+        "createdAt" : "2017-03-11T18:42:48Z",
+        "updatedAt" : "2017-03-11T18:42:55Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "edffbb2b-617f-48c9-888e-90850aee1bf5",
+        "parentId" : "a8cd1d9d-8b20-4aba-9061-913f2b0384cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Maybe `scalacenter/ci` is a better name then? I don't really mind either way",
+        "createdAt" : "2017-03-11T18:45:49Z",
+        "updatedAt" : "2017-03-11T18:45:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f0eb1e37257bd87d18b1a59d9af29be9bd372e",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +11,15 @@\n  tests:\n    image: scalacenter/scala-extras:1.0\n    pull: true\n    commands:"
+  },
+  {
+    "id" : "0b03d95c-b2e6-4dac-bf8f-2b32e9e3b1b4",
+    "prId" : 736,
+    "comments" : [
+      {
+        "id" : "40898d08-223a-4bbd-b9f8-208a42beb4b6",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why is `fetch --tags` necessary?",
+        "createdAt" : "2017-03-10T01:51:58Z",
+        "updatedAt" : "2017-03-10T01:55:12Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ddcf737c-a833-41a1-9b3b-d10892994fe7",
+        "parentId" : "40898d08-223a-4bbd-b9f8-208a42beb4b6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Yes, this took me 30 minutes to track down. For some reason, the tags were not included in the repo, which caused `os.scala` to crash once sbt had loaded (3-4 minutes into the build because the image had no cache).",
+        "createdAt" : "2017-03-11T17:47:27Z",
+        "updatedAt" : "2017-03-11T18:30:27Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f0eb1e37257bd87d18b1a59d9af29be9bd372e",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +14,18 @@    pull: true\n    commands:\n      - git fetch --tags && git log | head -n 20\n      - ./bin/checkCLA.sh\n      - ./bin/scalafmt --test"
+  },
+  {
+    "id" : "60d3cf95-0b70-4b9b-a99f-8a9300411393",
+    "prId" : 641,
+    "comments" : [
+      {
+        "id" : "8d88749f-5a3e-46f5-a258-cb47b8194f16",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Gonna validate this works first before adding more people on the list.",
+        "createdAt" : "2017-02-06T14:15:18Z",
+        "updatedAt" : "2017-02-06T14:15:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ff62d025490ec632d6b00d6564b4b3857079cc59",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +43,47 @@    password: $MAILGUN_PASSWORD\n    recipients:\n      - olafurpg+scalameta-ci@gmail.com"
+  },
+  {
+    "id" : "cce985e7-87c7-4b5f-b001-8082c619eb5b",
+    "prId" : 408,
+    "comments" : [
+      {
+        "id" : "8f87a6ee-9138-4395-9334-9ff5eabc0bcb",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@fommil Is there a different way to restart the build for a regular user? Even closing and reopening the same pull request doesn't make drone restart.\n",
+        "createdAt" : "2016-05-29T10:50:41Z",
+        "updatedAt" : "2016-05-29T10:50:41Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "827959b579dfed21ecffa6ac41e1b49004c13400",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +20,24 @@          echo \"CLA check for $author failed\";\n          echo \"Please sign the Scala CLA to contribute to scala.meta\";\n          echo \"Go to https://www.lightbend.com/contribute/cla/scala and then resubmit this pull request\";\n          exit 1;\n        fi;"
+  }
+]

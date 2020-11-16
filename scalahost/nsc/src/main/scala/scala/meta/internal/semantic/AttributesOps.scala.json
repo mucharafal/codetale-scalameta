@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "f2e07681-30d3-4b1e-b6ce-1b54d2c6f7be",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "e836a832-58bb-444d-8396-af26ea6121fc",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What's the difference between `toString` and `showCode` here? I'm very wary of `showCode`, because it's known to sometimes swallow snippets of code that it considers irrelevant.",
+        "createdAt" : "2017-07-06T01:39:44Z",
+        "updatedAt" : "2017-07-06T09:54:43Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1230fccf-a649-4bbd-a34e-b06540eefff9",
+        "parentId" : "e836a832-58bb-444d-8396-af26ea6121fc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Here's an example failing test from rebase on master\r\n\r\n```\r\n[info]   -[273..275) h.X.cvt[Int](*)(h.C.int)\r\n[info]   +[273..275) h.this.X.cvt[Int](*)(h.this.C.int)\r\n```\r\nThe second one (.toString) would not compile if inserted into a source file while the first one (showCode) would compile.\r\n",
+        "createdAt" : "2017-07-06T08:17:50Z",
+        "updatedAt" : "2017-07-06T09:54:43Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +308,312 @@                case gview: g.ApplyImplicitView =>\n                  val pos = gtree.pos.toMeta\n                  val syntax = g.showCode(gview.fun) + \"(*)\"\n                  success(pos, syntax)\n                  inferredImplicitConv += gview.fun"
+  },
+  {
+    "id" : "d3b6e576-e1a8-456f-9f24-35ce6b05153b",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "2d5117ff-f1ba-426c-863d-cbc7f701e42b",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why do we need `decoded` here?",
+        "createdAt" : "2017-07-07T03:25:11Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "edc91cfd-d403-4007-8a53-87f62981983b",
+        "parentId" : "2d5117ff-f1ba-426c-863d-cbc7f701e42b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I thought that was the way to get the name of a symbol, is there a better method?",
+        "createdAt" : "2017-07-07T07:36:05Z",
+        "updatedAt" : "2017-07-07T07:36:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ac1e35b-c3eb-4d00-afac-198c9bca218a",
+        "parentId" : "2d5117ff-f1ba-426c-863d-cbc7f701e42b",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I mixed this up with the macro API, where you have to do `decodedName.toString`.",
+        "createdAt" : "2017-07-09T22:12:53Z",
+        "updatedAt" : "2017-07-09T22:12:53Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +331,335 @@                case g.Apply(select @ g.Select(qual, nme), _) if isSyntheticName(select) =>\n                  val pos = qual.pos.withStart(qual.pos.end).toMeta\n                  success(pos, s\".${nme.decoded}\")\n                case _ =>\n                // do nothing"
+  }
+]

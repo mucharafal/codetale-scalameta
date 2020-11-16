@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "af5e321f-ea9e-4dd4-bcbf-1081170b3c07",
+    "prId" : 949,
+    "comments" : [
+      {
+        "id" : "122905e0-b9fd-407f-8308-102809e0ef40",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "How does an example app use these functions from js? Does it need a `require` or do they just magically appear in scope? I'm a total js noob 😅 ",
+        "createdAt" : "2017-06-19T14:34:33Z",
+        "updatedAt" : "2017-06-19T17:58:50Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa5800fa-f6b2-4285-8c36-8f939449edd6",
+        "parentId" : "122905e0-b9fd-407f-8308-102809e0ef40",
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "Since we're exporting a commonjs module, it needs a `require`, I'll add an example.",
+        "createdAt" : "2017-06-19T14:39:31Z",
+        "updatedAt" : "2017-06-19T17:58:50Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c2bb8c00a03e356be13f826795d962d5aa8777ed",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3,7 @@A JS API for the `parsers` module of [`scalameta`](https://github.com/scalameta/scalameta).\n\nIt exposes two functions:\n\n- `parseSource(code: string)`: parses the given code as a full-fledged source file"
+  }
+]

@@ -1,0 +1,144 @@
+[
+  {
+    "id" : "74775971-6e3a-4b08-9dc3-36441583459b",
+    "prId" : 2021,
+    "comments" : [
+      {
+        "id" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Are these methods still exported to JS? This API is published to NPM as https://www.npmjs.com/package/scalameta-parsers",
+        "createdAt" : "2020-05-15T08:58:05Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "79672cac-5c9b-4a41-9759-0ed157f9ca78",
+        "parentId" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "author" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "body" : "I think these are no longer exported since no annotation.\n\nI will try to update so these APIs are exported.",
+        "createdAt" : "2020-05-15T09:22:20Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7b9774d6-3d50-430f-9845-2943bf69e8f2",
+        "parentId" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "author" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "body" : "If `@JSExportTopLevel` annotations exists, the following error produed by Scala.js: \r\n\r\n`\r\n[error] file:/home/vagrant/IdeaProjects/scalameta/scalameta/parsers/js/src/main/scala/scala/meta/parsers/JSFacade.scala(39:7:This): this of type <notype> typed as scala.meta.parsers.JSFacade$\r\n`\r\n\r\nI will look into.",
+        "createdAt" : "2020-05-16T12:44:30Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8ad053bb-95b6-41e9-a3a8-e6b136e0eaf5",
+        "parentId" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "author" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "body" : "No idea how to fix this 🤷 ...\r\n[Opened a question in Scala.js gitter](https://gitter.im/scala-js/scala-js?at=5ebf9003863019312a61f4a5). ",
+        "createdAt" : "2020-05-16T13:00:36Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f0b69f83-817e-4649-ac90-751145c8275e",
+        "parentId" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "author" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "body" : "Filed an issue https://github.com/scala-js/scala-js/issues/4052",
+        "createdAt" : "2020-05-17T11:21:19Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "83a70bd2-a764-4b37-9451-89d57dc42324",
+        "parentId" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Looks like the solution is to use method overloads instead of default parameters. That's OK with me 👍 ",
+        "createdAt" : "2020-05-20T07:20:25Z",
+        "updatedAt" : "2020-05-20T07:32:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d58e00ff-3b61-47e2-8b0d-e6d55c17c81c",
+        "parentId" : "9afe0817-7e73-4832-b91e-aaec2f526f63",
+        "author" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "body" : "Added overloads to fix the issue.",
+        "createdAt" : "2020-05-20T07:33:14Z",
+        "updatedAt" : "2020-05-20T07:33:14Z",
+        "lastEditedBy" : {
+          "login" : "exoego",
+          "name" : "TATSUNO Yasuhiro",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/127635?u=e1c4d4a911ea00d9fb3ae2879ab39277826c42d8&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "af3260a74c644efec19ee1a2c884a37cad1ff1ce",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +117,121 @@  @JSExportTopLevel(\"default\")\n  @JSExportTopLevel(\"parseSource\")\n  def parseSource(\n      code: String,\n      settings: Settings"
+  }
+]

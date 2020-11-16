@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "dd1a8ff2-3bd0-496c-bc32-c6a20ea0a5ca",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "ed958d8d-3bee-49d1-9f4d-a5faa3b1af5d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-04-22T22:52:46Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +35,39 @@  }\n\n  def toTextDocument(compiler: Global, code: String): s.TextDocument =\n    toTextDocument(compiler, code, \"interactive.scala\", 10000, Nil)\n"
+  }
+]

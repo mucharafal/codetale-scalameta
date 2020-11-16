@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "61fcee28-6435-433d-975e-5e4c83beb7c6",
+    "prId" : 1088,
+    "comments" : [
+      {
+        "id" : "4785fff2-80a6-4dda-9d96-14c9e8babbb4",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I find it a bit unsettling that `tree.syntax` is OS dependent, would it make sense if TreeSyntax emitted \\n instead of EOL?",
+        "createdAt" : "2017-08-25T07:49:31Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "86c65d46-f933-443a-a3db-9813761a7833",
+        "parentId" : "4785fff2-80a6-4dda-9d96-14c9e8babbb4",
+        "author" : {
+          "login" : "martijnhoekstra",
+          "name" : "Martijn Hoekstra",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/882449?u=97ba510cbf9af4649fa55b436398dd82e1d08df1&v=4"
+        },
+        "body" : "I know so little about the actual library that I don't really have an opinion on that in this specific case.\r\n\r\nIn the general case (perhaps surprisingly), things tend to get more rather then less portable if `\\n` is consistently used for everything, as long as notepad isn't the tool of choice of the Windows user (and it never is).\r\n\r\nUnfortunately things like `println` are platform specific, making you in some cases end up with mixed line endings if you attempt to do that.\r\n\r\nI could experiment with globally replacing EOL with \\n and see where that brings us - maybe it removes the need for this PR almost entirely.\r\n\r\nOne notable issue is git. In some configurations, git on windows will replace \\n line endings with \\r\\n. This is problematic for scala in general, since line endings may in some cases (for example in multiline strings) not be interchangeable.",
+        "createdAt" : "2017-08-25T09:28:43Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "martijnhoekstra",
+          "name" : "Martijn Hoekstra",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/882449?u=97ba510cbf9af4649fa55b436398dd82e1d08df1&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e956c13-1051-4075-b98d-1f83260cb3b1",
+        "parentId" : "4785fff2-80a6-4dda-9d96-14c9e8babbb4",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Thanks for sharing your view. I propose we don't change the pretty-printing in this PR and focus on getting tests passing in Windows, as you've done. Globally EOL with \\n  might be worth it IMO, I'm happy to explore that path separately later.",
+        "createdAt" : "2017-08-25T09:37:15Z",
+        "updatedAt" : "2017-08-25T10:17:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ecd184064ff8450fa731c72ee96bb8f17b09ccd5",
+    "line" : 122,
+    "diffHunk" : "@@ -1,1 +437,441 @@    val tree = source(\"package foo; class C; package baz { class D }\")\n    assert(tree.structure === \"Source(List(Pkg(Term.Name(\\\"foo\\\"), List(Defn.Class(Nil, Type.Name(\\\"C\\\"), Nil, Ctor.Primary(Nil, Name(\\\"\\\"), Nil), Template(Nil, Nil, Self(Name(\\\"\\\"), None), Nil)), Pkg(Term.Name(\\\"baz\\\"), List(Defn.Class(Nil, Type.Name(\\\"D\\\"), Nil, Ctor.Primary(Nil, Name(\\\"\\\"), Nil), Template(Nil, Nil, Self(Name(\\\"\\\"), None), Nil))))))))\")\n    assert(tree.syntax === s\"package foo${EOL}class C${EOL}package baz {$EOL  class D${EOL}}\")\n  }\n"
+  }
+]

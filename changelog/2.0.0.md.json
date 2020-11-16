@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "ba08985d-0dcb-4fd8-b1a2-4575a57be573",
+    "prId" : 1081,
+    "comments" : [
+      {
+        "id" : "c362bac8-1bb5-43f3-aa4c-f7c6921ca4ce",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think we can skip this one. We never promised stability of internal packages.",
+        "createdAt" : "2017-08-23T14:54:56Z",
+        "updatedAt" : "2017-09-01T16:22:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "aa6a963a-c45a-4271-8333-21e8cafbbaa6",
+        "parentId" : "c362bac8-1bb5-43f3-aa4c-f7c6921ca4ce",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Even if we don't promise stability of internal packages, I think it's nice to include it here just in case some unfortunate soul like myself in the future is porting a library from 1.8 to 2.0.",
+        "createdAt" : "2017-08-23T16:43:30Z",
+        "updatedAt" : "2017-09-01T16:22:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dc8d1969-b7c5-4d85-965d-0e6e246738ca",
+        "parentId" : "c362bac8-1bb5-43f3-aa4c-f7c6921ca4ce",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Makes sense.",
+        "createdAt" : "2017-09-01T18:15:49Z",
+        "updatedAt" : "2017-09-01T18:15:49Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9d7153d6d8f9d02e0669e53aa902a57e01ccb745",
+    "line" : 98,
+    "diffHunk" : "@@ -1,1 +96,100 @@| -----                                             | -----                                               |\n| scala.collection.immmutable.Seq[T]                | List[T]                                             |\n| scala.meta.internal.ast                           | scala.meta.internal.trees                           |\n| scala.meta.Name.Qualifier                         | scala.meta.Name                                     |\n| scala.meta.Term.Update                            | scala.meta.Term.Assign(Apply())                     |"
+  }
+]

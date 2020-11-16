@@ -1,0 +1,96 @@
+[
+  {
+    "id" : "5105ea73-050a-4394-b5d6-c5ffd357f038",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "81ea44fd-8fbe-44ff-817f-c0bcf67c5fbc",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We add the compat annotation to the getter to be able to recognise it later in transform.",
+        "createdAt" : "2020-10-09T12:42:19Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 48,
+    "diffHunk" : "@@ -1,1 +112,116 @@        val binaryCompatAbstractFields = binaryCompatVars.flatMap { case vr: ValDef =>\n          List(\n            q\"${binaryCompatMods(vr)} def ${getterName(vr)}: ${vr.tpt}\",\n            q\"def ${setterName(vr)}(${vr.name} : ${vr.tpt}) : Unit\"\n          )"
+  },
+  {
+    "id" : "a6b5768e-e937-4ffb-9979-69851e5e2d8b",
+    "prId" : 2134,
+    "comments" : [
+      {
+        "id" : "a41c8638-a72e-4ee7-827f-944c13e9d2ab",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "[Q] should we also enforce `FINAL` ?",
+        "createdAt" : "2020-10-10T16:32:50Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2d665331-de48-4aa2-ab9d-62de0b5adc2d",
+        "parentId" : "a41c8638-a72e-4ee7-827f-944c13e9d2ab",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I don't think so, private is already safe enough.",
+        "createdAt" : "2020-10-14T13:54:02Z",
+        "updatedAt" : "2020-10-14T15:22:08Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5ec36b85-30f4-4180-b192-49925415e0c0",
+        "parentId" : "a41c8638-a72e-4ee7-827f-944c13e9d2ab",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "ok :+1: just educated myself that private final doesn't make any sense :sweat_smile: ",
+        "createdAt" : "2020-10-14T16:46:28Z",
+        "updatedAt" : "2020-10-14T16:46:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +102,106 @@                c.abort(vr.pos, \"The binaryCompat AST field needs to be private\")\n              if (!vr.mods.hasFlag(MUTABLE))\n                c.abort(vr.pos, \"The binaryCompat AST field needs to declared as var\")\n              true\n            case _ => false"
+  }
+]

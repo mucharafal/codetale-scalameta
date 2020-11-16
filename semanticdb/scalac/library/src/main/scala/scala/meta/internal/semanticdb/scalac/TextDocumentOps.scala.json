@@ -1,0 +1,312 @@
+[
+  {
+    "id" : "e4ddc7c2-adfd-4fb2-83d0-b24d1e847030",
+    "prId" : 2019,
+    "comments" : [
+      {
+        "id" : "f9d1f77f-e546-4cbb-953d-cba0259c4b5e",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That was a small change! Nice catch",
+        "createdAt" : "2020-04-10T12:45:40Z",
+        "updatedAt" : "2020-04-10T12:45:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2d25cd2ed202cd4f2898a55b2b9fe3ea42a24e8f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +633,637 @@              case SelectOf(original) =>\n                traverse(original)\n              case g.Function(params, body) if params.forall { param =>\n                    param.symbol.isSynthetic ||\n                    param.name.decoded.startsWith(\"x$\")"
+  },
+  {
+    "id" : "9024b931-dbd0-4b7d-87e1-31ef8831344e",
+    "prId" : 1919,
+    "comments" : [
+      {
+        "id" : "a43ca3e6-7a6b-4b81-beed-8ee1465bc615",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "isn't this a reworked `loop` function from below? You can remove it below if it's not needed.",
+        "createdAt" : "2019-12-10T11:47:47Z",
+        "updatedAt" : "2019-12-11T12:59:09Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6e6b84f2-7182-46ee-917c-0d7acfe7c9e1",
+        "parentId" : "a43ca3e6-7a6b-4b81-beed-8ee1465bc615",
+        "author" : {
+          "login" : "sswistun-vl",
+          "name" : "Szymon Świstun",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/56023683?u=f003afed233efe6b3491f405b0affea9c99d3163&v=4"
+        },
+        "body" : "Removed.",
+        "createdAt" : "2019-12-10T14:09:03Z",
+        "updatedAt" : "2019-12-11T12:59:09Z",
+        "lastEditedBy" : {
+          "login" : "sswistun-vl",
+          "name" : "Szymon Świstun",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/56023683?u=f003afed233efe6b3491f405b0affea9c99d3163&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "18567bb34ae5f9b318b454154fa81dd0c9c671a6",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +90,94 @@            mends(mend1) = mname\n          }\n          private def indexArgNames(mapp: m.Tree): Unit = {\n            mapp match {\n              case m.Term.Apply(fun, args) =>"
+  },
+  {
+    "id" : "6317b316-9666-4b19-a0e6-1ba0dedb4025",
+    "prId" : 1822,
+    "comments" : [
+      {
+        "id" : "eef6892c-6d2c-44ce-954a-a38deeffc9a0",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I'm already scared, and it's just the beginning of the diff :)",
+        "createdAt" : "2019-01-29T20:08:42Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80f7ad644ac37d3f71706bf89fdbae41694fbd0a",
+    "line" : 17,
+    "diffHunk" : "@@ -1,1 +68,72 @@      val mpatoccurrences = mutable.Map[m.Position, String]()\n      val mvalpatstart = mutable.Set.empty[Int] // start pos for Pat.Var names inside val patterns\n      val msinglevalpats = mutable.Map.empty[Int, m.Position] // start pos for vals with patterns -> last Pat.Var name\n\n      locally {"
+  },
+  {
+    "id" : "d1cec566-4572-4ebd-8d70-1c1286e7bf5a",
+    "prId" : 1822,
+    "comments" : [
+      {
+        "id" : "721306bf-7b49-4cec-9f61-fe61120c6658",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This reads like black magic, but that's because the entire TextDocumentOps is black magic. I'm extremely happy that we have a great test suite, because otherwise I don't see how we could be 100% sure that these changes do the right thing in all cases. Special thanks for finding the right incantation to fix the bug without breaking everything else.",
+        "createdAt" : "2019-01-29T20:10:45Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b5181e05-07fa-4ce6-8ae0-b6ae33b00f10",
+        "parentId" : "721306bf-7b49-4cec-9f61-fe61120c6658",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The val pattern fix took was may 80% of the work for this PR! It took me 3 iterations to reach the design here. I couldn't find a way to handle the fix in a sane way without introducing `mpatoccurrences` that uses \"last wins\" instead of \"first wins\".",
+        "createdAt" : "2019-01-29T20:24:44Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80f7ad644ac37d3f71706bf89fdbae41694fbd0a",
+    "line" : 251,
+    "diffHunk" : "@@ -1,1 +658,662 @@          s.SymbolOccurrence(Some(pos.toRange), flatSym, role)\n        }\n      }.toList\n\n      val diagnostics = unit.reportedDiagnostics(mstarts)"
+  },
+  {
+    "id" : "fc874858-9768-4cd4-8956-2473353e6ae3",
+    "prId" : 1758,
+    "comments" : [
+      {
+        "id" : "55ed034c-f991-42ee-8a0e-340f577d8641",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Impressive you tracked this down 😍 ",
+        "createdAt" : "2018-08-29T08:25:59Z",
+        "updatedAt" : "2018-08-29T08:26:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5ba921fb71529ee624ca0539b9e0a509635ae618",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +461,465 @@                  gimpl.fun match {\n                    case gview: g.ApplyImplicitView =>\n                      isVisitedParent += gview\n                      val range = gtree.pos.toMeta.toRange\n                      synthetics += s.Synthetic("
+  },
+  {
+    "id" : "2d8c379b-c6cc-47d6-b562-75504cb7df95",
+    "prId" : 1709,
+    "comments" : [
+      {
+        "id" : "9f77f251-386e-49f2-a1b3-f05419d37cf2",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This looks plausible as far as my mental debugging goes. I can't guarantee that this is 100% correct, since the for loop desugaring in Scalac is way too involved, but we have tests for that.",
+        "createdAt" : "2018-07-20T14:50:19Z",
+        "updatedAt" : "2018-07-20T19:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5db170a9-577f-4a4f-b9e6-dd69d2d3d70a",
+        "parentId" : "9f77f251-386e-49f2-a1b3-f05419d37cf2",
+        "author" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "body" : "It is not correct with `=` statements, but I decided that this was out of scope as it was not tested in current tests. For example:\r\n\r\n```scala\r\nfor {\r\n  x <- 1 to 10\r\n  y = x\r\n} yield x + y\r\n```\r\n\r\nThe following is produced:\r\n```scala\r\nfor (x <- 1 to 10; y = x) yield x + y =>\r\norig(1 to 10)\r\n.map[Tuple2[Int, Int], IndexedSeq[Tuple2[Int, Int]]]({ (x) =>\r\n    orig(y = x)\r\n})(canBuildFrom[Tuple2[Int, Int]])\r\n.map[Int, IndexedSeq[Int]]({ (local10) =>\r\n    orig(x + y)\r\n})(canBuildFrom[Int])\r\n```\r\n\r\nWhich is not terrible, but is different from expected:\r\n\r\n```scala\r\norig(1 to 10)\r\n.map[(Int, Int), scala.collection.immutable.IndexedSeq[(Int, Int)]](\r\n    ((x: Int) => {\r\n    val y = x;\r\n    scala.Tuple2.apply[Int, Int](x, y)\r\n    }))(scala.collection.immutable.IndexedSeq.canBuildFrom[(Int, Int)])\r\n.map[Int, Any](((x$1: (Int, Int)) =>\r\n    (x$1: @scala.unchecked) match {\r\n    case scala.Tuple2((x @ _), (y @ _)) => orig(x + y)\r\n    }))(scala.collection.immutable.IndexedSeq.canBuildFrom[Int])\r\n```\r\nAlthough to fully support this, we'd need to add a match ADT node or something to the synthetics tree..",
+        "createdAt" : "2018-07-20T18:56:59Z",
+        "updatedAt" : "2018-07-20T19:33:36Z",
+        "lastEditedBy" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d83e1fcc-f510-4bce-a234-71eb04cca800",
+        "parentId" : "9f77f251-386e-49f2-a1b3-f05419d37cf2",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Please submit a ticket.",
+        "createdAt" : "2018-07-20T19:17:29Z",
+        "updatedAt" : "2018-07-20T19:33:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7ce360c4-7049-4052-a90d-19d98c818b4a",
+        "parentId" : "9f77f251-386e-49f2-a1b3-f05419d37cf2",
+        "author" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "body" : "Created #1711",
+        "createdAt" : "2018-07-20T20:52:45Z",
+        "updatedAt" : "2018-07-20T20:52:45Z",
+        "lastEditedBy" : {
+          "login" : "maxov",
+          "name" : "Max Ovsiankin",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/1261779?u=af8b2cce4ee684500616ef475f263faafa8544ef&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "83490885e2b7a475f3c13b29f0d0b094fbeb135a",
+    "line" : 235,
+    "diffHunk" : "@@ -1,1 +540,544 @@                case _ =>\n                // do nothing\n              }\n            }\n          }"
+  },
+  {
+    "id" : "88af349b-345c-4621-bab0-17f2339ba2d9",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "13fe0a8f-9803-4018-acbd-bc55aedc84b0",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "If this method is used only once, let's inline it? That'll reduce the conceptual surface of SymbolOps and further highlight domain-specificity of this logic.",
+        "createdAt" : "2018-07-02T02:52:34Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7761d9e2-df40-4e86-80bb-6ca45166b0bc",
+        "parentId" : "13fe0a8f-9803-4018-acbd-bc55aedc84b0",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I made it a method since I found it helpful to have all the symbol filtering logic in one place instead of sprinkled all over like it used to be before your refactoring. For example, if we find another similar \"java inner modules are useless\" case then we update it in `def isUseless` and immediately question ourselves if that case is also a useless occurrence instead of waiting for unit tests to fail.",
+        "createdAt" : "2018-07-02T07:53:52Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +169,173 @@              // Instead of crashing with \"unsupported file\", we ignore these cases.\n              if (gsym0 == null) return\n              if (gsym0.isUselessOccurrence) return\n              if (mtree.pos == m.Position.None) return\n              if (occurrences.contains(mtree.pos)) return"
+  }
+]

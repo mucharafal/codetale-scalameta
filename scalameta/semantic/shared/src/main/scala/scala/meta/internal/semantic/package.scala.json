@@ -1,0 +1,162 @@
+[
+  {
+    "id" : "0e93ce23-47ea-4f01-adc1-88b7ce334ff9",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "8ebf4bde-4246-43b3-a618-25f199b519bf",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think we should either consistently get rid of vfs or consistently use it in both directions.",
+        "createdAt" : "2017-07-07T03:32:06Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +32,36 @@        }\n      }\n    }\n\n    def toMeta(sourcepath: Option[Sourcepath]): m.Database = {"
+  },
+  {
+    "id" : "603505bf-49d4-4b97-9521-0848673ac52b",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "a14c7276-3bc0-4455-96cc-680eff99aea6",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's first discuss the idea behind merging `toVfs` and `save`. Is that to save memory spent on precaching arrays of bytes? If yes, why not make `bytes` lazy?",
+        "createdAt" : "2017-07-07T03:33:28Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7596fbdc-07e8-45ea-ae65-134d87f233c5",
+        "parentId" : "a14c7276-3bc0-4455-96cc-680eff99aea6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "With the previous vfs design, we had `Array[Byte]` + `s.Database` + `m.Database` loaded into memory for all .semanticdb files at some point. This is prohibitively expensive when running large-scale analysis. We want to avoid materializing an `Array[Byte]` entirely. Protos can be loaded in a streaming fashion, tag by tag, and that's what this refactoring did. ",
+        "createdAt" : "2017-07-07T07:50:11Z",
+        "updatedAt" : "2017-07-07T07:50:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 35,
+    "diffHunk" : "@@ -1,1 +32,36 @@        }\n      }\n    }\n\n    def toMeta(sourcepath: Option[Sourcepath]): m.Database = {"
+  },
+  {
+    "id" : "ee933272-dfd1-4b1d-bda7-d736ee34c311",
+    "prId" : 953,
+    "comments" : [
+      {
+        "id" : "4b8ee20d-0be5-4e2b-838a-3ca563da7772",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What will this return on Windows?",
+        "createdAt" : "2017-06-24T02:36:53Z",
+        "updatedAt" : "2017-06-24T07:25:00Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bb00e5bc-183f-4961-803d-25c419f7b5ac",
+        "parentId" : "4b8ee20d-0be5-4e2b-838a-3ca563da7772",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "A unix filename would have forward slashes /",
+        "createdAt" : "2017-06-24T06:41:58Z",
+        "updatedAt" : "2017-06-24T07:25:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f29e5e3c-2a78-4158-9ea7-2c9384790235",
+        "parentId" : "4b8ee20d-0be5-4e2b-838a-3ca563da7772",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How would `c:\\foo.scala` be translated? Can we really say that `c:/foo.scala` is a unix path?",
+        "createdAt" : "2017-06-24T14:32:17Z",
+        "updatedAt" : "2017-06-24T14:32:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "24680567-4a5c-4210-9a4a-713975f55054",
+        "parentId" : "4b8ee20d-0be5-4e2b-838a-3ca563da7772",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The path is relative at this point so it should not be a problem.",
+        "createdAt" : "2017-06-24T20:18:15Z",
+        "updatedAt" : "2017-06-24T20:18:15Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b9d67bc28e8ca3c2fe0a496efabb43eb02a663ff",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +51,55 @@              sys.error(s\"bad database: unsupported input $other\")\n          }\n          val spath = PathIO.toUnix(splatformpath)\n          assert(spath.nonEmpty, s\"'$spath'.nonEmpty\")\n          val sdialect = {"
+  }
+]

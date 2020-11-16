@@ -1,0 +1,1638 @@
+[
+  {
+    "id" : "d86dd282-5dde-4b3c-bd2d-7000c1b8ee5e",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "6a67e107-5dcf-4947-8a30-f3e8f9ccbf3b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We weren't adding outdents when EOF was met, which can easily happen.",
+        "createdAt" : "2020-10-23T15:11:51Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "38c66cdc-d846-46fb-a8c5-4b9785565958",
+        "parentId" : "6a67e107-5dcf-4947-8a30-f3e8f9ccbf3b",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "good catch! scary it didn't fail on tests/community-tests :fearful: ",
+        "createdAt" : "2020-10-23T21:40:03Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "50841354-edb9-4f87-a656-0742f46a0777",
+        "parentId" : "6a67e107-5dcf-4947-8a30-f3e8f9ccbf3b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I don't think people usually leave EOF, but it failed on a number of places in scala3doc",
+        "createdAt" : "2020-10-24T10:18:39Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +362,366 @@            if (!sepRegions.isEmpty && sepRegions.head == RegionBracket) sepRegions.tail\n            else sepRegions\n          } else if (curr.is[EOF]) {\n            var sepRegionsProcess = sepRegions\n            while (indentedRegion(sepRegionsProcess)) {"
+  },
+  {
+    "id" : "f4e2d1a4-1ea1-4ade-a2fa-b898e8b69d6f",
+    "prId" : 2148,
+    "comments" : [
+      {
+        "id" : "07690d32-efe1-4b9b-8fb3-9a5757b03594",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This allows naming params `transparent` `opaque` etc.",
+        "createdAt" : "2020-10-23T15:12:17Z",
+        "updatedAt" : "2020-10-24T10:47:59Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +3260,3264 @@    def loop(mods: List[Mod]): List[Mod] = token match {\n      case InlineSoftIdent() => mods\n      case _ if isParams && token.is[NonParamsModifier] => mods\n      case Unquote() => if (continueLoop) mods else loop(appendMod(mods, modifier()))\n      case Ellipsis(_) => loop(appendMod(mods, modifier()))"
+  },
+  {
+    "id" : "635e95e1-a06d-4a11-aa87-5788a9c24c9b",
+    "prId" : 2143,
+    "comments" : [
+      {
+        "id" : "65759aaa-94fe-422a-971c-4bc86edcda49",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "good catch! :+1: ",
+        "createdAt" : "2020-10-20T08:32:31Z",
+        "updatedAt" : "2020-10-20T09:07:12Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6885a2a713ac180859f807ca1fc3155fa50b92e5",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +296,300 @@            var sepRegionsProcess = sepRegionsParameter\n            while ((indentedRegion(sepRegionsProcess)\n                && sepRegionsProcess.head.indent > currentIndent && !isLeadingInfixOperator(\n                  curr\n                )) ||"
+  },
+  {
+    "id" : "8c663d8f-42f5-4524-a033-5bdc92a00b02",
+    "prId" : 2138,
+    "comments" : [
+      {
+        "id" : "a34bb217-c679-4baa-b7b0-f12ba8183e37",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "took me a minute to realize but very nice extraction of match to be used only once :+1:",
+        "createdAt" : "2020-10-15T13:10:15Z",
+        "updatedAt" : "2020-10-15T13:10:40Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "add8ef2dca199c3dd8e3cc141c115c930fc9fe04",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +4385,4389 @@    if (mods forall {\n        case _: Mod.Implicit | _: Mod.Lazy | _: Mod.Inline | _: Mod.Annot => true; case _ => false\n      }) {\n      defOrDclOrSecondaryCtor(mods)\n    } else {"
+  },
+  {
+    "id" : "cc23af52-2972-4ef2-82ae-9130ab3ba1f1",
+    "prId" : 2125,
+    "comments" : [
+      {
+        "id" : "0a4264e2-eade-4d39-b082-0b3e8321f0d9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Why not have it in one place only? Why do we need to forward it through all the functions?",
+        "createdAt" : "2020-10-02T06:34:16Z",
+        "updatedAt" : "2020-10-02T06:35:15Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ed3b02f5-e24a-47ec-9d2a-a524a1d37a24",
+        "parentId" : "0a4264e2-eade-4d39-b082-0b3e8321f0d9",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "That's because it is not in all functions, even example in issue shows this:\r\n`F[_]` <- should fail\r\n`F[X[_]]` <- valid\r\nand this function is called recursively.",
+        "createdAt" : "2020-10-02T07:20:55Z",
+        "updatedAt" : "2020-10-02T07:20:56Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ae36ed2-2146-44ed-9e70-a0d4643eb1b9",
+        "parentId" : "0a4264e2-eade-4d39-b082-0b3e8321f0d9",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, thanks for the explanation!",
+        "createdAt" : "2020-10-02T07:25:15Z",
+        "updatedAt" : "2020-10-02T07:25:16Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1ada4080249078ec88a81610c5bb23f06222ad0b",
+    "line" : 113,
+    "diffHunk" : "@@ -1,1 +3835,3839 @@      ownerIsType = true,\n      ctxBoundsAllowed = true,\n      allowUnderscore = dialect.allowTypeParamUnderscore\n    )\n    val ctor = primaryCtor(OwnedByEnum)"
+  },
+  {
+    "id" : "1a3b6b29-da02-4df5-879c-abbc19832214",
+    "prId" : 2105,
+    "comments" : [
+      {
+        "id" : "98b41de8-88e1-4ebc-ace9-4504adcfa47b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Will this work in Scala 2.11.12? I think Either is right biased starting from 2.12.0",
+        "createdAt" : "2020-07-30T10:29:04Z",
+        "updatedAt" : "2020-08-03T07:22:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bd1105c4-18fc-499e-a0fe-be655b4a0320",
+        "parentId" : "98b41de8-88e1-4ebc-ace9-4504adcfa47b",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "yeah test failed, will explicitly map right value",
+        "createdAt" : "2020-07-30T14:14:33Z",
+        "updatedAt" : "2020-08-03T07:22:11Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "57532ab9b7cd8acea3e7fe07fc7d45b3b6147dd2",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +433,437 @@    if (endTokenPos < startTokenPos) endTokenPos = startTokenPos - 1\n    val pos = TokenStreamPosition(startTokenPos, endTokenPos + 1)\n    result.map(_.withOrigin(Origin.Parsed(input, dialect, pos)).asInstanceOf[T])\n  }\n"
+  },
+  {
+    "id" : "d6cd70e9-d06d-4d88-bc51-477bdbd14ce6",
+    "prId" : 2105,
+    "comments" : [
+      {
+        "id" : "2548f93d-9be9-4ace-904d-209da62d3a0c",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "if we hadn't had to build it for 2.11, `fold` would have been ideal here, although our usage is also equivalent to `.map(...).getOrElse(...)`.",
+        "createdAt" : "2020-08-03T12:19:12Z",
+        "updatedAt" : "2020-08-03T12:19:12Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "57532ab9b7cd8acea3e7fe07fc7d45b3b6147dd2",
+    "line" : 39,
+    "diffHunk" : "@@ -1,1 +2092,2096 @@        simpleExprRest(atPos(op, auto)(literal(isNegated = true)), canApply = true)\n      else {\n        simpleExpr0(allowRepeated = true) match {\n          case Success(result) => atPos(op, auto)(Term.ApplyUnary(op, result))\n          case Failure(_) =>"
+  },
+  {
+    "id" : "4536ac24-a11d-4f32-aa19-dea56e0780ad",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "7a074a75-c552-47bb-92c7-751be504bf98",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Why is this needed? I thought top level statements already did work.",
+        "createdAt" : "2020-08-17T11:17:52Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8322d66b-a481-49de-8e2b-dea5c4940570",
+        "parentId" : "7a074a75-c552-47bb-92c7-751be504bf98",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "not perfectly, now they should work even better ;)",
+        "createdAt" : "2020-08-21T06:58:53Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 926,
+    "diffHunk" : "@@ -1,1 +3715,3719 @@        next()\n        objectDef(mods :+ atPos(casePos, casePos)(Mod.Case()))\n      case DefIntro() if dialect.allowToplevelStatements =>\n        defOrDclOrSecondaryCtor(mods)\n      case _ =>"
+  },
+  {
+    "id" : "edd3e817-b7bd-4ecb-976d-b25f76b0fde2",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "49d3b726-7c88-408f-9086-806bb9c84246",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Isn't this covered at line 276? Why is this needed with `)`?\r\n\r\nNot sure where the indent regions are closed aside from here and this seems to happen only on `)`",
+        "createdAt" : "2020-08-25T13:02:34Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 224,
+    "diffHunk" : "@@ -1,1 +358,362 @@          } else if (curr.is[RightParen]) {\n            var sepRegionsProcess = sepRegions\n            while (indentedRegion(sepRegionsProcess)) {\n              insertOutdent()\n              sepRegionsProcess = sepRegionsProcess.tail"
+  },
+  {
+    "id" : "aa93d19a-ee30-4cc9-9b32-7c2746e5d25b",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "b4369cd6-10bc-4b52-bcd6-dab8047c5131",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Does this mean we accept `then` even if significant indentation is not used?",
+        "createdAt" : "2020-08-25T13:12:03Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c139bde5-a1ae-4bc4-aa66-f7576feae8e4",
+        "parentId" : "b4369cd6-10bc-4b52-bcd6-dab8047c5131",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "KwThen will only be emitted if significant indentation is used",
+        "createdAt" : "2020-08-27T07:24:38Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 491,
+    "diffHunk" : "@@ -1,1 +1874,1878 @@          }\n          newLinesOpt()\n          acceptOpt[KwThen]\n          (cond, exprMaybeIndented())\n        }"
+  },
+  {
+    "id" : "e28b2744-dd84-4fe6-b6e9-304702fb3cb9",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "a485c1cd-272e-419d-ab30-880a7eb62824",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Shouldn't this also be `condExpr`",
+        "createdAt" : "2020-08-25T13:23:05Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 561,
+    "diffHunk" : "@@ -1,1 +1933,1937 @@          Term.While(cond, exprMaybeIndented())\n        } else {\n          val cond = expr()\n          acceptOpt[LF]\n          accept[KwDo]"
+  },
+  {
+    "id" : "7d94f006-b0a4-48b1-97f2-2b6f3b6d1409",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "8846bb7a-809a-4918-b231-e6845a385369",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "What case is it solving?",
+        "createdAt" : "2020-09-23T15:00:43Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "924507ac-e3eb-486a-a7c4-265cc191619f",
+        "parentId" : "8846bb7a-809a-4918-b231-e6845a385369",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "https://dotty.epfl.ch/docs/reference/other-new-features/indentation.html\r\n`the first token on the next line is not a leading infix operator.`",
+        "createdAt" : "2020-09-24T13:11:49Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 274,
+    "diffHunk" : "@@ -1,1 +407,411 @@          sepRegionsParameter.head.isInstanceOf[RegionIndentEnum])) {\n\n          if (isLeadingInfixOperator(next)) {\n            loop(prevPos, nextPos, sepRegionsParameter, expectedIndent, shouldStartIndent)\n          } else {"
+  },
+  {
+    "id" : "d8a0838f-e7f1-41b9-9790-54afe43178c4",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "55ac98cd-9766-4c8c-82c4-cd560a486f13",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is the default so maybe let's leave out `Parameter`\r\n```suggestion\r\n        sepRegions: List[SepRegion],\r\n```",
+        "createdAt" : "2020-09-25T13:29:39Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3634cc9e-9748-4628-b7c5-3c0537ee01e6",
+        "parentId" : "55ac98cd-9766-4c8c-82c4-cd560a486f13",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "it would clash with sepRegions defined below",
+        "createdAt" : "2020-09-26T22:49:27Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 85,
+    "diffHunk" : "@@ -1,1 +232,236 @@        prevPos: Int,\n        currPos: Int,\n        sepRegionsParameter: List[SepRegion],\n        previousTokenIndent: Int,\n        previousTokenStartIndent: Boolean"
+  },
+  {
+    "id" : "9d9d2755-acc2-4daf-a3a1-520868675068",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "1ae0ea8d-902c-4f4e-8cfa-2819467e7e46",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "why is this true? The function checks `isAheadNewLine`, `:` doesn't seem to imply the same.",
+        "createdAt" : "2020-09-25T15:25:45Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "50ffc22b-9d62-4c0e-af53-2a2abfecabea",
+        "parentId" : "1ae0ea8d-902c-4f4e-8cfa-2819467e7e46",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "ColonEol also contains LF",
+        "createdAt" : "2020-09-26T22:53:26Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 325,
+    "diffHunk" : "@@ -1,1 +456,460 @@  private def isAheadNewLine(currentPosition: Int): Boolean = {\n    val nextPos = currentPosition + 1\n    if (scannerTokens(currentPosition).is[ColonEol]) true\n    else if (nextPos >= scannerTokens.length) false\n    else if (scannerTokens(nextPos).is[LF]) true"
+  },
+  {
+    "id" : "17b8e0a9-3933-4641-8578-22bd57e53c7e",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "6e734b31-24a2-439c-b0d7-b89eb7268f92",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should we check if significant indentation is supported here?",
+        "createdAt" : "2020-09-25T15:53:49Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7ba3139a-1b68-4f2a-8ed6-163674bd230b",
+        "parentId" : "6e734b31-24a2-439c-b0d7-b89eb7268f92",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "we checked in if above",
+        "createdAt" : "2020-09-27T08:02:14Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 561,
+    "diffHunk" : "@@ -1,1 +1933,1937 @@          Term.While(cond, exprMaybeIndented())\n        } else {\n          val cond = expr()\n          acceptOpt[LF]\n          accept[KwDo]"
+  },
+  {
+    "id" : "d9391c59-6906-4ae5-913e-496c47eaf4ab",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "e363f2c7-6991-42d8-950f-fa54fee87bda",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "why is this needed? We are already inside cases, so everything should work as previously.",
+        "createdAt" : "2020-09-25T16:11:24Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bfda01c7-8e58-474b-946e-dfdb25e26d93",
+        "parentId" : "e363f2c7-6991-42d8-950f-fa54fee87bda",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "okay, so parsing seq of stats is based on a loop: \r\n`while(CanStartStat) { parseStat; parseSep }`\r\nmatch-case old version always ends with `}` + LF\r\nmatch-case new version might only end with Outdent.\r\nI add LF artificially (you can see `insertOutdent()` + insertLF in code) to meet previous assumptions.\r\n\r\nBut I tried remove this line, remove adding LF after Outdent and add checking in `parseSep` if maybe previous token was Outdent, but I failed and in so many weird places I dropped this idea.",
+        "createdAt" : "2020-09-28T07:10:59Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a0c86a53-651f-4458-b236-3fe70bac60df",
+        "parentId" : "e363f2c7-6991-42d8-950f-fa54fee87bda",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Tried to work around it to see if we will get a bigger problem and I think this is the best we can do. Let's leave it.",
+        "createdAt" : "2020-09-29T16:22:36Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 667,
+    "diffHunk" : "@@ -1,1 +2614,2618 @@        cases += caseClause()\n      }\n      if (token.is[LF] && ahead(token.is[CaseIntro])) accept[LF]\n    }\n    if (cases.isEmpty) // trigger error if there are no cases"
+  },
+  {
+    "id" : "f46cb7d7-e72d-41ee-b948-fe69b1bd0163",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "ccaa2835-f55d-48f7-aa9e-ab3a1c03ead7",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should we add Outdent to StatSep ?",
+        "createdAt" : "2020-09-25T16:11:55Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d2fb22af-284e-4c5b-baea-6238521655d9",
+        "parentId" : "ccaa2835-f55d-48f7-aa9e-ab3a1c03ead7",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "no because it is not StatSep, similarly ro Brace.",
+        "createdAt" : "2020-09-27T07:07:42Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 676,
+    "diffHunk" : "@@ -1,1 +2629,2633 @@    val enums = new ListBuffer[Enumerator]\n    enums ++= enumerator(isFirst = true)\n    while (token.is[StatSep] && !ahead(token.is[Indentation.Outdent])) {\n      next()\n      enums ++= enumerator(isFirst = false)"
+  },
+  {
+    "id" : "be6c150a-0902-4bf7-a1f0-be6125062268",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "e10d6564-89b4-49d7-8261-65a035d53e79",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Do we need ident here? This should just be a temporary token, that we switch to RegionBrace later and we would calculate ident there.",
+        "createdAt" : "2020-09-28T11:06:09Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 59,
+    "diffHunk" : "@@ -1,1 +204,208 @@  case object RegionBracket extends SepRegion\n  case class RegionBrace(override val indent: Int) extends SepRegion\n  case class RegionEnum(override val indent: Int) extends SepRegion\n  case class RegionIndentEnum(override val indent: Int) extends SepRegion\n  case object RegionArrow extends SepRegion"
+  },
+  {
+    "id" : "c8edc371-3dbb-4368-8c8a-fbe60e0033a5",
+    "prId" : 2104,
+    "comments" : [
+      {
+        "id" : "855e6b4d-29e7-4ef3-8f62-7b1e54ba3295",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should `previousTokenIndent` not be enough for us in this case?",
+        "createdAt" : "2020-09-28T11:06:56Z",
+        "updatedAt" : "2020-09-30T16:20:26Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
+    "line" : 58,
+    "diffHunk" : "@@ -1,1 +203,207 @@  case object RegionParen extends SepRegion\n  case object RegionBracket extends SepRegion\n  case class RegionBrace(override val indent: Int) extends SepRegion\n  case class RegionEnum(override val indent: Int) extends SepRegion\n  case class RegionIndentEnum(override val indent: Int) extends SepRegion"
+  },
+  {
+    "id" : "e60bcc60-5161-44a3-8e1b-d3426d9135aa",
+    "prId" : 2032,
+    "comments" : [
+      {
+        "id" : "16d93122-12db-47fe-9269-a937682f4c5c",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Judging by the diff in scalac, we need to change how the body is parsed https://github.com/scala/scala/pull/8071/files#diff-e059ce64777235990044f1624042e5d0R1518\r\n\r\n<img width=\"762\" alt=\"Screenshot 2020-04-27 at 08 27 21\" src=\"https://user-images.githubusercontent.com/1408093/80350955-04aeef00-8861-11ea-9b14-1e54871b9d9f.png\">\r\n",
+        "createdAt" : "2020-04-27T08:28:22Z",
+        "updatedAt" : "2020-07-09T23:05:12Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0ce7471b-47aa-4b97-8e5e-c75d8f2002a1",
+        "parentId" : "16d93122-12db-47fe-9269-a937682f4c5c",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "done. added link to dialect.",
+        "createdAt" : "2020-07-09T20:20:33Z",
+        "updatedAt" : "2020-07-09T23:05:12Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7a45ccc26d7015d6c1128a4e1d7c38d7635c74be",
+    "line" : 3,
+    "diffHunk" : "@@ -1,1 +1604,1608 @@      case KwTry() =>\n        next()\n        val body: Term = token match {\n          case _ if dialect.allowTryWithAnyExpr => expr()\n          case LeftBrace() => autoPos(inBracesOrUnit(block()))"
+  },
+  {
+    "id" : "9475a824-b31c-48ef-9a7e-71be200c1610",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "d85383da-201d-40fc-b815-2c43714f2a24",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Can we move it next to `parsedImplicits` so that it's easier to see that we are using the same mechanism here.",
+        "createdAt" : "2020-05-25T16:02:27Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "10d3b48a-c03c-4167-afae-6f2a2db87b11",
+        "parentId" : "d85383da-201d-40fc-b815-2c43714f2a24",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "having it here is better because this scope is only inside defined method.\r\nFor `parsedImplicits` it is a little more complex as you declare it globally but set inside function, very hard to read",
+        "createdAt" : "2020-05-26T08:25:20Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 473,
+    "diffHunk" : "@@ -1,1 +2816,2820 @@        List(ellipsis(2, astInfo[Term.Param]))\n      case _ =>\n        var parsedUsing = false\n        if (token.is[KwImplicit]) {\n          next()"
+  },
+  {
+    "id" : "63e2d7e7-bfce-49da-9c66-cf576bb1b873",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "99cc740f-15c7-4bea-b93f-cb666f501af2",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Should it not be an error if we don't have `on` ?",
+        "createdAt" : "2020-05-25T16:30:12Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f63db6c5-3390-4b47-8bc7-75e8b1aa6148",
+        "parentId" : "99cc740f-15c7-4bea-b93f-cb666f501af2",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Extension block can be defined without 'on'",
+        "createdAt" : "2020-05-27T12:26:29Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 658,
+    "diffHunk" : "@@ -1,1 +3233,3237 @@      (tparams, eparam, sparams)\n    } else {\n      (Nil, Term.Param(Nil, meta.Name.Anonymous(), None, None), Nil)\n    }\n"
+  },
+  {
+    "id" : "64e41084-8fb1-46f3-9b8d-e435e524b905",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "4760b996-0c3e-4404-9487-c1724764bddc",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We should just run `baseTermDefinedOnce` first and we wouldn't need to check  `ExtensionMethod` and  `ExtensionMethodInfix`",
+        "createdAt" : "2020-05-25T16:39:42Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e391c92c-8d2b-484b-ac9d-136b0a3b5d59",
+        "parentId" : "4760b996-0c3e-4404-9487-c1724764bddc",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "they check different things.\r\nOne check is that eparam can be only defined in extension group or all methods, like XOR :D",
+        "createdAt" : "2020-05-27T12:30:50Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "77bab31d-8330-4e1e-9363-1aca869e5f27",
+        "parentId" : "4760b996-0c3e-4404-9487-c1724764bddc",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "second that type parameters [X, Y] can be defined also only in one place",
+        "createdAt" : "2020-05-27T12:31:34Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 678,
+    "diffHunk" : "@@ -1,1 +3253,3257 @@      if (eg.tparams.nonEmpty) {\n        for (f <- eg.templ.stats) {\n          if (f.is[Defn.ExtensionMethod]) {\n            val m = f.asInstanceOf[Defn.ExtensionMethod]\n            if (m.tparams.nonEmpty) {"
+  },
+  {
+    "id" : "c5a8fbd4-3e42-4e92-a829-22b12ae6bae8",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "6256b0cf-281c-401b-ab7f-df6cfed20f0f",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Why do we need this?",
+        "createdAt" : "2020-05-25T17:04:57Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "da93888b-b2d2-4bc0-8879-30e479dc7b29",
+        "parentId" : "6256b0cf-281c-401b-ab7f-df6cfed20f0f",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "dotty craziness :)\r\n```\r\nscala> extension c {\r\n     |   def (s: String) >>LF HERE>>\r\n     |     show(): String = s\r\n     | }\r\n```",
+        "createdAt" : "2020-05-27T12:36:36Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 752,
+    "diffHunk" : "@@ -1,1 +3327,3331 @@    accept[RightParen]\n\n    acceptOpt[LF]\n    val isInfix = token.isNot[Dot]\n    acceptOpt[Dot]"
+  },
+  {
+    "id" : "ef267433-af19-4867-883e-4fd6ba68d35c",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "8205acc2-3549-47a4-ae43-686fc06810db",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe this could be a bit more readable and we would lose the additional allocation:\r\n```scala\r\nif (isSoftKw(token, SoftKeyword.SkUsing) && dialect.allowGivenUsing) {\r\n  next()\r\n  Term.ApplyUsing(t, commaSeparated(argumentExpr()))  \r\n} else {\r\n  Term.Apply(t, argumentExprs())\r\n}\r\n```",
+        "createdAt" : "2020-06-01T10:21:26Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a25ad511-06f0-4746-b34f-d5b0d0ad2ff3",
+        "parentId" : "8205acc2-3549-47a4-ae43-686fc06810db",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "changed :+1:",
+        "createdAt" : "2020-06-01T12:44:43Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c0e69886-47ab-4afd-ae39-34029b2a1f0d",
+        "parentId" : "8205acc2-3549-47a4-ae43-686fc06810db",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Tests failed.\r\nit cannot work, you are in `case LeftParen() | LeftBrace() if (canApply) =>`\r\nYou will never be `SkUsing` in that case.\r\n\r\nReverting.",
+        "createdAt" : "2020-06-01T13:14:36Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e63d5a6-3ed1-40f1-8b4f-59ded01bddcc",
+        "parentId" : "8205acc2-3549-47a4-ae43-686fc06810db",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Maybe then:\r\n```scala\r\n  def argumentExprs(isUsing: () => Unit = () => ()): List[Term] = {\r\n    token match {\r\n      case LeftBrace() =>\r\n        List(blockExpr())\r\n      case LeftParen() =>\r\n        inParens(token match {\r\n          case RightParen() =>\r\n            Nil\r\n          case tok: Ellipsis if tok.rank == 2 =>\r\n            List(ellipsis(2, astInfo[Term]))\r\n          case _ =>\r\n            if (isSoftKw(token, SoftKeyword.SkUsing) && dialect.allowGivenUsing) {\r\n              next()\r\n              isUsing()\r\n            }\r\n            commaSeparated(argumentExpr)\r\n        })\r\n      case _ =>\r\n        Nil\r\n    }\r\n  }\r\n``` \r\n\r\nand then:\r\n\r\n```scala\r\n        val arguments = atPos(t, auto) {\r\n          var isUsing = false\r\n          def using() = { isUsing = true }\r\n          val args = argumentExprs(using)\r\n          if (isUsing) Term.ApplyUsing(t, args)\r\n          else Term.Apply(t, args)\r\n        }\r\n```\r\n\r\n?",
+        "createdAt" : "2020-06-01T14:29:41Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 357,
+    "diffHunk" : "@@ -1,1 +2158,2162 @@      case LeftParen() | LeftBrace() if (canApply) =>\n        val arguments = atPos(t, auto) {\n          argumentExprsWithUsing() match {\n            case (args, true) => Term.ApplyUsing(t, args)\n            case (args, false) => Term.Apply(t, args)"
+  },
+  {
+    "id" : "9c95639f-974c-49a2-907b-74bd34c41298",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "fba91beb-bf9c-4a69-918a-d093ce778c4f",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This should in theory be the same logic as implicit, why is it different?",
+        "createdAt" : "2020-06-01T10:38:20Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "88ed79c9-9164-439f-8930-87f400c8a32d",
+        "parentId" : "fba91beb-bf9c-4a69-918a-d093ce778c4f",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I think implicits cannot be anonymous, at least that was my assumption",
+        "createdAt" : "2020-06-01T12:36:17Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d4a0bf4c-8a27-46c1-99e3-b186c4ee5997",
+        "parentId" : "fba91beb-bf9c-4a69-918a-d093ce778c4f",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Yup, confirmed",
+        "createdAt" : "2020-06-01T12:36:49Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7f0a9ec6-11f8-4f7e-81ef-91b870f57820",
+        "parentId" : "fba91beb-bf9c-4a69-918a-d093ce778c4f",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ach right! It's a totally different syntax for annonymous implicits via [A: ClassTag] etc.",
+        "createdAt" : "2020-06-01T13:40:11Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 530,
+    "diffHunk" : "@@ -1,1 +2896,2900 @@      case _ =>\n        var anonymousUsing = false\n        val name = if (isUsing && ahead(!token.is[Colon])) { //anonymous using\n          anonymousUsing = true\n          meta.Name.Anonymous()"
+  },
+  {
+    "id" : "43c41f58-4c3e-4d30-8a5b-fb3c29239407",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "5207a0cc-760f-4b5d-a5b6-f29fbf583c98",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "```suggestion\r\n      case InlineSoftIdent() => mods\r\n```\r\notherwise we are suggesting we are not doing anything about those modifiers.",
+        "createdAt" : "2020-06-09T12:52:48Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a54849aa-ac17-4e9f-b698-f859e4eda4b4",
+        "parentId" : "5207a0cc-760f-4b5d-a5b6-f29fbf583c98",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : ":+1:",
+        "createdAt" : "2020-06-09T13:13:15Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 450,
+    "diffHunk" : "@@ -1,1 +2769,2773 @@      )\n    def loop(mods: List[Mod]): List[Mod] = token match {\n      case InlineSoftModifier() => mods\n      case Unquote() => if (continueLoop) mods else loop(appendMod(mods, modifier()))\n      case Ellipsis(_) => loop(appendMod(mods, modifier()))"
+  },
+  {
+    "id" : "4f5fa2c0-bc38-409f-88d4-09f9d01bd11c",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "5d6fff00-2071-44d6-a095-68d2f7a612a9",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "```suggestion\r\n    if (isInlineSoftKw(token) && ahead(token.is[Ident] || DclIntro.unapply(token) || Modifier.unapply(token))) {\r\n```\r\n?\r\n\r\nOr we could create a separate function like: \r\n```scala\r\nahead{\r\n  case _ : Ident | DclIntro() | Modifier() => true\r\n  case _ => false\r\n}\r\n```",
+        "createdAt" : "2020-06-09T12:55:27Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "60c08505-2c3e-48d7-8eb0-d945658e2a94",
+        "parentId" : "5d6fff00-2071-44d6-a095-68d2f7a612a9",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "you wanted to add this comment to `inlineDefOrOpaque` piece of code not `methodParamModifiers`, right?",
+        "createdAt" : "2020-06-09T13:17:56Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e13f23bd-7285-4994-b48e-c262b2526989",
+        "parentId" : "5d6fff00-2071-44d6-a095-68d2f7a612a9",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Hmm... yeah this might not be an issue. It might make sense to have `Modifier.unapply(token)` if at any point we have`inline other_modifier param`, but currently we might just leave it as is.",
+        "createdAt" : "2020-06-09T13:43:16Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a001e15e-1cf9-46de-a500-7763f7369a5e",
+        "parentId" : "5d6fff00-2071-44d6-a095-68d2f7a612a9",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "ok",
+        "createdAt" : "2020-06-10T14:55:22Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 459,
+    "diffHunk" : "@@ -1,1 +2780,2784 @@\n  def methodParamModifiers(): List[Mod] = {\n    if (isInlineSoftKw(token) && ahead(token.is[Ident])) {\n      List(modifier())\n    } else {"
+  },
+  {
+    "id" : "e3dd8670-f72f-4c14-99e0-9e6a7e91cd3a",
+    "prId" : 2008,
+    "comments" : [
+      {
+        "id" : "4f557cde-e040-40df-a48c-4652ab518da5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This will also allocate a new list, but you can avoid that by making it an iterator first",
+        "createdAt" : "2020-03-23T12:02:50Z",
+        "updatedAt" : "2020-04-28T14:12:15Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "faca89c7-1624-448d-9bc9-a7440a99fd47",
+        "parentId" : "4f557cde-e040-40df-a48c-4652ab518da5",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "good catch with this allocation, I will try use `iterator` ",
+        "createdAt" : "2020-03-23T13:45:50Z",
+        "updatedAt" : "2020-04-28T14:12:15Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3677c03b-5cda-4adc-bc96-caa88e3a41e1",
+        "parentId" : "4f557cde-e040-40df-a48c-4652ab518da5",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "changed to iterator :+1:",
+        "createdAt" : "2020-03-23T17:34:49Z",
+        "updatedAt" : "2020-04-28T14:12:15Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1eedb4ba2ce047aa874b408f69db9d8c51054e90",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +3001,3005 @@    def onlyLastParameterCanBeRepeated(params: List[Term.Param]): Unit = {\n      params.iterator\n        .take(params.length - 1)\n        .filter(p => !p.is[Term.Param.Quasi] && p.decltpe.exists(_.is[Type.Repeated]))\n        .foreach(p => syntaxError(\"*-parameter must come last\", p))"
+  },
+  {
+    "id" : "e689e2c9-b9f8-4c8d-814f-6fa26939b8b5",
+    "prId" : 2005,
+    "comments" : [
+      {
+        "id" : "f8397b04-aa50-45b6-b147-1ba5bcdcd548",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "What happens if there are multiple `LF`?",
+        "createdAt" : "2020-03-17T16:32:58Z",
+        "updatedAt" : "2020-03-17T16:33:07Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "107456f7-6cdc-45ec-8f4c-6620db12576e",
+        "parentId" : "f8397b04-aa50-45b6-b147-1ba5bcdcd548",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "it will generate `LFLF` which is invalid in this scenario",
+        "createdAt" : "2020-03-17T17:44:47Z",
+        "updatedAt" : "2020-03-17T17:44:48Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cfbd45b4f85feb4db85cc30d56030dbb9041521d",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +330,334 @@  }\n  @inline final def inBracesOrError[T](body: => T, alt: T): T = {\n    if (token.is[LF]) { accept[LF] }\n    if (token.is[LeftBrace]) inBraces(body)\n    else {"
+  },
+  {
+    "id" : "3c11dffb-4803-4304-ac3b-0157cbaa9cfa",
+    "prId" : 1004,
+    "comments" : [
+      {
+        "id" : "e1b289da-cf17-451f-8b49-ff8f6a0f1eb8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This looks weird.",
+        "createdAt" : "2017-07-07T16:29:48Z",
+        "updatedAt" : "2017-07-07T16:34:01Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9db69947-6ee2-4b2c-9c22-17401db41e75",
+        "parentId" : "e1b289da-cf17-451f-8b49-ff8f6a0f1eb8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This is a known issue https://github.com/scalacenter/scalafix/issues/216 due to be fixed in the next release.",
+        "createdAt" : "2017-07-11T07:37:37Z",
+        "updatedAt" : "2017-07-11T07:37:37Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c97e7cf8-c689-4cce-92a8-c104c6142ccf",
+        "parentId" : "e1b289da-cf17-451f-8b49-ff8f6a0f1eb8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Fix pending in https://github.com/scalacenter/scalafix/pull/245 the rewrite has limitations for how much it can preserve formatting, it adds a lot of complexity to the rewrite. Ideally we should be using scalafmt to clean up stuff like this. ",
+        "createdAt" : "2017-07-11T10:39:03Z",
+        "updatedAt" : "2017-07-11T10:39:03Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0073bff1bbfcb08a17e49392edf1f66286f9d9df",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +6,10 @@import scala.compat.Platform.EOL\nimport scala.reflect.{ClassTag, classTag}\nimport scala.collection. mutable \nimport mutable. ListBuffer \nimport scala.annotation.tailrec"
+  },
+  {
+    "id" : "d3ecfc06-3828-4a76-b1b3-6cf129538653",
+    "prId" : 1004,
+    "comments" : [
+      {
+        "id" : "54980e6f-b345-4700-91a1-fca9a404233f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This, too.",
+        "createdAt" : "2017-07-07T16:29:55Z",
+        "updatedAt" : "2017-07-07T16:34:01Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0073bff1bbfcb08a17e49392edf1f66286f9d9df",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +7,11 @@import scala.reflect.{ClassTag, classTag}\nimport scala.collection. mutable \nimport mutable. ListBuffer \nimport scala.annotation.tailrec\nimport scala.collection.immutable._"
+  },
+  {
+    "id" : "9b73f052-5456-466b-bb09-2837cde83e8c",
+    "prId" : 906,
+    "comments" : [
+      {
+        "id" : "4664ed21-caf7-4bc1-8860-edb54c503ba4",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I don't know if `typRest` is a good name or not, wdyt @xeno-by ?",
+        "createdAt" : "2017-05-31T14:49:38Z",
+        "updatedAt" : "2017-06-02T21:20:34Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b2957d8f-4a57-48bc-919b-f666deb07f48",
+        "parentId" : "4664ed21-caf7-4bc1-8860-edb54c503ba4",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Sounds allright.",
+        "createdAt" : "2017-06-02T09:08:14Z",
+        "updatedAt" : "2017-06-02T21:20:34Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9e6c4ba620af1bd214b9553c80f8eeef51e95f47",
+    "line" : 28,
+    "diffHunk" : "@@ -1,1 +1011,1015 @@    }\n\n    def typRest(): Type = autoPos {\n      val t: Type =\n        if (token.is[LeftParen]) tupleInfixType()"
+  },
+  {
+    "id" : "2acc99d3-67d3-4352-b5cf-a1435721c453",
+    "prId" : 906,
+    "comments" : [
+      {
+        "id" : "b9c20962-fa72-433c-a85f-bee582545742",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What about the position for this tree?",
+        "createdAt" : "2017-06-02T09:07:51Z",
+        "updatedAt" : "2017-06-02T21:20:34Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9e6c4ba620af1bd214b9553c80f8eeef51e95f47",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +1002,1006 @@        typRest() match {\n          case Type.Function(params, body) =>\n            Type.ImplicitFunction(params, body)\n          case t =>\n            syntaxError(\"function type expected\", at = t)"
+  }
+]

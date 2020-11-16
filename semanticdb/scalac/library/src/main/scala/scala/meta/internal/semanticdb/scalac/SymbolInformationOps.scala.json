@@ -1,0 +1,218 @@
+[
+  {
+    "id" : "0d7b58e8-5166-43f1-9bba-824e9aaa81e9",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "7c10a440-68d3-4279-a419-062c07de2329",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Lol Scalac at its best :)",
+        "createdAt" : "2018-06-28T22:13:19Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +24,28 @@      if (gsym.hasPackageFlag) l.SCALA\n      else if (gsym.hasFlag(gf.JAVA)) l.JAVA\n      else if (gsym.isParameter && gsym.owner.hasFlag(gf.JAVA)) l.JAVA\n      else l.SCALA\n    }"
+  },
+  {
+    "id" : "c1db2d36-1cae-4221-9879-23c5fbf57831",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "73d42c14-88e7-4f61-a7d5-ec4338e60573",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Nice catch.",
+        "createdAt" : "2018-06-28T22:13:24Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6be50ae4-3c9d-49c6-b3e7-d15d27118691",
+        "parentId" : "73d42c14-88e7-4f61-a7d5-ec4338e60573",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "FTR I'm starting to question our decision to remove STATIC from inner interfaces. Inner interfaces are STATIC because they are accessed the same way as static inner classes, for example `java.util.Map.Entry` is accessed as `.Entry` and not `#Entry`. ",
+        "createdAt" : "2018-07-02T07:51:14Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +75,79 @@        if (gsym.hasFlag(gf.FINAL) || gsym.hasFlag(gf.JAVA_ENUM)) flip(p.FINAL)\n        if (gsym.hasFlag(gf.JAVA_ENUM)) flip(p.ENUM)\n        if (gsym.hasFlag(gf.STATIC) && !gsym.hasFlag(gf.INTERFACE)) flip(p.STATIC)\n      } else {\n        if (isAbstractClass || isAbstractMethod || isAbstractType) flip(p.ABSTRACT)"
+  },
+  {
+    "id" : "a440e9da-e5dd-41dc-b419-25d0b323316f",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "71853eac-fdd1-437b-8b39-424108347e5e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Should these changes be mirrored in metacp/SymbolInformationOps.scala?",
+        "createdAt" : "2018-06-28T22:15:11Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "bb41cfc2-c3e7-4c8b-95aa-41529f891956",
+        "parentId" : "71853eac-fdd1-437b-8b39-424108347e5e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I don't think so. The changes in this PR are specific to metac.",
+        "createdAt" : "2018-06-29T08:52:09Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 1,
+    "diffHunk" : "@@ -1,1 +21,25 @@    }\n\n    private def language: s.Language = {\n      if (gsym.hasPackageFlag) l.SCALA\n      else if (gsym.hasFlag(gf.JAVA)) l.JAVA"
+  },
+  {
+    "id" : "c421254c-16c5-4255-91f7-99965317c0f7",
+    "prId" : 1570,
+    "comments" : [
+      {
+        "id" : "1413b2f5-3b29-4244-8182-0d0db63057df",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👿 I probably spent 30 minutes looking for `.moduleClass` and couldn't find it 😠 \r\n\r\nThank you @xeno-by for fixing this ",
+        "createdAt" : "2018-05-29T11:10:09Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27bca834-1739-4d7e-b123-b0ed40390519",
+        "parentId" : "1413b2f5-3b29-4244-8182-0d0db63057df",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I suspect `-P:semanticdb:symbols:all` grew quite a bit heavier with this change",
+        "createdAt" : "2018-05-29T11:15:02Z",
+        "updatedAt" : "2018-05-29T16:05:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "79de6a1047866355c6ac1b46427e91840afcfc22",
+    "line" : 86,
+    "diffHunk" : "@@ -1,1 +137,141 @@            preprocess(gsym.info)\n          } else if (gsym.isModule) {\n            gsym.moduleClass.info\n          } else {\n            gsym.info"
+  },
+  {
+    "id" : "10250036-7e61-4095-b19f-37a4d2ee5e8b",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "13bcf38e-9849-4e39-a5fd-116753a6c20c",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why do we still need this?",
+        "createdAt" : "2018-04-22T23:04:02Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fcaadfb3-be5a-498f-a313-1fa8928f1800",
+        "parentId" : "13bcf38e-9849-4e39-a5fd-116753a6c20c",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We need it for `symbols:all`, which is still relevant.",
+        "createdAt" : "2018-04-23T12:05:30Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 208,
+    "diffHunk" : "@@ -1,1 +206,210 @@\n  // NOTE: Holds a symbol information along with todo lists of symbols to persist.\n  case class SymbolInformationResult(denot: s.SymbolInformation, todoTpe: List[g.Symbol])\n}"
+  }
+]

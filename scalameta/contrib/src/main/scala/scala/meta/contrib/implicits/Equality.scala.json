@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "f65a4300-9f51-4f9f-8999-a1bd83d05364",
+    "prId" : 702,
+    "comments" : [
+      {
+        "id" : "7a922409-f2f8-4c00-8c31-05897fc9a203",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I kind of regret adding the `<: Tree` restriction on the equality type classes, it propagates to everywhere for a questionable benefit, I opened #706. I can fix it later.",
+        "createdAt" : "2017-02-26T16:34:57Z",
+        "updatedAt" : "2017-02-28T08:41:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3794cdb806af8f1eb10067da09f8841cbaa071cb",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +7,11 @@trait Equality {\n\n  type Structurally[A <: Tree] = scala.meta.contrib.equality.Structurally[A]\n  type Syntactically[A <: Tree] = scala.meta.contrib.equality.Syntactically[A]\n"
+  }
+]

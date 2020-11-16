@@ -1,0 +1,360 @@
+[
+  {
+    "id" : "7096ebb8-df9f-45aa-bdde-3992e9e9d299",
+    "prId" : 2070,
+    "comments" : [
+      {
+        "id" : "670df44f-7ff9-4f21-a525-2f65bff7ee77",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "is this something that works for 2.12 and 2.13, but not for 2.11 ?",
+        "createdAt" : "2020-06-24T07:33:38Z",
+        "updatedAt" : "2020-06-25T07:24:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "369524d8-e9d0-42e7-85c2-520c3b19c9cf",
+        "parentId" : "670df44f-7ff9-4f21-a525-2f65bff7ee77",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "hah it only works for 2.13 I realized that later but forgot to change PR title.\r\nYes it is something that only works for 2.13",
+        "createdAt" : "2020-06-25T07:22:18Z",
+        "updatedAt" : "2020-06-25T07:24:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0203e0b97996c8a0f4675473f0cd189f5ea1dc7a",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +84,88 @@    val allowOpaqueTypes: Boolean,\n    // Literal Unit Type\n    val allowLiteralUnitType: Boolean\n) extends Product\n    with Serializable {"
+  },
+  {
+    "id" : "1eddcf34-bea3-4b2f-8201-682da8014bde",
+    "prId" : 2044,
+    "comments" : [
+      {
+        "id" : "d00908ed-34c7-4fa8-98be-f5fd95b633da",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "why not use `= false` here and remove the other ctor?",
+        "createdAt" : "2020-05-02T17:25:34Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "418d8bb5-4c49-4898-8446-7cb2cdbe4e59",
+        "parentId" : "d00908ed-34c7-4fa8-98be-f5fd95b633da",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "i am guessing, because of binary compatibility, this ctor is private.",
+        "createdAt" : "2020-05-02T18:27:34Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3beb4b97-7533-4ed7-bd14-a8f9c7802228",
+        "parentId" : "d00908ed-34c7-4fa8-98be-f5fd95b633da",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Default parameter values auto-generate synthetic `$default..` methods on the companion object that leak into the public API. It's easiest to reason about binary compatibility when you type out all the methods by hand, for better or worse.",
+        "createdAt" : "2020-05-03T08:21:42Z",
+        "updatedAt" : "2020-05-03T08:45:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9582b934f55e2eb2160415895ba6051df124eec4",
+    "line" : 71,
+    "diffHunk" : "@@ -1,1 +69,73 @@    val toplevelSeparator: String,\n    // Are numeric literal underscore separators, i.e. `1_000_000` legal or not?\n    val allowNumericLiteralUnderscoreSeparators: Boolean\n) extends Product\n    with Serializable {"
+  },
+  {
+    "id" : "67065fc2-3398-4e3a-acf2-14679e520a3b",
+    "prId" : 2044,
+    "comments" : [
+      {
+        "id" : "a237d508-dffe-4efa-b51c-4b5b70307519",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "interesting idea... why not make this public, and get rid of all those `withXxx` methods? this would look exactly like a `case class` copy, and if anyone ever used `.copy` elsewhere, would continue to work unchanged.",
+        "createdAt" : "2020-05-02T17:25:49Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18e0c602-36ef-4036-a938-abbc6f6456c8",
+        "parentId" : "a237d508-dffe-4efa-b51c-4b5b70307519",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "If you used `copy` method that defines all parameters, on every new parameter added you would break binary compatibility. If you only use `withX` those methods don't change with addition of new parameters, you are safe. (My reasoning for this change :P also binary compatibility sucks :< )",
+        "createdAt" : "2020-05-02T17:58:25Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f8653d5a-7e72-41d2-9476-1a65e45cd720",
+        "parentId" : "a237d508-dffe-4efa-b51c-4b5b70307519",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "a, rozumiem...",
+        "createdAt" : "2020-05-02T18:25:34Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c34e542c-9844-4184-a39d-78df645f5dcc",
+        "parentId" : "a237d508-dffe-4efa-b51c-4b5b70307519",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "@kpbochenek Correct, by keeping this method private we don't break the public API when we add new parameters. ",
+        "createdAt" : "2020-05-03T08:23:04Z",
+        "updatedAt" : "2020-05-03T08:45:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "53f53999-20ce-4d18-a4ce-9a293d013e47",
+        "parentId" : "a237d508-dffe-4efa-b51c-4b5b70307519",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "@kpbochenek I agree binary compatibility can be annoying, but it could be worse. My understanding is that evolving APIs in a binary compatible way is a lot harder and sometimes near impossible in other languages/ecosystems. It's at least **possible** with Scala/JVM, even if it's cumbersome.",
+        "createdAt" : "2020-05-03T08:45:19Z",
+        "updatedAt" : "2020-05-03T08:45:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9582b934f55e2eb2160415895ba6051df124eec4",
+    "line" : 223,
+    "diffHunk" : "@@ -1,1 +221,225 @@  // the body inside curly braces.\n\n  private[this] def privateCopy(\n      allowAndTypes: Boolean = this.allowAndTypes,\n      allowAtForExtractorVarargs: Boolean = this.allowAtForExtractorVarargs,"
+  },
+  {
+    "id" : "53501d2e-0701-45c8-8cf5-36ae80e9ea52",
+    "prId" : 2044,
+    "comments" : [
+      {
+        "id" : "f23d27a3-9353-4c48-a343-68f7a3c92135",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "why? just curious...",
+        "createdAt" : "2020-05-02T17:26:52Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0f1ec8e5-1984-437f-8f46-16d28dcb03b0",
+        "parentId" : "f23d27a3-9353-4c48-a343-68f7a3c92135",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Because we can't safely evolve this method in a binary compatible way. Case class `copy()` methods are easy to evolve in a source-compatible way but every new field addition is a binary breaking change even if you provide a default value.",
+        "createdAt" : "2020-05-03T08:28:39Z",
+        "updatedAt" : "2020-05-03T08:45:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9582b934f55e2eb2160415895ba6051df124eec4",
+    "line" : 305,
+    "diffHunk" : "@@ -1,1 +303,307 @@  }\n\n  @deprecated(\"Use withX method instead\", \"4.3.11\")\n  def copy(\n      allowAndTypes: Boolean = this.allowAndTypes,"
+  },
+  {
+    "id" : "db49a444-ec42-4af8-a034-f858d27f3fc9",
+    "prId" : 2044,
+    "comments" : [
+      {
+        "id" : "43b00c5d-7183-416a-8519-e9bf91e4c781",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "should this also be deprecated?",
+        "createdAt" : "2020-05-02T18:36:19Z",
+        "updatedAt" : "2020-05-03T08:43:39Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b0c74ac8-4af4-417c-a95c-67d7e0482207",
+        "parentId" : "43b00c5d-7183-416a-8519-e9bf91e4c781",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We may want to deprecate this method in the future but I think it's OK to keep it unchanged for now. I tried to introduce a default constructor `def apply(): Dialect` but couldn't find out a way to implement it without having to declare the default values in two different places, which I want to avoid. Most users adjust existing dialects like `Scala213`.",
+        "createdAt" : "2020-05-03T08:41:46Z",
+        "updatedAt" : "2020-05-03T08:45:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9582b934f55e2eb2160415895ba6051df124eec4",
+    "line" : 362,
+    "diffHunk" : "@@ -1,1 +360,364 @@\nobject Dialect extends InternalDialect {\n  def apply(\n      allowAndTypes: Boolean,\n      allowAtForExtractorVarargs: Boolean,"
+  },
+  {
+    "id" : "dc6c72c9-ac8a-4389-be6e-f35c073fbd17",
+    "prId" : 2027,
+    "comments" : [
+      {
+        "id" : "c3408412-8aee-4a3b-a38b-66fc9fbc34d0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Can we do `allowTopLevelPackages` ?",
+        "createdAt" : "2020-05-25T11:43:34Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "20dfbc1e-54f3-4f2e-8410-0a7fcb207c6b",
+        "parentId" : "c3408412-8aee-4a3b-a38b-66fc9fbc34d0",
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "Okay after reading my comment I can see it could be misleading.\r\nTopLevelTerms - enable top level statements, disable packages\r\nTopLevelStatements - enable top level statements, (packages stay enabled by default)\r\nTopLevelTerms and TopLevelStatements should not be used together.\r\nNot sure how to express it better\r\n",
+        "createdAt" : "2020-05-27T10:54:30Z",
+        "updatedAt" : "2020-06-22T15:02:28Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +80,84 @@    // Top level statements introduced in dotty.\n    // differs from ToplevelTerms because here you can define packages\n    val allowToplevelStatements: Boolean,\n    // Opaque types introduced in dotty\n    val allowOpaqueTypes: Boolean"
+  }
+]

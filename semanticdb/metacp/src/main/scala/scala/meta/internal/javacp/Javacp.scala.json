@@ -1,0 +1,425 @@
+[
+  {
+    "id" : "53579dbc-5cfc-4a26-b42a-7b1fe05a86bb",
+    "prId" : 1456,
+    "comments" : [
+      {
+        "id" : "a07f9631-fbcd-4bd1-9191-69eb1f240d57",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "for some reason, removing this annotation causes this error\r\n\r\n\r\n```\r\n[error] /Users/gabro/buildo/scalameta/semanticdb/metacp/src/main/scala/scala/meta/internal/javacp/Javacp.scala:231: recursive value parameterSymbols needs type\r\n[error]               parameters = s.MethodType.ParameterList(parameterSymbols) :: Nil,\r\n```\r\n\r\nno clue...",
+        "createdAt" : "2018-03-23T23:37:39Z",
+        "updatedAt" : "2018-03-24T10:56:28Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4adf459d78111f915ad14e9531ae860a5e84b1b",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +200,204 @@          }\n\n        val parameterSymbols: List[String] = params.zipWithIndex.map {\n          case (param: JavaTypeSignature, i) =>\n            val paramName = {"
+  },
+  {
+    "id" : "138d5fb8-6d32-4194-85a3-99615ad87284",
+    "prId" : 1456,
+    "comments" : [
+      {
+        "id" : "f13d41e9-a59b-4708-a65e-a10865d79820",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "This was hard to find, but the `ACC_VARARGS` flag applies to the whole method.\r\n\r\nA parameter is then a vararg if it's the last of a method with `ACC_VARARGS`.",
+        "createdAt" : "2018-03-23T23:40:15Z",
+        "updatedAt" : "2018-03-24T10:56:28Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5e7429b3-3f74-46fe-892e-591c9aab57f0",
+        "parentId" : "f13d41e9-a59b-4708-a65e-a10865d79820",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Nice find! SemanticDB exists so that tool authors don't have to bother themselves with stuff like that.",
+        "createdAt" : "2018-03-23T23:44:10Z",
+        "updatedAt" : "2018-03-24T10:56:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fa84327c-1406-47fb-af72-de40750eadc3",
+        "parentId" : "f13d41e9-a59b-4708-a65e-a10865d79820",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Making vararg a property of the method makes sense to me semantically. One awkward artifact of s.ByNameType is that it's possible to encode invalid states\r\n```scala\r\ndef foo(a: *A, b: *B)\r\n```\r\nOn the other hand, by-name types makes sense for syntax trees where Defn.Def has no attributes/modifiers to encode varargs 🤔 ",
+        "createdAt" : "2018-03-24T00:42:03Z",
+        "updatedAt" : "2018-03-24T10:56:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4adf459d78111f915ad14e9531ae860a5e84b1b",
+    "line" : 38,
+    "diffHunk" : "@@ -1,1 +207,211 @@            }\n            val paramSymbol = Symbols.Global(methodSymbol, d.Parameter(paramName))\n            val isRepeatedType = method.node.access.hasFlag(o.ACC_VARARGS) && i == params.length - 1\n            val paramTpe =\n              if (isRepeatedType) {"
+  },
+  {
+    "id" : "b38fb84c-ae9e-4de1-a80e-b53d24ab876f",
+    "prId" : 1456,
+    "comments" : [
+      {
+        "id" : "48363842-5a7f-4ef7-b78b-58b404d6c190",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "I've introduced this specific `require` since this should always be an `Array`.",
+        "createdAt" : "2018-03-24T00:03:36Z",
+        "updatedAt" : "2018-03-24T10:56:28Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4adf459d78111f915ad14e9531ae860a5e84b1b",
+    "line" : 45,
+    "diffHunk" : "@@ -1,1 +214,218 @@                  tpe.typeRef.isDefined && tpe.typeRef.get.symbol == \"scala.Array#\",\n                  s\"expected $paramName to be a scala.Array#, found $tpe\"\n                )\n                s.Type(\n                  tag = t.REPEATED_TYPE,"
+  },
+  {
+    "id" : "ed8782fe-b0aa-45f7-acba-7f310731b0dc",
+    "prId" : 1456,
+    "comments" : [
+      {
+        "id" : "5650608c-3f73-4916-b6bb-a4497c582ec3",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "body" : "had to make this recursive in order to print the `javaTypeSignature` of the Array type parameter.",
+        "createdAt" : "2018-03-24T10:57:44Z",
+        "updatedAt" : "2018-03-24T10:57:44Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/691940?u=5aaf176f5da60764f857b8f8c6842217f737627f&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4adf459d78111f915ad14e9531ae860a5e84b1b",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +147,151 @@      val typeDescriptor = {\n        val hasVarArg = method.access.hasFlag(o.ACC_VARARGS)\n        def toTypeDescriptor(t: JavaTypeSignature, i: Int): String = t match {\n          case t: BaseType => sname(t.name)\n          case t: ClassTypeSignature => sname(t.simpleClassTypeSignature.identifier)"
+  },
+  {
+    "id" : "9168f575-c2d3-42ba-b961-da1bf82e7794",
+    "prId" : 1422,
+    "comments" : [
+      {
+        "id" : "4099e9d9-9e3b-4c98-bf32-1c150b65a279",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-03-10T11:46:34Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d2a4d472bf076e929228ea5770ca1e49a796cbf7",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +151,155 @@\n    methodSignatures.foreach {\n      case method: MethodInfo if method.node.name == \"<clinit>\" =>\n        ()\n      case method: MethodInfo =>"
+  },
+  {
+    "id" : "daf4c3ce-c386-4277-8b99-48498a1524e1",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "4d98a26d-73a5-48b3-8ca6-e6c46d1787db",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why wasn't this autoformatted before?",
+        "createdAt" : "2018-03-09T00:10:05Z",
+        "updatedAt" : "2018-03-09T00:24:15Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d8b4fcf4-1733-4156-9220-c9f95155b33b",
+        "parentId" : "4d98a26d-73a5-48b3-8ca6-e6c46d1787db",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "the `.java` part of `project.excludeFilters` ignored everything in the `javacp` directory. Fixed in https://github.com/scalameta/scalameta/pull/1417\r\n\r\nNote to self, I should make this configuration easier in scalafmt. Or alternatively, we should let scalafmt loose on the scalameta repo! 😄 ",
+        "createdAt" : "2018-03-09T11:11:37Z",
+        "updatedAt" : "2018-03-09T11:21:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +415,419 @@      symbol: String,\n      args: List[s.Type] = Nil,\n      prefix: Option[s.Type] = None): s.Type = {\n    s.Type(\n      tag = s.Type.Tag.TYPE_REF,"
+  },
+  {
+    "id" : "3ce8248b-da61-468d-891e-fdc2799f085f",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "0dcc9c85-4e5d-4008-9aad-b482ba36ff5d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think this is an overkill, but I don't think this is a blocker.",
+        "createdAt" : "2018-03-09T00:22:29Z",
+        "updatedAt" : "2018-03-09T00:24:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "63ff5b19-80cb-42f5-8619-0ca04ef40b46",
+        "parentId" : "0dcc9c85-4e5d-4008-9aad-b482ba36ff5d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It was auto-suggested by intellij, I ran the fix just to avoid the annoying yellow warning\r\n\r\n![screen shot 2018-03-09 at 11 56 25](https://user-images.githubusercontent.com/1408093/37204383-f4e8f07a-2390-11e8-84aa-e1c842ed7cf6.png)\r\n\r\nWould like to implement this as a scalafix rule at some point.",
+        "createdAt" : "2018-03-09T10:57:09Z",
+        "updatedAt" : "2018-03-09T11:21:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "603e068e-0088-4343-b80c-da6a55a276a1",
+        "parentId" : "0dcc9c85-4e5d-4008-9aad-b482ba36ff5d",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I wouldn't say this is idiomatic, regardless of what Intellij thinks about it. `lengthCompare` is likely to be faster than `length` on big lists, but I don't think that performance gains are worth the readability hit here.",
+        "createdAt" : "2018-03-09T15:08:07Z",
+        "updatedAt" : "2018-03-09T15:08:07Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff96f6b3-0fe5-4b48-9ca3-07529ff1504a",
+        "parentId" : "0dcc9c85-4e5d-4008-9aad-b482ba36ff5d",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I like using a method designed exactly for this usecase. The readability hit is miniscule it doesn't bother me much.",
+        "createdAt" : "2018-03-09T15:46:25Z",
+        "updatedAt" : "2018-03-09T15:46:25Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +158,162 @@        }\n        val suffix =\n          if (synonyms.lengthCompare(1) == 0) \"\"\n          else \"+\" + (1 + synonyms.indexWhere(_.signature eq method.signature))\n        val isConstructor = method.node.name == \"<init>\""
+  },
+  {
+    "id" : "763269e2-efbd-4308-9bd5-ddc55c33c864",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "3d8f63e6-5ab5-4d2d-bdf0-c52b9f0c38ff",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I intentionally renamed this from access to outerClassAccess in hope to make it clearer. No objections from me if you prefer it this way.",
+        "createdAt" : "2018-02-27T10:38:58Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b5b222b5-3d01-40f9-85f7-30ab895a0518",
+        "parentId" : "3d8f63e6-5ab5-4d2d-bdf0-c52b9f0c38ff",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think that `outerClassAccess` is somewhat misleading. It's not `access` of an outer class, but `access` of an `InnerClass` entry in outer class. I don't have better ideas though, so let's use `access` for the time being if you don't mind.",
+        "createdAt" : "2018-02-27T20:31:09Z",
+        "updatedAt" : "2018-02-27T20:31:09Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f9f378c3-983a-4f11-b5eb-fe9322b5885a",
+        "parentId" : "3d8f63e6-5ab5-4d2d-bdf0-c52b9f0c38ff",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I agree.",
+        "createdAt" : "2018-02-27T20:31:47Z",
+        "updatedAt" : "2018-02-27T20:31:47Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 68,
+    "diffHunk" : "@@ -1,1 +30,34 @@      toplevel: ToplevelClassfile,\n      node: ClassNode,\n      access: Int,\n      scope: Scope): Seq[s.SymbolInformation] = {\n"
+  },
+  {
+    "id" : "a8645491-cada-4b2f-829b-ecf5ab3f0da1",
+    "prId" : 1373,
+    "comments" : [
+      {
+        "id" : "011d235d-2e04-4465-9c0a-614c9f2b79a9",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "NB. I'm not sure if \"Some(PUBLIC)\" is the right accessibility for packages. Maybe it should be None instead. Doesn't matter for me.",
+        "createdAt" : "2018-02-27T10:39:43Z",
+        "updatedAt" : "2018-02-27T11:18:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "92fe22e1-ff8d-4af3-a536-e615ba89baad",
+        "parentId" : "011d235d-2e04-4465-9c0a-614c9f2b79a9",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "We already have a related ticket: https://github.com/scalameta/scalameta/issues/1325. Let's follow up there.",
+        "createdAt" : "2018-02-27T20:29:07Z",
+        "updatedAt" : "2018-02-27T20:29:07Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "384068564d24a8d1d4b4b578ae673d40f3d2ab0d",
+    "line" : 111,
+    "diffHunk" : "@@ -1,1 +73,77 @@            pkgName,\n            None,\n            o.ACC_PUBLIC,\n            owner\n          )"
+  }
+]

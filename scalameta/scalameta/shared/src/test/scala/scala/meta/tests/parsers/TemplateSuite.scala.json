@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "0d38f1eb-0534-4784-842a-c285e02b2b1a",
+    "prId" : 1018,
+    "comments" : [
+      {
+        "id" : "0428e084-6720-41cb-a8ec-f15e55fa1a77",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm not a fan of these deconstruction tests since they tend to be difficult to debug when they fail. I think we can do something better to diff two trees in testkit, which we could migrate to one day.",
+        "createdAt" : "2017-07-12T11:44:49Z",
+        "updatedAt" : "2017-07-12T14:09:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "95b12dad-e2de-4dbc-a846-51e5f147a530",
+        "parentId" : "0428e084-6720-41cb-a8ec-f15e55fa1a77",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Agreed.",
+        "createdAt" : "2017-07-12T14:09:38Z",
+        "updatedAt" : "2017-07-12T14:09:38Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e88cadc57e9e3921e0d953f7ab9082ff7e5f42f1",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +89,93 @@\n  test(\"class A { _ => }\") {\n    val Class(Nil, Type.Name(\"A\"), Nil, EmptyCtor(), Template(Nil, Nil, self @ EmptySelf(), Nil)) = templStat(\"class A { this => }\")\n  }\n"
+  }
+]

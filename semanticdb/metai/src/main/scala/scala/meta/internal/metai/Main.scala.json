@@ -1,0 +1,124 @@
+[
+  {
+    "id" : "7b8d084f-e3a3-4eb5-a4f7-98fa03e3fc79",
+    "prId" : 1726,
+    "comments" : [
+      {
+        "id" : "c2f7c100-7edc-413c-8205-acbdfbaa1725",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "iirc, this did not work when I first implemented this because we did not call `Files.createDirectories` before creating semanticdb files. Keep that in mind for other tools that produce SemanticDB files.",
+        "createdAt" : "2018-07-31T17:19:32Z",
+        "updatedAt" : "2018-07-31T17:35:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a44bd6be-9188-44bf-802e-21375392b500",
+        "parentId" : "c2f7c100-7edc-413c-8205-acbdfbaa1725",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yeah, I had to fix this in metacp.",
+        "createdAt" : "2018-08-03T19:51:44Z",
+        "updatedAt" : "2018-08-03T19:51:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "222bcbfd13d6416abb5f7ce96289c4b734cb550c",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +54,58 @@\n  private def processEntry(file: ClasspathFile): Boolean = {\n    val hasSemanticdb = file.path.resolve(\"META-INF\").resolve(\"semanticdb\").isDirectory\n    val ls = FileIO.listAllFilesRecursively(file.path)\n    var index = i.Index()"
+  },
+  {
+    "id" : "9bef0af7-6b37-44de-ab31-615a60f3511c",
+    "prId" : 1726,
+    "comments" : [
+      {
+        "id" : "8aabe25b-3ad0-48ad-9fa5-9179fadb3698",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "If you can assume the directory zip entry `META-INF/semanticdb` exists then you can simplify this logic with\r\n\r\n```scala\r\nval root = file.path.resolve(\"META-INF\").resolve(\"semanticdb\")\r\nval ls = FileIO.listAllFilesrecursively(root)\r\nls.files.foreach { ... }\r\n```",
+        "createdAt" : "2018-07-31T17:22:38Z",
+        "updatedAt" : "2018-07-31T17:35:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "222bcbfd13d6416abb5f7ce96289c4b734cb550c",
+    "line" : 63,
+    "diffHunk" : "@@ -1,1 +55,59 @@  private def processEntry(file: ClasspathFile): Boolean = {\n    val hasSemanticdb = file.path.resolve(\"META-INF\").resolve(\"semanticdb\").isDirectory\n    val ls = FileIO.listAllFilesRecursively(file.path)\n    var index = i.Index()\n    ls.files.foreach { relpath =>"
+  },
+  {
+    "id" : "5a11eaa0-caff-47ff-bfb1-60c6186160e5",
+    "prId" : 1690,
+    "comments" : [
+      {
+        "id" : "fc6f67aa-31e8-4836-b2dd-1f789fddd2fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's open a ticket for this?",
+        "createdAt" : "2018-07-12T23:06:25Z",
+        "updatedAt" : "2018-07-13T15:06:48Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a3a44ddd-9bd6-460a-bb90-1cc23503d6a5",
+        "parentId" : "fc6f67aa-31e8-4836-b2dd-1f789fddd2fa",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I left a comment in https://github.com/scalameta/scalameta/issues/1659#issuecomment-404789629",
+        "createdAt" : "2018-07-13T10:09:44Z",
+        "updatedAt" : "2018-07-13T15:06:48Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "03def7a684ca67a7dd7df13ae7d342831d4096d3",
+    "line" : 89,
+    "diffHunk" : "@@ -1,1 +87,91 @@      doc <- docs.documents\n      toplevel <- doc.symbols\n      if !toplevel.symbol.isPackage\n      if toplevel.symbol.owner.isPackage\n    } {"
+  }
+]

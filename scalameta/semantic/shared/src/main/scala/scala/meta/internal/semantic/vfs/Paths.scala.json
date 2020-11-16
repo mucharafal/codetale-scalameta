@@ -1,0 +1,237 @@
+[
+  {
+    "id" : "1b4e9735-d9b7-4d62-96ee-8702e855d5ac",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "c429edf0-155d-44b4-98a1-bb6c75e48255",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks like an unused import.",
+        "createdAt" : "2017-07-07T03:35:26Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "49835349-6f6f-4c1e-88fe-0c53e5d42119",
+        "parentId" : "c429edf0-155d-44b4-98a1-bb6c75e48255",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Removed in https://github.com/scalameta/scalameta/pull/1004",
+        "createdAt" : "2017-07-07T07:51:05Z",
+        "updatedAt" : "2017-07-07T07:51:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d61b7f64-3bdf-4222-a4fa-4d5a2cbe6a4f",
+        "parentId" : "c429edf0-155d-44b4-98a1-bb6c75e48255",
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "Can we just enable -Ywarn-unused:import to prevent humans having to catch this? If it makes the local development cycle awkward you can either disable that flag locally, or we could modify build to enable the flag in CI runs.",
+        "createdAt" : "2017-07-07T19:09:22Z",
+        "updatedAt" : "2017-07-07T19:09:22Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "30238281-4b29-450d-aba3-a1989abe41f3",
+        "parentId" : "c429edf0-155d-44b4-98a1-bb6c75e48255",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "@olafurpg Can we implement an unused import check on CI via scalafix?",
+        "createdAt" : "2017-07-09T22:30:34Z",
+        "updatedAt" : "2017-07-09T22:30:34Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@\nimport scala.meta.internal.io.PathIO.fileSeparator\nimport scala.meta.io.AbsolutePath\nimport scala.meta.io.RelativePath\nimport org.scalameta.invariants.require"
+  },
+  {
+    "id" : "3e8bc672-61de-4b91-829d-92de90dc8093",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "5cc30856-9769-4380-b339-852ad3837091",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "`path.path` reads weirdly. Can we change it to `path.value`?",
+        "createdAt" : "2017-07-07T03:36:05Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +14,18 @@  def isSemanticdb(path: RelativePath): Boolean = {\n    path.toNIO.startsWith(semanticDbPrefix.toNIO) &&\n    path.path.getFileName.toString.endsWith(semanticDbSuffix)\n  }\n"
+  },
+  {
+    "id" : "00b0e60c-ac6a-47e8-87ac-6222f87757a8",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "f4aba0eb-e9b2-461e-834b-72b552720a22",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Also, I'm not sure whether `path.path.getFileName.toString` constitutes an improvement with respect to `path.toString`. Can you comment on this?",
+        "createdAt" : "2017-07-07T03:36:26Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +14,18 @@  def isSemanticdb(path: RelativePath): Boolean = {\n    path.toNIO.startsWith(semanticDbPrefix.toNIO) &&\n    path.path.getFileName.toString.endsWith(semanticDbSuffix)\n  }\n"
+  },
+  {
+    "id" : "2ebafe6d-e426-4529-88f1-e1851c1f92a4",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "b5736c64-6212-4183-9e4e-fbb13b3e5c1a",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "`path.relativize(path)` reads like a typo. Have I misunderstood something?",
+        "createdAt" : "2017-07-07T03:36:36Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +20,24 @@    require(isSemanticdb(path))\n    RelativePath(path.toNIO\n      .relativize(path.toNIO)\n      .resolveSibling(path.path.getFileName.toString.stripSuffix(semanticDbSuffix) + scalaSuffix))\n  }"
+  },
+  {
+    "id" : "1ce7b70a-6649-4a5e-98e4-3e67bcc2f40d",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "48f316f0-6604-4f8a-8141-0f81ba0e3551",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I find the refactoring of logic in `Paths` hard to follow. Let's discuss a formulation that would work for both of us. What did you find unnice about the previous implementation?",
+        "createdAt" : "2017-07-07T03:40:39Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c2ba9f41-08dc-47db-8802-d58b6345ca3a",
+        "parentId" : "48f316f0-6604-4f8a-8141-0f81ba0e3551",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I've refactored the logic a bit to make it cleaner. I agree my refactoring was a bit messy. I did not like the previous implementation since it was purely string based. A path is more a `List[String]` than a `String`, so when changing the extension we should try to use `resolveSibling` and when checking the extension we should check the extension against the filename instead of `Path.toString.endsWith`.",
+        "createdAt" : "2017-07-07T08:30:27Z",
+        "updatedAt" : "2017-07-07T08:30:27Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0f64c49d-c88b-456d-8fb4-3f4941c351bc",
+        "parentId" : "48f316f0-6604-4f8a-8141-0f81ba0e3551",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "On a number of occasions, we have seen that moving from `String` to `*Path` brings correctness benefits. In general, I'm in favor of refactorings like that, as long as they are reasonably concise. I had problems with the first take on this, but I do like the new version. Thank you!",
+        "createdAt" : "2017-07-09T22:36:36Z",
+        "updatedAt" : "2017-07-09T22:36:36Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +31,35 @@  def scalaToSemanticdb(path: RelativePath): RelativePath = {\n    require(isScala(path))\n    semanticDbPrefix.resolve(path.resolveSibling(_.stripSuffix(scalaSuffix) + semanticDbSuffix))\n  }\n}"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "7bbed66c-8367-4b09-8888-4eef5dbafce3",
+    "prId" : 678,
+    "comments" : [
+      {
+        "id" : "fcdd2ae8-c074-4184-8120-aeed0885fdd1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Hurray, copy is awesome.",
+        "createdAt" : "2017-02-13T10:11:22Z",
+        "updatedAt" : "2017-02-13T22:50:37Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12e0cf7814bad1f41f76884678bebe61877ce4e4",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +5,9 @@// Tests from https://github.com/scala/scala/pull/5245/files\nclass TrailingCommaSuite extends ParseSuite {\n  implicit val Scala2122 = scala.meta.dialects.Scala212.copy(allowTrailingCommas = true)\n\n  // Negative tests"
+  }
+]

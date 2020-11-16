@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "d2981b5f-5333-42e7-84b0-fd45fa62fdb6",
+    "prId" : 1641,
+    "comments" : [
+      {
+        "id" : "0581873f-b677-4545-84f6-94f5c78fe29e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can we drop the default value for `language`, since we seem to have specialized Java- and Scala-specific methods anyway? ",
+        "createdAt" : "2018-06-28T22:21:39Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8aca8c80-ea91-42e4-bd46-e7735aebf586",
+        "parentId" : "0581873f-b677-4545-84f6-94f5c78fe29e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "You mean drop the default `= s.Language.SCALA` in `checkSection`? Sure, done.",
+        "createdAt" : "2018-06-29T09:47:56Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dab8808f-a237-41af-942e-e0aeeb76c7d9",
+        "parentId" : "0581873f-b677-4545-84f6-94f5c78fe29e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-07-02T02:33:36Z",
+        "updatedAt" : "2018-07-02T09:26:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c4a27c360098279cf8cb20062b3532047568c613",
+    "line" : 98,
+    "diffHunk" : "@@ -1,1 +138,142 @@  }\n\n  def javaSymbols(code: String, expected: String): Unit = {\n    checkSection(code, expected, \"Symbols\", s.Language.JAVA)\n  }"
+  }
+]

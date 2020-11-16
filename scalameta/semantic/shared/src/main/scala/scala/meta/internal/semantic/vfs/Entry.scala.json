@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "0a8450cc-b06f-400b-b065-0f3742e96821",
+    "prId" : 868,
+    "comments" : [
+      {
+        "id" : "e3004018-6de8-48d0-98ba-2dbcaec652f5",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I'd prefer to have this and the like on a single line",
+        "createdAt" : "2017-05-21T16:07:45Z",
+        "updatedAt" : "2017-05-22T14:55:08Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "52e4e1d5-a30a-416a-8a71-d67739441f9e",
+        "parentId" : "e3004018-6de8-48d0-98ba-2dbcaec652f5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I manually fixed this now. This should be easy to fix in scalafmt https://github.com/scalameta/scalafmt/issues/936",
+        "createdAt" : "2017-05-21T18:48:21Z",
+        "updatedAt" : "2017-05-22T14:55:08Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "986139dd74528943167a02f94308884192d7490b",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +10,14 @@\n@root\ntrait Entry {\n  def fragment: Fragment\n  def base: AbsolutePath = fragment.base"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id" : "e14b2d44-9461-4d81-8d35-db1eecaaa3d3",
+    "prId" : 1738,
+    "comments" : [
+      {
+        "id" : "8285ac81-eb16-477b-aed6-437f4170257b",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Your raised a good question about why metac defaults to warnings instead of errors. I think it would be good to change the default to error with v4. You in favor of that change?",
+        "createdAt" : "2018-08-07T16:02:03Z",
+        "updatedAt" : "2018-08-07T16:03:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1d4b256d-0da6-46d5-8ccf-e108608ab626",
+        "parentId" : "8285ac81-eb16-477b-aed6-437f4170257b",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yes. I won't have time to get this through myself this week, but if you do, that'd be great.",
+        "createdAt" : "2018-08-07T17:34:02Z",
+        "updatedAt" : "2018-08-07T17:34:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "68410f8a-5834-4696-beb7-f230abc2fc07",
+        "parentId" : "8285ac81-eb16-477b-aed6-437f4170257b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I may take a stab at it, opened https://github.com/scalameta/scalameta/issues/1742",
+        "createdAt" : "2018-08-08T09:09:12Z",
+        "updatedAt" : "2018-08-08T09:37:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cc08bebdb55343bea8b986c70d25db6741cecedf",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +30,34 @@\n  def handleCrash(unit: Option[g.CompilationUnit]): PartialFunction[Throwable, Unit] = {\n    case NonFatal(ex) =>\n      val writer = new StringWriter()\n      val culprit = unit.map(unit => \" for \" + unit.source.file.path).getOrElse(\"\")"
+  },
+  {
+    "id" : "9e3784ac-5555-4944-8d37-45895687a816",
+    "prId" : 1395,
+    "comments" : [
+      {
+        "id" : "b11ce655-6741-4f28-84cd-8facbbe2c654",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Unrelated to this PR, but this logic has always bugged me. I think we should try to use idiomatic java.nio wherever possible. Here's how it's possible to delete a directory upwards\r\n\r\n```scala\r\n  Files.walkFileTree(\r\n    Paths.get(\"\"),\r\n    new SimpleFileVisitor[Path] {\r\n      override def visitFile(file: Path, attrs: BasicFileAttributes): FileVisitResult = {\r\n        if (someLogic() { Files.delete(file) }\r\n        FileVisitResult.CONTINUE\r\n      }\r\n      override def postVisitDirectory(dir: Path, exc: IOException): FileVisitResult = {\r\n        val ds = Files.newDirectoryStream(dir)\r\n        val isEmpty = !ds.iterator().hasNext\r\n        ds.close()\r\n        if (isEmpty) {\r\n          Files.delete(dir)\r\n        }\r\n        FileVisitResult.CONTINUE\r\n      }\r\n    }\r\n  )\r\n```\r\nSure it's verbose, but by using conventional APIs for IO the code is more approachable for anyone dropping into the codebase.",
+        "createdAt" : "2018-03-07T22:18:05Z",
+        "updatedAt" : "2018-03-08T00:57:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b9e9909c-d4b6-47d5-a715-0eb56167f072",
+        "parentId" : "b11ce655-6741-4f28-84cd-8facbbe2c654",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "At the time when this logic was introduced, we were still on JDK 1.6. I agree that your proposed code snippet will be an improvement. Let's open a ticket for this.",
+        "createdAt" : "2018-03-08T00:25:27Z",
+        "updatedAt" : "2018-03-08T00:57:40Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b4cb5bdd-36ee-47cb-9794-8fc66390f3db",
+        "parentId" : "b11ce655-6741-4f28-84cd-8facbbe2c654",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Done #1402 ",
+        "createdAt" : "2018-03-08T10:41:05Z",
+        "updatedAt" : "2018-03-08T11:50:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "44f66ad367eba5d3307e2dfe61035d34647e8019",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +70,74 @@        })\n        orphanedVentries.map(ve => {\n          def cleanupUpwards(file: File): Unit = {\n            if (file != null) {\n              if (file.isFile) {"
+  }
+]

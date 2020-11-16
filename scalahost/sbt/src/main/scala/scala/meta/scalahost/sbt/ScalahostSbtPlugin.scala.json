@@ -1,0 +1,559 @@
+[
+  {
+    "id" : "d841e736-787b-4b14-a7dd-31b961551a77",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "9a398c35-eb5b-46e6-a54a-b32d8aec1fd5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Is this an idiomatic way to allow users to configure the semanticdb mode by project/config? See semantic-example `test` how to disable/enable custom semantic dbs by config.",
+        "createdAt" : "2017-05-15T11:22:20Z",
+        "updatedAt" : "2017-05-15T18:38:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "adb04583-e476-49e1-b1c8-e6fbe5d99290",
+        "parentId" : "9a398c35-eb5b-46e6-a54a-b32d8aec1fd5",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "AFAIK, this is very idiomatic. Make sure you document it clearly -- tasks are scoped in the `Compile` and `Test` configurations.",
+        "createdAt" : "2017-05-15T22:08:40Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c0485979-5c09-4b50-9a58-5ca6822e75cd",
+        "parentId" : "9a398c35-eb5b-46e6-a54a-b32d8aec1fd5",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good point. Docs are totally behind atm. cc/ https://github.com/scalameta/scalameta/issues/816",
+        "createdAt" : "2017-05-16T07:02:05Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 43,
+    "diffHunk" : "@@ -1,1 +41,45 @@  lazy val scalahostAllSettings =\n    scalahostBaseSettings ++\n      inTestAndCompile(scalahostConfigSettings) ++\n      scalahostInjectScalacOptions ++\n      scalahostInjectDependency ++"
+  },
+  {
+    "id" : "d9fb7a37-bad6-466f-b5b1-95a192c0df0b",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't like the duplication in saying `foobarbaz := Foobarbaz.qux`. Can we do better here?",
+        "createdAt" : "2017-05-15T16:37:12Z",
+        "updatedAt" : "2017-05-15T18:38:46Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "fca7a2c4-250c-420d-9bb6-7c49b60b4774",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I believe this is idiomatic sbt, see http://www.scala-sbt.org/0.13/docs/Plugins-Best-Practices.html#Avoid+namespace+clashes\r\n\r\nEverything inside autoImport will be in scope of build.sbt files so for example `Fat` would not be a good idea.",
+        "createdAt" : "2017-05-15T18:35:46Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6d230f2d-b175-4baf-871e-a74788f29820",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "NB. It would be possible to make this a `settingKey[String]` to get this syntax\r\n\r\n```scala\r\nscalametaSemanticdb := \"fat\"\r\n```\r\n\r\nI prefer the current approach since it avoid dealing with invalid values and it documents the valid cases  in the types.",
+        "createdAt" : "2017-05-15T18:37:15Z",
+        "updatedAt" : "2017-05-16T07:21:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3ec3ee0a-8bf4-47ee-9fc9-f5834d9b09e2",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "What duplication do you mean Eugene?",
+        "createdAt" : "2017-05-15T22:10:05Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "46b603bb-ec92-4c8e-8e28-88d4f9611eec",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think he's referring to `scalametaX := scalametaY`",
+        "createdAt" : "2017-05-16T07:04:53Z",
+        "updatedAt" : "2017-05-16T07:21:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "14e6a430-929d-4d63-8e56-2c8ce5064956",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yes.",
+        "createdAt" : "2017-05-16T18:26:22Z",
+        "updatedAt" : "2017-05-16T18:26:22Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "18090c9b-1dc8-4003-b34a-86ab64c5550e",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I suggest we at least drop the `scalameta` prefix. There are no other semantic dbs around.\r\n\r\n`semanticDb := SemanticDb.Fat` looks more or less allright.",
+        "createdAt" : "2017-05-16T18:27:17Z",
+        "updatedAt" : "2017-05-16T18:27:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8819bfd8-bcf1-4800-9c20-f8b3d2a600a0",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It's conventional to prefix all plugin keys by the plugin name, this makes it easier to discover what settings are provided by a plugin, for example via `scalameta<TAB>` in the sbt shell. I'm open to make the syntax `scalametaSemanticdb := Semanticdb.Fat`, would that be better?",
+        "createdAt" : "2017-05-16T20:01:26Z",
+        "updatedAt" : "2017-05-16T20:01:26Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "57417718-9609-468b-a905-8fe57cb0a604",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Relevant http://www.lihaoyi.com/post/StrategicScalaStyleConcisenessNames.html#long-names-vs-short-names\r\n\r\nConsidering that users will typically write this setting few times, I believe a longer/verbose name that follows sbt plugin naming conventions is fine.",
+        "createdAt" : "2017-05-16T20:05:10Z",
+        "updatedAt" : "2017-05-16T20:05:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a7d5270f-d23a-4aa7-aece-6607fe23665b",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Well, then I guess it should be `scalahostSemanticDb := ScalahostSemanticDb.Fat`.",
+        "createdAt" : "2017-05-16T20:06:59Z",
+        "updatedAt" : "2017-05-16T20:06:59Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c8e3891-a742-4de4-ba66-f0c6ba7b075a",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Or rather, the plugin should be `ScalametaPlugin` named instead of `ScalahostSbtPlugin`?\r\n\r\nThis also opens the question if we should rename `sbt-scalahost` to `sbt-scalameta`. Having explained what were doing to several people, I have noticed that the word \"scalahost\" is confusing to many.",
+        "createdAt" : "2017-05-16T20:20:35Z",
+        "updatedAt" : "2017-05-16T20:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9fe17e73-388b-427f-ac05-a9bc903da3aa",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Good point. How about we explore this in 2.x? I'm afraid big refactorings like this will interfere with the 2.x branch, which will have to coexist with 1.x for quite a while.",
+        "createdAt" : "2017-05-16T20:24:55Z",
+        "updatedAt" : "2017-05-16T20:24:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1ed5cbd3-f922-47cb-bc32-13436c471fcc",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "So keep things as is for now? So far the plugin exposes only `scalameta*` keys to the build.sbt scope so I think renaming the plugin to sbt-scalameta would be a logical step, but I'm fine with waiting with that change.",
+        "createdAt" : "2017-05-16T20:26:44Z",
+        "updatedAt" : "2017-05-16T20:26:45Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e67c88dd-e640-4e20-a1cf-d0f422a22341",
+        "parentId" : "b6933cc7-5d98-4685-ac3d-8f20fdaaa10e",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yes, let's keep this as is for now.",
+        "createdAt" : "2017-05-16T20:27:37Z",
+        "updatedAt" : "2017-05-16T20:27:37Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +52,56 @@  )\n  lazy val scalahostConfigSettings: Seq[Def.Setting[_]] = Def.settings(\n    scalametaSemanticdb := ScalametaSemanticdb.Fat\n  )\n"
+  },
+  {
+    "id" : "bfc19d97-f204-4cfe-8d59-e4761c1fa231",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "275c5720-9110-49c2-9c9e-9e5c2c4fce9a",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "You don't need `lazy` here.",
+        "createdAt" : "2017-05-15T22:09:38Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b0c66d50-5571-417f-abdc-040c021e87e5",
+        "parentId" : "275c5720-9110-49c2-9c9e-9e5c2c4fce9a",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The `lazy` is actually intentional, but maybe not for the best reason. ScalahostSbtPlugin is an object so removing the lazy would make initialization errors more cryptic compared to typical stack traces.",
+        "createdAt" : "2017-05-16T07:03:02Z",
+        "updatedAt" : "2017-05-16T07:21:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +51,55 @@    resolvers += Resolver.bintrayRepo(\"scalameta\", \"maven\")\n  )\n  lazy val scalahostConfigSettings: Seq[Def.Setting[_]] = Def.settings(\n    scalametaSemanticdb := ScalametaSemanticdb.Fat\n  )"
+  },
+  {
+    "id" : "bc24d67c-c587-42cb-b62e-476d64e9e930",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "b10aa313-39c6-436f-93b9-f01972dfeec6",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "You can probably remove all these lazy's.",
+        "createdAt" : "2017-05-15T22:10:41Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ccda0709-2744-45db-ab94-88500b3c49e3",
+        "parentId" : "b10aa313-39c6-436f-93b9-f01972dfeec6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "See comment above.",
+        "createdAt" : "2017-05-16T07:05:03Z",
+        "updatedAt" : "2017-05-16T07:21:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 69,
+    "diffHunk" : "@@ -1,1 +66,70 @@    }\n  )\n  lazy val scalahostInjectScalacOptions: Seq[Def.Setting[_]] = Def.settings(\n    // sets -Xplugin:/scalahost.jar and other necessary compiler options.\n    scalacOptions ++= {"
+  },
+  {
+    "id" : "485e4096-74ab-4862-a3de-d9fdafcc0956",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "06e25833-895f-438c-bc83-1cdbe7026247",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "I would group the settings based on the place they are scoped. Following this criterion, these two can be grouped together.",
+        "createdAt" : "2017-05-15T22:11:31Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 44,
+    "diffHunk" : "@@ -1,1 +42,46 @@    scalahostBaseSettings ++\n      inTestAndCompile(scalahostConfigSettings) ++\n      scalahostInjectScalacOptions ++\n      scalahostInjectDependency ++\n      scalahostHasMirrorSettings"
+  },
+  {
+    "id" : "0e63cb4c-eb9d-415e-94f9-23cc7f5fd314",
+    "prId" : 866,
+    "comments" : [
+      {
+        "id" : "ba7cd72a-5706-42c4-a7c6-344935da2d02",
+        "parentId" : null,
+        "author" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "body" : "I've used this so many times that i think it's about time we add it to sbt/sbt.",
+        "createdAt" : "2017-05-15T22:12:01Z",
+        "updatedAt" : "2017-05-15T22:16:29Z",
+        "lastEditedBy" : {
+          "login" : "jvican",
+          "name" : "Jorge",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/2462974?u=247f9a0cfd142440687595dce462fabed087e912&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b46f94a3-c0a8-4d46-82ab-d39f79daf277",
+        "parentId" : "ba7cd72a-5706-42c4-a7c6-344935da2d02",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👏 ",
+        "createdAt" : "2017-05-16T07:05:12Z",
+        "updatedAt" : "2017-05-16T07:21:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fefdc918e8c02e97f4cb408b61350bd31ffb178",
+    "line" : 90,
+    "diffHunk" : "@@ -1,1 +122,126 @@  )\n\n  private def inTestAndCompile(settings: Seq[Def.Setting[_]]) =\n    List(Compile, Test).flatMap(inConfig(_)(settings)) ++ settings\n"
+  },
+  {
+    "id" : "34b407b9-1c3b-4dac-b6a9-d262d657dad7",
+    "prId" : 854,
+    "comments" : [
+      {
+        "id" : "4b77e230-e0b0-4b10-b3fe-0804dac50303",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "We may hit on performance issues in `Fragment.deep/find` with this sourcepath. For example, in the scalafmt/scalameta repos `target/` often contains (tens of) thousands of files from testkit.",
+        "createdAt" : "2017-05-11T21:29:41Z",
+        "updatedAt" : "2017-05-11T21:31:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "938724ae-22fd-4660-bc88-d037c8e9a40a",
+        "parentId" : "4b77e230-e0b0-4b10-b3fe-0804dac50303",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "We can definitely improve the implementations on deep and find if the need arises. At the moment, they are intentionally very naive in order to focus the development effort.",
+        "createdAt" : "2017-05-11T21:33:11Z",
+        "updatedAt" : "2017-05-11T21:33:11Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ed5af9cd9004a6db68a119de7a748eb491429856",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +61,65 @@      if (scalametaDependencies.value.isEmpty) Nil\n      else {\n        val sourcepath = sys.props(\"user.dir\")\n        val classpath =\n          scalahostClasspath.value"
+  }
+]

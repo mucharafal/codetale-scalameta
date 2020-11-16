@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "2f8aba77-3e29-49ea-a79b-c4237135a92b",
+    "prId" : 1337,
+    "comments" : [
+      {
+        "id" : "685f6a84-e2ae-4640-8509-8b2ba4b0e846",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "`coursier fetch org.scalameta:scalameta_2.12:3.3.0 -r sonatype:releases` should work right after `sonatypeReleaseAll` completes. Remove `-r sonatype:releases` to validate if the artifacts are on maven central. In the fastparse repo I actually have script to automatically validate that all entries in the release matrix got released.",
+        "createdAt" : "2018-02-18T09:55:29Z",
+        "updatedAt" : "2018-02-18T09:55:36Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "9e77dbf112d240ab27a17729e2bdfd96c2ab8a6b",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +47,51 @@  * Wait for up to several hours (for 3.2.0, we waited for 15 minutes;\n    for 3.3.0, we waited for 1.5 hours).\n  * Make sure that the release shows up at https://search.maven.org/#search%7Cga%7C1%7Corg.scalameta%20a%3A%22scalameta_2.12%22.\n  * If it's been a while, and the release doesn't show up at Maven Central,\n    ping Sonatype at [OSSRH-10192](https://issues.sonatype.org/browse/OSSRH-10192)."
+  },
+  {
+    "id" : "cb344add-a70c-4a77-8688-11b6dcf6ab50",
+    "prId" : 1269,
+    "comments" : [
+      {
+        "id" : "ad56cd62-9919-4c15-b7ba-cea248865d3f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Alternatively, `sbt sonatypeReleaseAll` from the scalameta build.\r\n\r\nI would love to get rid of this step by adding a build stage that does this step after all release jobs complete.",
+        "createdAt" : "2018-02-07T09:38:29Z",
+        "updatedAt" : "2018-02-07T16:01:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "93cf0b1e41df3998ce517a969c59ed8e8605aa8d",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +12,16 @@* Wait for [the Travis CI job](https://travis-ci.org/scalameta/scalameta/branches)\n   in Active Branches to build the binaries and stage them to Sonatype.\n* Finalize the release on Sonatype:\n  * `sbt sonatypeReleaseAll`\n  * Alternatively:"
+  }
+]

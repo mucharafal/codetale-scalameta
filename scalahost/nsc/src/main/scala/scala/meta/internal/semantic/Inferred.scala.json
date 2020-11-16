@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "52b1dbcd-74d1-4c91-a59c-7cf91dbd1890",
+    "prId" : 1000,
+    "comments" : [
+      {
+        "id" : "e9956b3b-347c-4596-beb8-350ec41fe487",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "`sugars.map(_.toString).mkString(sep)`?",
+        "createdAt" : "2017-07-10T15:28:24Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f02787558f288424196edc1806705543a14be6d6",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +17,21 @@  val star = AttributedSugar(\"*\", List(SugarRange(0, 1, Symbol(\"_star_.\"))))\n  def apply(syntax: String): AttributedSugar = AttributedSugar(syntax, Nil)\n  def mkString(sugars: List[AttributedSugar], sep: String): AttributedSugar = sugars match {\n    case Nil => empty\n    case head :: Nil => head"
+  }
+]

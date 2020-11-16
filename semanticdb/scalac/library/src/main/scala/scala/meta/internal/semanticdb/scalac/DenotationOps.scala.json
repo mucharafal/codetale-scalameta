@@ -1,0 +1,284 @@
+[
+  {
+    "id" : "44392dfb-8b21-4968-9d89-e0d1579d114a",
+    "prId" : 1422,
+    "comments" : [
+      {
+        "id" : "c594616e-103b-47f4-95b9-f64220b048f1",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 ",
+        "createdAt" : "2018-03-10T11:45:56Z",
+        "updatedAt" : "2018-03-10T16:00:18Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "d2a4d472bf076e929228ea5770ca1e49a796cbf7",
+    "line" : 33,
+    "diffHunk" : "@@ -1,1 +142,146 @@\n    private def newInfo: (Option[s.Type], List[g.Symbol]) = {\n      if (gsym.hasPackageFlag) (None, Nil)\n      else {\n        val ginfo = {"
+  },
+  {
+    "id" : "8fa3276d-3ece-4abc-bb73-4d9d5dcbf572",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "7c4bf432-5383-4056-9f20-8ad3399a2cd6",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why is `TRAIT` necessary? Would it be possible to model them as `INTERFACE`?",
+        "createdAt" : "2018-03-09T09:40:53Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dd7b0518-f0d5-4f40-97be-ff32e203ff3a",
+        "parentId" : "7c4bf432-5383-4056-9f20-8ad3399a2cd6",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I would say that traits and interfaces are sufficiently different to warrant different kinds, just like macros and methods. This is clearly subjective, though. What do you think?",
+        "createdAt" : "2018-03-09T15:12:22Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6eef680c-2c4b-4a7e-87ad-6d52ee11735f",
+        "parentId" : "7c4bf432-5383-4056-9f20-8ad3399a2cd6",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I see. I'm a fan of modeling things for what they are so the k.INTERFACE and k.TRAIT is fine.",
+        "createdAt" : "2018-03-09T15:37:26Z",
+        "updatedAt" : "2018-03-09T15:43:41Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +47,51 @@        case gsym: ClassSymbol =>\n          if (gsym.isTrait && gsym.hasFlag(gf.JAVA)) mf.INTERFACE\n          else if (gsym.isTrait) mf.TRAIT\n          else mf.CLASS\n        case gsym: TypeSymbol =>"
+  },
+  {
+    "id" : "c2084c98-3b5a-41ff-8d0a-61bd0839fbfb",
+    "prId" : 1416,
+    "comments" : [
+      {
+        "id" : "81585fb0-37fc-4f19-bde7-5212c41a78ca",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "👍 Didn't know about this one, handy",
+        "createdAt" : "2018-03-09T09:43:01Z",
+        "updatedAt" : "2018-03-09T15:12:28Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "2ff10c15502b6b6400abe286a263819084a11d18",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +14,18 @@  implicit class XtensionGSymbolMDenotation(gsym0: g.Symbol) {\n    private val gsym: g.Symbol = {\n      if (gsym0.isJavaClass) gsym0.companionClass\n      else if (gsym0.isModuleClass) gsym0.asClass.module\n      else if (gsym0.isTypeSkolem) gsym0.deSkolemize"
+  },
+  {
+    "id" : "fb4b4b06-b664-46f4-9408-eb12cdc7a9cf",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "55621a9f-81b6-4f3e-89d2-ff5a4f3ab836",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Looks like the three `isJavaClass` checks above can be replaced by a single condition in `val gsym` above. I'll experiment with this myself after merging this PR.",
+        "createdAt" : "2018-03-09T00:12:27Z",
+        "updatedAt" : "2018-03-09T00:24:15Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "25f86659-5ae6-4361-849e-b994d8b34a64",
+        "parentId" : "55621a9f-81b6-4f3e-89d2-ff5a4f3ab836",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nice job cleaning this up in #1416 ",
+        "createdAt" : "2018-03-09T11:12:05Z",
+        "updatedAt" : "2018-03-09T11:21:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 25,
+    "diffHunk" : "@@ -1,1 +123,127 @@        if (gsym.isJavaClass) {\n          gsym.companionClass.info\n        } else if (gsym.isGetter && gsym.isLazy && !gsym.isClass) {\n          gsym.info.finalResultType\n        } else if (gsym.isAliasType) {"
+  },
+  {
+    "id" : "ad48d5d3-5840-4532-8974-ffc9fca6f376",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "524cd3b1-967c-4235-8812-c27c2ab16686",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Will there ever be a use-case for this mode?",
+        "createdAt" : "2018-02-05T17:42:07Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "219182c0-7fb6-4137-a284-e2682fa7c2dd",
+        "parentId" : "524cd3b1-967c-4235-8812-c27c2ab16686",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Transition period when tools like Metals still don't have support for s.Type prettyprinting.",
+        "createdAt" : "2018-02-05T18:15:58Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "565cf566-fe81-46a1-801d-130175c36562",
+        "parentId" : "524cd3b1-967c-4235-8812-c27c2ab16686",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I feel like the transition will more likely be atomic, we throw out the pretty printing and add in s.Type.",
+        "createdAt" : "2018-02-05T18:57:40Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a1f7d512-a663-4942-b639-1e763704f826",
+        "parentId" : "524cd3b1-967c-4235-8812-c27c2ab16686",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's keep this for now. It's not like supporting this mode costs us anything apart from single-digit amount of lines of code.",
+        "createdAt" : "2018-02-05T19:04:16Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +135,139 @@          val denot = m.Denotation(flags, name, \"\", Nil, Nil, over, tpe)\n          DenotationResult(denot, todoOverrides, todoTpe)\n        case SignatureMode.All =>\n          val (signature, names) = oldInfo\n          val (tpe, todoTpe) = newInfo"
+  },
+  {
+    "id" : "dc43ee9b-cf95-42a2-b9b9-65d97d0201b3",
+    "prId" : 1257,
+    "comments" : [
+      {
+        "id" : "d9a0f4a7-8f09-487e-85aa-15f0e37edbf8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Without this, all packages get the `JAVADEFINED` flag which I found pretty excessive.",
+        "createdAt" : "2018-02-04T21:24:04Z",
+        "updatedAt" : "2018-02-04T21:24:04Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6369a4be8d03c1055fe5099c90692f4e30d17e8f",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +41,45 @@      if (maybeValOrVar && !(gsym.hasFlag(gf.LOCAL) && gsym.hasFlag(gf.PARAMACCESSOR)))\n        flags |= mf.VAL\n      if (gsym.hasFlag(gf.JAVA) && !gsym.hasFlag(gf.PACKAGE))\n        flags |= mf.JAVADEFINED\n      flags"
+  }
+]

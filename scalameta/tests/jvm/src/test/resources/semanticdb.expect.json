@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "4eb3f1e8-0757-4a94-adeb-a7bbcc9e0568",
+    "prId" : 1102,
+    "comments" : [
+      {
+        "id" : "06ef5653-6c36-48f3-9520-b3adc107a3ff",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This so sooooooo good.",
+        "createdAt" : "2017-09-01T14:29:44Z",
+        "updatedAt" : "2017-09-01T14:31:20Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6cbc62d2-0741-4b5c-830f-0378f0cbfbb4",
+        "parentId" : "06ef5653-6c36-48f3-9520-b3adc107a3ff",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "😄 ",
+        "createdAt" : "2017-09-01T14:47:21Z",
+        "updatedAt" : "2017-09-01T14:47:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b41e59222e3ba83cdca06666f60bde812162ff16",
+    "line" : 18,
+    "diffHunk" : "@@ -1,1 +35,39 @@_root_.example. => package example\n_root_.example.Example. => final object Example\n_root_.example.Example.main([Ljava/lang/String;)V. => def main: (args: Array[String]): Unit\n  [7..12): Array => _root_.scala.Array#\n  [13..19): String => _root_.scala.Predef.String#"
+  },
+  {
+    "id" : "83a0d86f-2401-414d-881c-444c2037ad99",
+    "prId" : 988,
+    "comments" : [
+      {
+        "id" : "b881443a-301a-464c-b618-93473cf95a36",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How does this work? Do we force expect tests to Scala 2.12 only?",
+        "createdAt" : "2017-07-07T03:41:07Z",
+        "updatedAt" : "2017-07-07T03:42:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2e65db3c-5612-4e2e-8f53-2e5c39aabe3c",
+        "parentId" : "b881443a-301a-464c-b618-93473cf95a36",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That's fine for me by now. We can normalize the dialect to something else if you prefer. You won't have to fix this file manually though, just run the SaveExpect... main and commit.",
+        "createdAt" : "2017-07-07T08:31:21Z",
+        "updatedAt" : "2017-07-07T08:31:21Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "313c29e0-01ea-4b4c-92b0-7a69562d2947",
+        "parentId" : "b881443a-301a-464c-b618-93473cf95a36",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "2.12 was released quite a while ago, so it's only fair that we use it as default. Also see https://github.com/scalameta/scalameta/issues/1011.",
+        "createdAt" : "2017-07-09T22:38:01Z",
+        "updatedAt" : "2017-07-09T22:38:01Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "488ac646810a094fdfc3a6ffa580539a7c79780a",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +2,6 @@----------------------------------------------------------\nDialect:\nScala212\n\nNames:"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id" : "2657963d-1577-482f-bea1-ab477773e2d7",
+    "prId" : 1225,
+    "comments" : [
+      {
+        "id" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why not publish prereleases on every merge like we did previously? In comparison with snapshots, prereleases are stable reference points (which is something that was and still is quite useful for us at Twitter).",
+        "createdAt" : "2018-01-19T17:15:04Z",
+        "updatedAt" : "2018-01-19T17:15:50Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cda2324c-962f-4930-bc06-648d8050e852",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "bintray is unstable, has file size limits, and requires different credentials and sbt plugins to work. This change is a tiny change from our current setup",
+        "createdAt" : "2018-01-19T17:19:13Z",
+        "updatedAt" : "2018-01-19T17:19:13Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5422d83c-8fdc-41c5-ac61-ce415ca086cc",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "publishing non-SNAPSHOT on every merge to maven central creates noise",
+        "createdAt" : "2018-01-19T17:19:38Z",
+        "updatedAt" : "2018-01-19T17:19:38Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1be042ca-ad57-4fe9-a848-eab7f0b334a0",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What do you mean by noise? Are we risking to run into quota issues? Is there an important webpage that would be spammed by frequent releases?",
+        "createdAt" : "2018-01-19T17:21:48Z",
+        "updatedAt" : "2018-01-19T17:21:48Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c327dffe-c7f9-4e0a-8066-9567129265c2",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "see https://github.com/scalameta/scalameta/pull/1225#issuecomment-359033250 publishing -SNAPSHOT to sonatype is logistically simpler than non-SNAPSHOT releases",
+        "createdAt" : "2018-01-19T17:37:05Z",
+        "updatedAt" : "2018-01-19T17:37:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27939c04-df08-4fe7-ab29-1749a34da751",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Okay, that's a good reason. Can you talk a bit more about the workflow?\r\n\r\n1) So, the idea is that we publish -SNAPSHOT releases to Sonatype releases but don't promote them to Maven Central?\r\n\r\n2) Can there be a possibility to run `sonatypeRelease` after all the CI jobs have finished? If there was such a possibility, would we still need -SNAPSHOT, or we would be able to switch to regular prereleases?",
+        "createdAt" : "2018-01-19T18:50:01Z",
+        "updatedAt" : "2018-01-19T18:50:01Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "65481b0a-d3e8-4db9-b1e2-6b53890c76bd",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "1. Correct, we publish -SNAPSHOT on every merge and forget about them, they never appear in search results in http://search.maven.org/, only https://oss.sonatype.org/content/repositories/snapshots/org/scalameta/\r\n\r\n2. I don't want every merge to go to maven central even if I could. I don't want them to appear on http://search.maven.org/  Stable  releases should be accompanied with a tag, changelist in GitHub releases and attributes to contributors. Stable releases should be something worth sharing on gitter/twitter.",
+        "createdAt" : "2018-01-19T19:01:09Z",
+        "updatedAt" : "2018-01-19T19:01:09Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "29b43baa-7984-49a7-9bb3-0a548f00f380",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "A stable release is still only a tag push away, I don't see any of my projects ending up depending on -SNAPSHOT releases for long periods. I intend to continue pushing tags liberally like I did this morning.",
+        "createdAt" : "2018-01-19T19:03:19Z",
+        "updatedAt" : "2018-01-19T19:03:19Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d29298f2-ff08-4517-98cf-e735e6a7905b",
+        "parentId" : "b320dfd7-57ac-4b9d-9b12-2a629066c1cd",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "> Can there be a possibility to run sonatypeRelease after all the CI jobs have finished? \r\n\r\nI think it can be done with Travis build stages, which is an experimental feature. We're using it in metals with good success.",
+        "createdAt" : "2018-01-19T19:05:11Z",
+        "updatedAt" : "2018-01-19T19:05:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "65addba315d9f5f826b80d44502952eca429234a",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +11,15 @@  else\n    sbt -Dscalameta.snapshot=true ci-publish\n  fi\nelse\n  echo \"Skipping publish, branch=$TRAVIS_BRANCH publish=$PUBLISH test=$CI_TEST\""
+  }
+]

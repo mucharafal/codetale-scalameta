@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "d6df15d7-4ce0-4402-8a43-2144a274fa2a",
+    "prId" : 1822,
+    "comments" : [
+      {
+        "id" : "e258c5f4-d3bd-4d09-8547-dac50f5964b7",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "😍 ",
+        "createdAt" : "2019-01-29T20:05:00Z",
+        "updatedAt" : "2019-01-30T08:06:17Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "80f7ad644ac37d3f71706bf89fdbae41694fbd0a",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +9,13 @@  protected[example] def m6/*example.Access#m6().*/ = ???/*scala.Predef.`???`().*/\n  def m7/*example.Access#m7().*/ = ???/*scala.Predef.`???`().*/\n}"
+  }
+]

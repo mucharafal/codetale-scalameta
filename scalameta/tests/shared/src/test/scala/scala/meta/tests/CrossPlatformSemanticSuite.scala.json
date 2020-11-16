@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "5038d95c-f26a-4df4-99a9-60db55a16ae9",
+    "prId" : 1005,
+    "comments" : [
+      {
+        "id" : "17dd3a4c-b31f-402f-b9c4-5b159e87fecd",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I admit this is a bit awkward, any suggestion that doesn't go back to `Paths`?",
+        "createdAt" : "2017-07-07T08:34:45Z",
+        "updatedAt" : "2017-07-10T13:22:49Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d6d4772e-1d03-4dff-8524-6735312a0fd0",
+        "parentId" : "17dd3a4c-b31f-402f-b9c4-5b159e87fecd",
+        "author" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "body" : "These are always a little awkward due to the fact the meaning changes before and after the =>\r\nBefore the => this is a classpath, but after, if the check is correct, it is a semanticDbPath.  Even though it reads oddly, since the if is so close to the naming I tend to name it in the case that the off is correct, which makes readability of the code after the => better.\r\nHow about \r\n```\r\nCase semanticDbPath if v.SemanticdbPaths.isSemanticdb(semanticDbPath.name) =>\r\n```\r\nAt the point of checking in isSemanticdb(...) it is really candidatePath, it may or may not be true, but if the check succeeds this is definitely a semanticDbPath, not just any path so I prefer to at least carry that information along in the name since it is not in the type.",
+        "createdAt" : "2017-07-07T19:05:35Z",
+        "updatedAt" : "2017-07-10T13:22:49Z",
+        "lastEditedBy" : {
+          "login" : "ShaneDelmore",
+          "name" : "Shane Delmore",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/4604933?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "12e54689df442e582ad929548142512d36b6f244",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +11,15 @@\n  def semanticdbs: List[AbsolutePath] = classpath.deep.collect {\n    case path if v.SemanticdbPaths.isSemanticdb(path.name) =>\n      path.base.resolve(path.name)\n  }"
+  }
+]

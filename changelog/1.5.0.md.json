@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "84cf2450-80ae-4dcc-b690-4105eb36913b",
+    "prId" : 593,
+    "comments" : [
+      {
+        "id" : "0593b213-213d-4a83-949c-05fb57a1c180",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What's a property-based test?",
+        "createdAt" : "2017-01-24T18:16:59Z",
+        "updatedAt" : "2017-01-24T18:25:55Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9d700cf1-6d60-4e58-90e8-0c4a3276d405",
+        "parentId" : "0593b213-213d-4a83-949c-05fb57a1c180",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "[See here](http://letmegooglethat.com/?q=property+based+testing)",
+        "createdAt" : "2017-01-24T18:24:59Z",
+        "updatedAt" : "2017-01-24T18:25:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "146d852d-e64d-4a17-9e8e-fc7debbed05d",
+        "parentId" : "0593b213-213d-4a83-949c-05fb57a1c180",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "hehe :p sry, do you think it needs more explanation?",
+        "createdAt" : "2017-01-24T18:26:26Z",
+        "updatedAt" : "2017-01-24T18:26:26Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f4800381-5d90-4539-95a0-ccbd30bc0429",
+        "parentId" : "0593b213-213d-4a83-949c-05fb57a1c180",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Just a URL should be enough, so that we're sure that people reading the notes understand what's going on :)",
+        "createdAt" : "2017-01-24T18:28:35Z",
+        "updatedAt" : "2017-01-24T18:28:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "32f1ec816f22e2e6121aeff42149ec48bbfe37d6",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +3,7 @@## `testkit`\n\n  * `testkit` is a new module that can be used to run property-based tests\n    on real-world Scala source files. The corpus consists of around 27k source files.\n  * [Here](https://github.com/scalameta/scalameta/blob/92e416d6905b78f3dcbbd76c82b14f33eb88e0a0/scalameta/testkit/src/test/scala/scala/meta/testkit/ScalametaParserProperties.scala) is an example of how we use `testkit` to test the scala.meta parser."
+  }
+]

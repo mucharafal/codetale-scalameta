@@ -1,0 +1,323 @@
+[
+  {
+    "id" : "fb3af468-d37f-415e-874b-464a5a7376b2",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "a3ac031b-3048-44c0-8d30-d9aa70a9e9fc",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm not convinced we should hardcode protobuf serialization into the `codecs` package. It's not unimaginable to think that we would want to use alternative serialization formats in the future, and that would mean that we have to move this code again. What do you think about moving this into a `protobuf` package?",
+        "createdAt" : "2017-04-21T08:25:05Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6001601e-2a02-44ea-8b66-e831f2ae01de",
+        "parentId" : "a3ac031b-3048-44c0-8d30-d9aa70a9e9fc",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Will do.",
+        "createdAt" : "2017-04-27T23:14:59Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "21aef575-e840-4116-b98e-401353d1d8e6",
+        "parentId" : "a3ac031b-3048-44c0-8d30-d9aa70a9e9fc",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "We'll have to discuss #799 separately and come up with a fix in a different PR. In this pull request, I only plan to rename the package, nothing beyond that.",
+        "createdAt" : "2017-04-27T23:18:02Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@import scala.meta.internal.semantic.{proto => p}\n\npackage object codecs {\n  implicit class XtensionProtoSerializable[A](val a: A) extends AnyVal {\n    def toMeta[B](implicit ev: ProtoDecoder[B, A]): B = ev.fromProto(a)"
+  },
+  {
+    "id" : "06c2dcfa-2b0a-43b8-8e6a-de82f0d67ed5",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "d3c5ac9e-5ebe-4d10-9845-b4db1378d788",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we move all of these nested encoders into the top-level? It's a bit difficult to follow the code for AttributedSourceCodec because there are 4 encoders defined the case body. We should try to keep each encoder/decoder as small as possible.",
+        "createdAt" : "2017-04-27T08:07:08Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "285620e6-9297-48f0-8600-436c4d89afd8",
+        "parentId" : "d3c5ac9e-5ebe-4d10-9845-b4db1378d788",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I don't think we can, because they require `path` from `m.AttributedSource` to be in scope. I learned this the hard way by implementing them at the top level first :)",
+        "createdAt" : "2017-04-28T00:31:41Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "06003d12-aa78-41ec-aa29-b1c9135062a7",
+        "parentId" : "d3c5ac9e-5ebe-4d10-9845-b4db1378d788",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I don't see which one needs `path`.\r\n\r\nIf they all need a path, how about making them `def resolvedNameEncoder(path: ...): ProtoEncoder`? That would make this dependency clearer.\r\n\r\nThis is just nitpick. In general, I'm not a fan of\r\n\r\n```scala\r\ndef foo(a: A) = {\r\n  def bar ...\r\n  def kaz = ... bar ...\r\n  def banan(a: A) = ... // many more lines\r\n  banan(a)\r\n}\r\n```\r\nWhen the internal helper methods span multiple lines it gets hard to track that `foo` is implemented as a one-liner.",
+        "createdAt" : "2017-04-29T10:50:29Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "254aecef-08fa-4481-9d77-63cde303180e",
+        "parentId" : "d3c5ac9e-5ebe-4d10-9845-b4db1378d788",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Let's put this discussion on hold. I'm happy to open a followup PR showing what reorganization I'd like to make.",
+        "createdAt" : "2017-04-29T11:23:47Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "2aa96411-32fb-458d-9c88-8d317b8a72cd",
+        "parentId" : "d3c5ac9e-5ebe-4d10-9845-b4db1378d788",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Allright. Thanks a lot for the input here and in general in the review!",
+        "createdAt" : "2017-04-29T13:31:07Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +17,21 @@      override def toProto(e: m.AttributedSource): p.AttributedSource = e match {\n        case m.AttributedSource(path, names, messages, denotations, sugars) =>\n          implicit val resolvedNameEncoder = new ProtoEncoder[(m.Anchor, m.Symbol), p.ResolvedName] {\n            override def toProto(e: (m.Anchor, m.Symbol)): p.ResolvedName = e match {\n              case (m.Anchor(_, start, end), symbol) =>"
+  },
+  {
+    "id" : "0d728799-a5c9-4f5e-9fa6-ad1077a1a11c",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "50d83f7e-3abc-48f5-9593-1696fc55fc20",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Following discussions in https://github.com/scalameta/scalameta/issues/777 \r\n\r\nWe will need to have a a `sourceRoot: AbsolutePath` available in scope in order to turn `p.AttributedSource.path/relative_path: String` to construct an AbsolutePath.",
+        "createdAt" : "2017-04-27T08:16:58Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +13,17 @@  }\n\n  implicit val AttributedSourceCodec: ProtoCodec[m.AttributedSource, p.AttributedSource] =\n    new ProtoCodec[m.AttributedSource, p.AttributedSource] {\n      override def toProto(e: m.AttributedSource): p.AttributedSource = e match {"
+  },
+  {
+    "id" : "c9affe39-3687-4760-a8e4-ef34d09ff349",
+    "prId" : 808,
+    "comments" : [
+      {
+        "id" : "d26c8620-4747-444d-a018-6669a0a41adc",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think this needs to become a \r\n\r\n```scala\r\ndef DatabaseCodec(sourceRoot: AbsolutePath): ProtoCodec[m.Database, p.Database]\r\n```\r\n",
+        "createdAt" : "2017-04-27T08:19:07Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c802537e-3dea-48dd-b960-7575471467bc",
+        "parentId" : "d26c8620-4747-444d-a018-6669a0a41adc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It doesn't have to be implicit, we can construct it manually by hand since it's only used in two places.",
+        "createdAt" : "2017-04-27T08:19:32Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b09b9746-23a4-4328-a56e-41579a6236a2",
+        "parentId" : "d26c8620-4747-444d-a018-6669a0a41adc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Alternatively, we could wrap all of the encoders/decoders into a class\r\n\r\n```scala\r\nclass DatabaseCodecs(sourceRoot: AbsolutePath) {\r\n  implicit val DatabaseCodec: ProtoCodec[m.Database, p.Database]\r\n}\r\n```\r\n\r\nThis would avoid having to pass around the sourceRoot between codecs. ",
+        "createdAt" : "2017-04-27T08:21:00Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "28210d9d-494c-4ee3-9346-0f8d31a6c821",
+        "parentId" : "d26c8620-4747-444d-a018-6669a0a41adc",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Probably not `AbsolutePath` but `Multipath`, i.e. a sourcepath.",
+        "createdAt" : "2017-04-28T00:32:24Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7422d403-d9bd-4d51-91e9-ba610195afda",
+        "parentId" : "d26c8620-4747-444d-a018-6669a0a41adc",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Why a multipath? The database contains relative paths\r\n\r\n```\r\nfoo/Bar.scala\r\nNames:\r\naa => _root_.a.\r\n```\r\nHow do absolutize `foo/Bar.scala` if source root can be multiple directories?\r\n\r\nBtw, what do you think about creating a `@data class Multipath(files: Seq[URI])`? I think `String.split(File.pathSeparator)/.mkstring(File.pathSeparator)` is a poor interface for something that has a clear type.",
+        "createdAt" : "2017-04-29T10:54:58Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cad81600-1606-4044-bf53-d274fca53048",
+        "parentId" : "d26c8620-4747-444d-a018-6669a0a41adc",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Agreed and agreed. As discussed via hangouts, I'll soon submit a follow-up commit that fixes #777 and features some additional good stuff.",
+        "createdAt" : "2017-04-29T13:34:03Z",
+        "updatedAt" : "2017-04-30T04:14:02Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "ac448f5c9b3250ede75f1d0a84fb0a036943da36",
+    "line" : 91,
+    "diffHunk" : "@@ -1,1 +89,93 @@    }\n\n  implicit val DatabaseCodec: ProtoCodec[m.Database, p.Database] =\n    new ProtoCodec[m.Database, p.Database] {\n      override def toProto(e: m.Database): p.Database = e match {"
+  }
+]

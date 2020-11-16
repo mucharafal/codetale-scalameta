@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "5245f45e-8ee8-47d1-817f-ad15d3461a57",
+    "prId" : 748,
+    "comments" : [
+      {
+        "id" : "51d60f40-be62-4a24-8220-a04f9fef9777",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Nice!",
+        "createdAt" : "2017-03-15T17:58:51Z",
+        "updatedAt" : "2017-03-15T22:11:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7ebedc4580ffc91ea45155279b688f37f0c43b95",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +86,90 @@    val database = unit.asInstanceOf[mirror.g.CompilationUnit].toDatabase\n    assertDatabaseSerializationIsBijective(database)\n    database\n  }\n"
+  }
+]

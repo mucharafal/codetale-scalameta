@@ -1,0 +1,283 @@
+[
+  {
+    "id" : "926558f2-e880-40e9-b425-96900fa66b31",
+    "prId" : 1743,
+    "comments" : [
+      {
+        "id" : "a9c90957-1771-49d2-b3f1-5df05f7060bb",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Let's also mention that this can be a jar?",
+        "createdAt" : "2018-08-08T17:30:25Z",
+        "updatedAt" : "2018-08-08T19:30:42Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "6c43d11e-0654-4539-ae45-47fe33e9f332",
+        "parentId" : "a9c90957-1771-49d2-b3f1-5df05f7060bb",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "That's not implemented in this PR, there are complications related to when to open/close the jar file system. I decided to leave it for a future PR when I have a use-case for it.",
+        "createdAt" : "2018-08-08T18:31:18Z",
+        "updatedAt" : "2018-08-08T19:36:05Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b9e64ef770e5af1853a6334977620aa0ac707c4",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +270,274 @@    <td>\n      The output directory to produce <code>META-INF/semanticdb/**/*.semanticdb</code>\n      files.\n    </td>\n    <td>"
+  },
+  {
+    "id" : "5aa80abe-4dde-4920-a26e-1936e9894dd9",
+    "prId" : 1743,
+    "comments" : [
+      {
+        "id" : "647fd158-8ac9-4f94-916c-dfcb313cba1f",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Is the new `SymbolMode` intentionally undocumented?",
+        "createdAt" : "2018-08-08T17:40:14Z",
+        "updatedAt" : "2018-08-08T19:30:42Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c9aac33-49eb-470e-87d5-a97bb58776c9",
+        "parentId" : "647fd158-8ac9-4f94-916c-dfcb313cba1f",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good catch, it's documented now.",
+        "createdAt" : "2018-08-08T19:11:36Z",
+        "updatedAt" : "2018-08-08T19:36:06Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b9e64ef770e5af1853a6334977620aa0ac707c4",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +276,280 @@      and scalac command-line option <code>-d</code>.\n    </td>\n  </tr>\n  <tr>\n    <td><code>-P:semanticdb:text:&lt;value&gt;</code></td>"
+  },
+  {
+    "id" : "8d1ba347-d94e-4c24-9d61-6262b3b1f7ec",
+    "prId" : 1668,
+    "comments" : [
+      {
+        "id" : "7232c4bb-9089-4462-99fb-a6154f3271a6",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "This command will cause problems since --dependency-classpath is missing. Metacp doesn't even infer JDK jars by default. I think we can improve on metacp cli ergonomics.",
+        "createdAt" : "2018-07-04T07:16:52Z",
+        "updatedAt" : "2018-07-04T07:22:46Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "061e054c01e7dded493ed5381e009fe96ab8b023",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +43,47 @@```bash\nalias metac=\"coursier launch org.scalameta:metac_2.12.6:4.0.0-M5 -- -cp $(coursier fetch -p org.scala-lang:scala-library:2.12.6)\"\nalias metacp=\"coursier launch org.scalameta:metacp_2.12:4.0.0-M5 --\"\nalias metap=\"coursier launch org.scalameta:metap_2.11:4.0.0-M5 --\"\n```"
+  },
+  {
+    "id" : "1cb150da-7073-4eba-9af4-0e40b42aa3b7",
+    "prId" : 1567,
+    "comments" : [
+      {
+        "id" : "aeffcd8a-3dd0-453b-b5fa-36ae12d8d97f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It's not clear from the table above that the values come after a colon with the syntax `-P:semanticdb:<flag>:<value>`. WDYT about including basic examples below the table?\r\n\r\nExamples:\r\n```\r\n-P:semanticdb:synthetics:none   # Don't emit synthetics\r\n-P:semanticdb:mode:slim         # Don't include full text contents of source files\r\n-P:semanticdb:exclude:Foo.scala # Skip files matching `Foo.scala`\r\n```\r\n",
+        "createdAt" : "2018-05-28T06:24:42Z",
+        "updatedAt" : "2018-05-28T21:49:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a75e08ede40481baf2d559b042b3cde611277b91",
+    "line" : 344,
+    "diffHunk" : "@@ -1,1 +342,346 @@    <td><code>all</code></td>\n  </tr>\n</table>\n\n`semanticdb-scalac` can be hooked into Scala builds in a number of ways."
+  },
+  {
+    "id" : "253f4bb9-ec6c-401e-af0d-747e501213f9",
+    "prId" : 1567,
+    "comments" : [
+      {
+        "id" : "7f9331c7-f6d3-465c-b6e5-e1f2d2e5d938",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Let's put `metap` above `protoc`, the ordering of sections implicitly implies relevance/importance",
+        "createdAt" : "2018-05-28T06:33:05Z",
+        "updatedAt" : "2018-05-28T21:49:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a75e08ede40481baf2d559b042b3cde611277b91",
+    "line" : 649,
+    "diffHunk" : "@@ -1,1 +647,651 @@```\n\n`protoc` was useful for getting things done in the early days of SemanticDB,\nbut nowadays it's a bit too low-level. It is recommended to use `metap`\ninstead of `protoc`."
+  },
+  {
+    "id" : "d79b2b61-21e2-4c14-ae24-6fa16b456dfc",
+    "prId" : 1567,
+    "comments" : [
+      {
+        "id" : "07b0d601-8175-49d0-81d6-7bcf21016992",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "bravo 👏 you figured out the mystical incantation to get this working 😂 \r\n\r\nI probably spent 10-20 minutes trying to figure out until I gave up. \r\n\r\nNot sure if it's worth documenting, but I have the following alias in my machine\r\n```\r\nalias semanticdb=\"protoc --decode_raw\"\r\n```\r\nand use it like this\r\n```\r\ncat foo.semanticdb | semanticdb\r\n```",
+        "createdAt" : "2018-05-28T06:37:52Z",
+        "updatedAt" : "2018-05-28T21:49:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a75e08ede40481baf2d559b042b3cde611277b91",
+    "line" : 620,
+    "diffHunk" : "@@ -1,1 +618,622 @@└── Test.scala\n\n$ protoc --proto_path <directory with the .proto file>\\\n--decode scala.meta.internal.semanticdb3.TextDocuments\\\nsemanticdb3.proto < META-INF/semanticdb/Test.scala.semanticdb"
+  },
+  {
+    "id" : "6dfbdd8b-caf2-4b0c-9904-f9afeb298eb6",
+    "prId" : 1567,
+    "comments" : [
+      {
+        "id" : "5c237b4e-d4f4-40b1-ab52-747dc7c94202",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Missing trailing comma",
+        "createdAt" : "2018-05-28T21:37:58Z",
+        "updatedAt" : "2018-05-28T21:49:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1f398aaa-54d9-4000-9948-2a04be836241",
+        "parentId" : "5c237b4e-d4f4-40b1-ab52-747dc7c94202",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Oops, I didn't mean for trailing commas to be a thing.",
+        "createdAt" : "2018-05-28T21:49:57Z",
+        "updatedAt" : "2018-05-28T21:49:58Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a75e08ede40481baf2d559b042b3cde611277b91",
+    "line" : 229,
+    "diffHunk" : "@@ -1,1 +227,231 @@    <td>\n        <code>fat</code>,<br/>\n        <code>slim</code>\n    </td>\n    <td>"
+  },
+  {
+    "id" : "10cac53f-aefa-4e09-825a-7cd94a0b985e",
+    "prId" : 1567,
+    "comments" : [
+      {
+        "id" : "d132ce43-e3a8-4f81-8ba0-d3ddf6e57c56",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Missing trailing comma",
+        "createdAt" : "2018-05-28T21:38:28Z",
+        "updatedAt" : "2018-05-28T21:49:52Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a75e08ede40481baf2d559b042b3cde611277b91",
+    "line" : 244,
+    "diffHunk" : "@@ -1,1 +242,246 @@      <code>warning</code>,<br/>\n      <code>info</code>,<br/>\n      <code>ignore</code></td>\n    <td>\n      The level at which the Scala compiler should report failures arise during"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "b433ef2e-5ed1-4841-ab01-ac151c26a8a6",
+    "prId" : 1506,
+    "comments" : [
+      {
+        "id" : "a0fb9899-7e8d-49bd-abdf-bfe50f8df312",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I like the new name :+1:",
+        "createdAt" : "2018-04-22T22:57:27Z",
+        "updatedAt" : "2018-04-24T07:20:44Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8bbfa5fdaef97e3097cd8450a470bbdc750df482",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3,7 @@import scala.meta.internal.{semanticdb3 => s}\n\ntrait AnnotationOps { self: SemanticdbOps =>\n\n  implicit class XtensionAnnotationInfo(gann: g.AnnotationInfo) {"
+  }
+]

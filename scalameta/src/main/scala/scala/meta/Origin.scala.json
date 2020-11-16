@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "daf353d1-04c8-45dd-805e-71567e7b30ae",
+    "prId" : 128,
+    "comments" : [
+      {
+        "id" : "88cd5066-334b-440c-a115-f5f97475a6fa",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think it'd be useful to also add these methods to https://github.com/xeno-by/scalameta/blob/master/scalameta/src/main/scala/scala/meta/syntactic/Api.scala#L48.\n",
+        "createdAt" : "2015-04-05T07:27:13Z",
+        "updatedAt" : "2015-04-05T13:14:05Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a51f0e26f8fbc5fd4214e12207575f7dff47ce85",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +12,16 @@  def end: Int\n  def startLine: Int\n  def endLine: Int\n  def tokens: Seq[Token]\n}"
+  },
+  {
+    "id" : "00813f6b-c6e9-4eae-ab4f-b0d46af92ac7",
+    "prId" : 128,
+    "comments" : [
+      {
+        "id" : "4a03a9cd-85ea-410a-9114-6da8ea36c8fe",
+        "parentId" : null,
+        "author" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "body" : "This looks like `O(n)` every time you call it where `n` is number of preceding tokens. And for all trees it's going to be `O(n!)`. Scary.\n",
+        "createdAt" : "2015-04-07T10:11:23Z",
+        "updatedAt" : "2015-04-07T10:11:29Z",
+        "lastEditedBy" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5686b732-77de-420b-a624-7143a9beb9f5",
+        "parentId" : "4a03a9cd-85ea-410a-9114-6da8ea36c8fe",
+        "author" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "body" : "A simply way to avoid that would be to have `lazy vals`, since startLine and endLine might not be used much.\n",
+        "createdAt" : "2015-04-07T10:15:47Z",
+        "updatedAt" : "2015-04-07T10:15:47Z",
+        "lastEditedBy" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "1dd36b13-25a7-4c45-a683-efe8edfc3f48",
+        "parentId" : "4a03a9cd-85ea-410a-9114-6da8ea36c8fe",
+        "author" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "body" : "I think making it a `lazy val` or even `def` should be an improvement. \n",
+        "createdAt" : "2015-04-07T10:17:32Z",
+        "updatedAt" : "2015-04-07T10:17:32Z",
+        "lastEditedBy" : {
+          "login" : "densh",
+          "name" : "Denys Shabalin",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/320966?u=784f6f761f35b8b7f3f787172b468334d6524524&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8b49f9e6-44b9-469a-8b5c-719b477ee712",
+        "parentId" : "4a03a9cd-85ea-410a-9114-6da8ea36c8fe",
+        "author" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "body" : "Done in https://github.com/scalameta/scalameta/pull/129.\n",
+        "createdAt" : "2015-04-07T10:34:59Z",
+        "updatedAt" : "2015-04-07T10:34:59Z",
+        "lastEditedBy" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a51f0e26f8fbc5fd4214e12207575f7dff47ce85",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +45,49 @@    }\n    val startLine = findLine(start, 0)\n    val endLine = findLine(end, -1)\n\n    def tokens: Seq[Token] = input.tokens(dialect).slice(startTokenPos, endTokenPos + 1)"
+  }
+]

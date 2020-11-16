@@ -1,0 +1,87 @@
+[
+  {
+    "id" : "7f9bfd99-53b8-4e90-ad3c-bb106a1fd051",
+    "prId" : 1000,
+    "comments" : [
+      {
+        "id" : "5050e48e-3207-4bbf-bb48-60eb6b0e9cec",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can we reuse one of the existing inputs for this?",
+        "createdAt" : "2017-07-09T22:58:35Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b58bdbe9-033a-4efc-bce7-8d460e864a96",
+        "parentId" : "5050e48e-3207-4bbf-bb48-60eb6b0e9cec",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I don't think so, we need each sugar input to have a unique hashcode. \r\n\r\n- Input.String does not cut it\r\n- Input.File makes no sense\r\n- Input.LabeledString maybe, but that would mean serializing the underlying input and range positions in the label as strings. That feels like a hack IMO.\r\n- Input.Slice, doesn't work because `.chars` must contain the sugar contents, not the underlying input.",
+        "createdAt" : "2017-07-10T08:17:10Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d2c89d4e-0ea8-4fac-b415-cf00f14ab7fd",
+        "parentId" : "5050e48e-3207-4bbf-bb48-60eb6b0e9cec",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think sugars are important enough to our semantic model to merit a custom input.",
+        "createdAt" : "2017-07-10T08:20:29Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a2613703-92cf-4554-be4b-41b911dc4a51",
+        "parentId" : "5050e48e-3207-4bbf-bb48-60eb6b0e9cec",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I agree.",
+        "createdAt" : "2017-07-10T15:23:53Z",
+        "updatedAt" : "2017-07-10T16:13:10Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "f02787558f288424196edc1806705543a14be6d6",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +65,69 @@      |scala.meta.inputs.Input.Stream\n      |scala.meta.inputs.Input.String\n      |scala.meta.inputs.Input.Sugar\n      |scala.meta.inputs.Position\n      |scala.meta.inputs.Position.None"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "55c64cde-a970-4590-b4a8-2bdc225416d6",
+    "prId" : 132,
+    "comments" : [
+      {
+        "id" : "1afb9f37-abd6-4a68-95be-105131b9436a",
+        "parentId" : null,
+        "author" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "body" : "Makes sense! Off topic: I have checked this with the bug I have with https://github.com/mdemarne/scalameta/blob/f0aeadf75fe49a5f009160b1a06ce9e3620ff60f/tests/src/test/scala/tql/TQLOriginSuite.scala, and it's going through there, so I would think that somehow something is not done properly in copying a tree, i.e. https://github.com/mdemarne/scalameta/blob/master/scalameta/src/main/scala/scala/meta/internal/tql/TraverserHelper.scala#L25 is sometimes true; the tree has changed (even with collect { ... } which copies the tree as is in https://github.com/mdemarne/scalameta/blob/master/scalameta/src/main/scala/scala/meta/tql/Combinators.scala#L174).\n",
+        "createdAt" : "2015-05-05T07:52:18Z",
+        "updatedAt" : "2015-05-05T07:52:18Z",
+        "lastEditedBy" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "351560875a580299fb3a052d778b8a6a2fb3bf15",
+    "line" : 255,
+    "diffHunk" : "@@ -1,1 +247,251 @@    else\n      scala.None;\n    def origin: scala.meta.Origin = {\n      if (Impl.this.internalOrigin.==(null))\n        Impl.this.internalOrigin_=(scala.meta.Origin.Synthetic.apply(this))"
+  }
+]

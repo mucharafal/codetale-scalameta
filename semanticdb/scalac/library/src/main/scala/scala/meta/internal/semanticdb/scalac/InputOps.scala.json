@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "c6df31dc-cf39-4f5d-8834-4949d20096e4",
+    "prId" : 1890,
+    "comments" : [
+      {
+        "id" : "b3c27635-1c0d-49ee-8207-d05d64f75892",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The SemanticDB compiler plugin doesn't reaaly work with virtual files either way since it uses java.io.File and nio.file.Path in a lot of places.",
+        "createdAt" : "2019-08-15T14:51:25Z",
+        "updatedAt" : "2019-08-15T15:35:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "521aa43e580edade95f1ed6f9c9beb639640f93d",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +34,38 @@        gfile.file.toPath.startsWith(config.sourceroot.toNIO)\n      case _: VirtualFile =>\n        true // Would anyone go to the trouble of building a VirtualFile that's outside of sourceroot?\n      case _ =>\n        false"
+  },
+  {
+    "id" : "f62fce4a-341d-43ed-a70c-d202439dfc0e",
+    "prId" : 1743,
+    "comments" : [
+      {
+        "id" : "8c480df2-6206-4abb-a6cb-f16305f6128d",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Nice catch 👍 ",
+        "createdAt" : "2018-08-08T17:41:56Z",
+        "updatedAt" : "2018-08-08T19:30:42Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7b9e64ef770e5af1853a6334977620aa0ac707c4",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +15,19 @@trait InputOps { self: SemanticdbOps =>\n\n  lazy val gSourceFileInputCache = mutable.Map[GSourceFile, m.Input]()\n  implicit class XtensionGSourceFileInput(gsource: GSourceFile) {\n    def toUri: String = toInput match {"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "a7e0d585-e8ad-4eaf-a89b-c61e423f0653",
+    "prId" : 702,
+    "comments" : [
+      {
+        "id" : "b118a579-ddea-4e6a-8a5a-15f7825a194f",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Nice! This is a thing of beauty.",
+        "createdAt" : "2017-02-26T16:33:10Z",
+        "updatedAt" : "2017-02-28T08:41:22Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3794cdb806af8f1eb10067da09f8841cbaa071cb",
+    "line" : 49,
+    "diffHunk" : "@@ -1,1 +3,7 @@import scala.meta.contrib.implicits.{Converters, Equality, TreeExtensions}\n\npackage object contrib\n  extends TreeExtensions\n  with Equality"
+  }
+]

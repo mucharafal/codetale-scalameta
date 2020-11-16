@@ -1,0 +1,68 @@
+[
+  {
+    "id" : "5cb11cab-bd65-4189-a3c3-17d8270ff32c",
+    "prId" : 1376,
+    "comments" : [
+      {
+        "id" : "7e50084b-4343-4049-9150-3590289f0aa5",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I'm concerned about the spread of logic around handling symbol strings. I'm not convinced this bare bones approach is sustainable given how easy it is to mess up and lack of static checks to help you prevent do mistakes. ",
+        "createdAt" : "2018-02-28T13:19:21Z",
+        "updatedAt" : "2018-02-28T13:24:11Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "514d9b3a-eae1-4d58-bb65-b9ba76139a68",
+        "parentId" : "7e50084b-4343-4049-9150-3590289f0aa5",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Yep. We'll need to refactor all that once the dust settles. I'm not doing the refactoring right now to be sure we collect enough use cases and don't overengineer the API.",
+        "createdAt" : "2018-02-28T15:32:25Z",
+        "updatedAt" : "2018-02-28T15:32:25Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3743eb14-908b-41c5-8a85-41b9509df92b",
+        "parentId" : "7e50084b-4343-4049-9150-3590289f0aa5",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1381",
+        "createdAt" : "2018-02-28T15:34:31Z",
+        "updatedAt" : "2018-02-28T15:34:31Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "452b259e539064f1eedb9d397712e9a524d97f1f",
+    "line" : 113,
+    "diffHunk" : "@@ -1,1 +111,115 @@    val disambiguator = {\n      val paramTypeDescriptors = paramDsls.map(_._2).map { symbol =>\n        // TODO: It would be nice to have a symbol parser in semanticdb3.\n        val _ :+ last = symbol.split(\"[\\\\.|#]\").toList\n        val last1 = last.stripPrefix(\"(\").stripPrefix(\"[\")"
+  }
+]

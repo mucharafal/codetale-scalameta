@@ -1,0 +1,115 @@
+[
+  {
+    "id" : "12f4c82c-5f9a-4c7e-9a0b-0ed4cc607e8c",
+    "prId" : 1102,
+    "comments" : [
+      {
+        "id" : "8bff55fd-06b5-4393-a241-ed05b2374504",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Why's that? We can use Type.Bounds here, I think, wrapped in a Type.Lambda if necessary.",
+        "createdAt" : "2017-09-01T14:27:06Z",
+        "updatedAt" : "2017-09-01T14:31:20Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c29ca47e-62e5-48c0-8037-b394625217b4",
+        "parentId" : "8bff55fd-06b5-4393-a241-ed05b2374504",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I thought it would be best to skip these since I have no need for them at the moment, we can handle them later if they turn out to be useful.",
+        "createdAt" : "2017-09-01T14:48:17Z",
+        "updatedAt" : "2017-09-01T14:48:17Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b41e59222e3ba83cdca06666f60bde812162ff16",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +12,16 @@\n  def showSynthetic(tpe: g.Type): AttributedSynthetic = tpe match {\n    // Skip signature for abstract type members, e.g. type T <: Int\n    case g.TypeBounds(_, _) => AttributedSynthetic.empty\n    case _ => showSynthetic(g.TypeTree(tpe))"
+  },
+  {
+    "id" : "74ef98df-ce60-4621-a011-db8c665f1b82",
+    "prId" : 1102,
+    "comments" : [
+      {
+        "id" : "fa6fdfee-eb00-4952-bf79-9fac54cd2116",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "How about `: $result`?",
+        "createdAt" : "2017-09-01T14:28:02Z",
+        "updatedAt" : "2017-09-01T14:31:20Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "455dd832-3034-44b2-9c9d-4ba63aae4ea3",
+        "parentId" : "fa6fdfee-eb00-4952-bf79-9fac54cd2116",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good idea, but it seems to trigger for `val`s too. I propose we keep it unchanged since this is enough to get ExplicitReturnTypes working for defs, but consider adding this later for `def`s.",
+        "createdAt" : "2017-09-01T14:47:16Z",
+        "updatedAt" : "2017-09-01T14:47:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "474db727-248f-41e7-b189-b8af39ffef62",
+        "parentId" : "fa6fdfee-eb00-4952-bf79-9fac54cd2116",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Should I open an issue for this? I agree the denotation.signature for nullary methods should be `Type.Method(Nil, _)`",
+        "createdAt" : "2017-09-01T14:49:20Z",
+        "updatedAt" : "2017-09-01T14:49:20Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b41e59222e3ba83cdca06666f60bde812162ff16",
+    "line" : 75,
+    "diffHunk" : "@@ -1,1 +369,373 @@          this.printType(result)\n        case NullaryMethodType(result) =>\n          printType(result)\n        case PolyType(tparams, result) =>\n          wrapped(tparams, \"[\", \"] => \")(s => this.print(s.decodedName))"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "2ae15079-dfc6-4f42-afb9-f3a8e10aa4a0",
+    "prId" : 1059,
+    "comments" : [
+      {
+        "id" : "8f7c102e-8c6a-4835-9222-9a8824afc104",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "cool this works!",
+        "createdAt" : "2017-08-07T08:17:34Z",
+        "updatedAt" : "2017-08-07T08:36:56Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e8013d78f4a7e7232f6428c27cb9ce5d370a0d07",
+    "line" : 75,
+    "diffHunk" : "@@ -1,1 +93,97 @@  def isNode = !js.isUndefined(process) && !js.isUndefined(process.cwd)\n  private[io] lazy val module: JSModules = js.Dynamic.global.asInstanceOf[JSModules]\n  lazy val fs: JSFs = module.require(\"fs\")\n  lazy val path: JSPath = module.require(\"path\")\n"
+  }
+]

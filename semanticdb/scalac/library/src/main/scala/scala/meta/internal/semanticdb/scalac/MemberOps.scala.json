@@ -1,0 +1,106 @@
+[
+  {
+    "id" : "c03bf4d3-6c6c-46ca-9a5e-adab0ff29b0f",
+    "prId" : 1259,
+    "comments" : [
+      {
+        "id" : "bcf81f90-76da-45cd-b757-008673f98038",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Looking forward to remove this hack!",
+        "createdAt" : "2018-02-05T17:42:42Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d79ec065-b3ef-481d-b0d6-a5444f94c8ee",
+        "parentId" : "bcf81f90-76da-45cd-b757-008673f98038",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Can we add `@deprecated` to remind us to remove this someday?",
+        "createdAt" : "2018-02-05T17:43:12Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d251e9a9-9fa8-404a-a9d1-bbd0300163d2",
+        "parentId" : "bcf81f90-76da-45cd-b757-008673f98038",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Done.",
+        "createdAt" : "2018-02-05T18:17:53Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "51ccae7e-bddb-4929-872f-98bbcc5e8ab8",
+        "parentId" : "bcf81f90-76da-45cd-b757-008673f98038",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "The build fails now, because we have fatal warnings. I'll open a ticket.",
+        "createdAt" : "2018-02-05T19:11:23Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "982363b6-d7b9-437b-b461-c3a8a1f7db87",
+        "parentId" : "bcf81f90-76da-45cd-b757-008673f98038",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "https://github.com/scalameta/scalameta/issues/1261",
+        "createdAt" : "2018-02-05T20:35:28Z",
+        "updatedAt" : "2018-02-05T21:04:24Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "dfafd4238974683ed888ce24c52bd0fa4de7aa33",
+    "line" : 31,
+    "diffHunk" : "@@ -1,1 +29,33 @@\n  implicit class XtensionGTypeMSignatures(tpe: g.Type) {\n    def lookupMembers: List[m.Signature] = {\n      val buffer = List.newBuilder[m.Signature]\n      tpe.members.iterator.filterNot(s => ignoreName(s.name)).foreach { s =>"
+  }
+]

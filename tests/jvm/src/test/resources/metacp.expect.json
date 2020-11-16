@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "e90e02e8-c251-4553-be05-fce880bde963",
+    "prId" : 1414,
+    "comments" : [
+      {
+        "id" : "e1acff98-e510-4ebc-8ec4-3281f560c9c8",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "This is out of sync with javacp. Do you think that should be a blocker, or we can open a ticket for the future?",
+        "createdAt" : "2018-03-09T00:20:10Z",
+        "updatedAt" : "2018-03-09T00:24:16Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "05878a86-febe-4e99-bd47-88b05cbe3529",
+        "parentId" : "e1acff98-e510-4ebc-8ec4-3281f560c9c8",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Good catch! Looking at the diff it seems metac emits too duplicate symbols for inner classes, which is a bug but not a blocker\r\n\r\n```diff\r\n============================\r\n_root_.com.javacp.MetacJava#\r\n============================\r\n--- metac\r\n+++ metacp\r\n     declarations: \"_root_.com.javacp.MetacJava#`<init>`().\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#Overload1#\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#Overload1#\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#Overload2#\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#Overload2#\"\r\n     declarations: \"_root_.com.javacp.MetacJava#overload(A+1).\"\r\n     declarations: \"_root_.com.javacp.MetacJava#overload(A+2).\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#StaticInner#\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#StaticInner#\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#Overload3#\"\r\n-    declarations: \"_root_.com.javacp.MetacJava#Overload3#\"\r\n     declarations: \"_root_.com.javacp.MetacJava#overload(A+3).\"\r\n+    declarations: \"_root_.com.javacp.MetacJava#Overload2#\"\r\n+    declarations: \"_root_.com.javacp.MetacJava#Overload3#\"\r\n+    declarations: \"_root_.com.javacp.MetacJava#Overload1#\"\r\n+    declarations: \"_root_.com.javacp.MetacJava#StaticInner#\"\r\n accessibility {\r\n```\r\n\r\nTracked in #1411",
+        "createdAt" : "2018-03-09T11:19:44Z",
+        "updatedAt" : "2018-03-09T11:21:04Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "cb302a4761255026e7932da0feff1aa9ca82ec85",
+    "line" : 93,
+    "diffHunk" : "@@ -1,1 +317,321 @@_root_.com. => package com\n_root_.com.javacp. => package javacp\n_root_.com.javacp.MetacJava# => class MetacJava.{+8 decls}\n  extends Object\n_root_.com.javacp.MetacJava#Overload1# => class Overload1.{+2 decls}"
+  }
+]

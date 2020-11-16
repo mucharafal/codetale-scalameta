@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "23396eb7-7430-49e1-9d66-26125035a7de",
+    "prId" : 680,
+    "comments" : [
+      {
+        "id" : "2cd2cb61-fe3f-4d79-9422-220ecb09cf21",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Cool! I was thinking how to cache the database correctly since it is convenient to instantiate the mirror during global initialization.",
+        "createdAt" : "2017-02-14T09:06:56Z",
+        "updatedAt" : "2017-02-14T09:27:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c73a8ace2ee18ab80d1f5341c5ab19672d924b71",
+    "line" : 16,
+    "diffHunk" : "@@ -1,1 +46,50 @@  private var cachedDatabase: Database = null\n  def database: Database = {\n    // NOTE: We rely on the fact that compilation units change monotonously,\n    // i.e. that we can only add new compilation units, but not remove them.\n    if (cachedDatabaseKey != recomputeCachedDatabaseKey()) {"
+  }
+]

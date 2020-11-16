@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "2c9203d3-f579-4818-ac70-7fe8a8c138b5",
+    "prId" : 128,
+    "comments" : [
+      {
+        "id" : "2c28ae8f-1272-4f2e-a89b-1c5e5760d729",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "What's wrong with these files?\n",
+        "createdAt" : "2015-04-05T07:26:32Z",
+        "updatedAt" : "2015-04-05T13:14:05Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9c2eac2f-912c-42fb-b9aa-b2ac8d03d67a",
+        "parentId" : "2c28ae8f-1272-4f2e-a89b-1c5e5760d729",
+        "author" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "body" : "Build.scala issue some parse exception, probably due to its special syntax:\n\n> [info]   scala.meta.ParseException: XML literals are not supported at < (1751..1751)\n> [info]   at scala.meta.internal.parsers.Reporter$class.syntaxError(Reporter.scala:13)\n> [info]   at scala.meta.internal.parsers.Reporter$$anon$1.syntaxError(Reporter.scala:18)\n> [info]   at scala.meta.internal.parsers.Parser.xmlLiteral(Parsers.scala:1230)\n> [info]   at scala.meta.internal.parsers.Parser$$anonfun$simpleExpr$1.apply(Parsers.scala:1254)\n> [info]   at scala.meta.internal.parsers.Parser$$anonfun$simpleExpr$1.apply(Parsers.scala:1245)\n> [info]   at scala.meta.internal.parsers.Parser.atPos(Parsers.scala:277)\n> [info]   at scala.meta.internal.parsers.Parser.autoPos(Parsers.scala:294)\n> [info]   at scala.meta.internal.parsers.Parser.simpleExpr(Parsers.scala:1245)\n> [info]   at scala.meta.internal.parsers.Parser.prefixExpr(Parsers.scala:1221)\n> [info]   at scala.meta.internal.parsers.Parser.postfixExpr(Parsers.scala:1207)\n\nToken.scala fails, because apparently the name of\n\n``` scala\n@token class `macro`(start: Int) extends Keywords\n```\n\nis named \"macro\" without `. (why?)\n\n/semantic/Api.scala contains something of the form:\n\n``` scala\ninternalFilter[T](that => {\n              def thisDenot = thisName.denot.require[h.Denotation.Precomputed]\n              def thatDenot = that.require[impl.Member].name.require[impl.Name].denot.require[h.Denotation.Precomputed]\n              scala.util.Try(thisDenot.symbol == thatDenot.symbol).getOrElse(false)\n            }) match {\n        ...\n        }\n```\n\nThe starting line of the match contains `internalFilter[T](that => {` only, and therefore does not pass the test for `match`. To keep the test simple, I decided to avoid checking the Api.scala files.\n",
+        "createdAt" : "2015-04-05T13:12:35Z",
+        "updatedAt" : "2015-04-05T13:23:43Z",
+        "lastEditedBy" : {
+          "login" : "mdemarne",
+          "name" : "Mathieu Demarne",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/2266330?u=a95e1d640b70c1ea441d708a00cdc4f9118889be&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a51f0e26f8fbc5fd4214e12207575f7dff47ce85",
+    "line" : 20,
+    "diffHunk" : "@@ -1,1 +18,22 @@    \"Token.scala\",\n    \"Api.scala\"\n  )\n\n  val findAllDefn = topDown(collect {"
+  }
+]

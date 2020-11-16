@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "8e18c6f2-009f-4236-ae7a-349369d6a242",
+    "prId" : 1890,
+    "comments" : [
+      {
+        "id" : "e5839f63-fc9e-4b1a-a1e9-65b877821769",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Thank you for writing a test case for this situation, it's quite tricky to setup the right fixture :+1:",
+        "createdAt" : "2019-08-15T14:53:39Z",
+        "updatedAt" : "2019-08-15T15:35:59Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "521aa43e580edade95f1ed6f9c9beb639640f93d",
+    "line" : 94,
+    "diffHunk" : "@@ -1,1 +93,97 @@  }\n\n  test(\"metac only outputs semanticdb for files in sourceroot\") {\n    val projectroot = StringFS.fromString(\n      \"\"\"|/sourceroot_/Left.scala"
+  },
+  {
+    "id" : "8b9d5666-b960-4611-95b5-d758ca23630e",
+    "prId" : 1890,
+    "comments" : [
+      {
+        "id" : "3f9732c5-a838-4847-9e0c-ea47c97b4476",
+        "parentId" : null,
+        "author" : {
+          "login" : "jameskoch",
+          "name" : "James Koch",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/168110?v=4"
+        },
+        "body" : "Nice!",
+        "createdAt" : "2019-08-15T15:37:37Z",
+        "updatedAt" : "2019-08-15T15:37:37Z",
+        "lastEditedBy" : {
+          "login" : "jameskoch",
+          "name" : "James Koch",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/168110?v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "521aa43e580edade95f1ed6f9c9beb639640f93d",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +100,104 @@         |object Right { def left = 41 }\n         |\"\"\".stripMargin\n    ).toNIO\n    val sourceroot = projectroot.resolve(\"sourceroot_\")\n    val notSourceroot = projectroot.resolve(\"not_sourceroot_\")"
+  }
+]

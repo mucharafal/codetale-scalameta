@@ -1,0 +1,49 @@
+[
+  {
+    "id" : "d640a6d5-a8ac-4d24-a7e0-0b54a0a22147",
+    "prId" : 1682,
+    "comments" : [
+      {
+        "id" : "5939306c-4e69-4581-a2d2-d0aa68c1c97b",
+        "parentId" : null,
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "Can this become a `RelativePath`?",
+        "createdAt" : "2018-07-08T05:40:27Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0642dbb5-1b13-4798-b7a0-dd66739b87a2",
+        "parentId" : "5939306c-4e69-4581-a2d2-d0aa68c1c97b",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "It can't be `RelativePath` because paths use `\\` on windows and `/` unix. It could be `RelativeUri` if we had that.",
+        "createdAt" : "2018-07-10T12:16:12Z",
+        "updatedAt" : "2018-07-11T15:20:35Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcaede3273ea29c957237b949345066727ce2945",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +12,16 @@/** Represents a entry in a classpath that is either a package, file on disk or zip entry. */\nsealed abstract class ClasspathElement {\n  def relativeUri: String\n}\n"
+  }
+]

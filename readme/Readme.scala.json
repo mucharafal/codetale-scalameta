@@ -1,0 +1,77 @@
+[
+  {
+    "id" : "9b147db2-dae2-4aca-bd8e-aef7dd56723c",
+    "prId" : 1032,
+    "comments" : [
+      {
+        "id" : "434a89f8-8395-4b85-b165-9cecfa049392",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I verified locally that this resolves to 1.8.0 when the latest tag is v2.0.0-M1",
+        "createdAt" : "2017-07-14T17:07:16Z",
+        "updatedAt" : "2017-07-14T17:07:16Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "51b5a237d0b680149fea4c0722762c6217c2080d",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +90,94 @@    val stdout = shell.check_output(\"git tag -l v*\")\n    val StableVersion = \"\"\"v(\\d+.\\d+.\\d+)\"\"\".r\n    stdout\n      .split(EOL)\n      .reverse"
+  },
+  {
+    "id" : "70f91cbf-c691-45aa-9dd2-e07c3cde2953",
+    "prId" : 414,
+    "comments" : [
+      {
+        "id" : "ba508c1d-41de-4b3b-9ab0-f77352e414c1",
+        "parentId" : null,
+        "author" : {
+          "login" : "fommil",
+          "name" : ">>=",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/1914041?u=bd96315dd5fa039f8b0cf69428ac03181d002b57&v=4"
+        },
+        "body" : "or you could set up drone to do this from the beginning http://readme.drone.io/usage/cloning/\n",
+        "createdAt" : "2016-06-01T17:46:12Z",
+        "updatedAt" : "2016-06-01T17:46:12Z",
+        "lastEditedBy" : {
+          "login" : "fommil",
+          "name" : ">>=",
+          "avatarUrl" : "https://avatars3.githubusercontent.com/u/1914041?u=bd96315dd5fa039f8b0cf69428ac03181d002b57&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8392a241-6976-4093-bf9b-8510e0fefe97",
+        "parentId" : "ba508c1d-41de-4b3b-9ab0-f77352e414c1",
+        "author" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "body" : "I think it's fine. This way we fetch less data.\n",
+        "createdAt" : "2016-06-01T18:05:50Z",
+        "updatedAt" : "2016-06-01T18:05:51Z",
+        "lastEditedBy" : {
+          "login" : "xeno-by",
+          "name" : "Eugene Burmako",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/609152?u=20bb3a58b554d0984a33eaa519c5cf3fd09e88fc&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "970081e01fbe3899b061abc335167803634cd822",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +66,70 @@  def versionBadge = {\n    def timestampOfTag(tag: String): String = {\n      shell.call(s\"git fetch origin refs/tags/$tag:refs/tags/$tag\")\n      val stdout = shell.check_output(s\"git show $tag --pretty=%aD\")\n      val original_dateOfTag = stdout.split(EOL).last"
+  }
+]

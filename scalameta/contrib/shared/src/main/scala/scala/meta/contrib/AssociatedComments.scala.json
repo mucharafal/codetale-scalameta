@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "e28c040c-8fd0-4c41-aa60-aa2083ac2f02",
+    "prId" : 1534,
+    "comments" : [
+      {
+        "id" : "f6c9b8f1-2818-4a2c-ba2a-3fc41d138c53",
+        "parentId" : null,
+        "author" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "body" : "this could alternatively be implemented outside of the `foreach`. Please let me know if you prefer that instead",
+        "createdAt" : "2018-05-17T23:32:35Z",
+        "updatedAt" : "2018-05-17T23:41:20Z",
+        "lastEditedBy" : {
+          "login" : "marcelocenerine",
+          "name" : "Marcelo Cenerino",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1107367?u=79f0734ad984a1b4e0b35316a29ece136c814f62&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7925cb15b8d5da59a34a7bf28cc93b46ef5156a5",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +65,69 @@        if (l.nonEmpty || t.nonEmpty) {\n          trailingBuilder += lastToken -> (l ::: t)\n        }\n      case Trivia() =>\n      case currentToken =>"
+  }
+]
