@@ -1,0 +1,81 @@
+[
+  {
+    "id" : "4f5933d1-5955-418c-a322-13483763d2c7",
+    "prId" : 2211,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2211",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dfb6cf8f-1378-4b24-bd73-80962b4ac913",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Why is `stubbedMembers` needed? I see that it's never really read.",
+        "createdAt" : "2021-01-07T10:01:33Z",
+        "updatedAt" : "2021-01-07T10:04:12Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f0506ca2-427e-40e7-bac7-cbe2674eea5f",
+        "parentId" : "dfb6cf8f-1378-4b24-bd73-80962b4ac913",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "to make sure that, for instance, `value` is not defined twice, since `extraStubs` are hardcoded to contain it. \r\n\r\nin the original code, `distinct` was used to remove duplicates between class parameters and extra stubs. but we also need to apply the same to extra abstract definitions as well.",
+        "createdAt" : "2021-01-07T15:18:22Z",
+        "updatedAt" : "2021-01-07T15:18:22Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "16d2dfb7706536dd5558e243ccad360fcc94186e",
+    "line" : 61,
+    "diffHunk" : "@@ -1,1 +73,77 @@      q\"throw new $UnsupportedOperationException($message)\"\n    }\n    val stubbedMembers = new mutable.HashSet[String]\n    def markStubbedMemberName(name: TermName): Boolean = stubbedMembers.add(name.toString)\n    def addStubbedMemberWithName(name: TermName): Unit ="
+  },
+  {
+    "id" : "6244d1a7-87d7-4285-b97d-b2b7df91823e",
+    "prId" : 2211,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2211",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ed2ddbf5-afae-4b0f-a2a4-a5147aef93cc",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "this is where this structure is used: when the method returns true, it means the value hadn't been seen before and can be stubbed.",
+        "createdAt" : "2021-01-07T15:20:44Z",
+        "updatedAt" : "2021-01-07T15:20:45Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "16d2dfb7706536dd5558e243ccad360fcc94186e",
+    "line" : 62,
+    "diffHunk" : "@@ -1,1 +74,78 @@    }\n    val stubbedMembers = new mutable.HashSet[String]\n    def markStubbedMemberName(name: TermName): Boolean = stubbedMembers.add(name.toString)\n    def addStubbedMemberWithName(name: TermName): Unit =\n      if (markStubbedMemberName(name)) qstats += q\"def $name = $stub\""
+  }
+]

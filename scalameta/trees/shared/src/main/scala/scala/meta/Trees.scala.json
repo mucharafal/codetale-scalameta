@@ -2,6 +2,8 @@
   {
     "id" : "17ba13b9-8744-4a2a-81d3-5bf9bc5ae3df",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "15269815-cef9-419e-9292-6a9a2f22d7fa",
@@ -49,6 +51,8 @@
   {
     "id" : "adf074cb-abc4-4246-9af6-4e2d29a88888",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "3096554c-28ca-4b2b-bfa4-a71240799a14",
@@ -96,6 +100,8 @@
   {
     "id" : "833fb238-55ed-4477-b9c6-a0f4e9c99493",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "037e51df-48b3-4100-a2a5-29b1dfd12acc",
@@ -162,6 +168,8 @@
   {
     "id" : "c7fed469-2956-4b8c-9e07-13142b2b9ce9",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b869ad15-2703-4efc-94b0-a23db60782e0",
@@ -285,6 +293,8 @@
   {
     "id" : "147148fe-d2d4-4efb-8f6b-568f0f6013ec",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "e8dc7a68-f4b6-40a3-a50c-9c53b09fa138",
@@ -351,6 +361,8 @@
   {
     "id" : "6f496459-d94b-43d9-b502-fa84beb5a958",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "41005e50-4141-42db-a613-72e47aec9898",
@@ -417,6 +429,8 @@
   {
     "id" : "a2507f2b-bc28-4be7-a81a-5bee3ef82f9f",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "16c83fac-a0b2-44e6-898c-6969be4ce1f4",
@@ -464,6 +478,8 @@
   {
     "id" : "0b9912d8-446d-4afb-8e57-067e8e9673cc",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "d93b9888-ae74-4997-a17f-3f5bac421d8c",
@@ -511,6 +527,8 @@
   {
     "id" : "5bdc6e63-48b9-4e81-b625-2d1b92f42c48",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "acd59b0f-73fb-4577-9b42-dd038ac498cb",
@@ -577,6 +595,8 @@
   {
     "id" : "b7db0119-74ac-4e19-9de6-e256a30d6a25",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "8b116df6-7c05-4c1a-8613-d9a9617459ab",
@@ -624,6 +644,8 @@
   {
     "id" : "d512e106-dcd8-4ef7-86e1-7c6019905c5b",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "da0ce29d-8870-4441-b2d7-395a8b65712e",
@@ -671,6 +693,8 @@
   {
     "id" : "e73b59a9-bb7c-432c-b3b0-9363d515040d",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "bc788e20-9c42-4f74-8239-631973eedfcf",
@@ -718,6 +742,8 @@
   {
     "id" : "f1da4a1e-7f15-4521-8262-0eac7255f380",
     "prId" : 907,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "e576a0e7-71a6-4c44-b6b0-1a77f663b900",
@@ -799,5 +825,35 @@
     "commit" : "6671021ca31de70beb5653b516169540d2300121",
     "line" : 715,
     "diffHunk" : "@@ -1,1 +389,393 @@object Importee {\n  @ast class Wildcard() extends Importee\n  @ast class Name(name: scala.meta.Name) extends Importee {\n    checkFields(name.is[scala.meta.Name.Quasi] || name.is[scala.meta.Name.Indeterminate])\n  }"
+  },
+  {
+    "id" : "3e962426-2880-4326-b6fe-0bc8221928e3",
+    "prId" : 2187,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2187",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7a2a2f8b-bd60-4cd3-b0c5-c03a64abab5e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I also added the check to make sure that no one will try to add a different term here. We can always change the check, but might be harder to fix if we change the type.",
+        "createdAt" : "2020-12-02T13:46:56Z",
+        "updatedAt" : "2020-12-02T13:46:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "51fd3bfcb1ca92cb2a5625b70ea578cc36bf922a",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +263,267 @@  }\n  @ast class Macro(body: Term) extends Pat {\n    checkFields(body.is[Term.QuotedMacroExpr])\n  }\n  @ast class Given(tpe: Type) extends Pat"
   }
 ]

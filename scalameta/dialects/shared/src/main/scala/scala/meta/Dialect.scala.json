@@ -2,6 +2,8 @@
   {
     "id" : "7096ebb8-df9f-45aa-bdde-3992e9e9d299",
     "prId" : 2070,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "670df44f-7ff9-4f21-a525-2f65bff7ee77",
@@ -49,6 +51,8 @@
   {
     "id" : "1eddcf34-bea3-4b2f-8201-682da8014bde",
     "prId" : 2044,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "d00908ed-34c7-4fa8-98be-f5fd95b633da",
@@ -115,6 +119,8 @@
   {
     "id" : "67065fc2-3398-4e3a-acf2-14679e520a3b",
     "prId" : 2044,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "a237d508-dffe-4efa-b51c-4b5b70307519",
@@ -219,6 +225,8 @@
   {
     "id" : "53501d2e-0701-45c8-8cf5-36ae80e9ea52",
     "prId" : 2044,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "f23d27a3-9353-4c48-a343-68f7a3c92135",
@@ -266,6 +274,8 @@
   {
     "id" : "db49a444-ec42-4af8-a034-f858d27f3fc9",
     "prId" : 2044,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "43b00c5d-7183-416a-8519-e9bf91e4c781",
@@ -313,6 +323,8 @@
   {
     "id" : "dc6c72c9-ac8a-4389-be6e-f35c073fbd17",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "c3408412-8aee-4a3b-a38b-66fc9fbc34d0",
@@ -356,5 +368,54 @@
     "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
     "line" : 16,
     "diffHunk" : "@@ -1,1 +80,84 @@    // Top level statements introduced in dotty.\n    // differs from ToplevelTerms because here you can define packages\n    val allowToplevelStatements: Boolean,\n    // Opaque types introduced in dotty\n    val allowOpaqueTypes: Boolean"
+  },
+  {
+    "id" : "209758e6-c83a-4ba9-ad67-7ee94f4fa6ac",
+    "prId" : 2192,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2192",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6d638f20-cb6f-475b-9c07-99201968fb74",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I think you can turn this into `def allowWhiteboxMacro = allowSpliceAndQuote`",
+        "createdAt" : "2020-12-10T15:39:17Z",
+        "updatedAt" : "2020-12-10T18:12:31Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ff3d9ae7-55cb-4237-9ea8-161f3209457c",
+        "parentId" : "6d638f20-cb6f-475b-9c07-99201968fb74",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`allowWhiteboxMacro` no longer is used, so I think there is no need to do it. ",
+        "createdAt" : "2020-12-10T17:32:21Z",
+        "updatedAt" : "2020-12-10T18:12:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0130a2fc17201506173b37061487119196518435",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +81,85 @@    // Scala 3 splices/quotes\n    @deprecated(\"Replaced with allowSpliceAndQuote\", \"4.4.1\")\n    val allowWhiteboxMacro: Boolean,\n    // Top level statements introduced in dotty.\n    // differs from ToplevelTerms because here you can define packages"
   }
 ]

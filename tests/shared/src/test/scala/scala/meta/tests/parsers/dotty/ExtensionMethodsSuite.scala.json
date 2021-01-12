@@ -1,0 +1,149 @@
+[
+  {
+    "id" : "bc6c7f73-ad20-41ac-9ebf-bff6511517e3",
+    "prId" : 2199,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2199",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e6aed3bd-8f3b-40c0-b6e5-c352d108051c",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "what was the result of discussion, is \":\" not-required but allowed, or not even allowed here?\r\nIf it is optional I would keep at least 1 test with \":\"",
+        "createdAt" : "2020-12-22T09:28:43Z",
+        "updatedAt" : "2020-12-23T11:26:43Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e710888-54ae-4dbb-bb7c-df6ad009b4d6",
+        "parentId" : "e6aed3bd-8f3b-40c0-b6e5-c352d108051c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "It's not really optional :/\r\n\r\n```\r\n[error] -- Error: /home/tgodzik/Documents/workspaces/dotty-vinz/src/main/scala/Main.scala:10:23 \r\n[error] 10 |    extension (a : Int):\r\n[error]    |                       ^\r\n[error]    |                       no `:` expected here\r\n```",
+        "createdAt" : "2020-12-22T10:11:59Z",
+        "updatedAt" : "2020-12-23T11:26:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f4ab51b1eceac94f362498aef51f04286c9fd78",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +60,64 @@\n  test(\"modifier-method-indent\") {\n    val code = \"\"\"|extension (c: Circle)\n                  |  private def crc: Int = 2\n                  |\"\"\".stripMargin"
+  },
+  {
+    "id" : "bf9b73e8-cc90-4521-bc1f-7bfcc61e0dc6",
+    "prId" : 2199,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2199",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "6f032de1-793f-4d88-aa89-b3f4600658a6",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I would also add test that ``` `extension`(3) ``` should parse correctly",
+        "createdAt" : "2020-12-22T09:32:59Z",
+        "updatedAt" : "2020-12-23T11:26:43Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d764d112-49e5-4c90-a08a-b19549b30e7f",
+        "parentId" : "6f032de1-793f-4d88-aa89-b3f4600658a6",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Added and after some rework it should be fine now.",
+        "createdAt" : "2020-12-22T11:49:46Z",
+        "updatedAt" : "2020-12-23T11:26:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f4ab51b1eceac94f362498aef51f04286c9fd78",
+    "line" : 37,
+    "diffHunk" : "@@ -1,1 +201,205 @@  // https://github.com/lampepfl/dotty/issues/10076\n  test(\"extension-named-method\") {\n    runTestError[Stat](\n      \"\"\"|object A{\n         |  def extension(a : Int) = a + 2"
+  },
+  {
+    "id" : "737b3038-f099-4804-ae85-69d9d95f9aca",
+    "prId" : 2199,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2199",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "38624c36-078e-4b33-bc96-149347d7fa46",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "I would add a test that parsing is ok:\r\n`extension + 3`\r\n`3 + extension(5)`\r\n`trait extension`\r\n`def extension(x: extension): extension = x`\r\n`extension.extension(3)`\r\n\r\nJust to be sure it is truly `soft` :)",
+        "createdAt" : "2020-12-22T09:43:34Z",
+        "updatedAt" : "2020-12-23T11:26:43Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c7195cfe-6097-4c29-998a-3a0ae5ec2512",
+        "parentId" : "38624c36-078e-4b33-bc96-149347d7fa46",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Good catch, it was not actually working. Thanks!",
+        "createdAt" : "2020-12-22T11:49:26Z",
+        "updatedAt" : "2020-12-23T11:26:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7f4ab51b1eceac94f362498aef51f04286c9fd78",
+    "line" : 101,
+    "diffHunk" : "@@ -1,1 +265,269 @@    )\n  }\n\n  final val defcrc = Defn.Def(Nil, tname(\"crc\"), Nil, Nil, Some(pname(\"Int\")), int(2))\n"
+  }
+]

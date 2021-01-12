@@ -2,6 +2,8 @@
   {
     "id" : "7bd85e90-c6bb-47ae-b31f-e18d5f8c49b7",
     "prId" : 2157,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "7d9a5a9a-1f55-44cf-a5da-47d0e98f6017",
@@ -30,6 +32,8 @@
   {
     "id" : "81b9ba0b-b4bf-40ec-8e02-bbad08542c3e",
     "prId" : 1473,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "cf2b0250-044d-4b28-81fa-0a5d30d469c7",
@@ -96,6 +100,8 @@
   {
     "id" : "f9b37cda-ae2f-4f68-ac28-e8b0b076886a",
     "prId" : 1126,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "535274b9-d758-4009-979a-33e4dac0c4ee",
@@ -139,5 +145,54 @@
     "commit" : "240f551aeb0adf271899ac956957d5674af7ff42",
     "line" : 10,
     "diffHunk" : "@@ -1,1 +8,12 @@      ProblemFilters.exclude[Problem](\"scala.meta.internal.*\"),\n      ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.parsers.Parsed.*\"),\n      ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.tokenizers.Tokenized.*\")\n    )\n  }"
+  },
+  {
+    "id" : "5c502bf4-e339-45aa-82f2-26d65b70277e",
+    "prId" : 2212,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2212",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "978dfe9c-06ca-499c-94f4-0618092f3975",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "what was the problem with mima? adding a method causes this? or did we change the signature?",
+        "createdAt" : "2021-01-08T17:38:25Z",
+        "updatedAt" : "2021-01-08T17:38:26Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e753b108-b647-4ff1-b19f-655aa99b1ecd",
+        "parentId" : "978dfe9c-06ca-499c-94f4-0618092f3975",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This happens when adding a methods for public traits. However since no one really can sensibly extend CaseTree, I think it's not a problem.",
+        "createdAt" : "2021-01-08T17:42:10Z",
+        "updatedAt" : "2021-01-08T17:42:11Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0cb515e96d640bcb8f9229c96a9c74b01c5c8a15",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +77,81 @@      \"scala.meta.Defn#Given#DefnGivenImpl.copy$default$6\"\n    ),\n    ProblemFilters.exclude[DirectMissingMethodProblem](\"scala.meta.Defn#Given#DefnGivenImpl.this\"),\n    ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.CaseTree.pat\"),\n    ProblemFilters.exclude[ReversedMissingMethodProblem](\"scala.meta.CaseTree.body\")"
   }
 ]

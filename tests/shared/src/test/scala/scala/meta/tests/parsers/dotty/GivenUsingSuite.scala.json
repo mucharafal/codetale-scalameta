@@ -2,6 +2,8 @@
   {
     "id" : "78d99c00-c192-4d75-b515-ac3a41bee91c",
     "prId" : 2148,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "ed0d8169-ef45-4a0c-bea0-87b6bc9dba8d",
@@ -64,5 +66,122 @@
     "commit" : "99ae819463c21f6b746c3fc55a94abfc494a0963",
     "line" : 4,
     "diffHunk" : "@@ -1,1 +56,60 @@  }\n\n  test(\"given-anon-as\") {\n    runTestAssert[Stat](\"given as Context = ctx\", assertLayout = Some(\"given Context = ctx\"))(\n      Defn.GivenAlias(Nil, Name(\"\"), Nil, Nil, Type.Name(\"Context\"), Term.Name(\"ctx\"))"
+  },
+  {
+    "id" : "c3e4ceaf-784d-4d0d-b3f0-8bc2ba887d49",
+    "prId" : 2210,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2210",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ab7f9ff0-ed58-401c-b16c-379eccc9e808",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "(random place)\r\nwith can start in that case indentation block, could you add a test for that?\r\nsth like:\r\n```\r\ngiven intOrd: Ord[Int] with\r\n   def fa: Int = 1\r\n   def fb: Int = 2\r\n```",
+        "createdAt" : "2021-01-06T19:28:51Z",
+        "updatedAt" : "2021-01-07T16:32:29Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dfd18826-d517-4c29-a601-792f8ca047c5",
+        "parentId" : "ab7f9ff0-ed58-401c-b16c-379eccc9e808",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Actually it was not supported, but it's not that hard to do. Fixed it and added a test for both indentation and legit `with`.",
+        "createdAt" : "2021-01-07T16:25:02Z",
+        "updatedAt" : "2021-01-07T16:32:29Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a08d5544ed1a8f7ec41bf03154761d07b05f865b",
+    "line" : 178,
+    "diffHunk" : "@@ -1,1 +169,173 @@    )\n  }\n\n  test(\"given-selftype-error\") {\n    runTestError("
+  },
+  {
+    "id" : "3fd32d06-0d14-4880-85b5-1e17a9ab46ba",
+    "prId" : 2210,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2210",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3c34efec-befa-40d1-99f5-354421f33e9b",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "could you add test:\r\n```\r\nscala> given intM: Ord[Int] with Eq[Int] with {\r\n     |   def fx = 3\r\n     |}\r\n// defined object intM\r\n```\r\nDidn't check if it is handled, but seems like a tricky case",
+        "createdAt" : "2021-01-06T19:45:57Z",
+        "updatedAt" : "2021-01-07T16:32:29Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars2.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "673d4db6-4839-4e12-9ba0-35e29587b9d3",
+        "parentId" : "3c34efec-befa-40d1-99f5-354421f33e9b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "That might have never actually worked :thinking: \r\n",
+        "createdAt" : "2021-01-07T15:08:46Z",
+        "updatedAt" : "2021-01-07T16:32:29Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "94c0793f-fd94-438f-ba6e-89c355caaeea",
+        "parentId" : "3c34efec-befa-40d1-99f5-354421f33e9b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Ok, so that was much more difficult than aniticipated - I had to rework given defs, there is no need for separate `decltype` anymore, but we can just use the inits from the Template.",
+        "createdAt" : "2021-01-07T16:26:18Z",
+        "updatedAt" : "2021-01-07T16:32:29Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a08d5544ed1a8f7ec41bf03154761d07b05f865b",
+    "line" : 495,
+    "diffHunk" : "@@ -1,1 +582,586 @@        tname(\"???\")\n      )\n    )\n  }\n"
   }
 ]

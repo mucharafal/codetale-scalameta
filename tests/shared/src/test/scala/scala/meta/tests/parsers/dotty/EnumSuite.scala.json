@@ -2,6 +2,8 @@
   {
     "id" : "5beaeb88-e157-4b6c-b138-fc922c1d218d",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "09319159-467b-471b-8729-fe47d9bb8ece",
@@ -26,5 +28,35 @@
     "commit" : "cc7ada7f7baf3d65abfdbedc5968db4feb477ab7",
     "line" : 95,
     "diffHunk" : "@@ -1,1 +93,97 @@\n  test(\"enum-other-stat\") {\n    runTestAssert[Stat](\"enum C { val PI=3; def r: Int = 4; case R }\", assertLayout = None)(\n      Defn.Enum(\n        Nil,"
+  },
+  {
+    "id" : "134d5853-9b63-4a10-862b-85fecbab876b",
+    "prId" : 2194,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2194",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "908980e7-e105-4434-9b54-f3a3ec0ff968",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This test checks that we should fail to get an enum case in any other situation.",
+        "createdAt" : "2020-12-11T14:09:06Z",
+        "updatedAt" : "2020-12-15T12:12:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4bccd792af2a010693382e60f925df53d355aa00",
+    "line" : 121,
+    "diffHunk" : "@@ -1,1 +364,368 @@  }\n\n  test(\"enum-case-toplevel\") {\n    val init = Init(pname(\"Color\"), anon, List(List(Lit.Int(65280))))\n    runTestError[Stat]("
   }
 ]

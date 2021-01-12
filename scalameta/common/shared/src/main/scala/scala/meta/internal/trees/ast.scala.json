@@ -2,6 +2,8 @@
   {
     "id" : "5105ea73-050a-4394-b5d6-c5ffd357f038",
     "prId" : 2134,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "81ea44fd-8fbe-44ff-817f-c0bcf67c5fbc",
@@ -30,6 +32,8 @@
   {
     "id" : "a6b5768e-e937-4ffb-9979-69851e5e2d8b",
     "prId" : 2134,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "a41c8638-a72e-4ee7-827f-944c13e9d2ab",
@@ -92,5 +96,182 @@
     "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
     "line" : 38,
     "diffHunk" : "@@ -1,1 +102,106 @@                c.abort(vr.pos, \"The binaryCompat AST field needs to be private\")\n              if (!vr.mods.hasFlag(MUTABLE))\n                c.abort(vr.pos, \"The binaryCompat AST field needs to declared as var\")\n              true\n            case _ => false"
+  },
+  {
+    "id" : "e45dbad0-b3cb-4eed-ac3b-4666258f0f8f",
+    "prId" : 2189,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2189",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c2b23c8e-eb3a-4076-ac29-7677bad29726",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is actual the fix for product, which is used in structure or in pprint.",
+        "createdAt" : "2020-12-03T18:45:42Z",
+        "updatedAt" : "2020-12-04T16:14:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3542fd0224104891b2ccc48008f3bcedf8eedbf6",
+    "line" : 67,
+    "diffHunk" : "@@ -1,1 +279,283 @@\n        // generate product elements for @binaryCompat fields\n        pelClauses ++= fieldsNum\n          .to(fieldsNum + binaryCompatNum)\n          .zip(binaryCompatVars)"
+  },
+  {
+    "id" : "a6ac6d16-b7e3-4435-b40f-47d8097fce4d",
+    "prId" : 2189,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2189",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee0baa2c-ed32-430b-8b37-3b6de340fad0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Invokes the original apply",
+        "createdAt" : "2020-12-03T18:48:36Z",
+        "updatedAt" : "2020-12-04T16:14:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3542fd0224104891b2ccc48008f3bcedf8eedbf6",
+    "line" : 137,
+    "diffHunk" : "@@ -1,1 +392,396 @@              def apply(...$params): $iname = {\n                ..$checks\n                val newAst = apply(...$internalArgss);\n                ..$setters\n                newAst"
+  },
+  {
+    "id" : "883891d6-010e-467f-8f72-7ba97dc0c574",
+    "prId" : 2189,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2189",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7056914c-9431-40ea-af07-3af81af9e730",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Performance nitpick: the lambda to `sortBy` gets evaluated many times per element. You can cache the results by doing a method like here https://github.com/twitter/bazel-multideps/blob/db19c92d13bce01bcd0189309564c79213995917/multideps/src/main/scala/multideps/diagnostics/MultidepsEnrichments.scala#L58",
+        "createdAt" : "2020-12-04T16:19:22Z",
+        "updatedAt" : "2020-12-04T16:22:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5bfb6341-7f0a-4a7c-bbf3-bb9fd32a2655",
+        "parentId" : "7056914c-9431-40ea-af07-3af81af9e730",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "The size of the list will always be small here so I suspect performance is not a concern. Just an FYI, feel free to ignore",
+        "createdAt" : "2020-12-04T16:20:48Z",
+        "updatedAt" : "2020-12-04T16:22:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9fb5a4d2-0a0f-43b0-9341-980fb58970a0",
+        "parentId" : "7056914c-9431-40ea-af07-3af81af9e730",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Currently it's mostly only a single element list, so it should not be an issue. But I haven't really thought about the performance here. \r\n\r\nI think I will leave as is, because I am afraid of really adding any more complexity here.",
+        "createdAt" : "2020-12-04T16:29:36Z",
+        "updatedAt" : "2020-12-04T16:29:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3542fd0224104891b2ccc48008f3bcedf8eedbf6",
+    "line" : 104,
+    "diffHunk" : "@@ -1,1 +359,363 @@        val sortedBinaryCompatName = binaryCompatVars\n          .collect { case vr: ValDef => vr }\n          .sortBy { vr =>\n            try {\n              vr.mods.annotations.collectFirst { case q\"new binaryCompatField($version)\" =>"
+  },
+  {
+    "id" : "f23ed81a-73df-4022-b9a2-2fb4637ad15a",
+    "prId" : 2189,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2189",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "d9ed9f17-2e30-44af-a918-6f84c4157096",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Does this provide a stable sort when we have two bincompat fields with the same name?",
+        "createdAt" : "2020-12-04T16:21:47Z",
+        "updatedAt" : "2020-12-04T16:22:40Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cfe23444-fbfc-4036-9977-b287419074d7",
+        "parentId" : "d9ed9f17-2e30-44af-a918-6f84c4157096",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "`sortBy` is stable judging by the docs so this should also be stable. So if we ever need to add two elements at the same time it should work ok. ",
+        "createdAt" : "2020-12-04T16:33:33Z",
+        "updatedAt" : "2020-12-04T16:33:33Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3542fd0224104891b2ccc48008f3bcedf8eedbf6",
+    "line" : 109,
+    "diffHunk" : "@@ -1,1 +364,368 @@                val since = version.toString().stripPrefix(\"\\\"\").stripSuffix(\"\\\"\")\n                val versions = since.split(\"\\\\.\").map(_.toInt)\n                (versions(0), versions(1), versions(2))\n              }.get\n            } catch {"
   }
 ]

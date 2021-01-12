@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "fef2a7ac-3e6e-4ca8-9341-af3ae13f1ee4",
+    "prId" : 2193,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2193",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7538826a-3424-44ca-8bd0-326e0fbe8514",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "do we need to wrap this in an instance? wouldn't this work, with implicit:\r\n```\r\n  object SoftKw {\r\n    @classifier\r\n    trait Using {\r\n      def unapply(token: Token)(implicit dialect: Dialect): Boolean = {\r\n        dialect.allowGivenUsing && isSoftKw(token, \"using\")\r\n      }\r\n    }\r\n  }\r\n\r\n  // somewhere else\r\n  token.is[SoftKw.Using]\r\n```",
+        "createdAt" : "2020-12-09T16:44:38Z",
+        "updatedAt" : "2020-12-10T10:25:13Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars1.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "873d8dfb-a53c-4ada-b8eb-dfa011a016a5",
+        "parentId" : "7538826a-3424-44ca-8bd0-326e0fbe8514",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Tried it and it does not recognize it as an unapply method :/",
+        "createdAt" : "2020-12-09T16:53:41Z",
+        "updatedAt" : "2020-12-10T10:25:13Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "fcfb286b85006520a9aaaeea249de1625c0085b3",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@import scala.meta.internal.classifiers.classifier\n\nclass SoftKeywords(dialect: Dialect) {\n\n  import ScalametaParser.isIdentAnd"
+  }
+]
