@@ -1939,5 +1939,65 @@
     "commit" : "9a97c23dc793bfa47061fb103aab7c8a0097f3b5",
     "line" : 118,
     "diffHunk" : "@@ -1,1 +3845,3849 @@        enumCaseDef(mods)\n      case KwIf() if mods.size == 1 && mods.head.is[Mod.Inline] =>\n        ifClause(isInline = true)\n      case other =>\n        tmplDef(mods)"
+  },
+  {
+    "id" : "5799c782-ea5c-4df5-bde6-b0eecc0c0da6",
+    "prId" : 2213,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2213",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ba9b308c-2cfd-46ee-9b68-8d1f9df327e0",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Removed `abstract givens cannot be annonymous` here since it's actually misleading. Givens with `with` cannot be abstract at all.",
+        "createdAt" : "2021-01-12T10:19:07Z",
+        "updatedAt" : "2021-01-12T10:19:07Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "22b449c6b1fbbf2df67ab344145080fe59008f7e",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +3962,3966 @@        }\n      } else {\n        syntaxError(\"expected 'with' <body>\", at = token.pos)\n      }\n      val rhs = if (slf.decltpe.nonEmpty) {"
+  },
+  {
+    "id" : "8f4d15eb-1b7c-4753-95ba-5893623a1966",
+    "prId" : 2213,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2213",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "2d022d63-8201-4eff-ba55-b7198d4e8b85",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Removed `abstract givens cannot be annonymous` here since it's actually misleading. Givens with `with` cannot be abstract at all.",
+        "createdAt" : "2021-01-12T10:19:07Z",
+        "updatedAt" : "2021-01-12T10:19:07Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "22b449c6b1fbbf2df67ab344145080fe59008f7e",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +3962,3966 @@        }\n      } else {\n        syntaxError(\"expected 'with' <body>\", at = token.pos)\n      }\n      val rhs = if (slf.decltpe.nonEmpty) {"
   }
 ]
