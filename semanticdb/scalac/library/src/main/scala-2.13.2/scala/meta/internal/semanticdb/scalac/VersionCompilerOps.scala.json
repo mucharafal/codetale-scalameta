@@ -1,0 +1,32 @@
+[
+  {
+    "id" : "19df89e2-6158-483c-83ea-2796e3c44c42",
+    "prId" : 2216,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2216",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c105606b-0116-4aee-96f2-aba127dabb7d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This is the main thing that was needed to be added for some of the Scala versions.",
+        "createdAt" : "2021-01-14T12:31:02Z",
+        "updatedAt" : "2021-01-14T12:31:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars0.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "278e068679fa4daf02051488495c8ec109ca2f74",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +6,10 @@\n  def forceWarnings(global: Global) = {\n    global.runReporting.reportSuspendedMessages()\n  }\n"
+  }
+]
