@@ -1999,5 +1999,73 @@
     "commit" : "22b449c6b1fbbf2df67ab344145080fe59008f7e",
     "line" : 23,
     "diffHunk" : "@@ -1,1 +3962,3966 @@        }\n      } else {\n        syntaxError(\"expected 'with' <body>\", at = token.pos)\n      }\n      val rhs = if (slf.decltpe.nonEmpty) {"
+  },
+  {
+    "id" : "aba8a9fe-b149-4410-99f1-c2b0a8fe698f",
+    "prId" : 2238,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2238",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7b42f570-38c9-429d-9f47-c55bf03e77dc",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "This clause affects all `*` usage.\r\nThe community test has a lot of new similar errors:\r\n```\r\nFailed for file ..community-projects/dotty/compiler/src/scala/quoted/runtime/impl/printers/SourceCode.scala\r\nError: ..community-projects/dotty/compiler/src/scala/quoted/runtime/impl/printers/SourceCode.scala:103: error: ) expected but identifier found\r\n    private def lineBreak(): String = \"\\n\" + (\"  \" * indent)\r\n```\r\n\r\nI'm not sure maybe it should be  `dialect.allowPostfixStarVarargSplices && isIndentEndsByStar` ?",
+        "createdAt" : "2021-02-15T19:41:18Z",
+        "updatedAt" : "2021-02-15T19:53:54Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "4241bf89-e235-4767-af7a-402ae3a6b406",
+        "parentId" : "7b42f570-38c9-429d-9f47-c55bf03e77dc",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Damn, I will take a look into this. Martin's small changes are actually much more complicated than anticipated.",
+        "createdAt" : "2021-02-15T19:54:56Z",
+        "updatedAt" : "2021-02-15T19:54:56Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8099def7-555b-40c0-8653-72e0b7dff1be",
+        "parentId" : "7b42f570-38c9-429d-9f47-c55bf03e77dc",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fix is here: https://github.com/scalameta/scalameta/pull/2240",
+        "createdAt" : "2021-02-15T20:38:18Z",
+        "updatedAt" : "2021-02-15T20:38:18Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8279089f786218c3c48d84f8bc881d6acc3fd813",
+    "line" : 23,
+    "diffHunk" : "@@ -1,1 +2232,2236 @@            t = atPos(t, auto)(Term.Ascribe(t, typeOrInfixType(location)))\n          }\n        } else if (dialect.allowPostfixStarVarargSplices && isStar) {\n          repeatedTerm(() => next())\n        } else if (token.is[KwMatch]) {"
   }
 ]
