@@ -2,6 +2,8 @@
   {
     "id" : "9146062c-1a9d-4216-bca0-a7f571cbc271",
     "prId" : 2142,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "1c5394dc-1d13-4922-9079-0bad8fe129ff",
@@ -49,6 +51,8 @@
   {
     "id" : "02c636e6-d267-497b-934c-541ceabae554",
     "prId" : 2142,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "2c2c9a26-42a1-4e4c-ba09-55c11f03a810",
@@ -96,6 +100,8 @@
   {
     "id" : "ba31bf02-2fad-4da1-8640-aed9126549ef",
     "prId" : 2142,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "88fd9d42-54d4-412e-bfbd-e88d92c00a18",
@@ -143,6 +149,8 @@
   {
     "id" : "09edb3ae-6760-4fd3-a542-22374b36cdb6",
     "prId" : 2142,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "8a025095-0541-4869-b9b9-c40afed3c639",
@@ -190,6 +198,8 @@
   {
     "id" : "d335cfbd-6292-4aa5-8ba3-a1fe4b1433d1",
     "prId" : 2136,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "1c99715d-ad39-4f79-813c-aaa067c4ccd2",
@@ -256,6 +266,8 @@
   {
     "id" : "5ca6b188-4dee-4870-99ed-a05baed96265",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b9eb69fd-c719-47f9-8fbb-55e835405e82",
@@ -303,6 +315,8 @@
   {
     "id" : "b01364c0-5218-4468-a3f2-0dc313ecb5c1",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "9d74f5a8-6d4d-4583-90a3-486557b96869",
@@ -369,6 +383,8 @@
   {
     "id" : "2e6356bb-6c2b-4bca-8ea9-4fe21a4b581d",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b8ff2d95-0869-4c7e-a4d0-d245f310ec6e",
@@ -416,6 +432,8 @@
   {
     "id" : "da9e1b78-a232-4f3d-b517-a1b12906bf72",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "4598efad-a337-4212-b070-7464d45a3f52",
@@ -501,6 +519,8 @@
   {
     "id" : "9f4693be-b17e-4581-8b57-eac795221ca3",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "ddcb882f-9e93-402e-9e16-24809fb7e054",
@@ -548,6 +568,8 @@
   {
     "id" : "3c237882-d619-4c3b-a6fe-3c0472509415",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "45964406-9708-4d11-a6ec-a88019a67258",
@@ -591,5 +613,35 @@
     "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
     "line" : 1140,
     "diffHunk" : "@@ -1,1 +1138,1142 @@    val code = \"\"\"|cond match {\n                  |  case a =>\n                  |  fa\n                  |  case b =>\n                  |  fb"
+  },
+  {
+    "id" : "f77c1e6b-0168-417b-b51c-30516f2e03cf",
+    "prId" : 2237,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2237",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4f2c2834-82de-408e-bcde-9b977b3550fb",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I think this should not be accepted, but I will follow up with a PR later.",
+        "createdAt" : "2021-02-17T10:08:21Z",
+        "updatedAt" : "2021-02-17T10:09:01Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e65d886f60569f3957421c3e80b5d5c88ac189f0",
+    "line" : 24,
+    "diffHunk" : "@@ -1,1 +219,223 @@\n  test(\"new-if-else-indented\") {\n    val code = \"\"\"|if cond\n                  |  fx1\n                  |  fx2"
   }
 ]

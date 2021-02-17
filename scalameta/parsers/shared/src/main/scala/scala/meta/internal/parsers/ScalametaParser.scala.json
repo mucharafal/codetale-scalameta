@@ -2067,5 +2067,152 @@
     "commit" : "8279089f786218c3c48d84f8bc881d6acc3fd813",
     "line" : 23,
     "diffHunk" : "@@ -1,1 +2232,2236 @@            t = atPos(t, auto)(Term.Ascribe(t, typeOrInfixType(location)))\n          }\n        } else if (dialect.allowPostfixStarVarargSplices && isStar) {\n          repeatedTerm(() => next())\n        } else if (token.is[KwMatch]) {"
+  },
+  {
+    "id" : "770b8216-e3cc-42a1-9833-e92c761940a1",
+    "prId" : 2237,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2237",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "72a285ea-a18e-4f56-be8d-a08c58798cd4",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : " We should have `RegionIndent` and the `RegionParen` next - instead of just dropping it.",
+        "createdAt" : "2021-02-15T11:02:50Z",
+        "updatedAt" : "2021-02-17T10:03:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "45459da4-e3f8-4e76-9cb0-ff89501cb348",
+        "parentId" : "72a285ea-a18e-4f56-be8d-a08c58798cd4",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "It will be applied one more time.\r\nAfter `observerIndented` were called the next token after `Indent` will be `(` that will put `RegionParen` again.\r\n\r\nFor example, in the code below at the moment when `observeIndented` is called iterator already reached `(` token on the second line and updated `sepRegions` on `RegionParen :: Nil`.\r\n\r\n```scala\r\nif (cond)\r\n  <(>f)\r\n```",
+        "createdAt" : "2021-02-15T12:09:28Z",
+        "updatedAt" : "2021-02-17T10:03:31Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e65d886f60569f3957421c3e80b5d5c88ac189f0",
+    "line" : 124,
+    "diffHunk" : "@@ -1,1 +310,314 @@        val undoRegionChange =\n          prev.headOption match {\n            case Some(RegionParen) if token.is[LeftParen] => prev.tail\n            case Some(RegionEnumArtificialMark) if token.is[KwEnum] => prev.tail\n            case Some(_: RegionBrace) if token.is[LeftBrace] => prev.tail"
+  },
+  {
+    "id" : "2567491f-db5e-4112-81e7-c4e4cf87fb26",
+    "prId" : 2237,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2237",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "318439b2-8cb7-4c40-9f67-da7a5b2fa29e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Same case as with the above comment. We should still have RegionBrace, but most likely change the order.\r\n\r\n`RegionBrace :: RegionIndent`",
+        "createdAt" : "2021-02-15T11:04:31Z",
+        "updatedAt" : "2021-02-17T10:03:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "53b9e3c3-adb4-4eba-a77a-9ba59ca65898",
+        "parentId" : "318439b2-8cb7-4c40-9f67-da7a5b2fa29e",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "The same as above",
+        "createdAt" : "2021-02-15T18:05:57Z",
+        "updatedAt" : "2021-02-17T10:03:31Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e65d886f60569f3957421c3e80b5d5c88ac189f0",
+    "line" : 126,
+    "diffHunk" : "@@ -1,1 +312,316 @@            case Some(RegionParen) if token.is[LeftParen] => prev.tail\n            case Some(RegionEnumArtificialMark) if token.is[KwEnum] => prev.tail\n            case Some(_: RegionBrace) if token.is[LeftBrace] => prev.tail\n            case _ => prev\n          }"
+  },
+  {
+    "id" : "a171dcb4-876c-4f2e-aa3a-818406e1d276",
+    "prId" : 2237,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2237",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "74380e2d-b991-49ad-81cf-1fa50273552e",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "This should not pop up aside from enum, isn't thi shandled by `observeIndentedEnum`",
+        "createdAt" : "2021-02-15T11:05:10Z",
+        "updatedAt" : "2021-02-17T10:03:31Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0e659f4f-2d7e-4520-973d-d0814ce5d643",
+        "parentId" : "74380e2d-b991-49ad-81cf-1fa50273552e",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "There is the same case as with `RegionParen`\r\nEven if it might be strange but it possible to define `enum` inside `if` ",
+        "createdAt" : "2021-02-15T18:05:45Z",
+        "updatedAt" : "2021-02-17T10:03:31Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e65d886f60569f3957421c3e80b5d5c88ac189f0",
+    "line" : 125,
+    "diffHunk" : "@@ -1,1 +311,315 @@          prev.headOption match {\n            case Some(RegionParen) if token.is[LeftParen] => prev.tail\n            case Some(RegionEnumArtificialMark) if token.is[KwEnum] => prev.tail\n            case Some(_: RegionBrace) if token.is[LeftBrace] => prev.tail\n            case _ => prev"
   }
 ]
