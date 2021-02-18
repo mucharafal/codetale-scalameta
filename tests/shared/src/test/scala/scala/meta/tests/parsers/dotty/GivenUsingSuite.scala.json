@@ -183,5 +183,35 @@
     "commit" : "a08d5544ed1a8f7ec41bf03154761d07b05f865b",
     "line" : 495,
     "diffHunk" : "@@ -1,1 +582,586 @@        tname(\"???\")\n      )\n    )\n  }\n"
+  },
+  {
+    "id" : "1c53a0d9-bcc3-477e-b02a-af3c55b27154",
+    "prId" : 2239,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2239",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c2c59f1a-f10d-4be7-b301-25e9ba31b1e2",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "as we still need to support `_` it could be good to also keep a test for import + given + '_'",
+        "createdAt" : "2021-02-17T11:41:59Z",
+        "updatedAt" : "2021-02-17T15:50:20Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a5ec732af4c3518ebdf33cbcf706919041605d24",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +767,771 @@    )\n\n    runTestAssert[Stat](\"import File.{ given TC, given AC, * }\")(\n      Import(\n        List("
   }
 ]

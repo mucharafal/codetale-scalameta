@@ -2,6 +2,8 @@
   {
     "id" : "6a4249c0-a3d2-4ff8-8cbc-5ad6c0c6ce73",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "3275a21c-31a5-4b90-9922-a87936ea134b",
@@ -49,6 +51,8 @@
   {
     "id" : "a7e1547d-a89b-40cf-8b68-f82610a8b2fa",
     "prId" : 2027,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "8d4c2f20-06db-4e02-878e-7113764104b0",
@@ -96,6 +100,8 @@
   {
     "id" : "2ae2ace5-7b2f-421b-ab1a-df14e8e606f5",
     "prId" : 907,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "67732304-e49f-4785-a71c-967075ac3042",
@@ -177,5 +183,35 @@
     "commit" : "6671021ca31de70beb5653b516169540d2300121",
     "line" : 18,
     "diffHunk" : "@@ -1,1 +16,20 @@import scala.compat.Platform.EOL\n\nobject TreeSyntax {\n  def apply[T <: Tree](dialect: Dialect): Syntax[T] = {\n    object syntaxInstances {"
+  },
+  {
+    "id" : "c0ba8ef3-9427-4c5b-b514-dbe6432ec5dd",
+    "prId" : 2239,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2239",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "724a7fbb-ca54-4f57-beac-250e10b99492",
+        "parentId" : null,
+        "author" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "body" : "just cosmetic suggestion:\r\n`val op = if (dialect.allowAsForImportRename) kw(\"as\") else kw(\"=>\")`\r\n`s(t.name, \" \", op, \" \", t.rename)`",
+        "createdAt" : "2021-02-17T11:44:18Z",
+        "updatedAt" : "2021-02-17T15:50:20Z",
+        "lastEditedBy" : {
+          "login" : "kpbochenek",
+          "name" : "Krzysiek Bochenek",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/10478402?u=7a7840d3f5ce4047a19639e6b7977d43e3557158&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "a5ec732af4c3518ebdf33cbcf706919041605d24",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +1142,1146 @@      case t: Importee.Rename =>\n        if (dialect.allowAsForImportRename)\n          s(t.name, \" \", kw(\"as\"), \" \", t.rename)\n        else\n          s(t.name, \" \", kw(\"=>\"), \" \", t.rename)"
   }
 ]
