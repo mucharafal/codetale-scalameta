@@ -28,5 +28,73 @@
     "commit" : "278e068679fa4daf02051488495c8ec109ca2f74",
     "line" : 1,
     "diffHunk" : "@@ -1,1 +-1,3 @@package scala.meta.tests\npackage semanticdb\n"
+  },
+  {
+    "id" : "8567fe1f-a583-47b3-9684-79689f4e84be",
+    "prId" : 2255,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2255",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dd871efe-fc95-45ce-863b-5d997eb5b67b",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I would leave `2.13.4` key still here. The test will fail otherwise.",
+        "createdAt" : "2021-02-23T08:48:39Z",
+        "updatedAt" : "2021-02-23T10:49:01Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "3457d32a-6456-4d7a-b5cc-fe1f5a1365a3",
+        "parentId" : "dd871efe-fc95-45ce-863b-5d997eb5b67b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "We should also add `2.13.5` key, sorry if I wasn't clear about it. It should look like:\r\n```\r\n      \"2.13.4\" -> expectedLatest,\r\n      \"2.13.5\" -> expectedLatest,\r\n```",
+        "createdAt" : "2021-02-23T10:18:34Z",
+        "updatedAt" : "2021-02-23T10:49:01Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8aa198db-5536-4458-8e5b-e6fa41ae75ba",
+        "parentId" : "dd871efe-fc95-45ce-863b-5d997eb5b67b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "I added the small change myself to unblock.",
+        "createdAt" : "2021-02-23T10:49:23Z",
+        "updatedAt" : "2021-02-23T10:49:23Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5880904a9f1bb61109b22d5080fc135662019d56",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +112,116 @@    compat = List(\n      \"2.13.4\" -> expectedLatest,\n      \"2.13.5\" -> expectedLatest,\n      \"2.13\" -> expectedPrevious213\n    )"
   }
 ]
