@@ -2,6 +2,8 @@
   {
     "id" : "fa732bbb-d1f0-430b-b053-46b43fc3808e",
     "prId" : 1009,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b2747d0d-2617-4405-9b9d-65e38ba8eb02",
@@ -45,5 +47,73 @@
     "commit" : "8f311ca64c365724b8409f4bcb8c60324b2ccc34",
     "line" : 6,
     "diffHunk" : "@@ -1,1 +30,34 @@            // Adds the parsed token to the list of tokens and parse the rest of the string recursively.\n            if (remainingScaladoc.take(2) == \"\\n\\n\") {\n              List(p.value, DocToken(Paragraph)) ++ parseRec(remainingScaladoc.dropWhile(_ == '\\n'))\n            } else {\n              List(p.value) ++ parseRec(remainingScaladoc.dropWhile(c => c == ' ' || c == '\\n'))"
+  },
+  {
+    "id" : "e2c5b66a-5e18-4439-9070-c638ec87d040",
+    "prId" : 2259,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2259",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "89faa4bd-f6f9-4924-9063-720e03d70ab5",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "this approach is likely to apply every parser first. should we say instead\r\n`parsers.iterator.map { ... }` (so it's one at a time)?",
+        "createdAt" : "2021-02-26T15:59:24Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "17627915-623c-4c47-81b4-1bf1256c9c6b",
+        "parentId" : "89faa4bd-f6f9-4924-9063-720e03d70ab5",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "might be a good idea.",
+        "createdAt" : "2021-03-01T10:29:13Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d3f8fda7-7363-4594-b287-8be9e8745611",
+        "parentId" : "89faa4bd-f6f9-4924-9063-720e03d70ab5",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Fixed",
+        "createdAt" : "2021-03-02T16:01:17Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e772b2893885c31ddbf7bb5d77f0931ae4e38da9",
+    "line" : 29,
+    "diffHunk" : "@@ -1,1 +18,22 @@    def parseRec(toParse: String): List[DocToken] = {\n      parsers.iterator\n        .map { p =>\n          parse(toParse, p(_))\n        }"
   }
 ]

@@ -2,6 +2,8 @@
   {
     "id" : "65094a66-26d9-491b-85da-40dbfee7bb98",
     "prId" : 2059,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "57fa3650-298e-43e7-ba2a-725817bebefe",
@@ -45,5 +47,54 @@
     "commit" : "0895807bdd03f35efd545e4d45a450d65e089033",
     "line" : 55,
     "diffHunk" : "@@ -1,1 +164,168 @@    val table = row.rep(2, sep = sep).map { x =>\n      // we'll trim the header later; we might need it if align is missing\n      val rest = x.tail.map(_.map(_.trim))\n      val alignRow = rest.head\n      val align = alignRow.flatMap(toAlign).toSeq"
+  },
+  {
+    "id" : "372b76a4-b864-40f9-962b-dfd578839726",
+    "prId" : 2259,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2259",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c187ad61-b655-45a4-9f5b-99ffa208ac44",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "what is the significance of this `[_: P]` construct?",
+        "createdAt" : "2021-02-26T17:37:57Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cde16d09-6842-4f33-a36e-6625142ab01a",
+        "parentId" : "c187ad61-b655-45a4-9f5b-99ffa208ac44",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "That's an implicit parameter of type `P[_]`, which I think is a replacement of `Parser` from v1. It's needed for most operations on the parser.",
+        "createdAt" : "2021-03-01T10:31:31Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e772b2893885c31ddbf7bb5d77f0931ae4e38da9",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +25,29 @@    (Index ~ hspacesMin(min) ~ Index).map { case (b, e) => e - b }\n\n  private def nl[_: P]: P0 = P(\"\\n\")\n  private def startOrNl[_: P] = nl | Start\n  private def paraEnd[_: P] = nl.rep(exactly = 2)"
   }
 ]

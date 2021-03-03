@@ -2,6 +2,8 @@
   {
     "id" : "94dddf8a-49bc-4438-a50d-1f603ad18e37",
     "prId" : 1094,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "4058e616-d3e3-4355-b9c8-f6d93c1ca878",
@@ -45,5 +47,54 @@
     "commit" : "200894e1656e1855c673f442ce23857245f2241b",
     "line" : 7,
     "diffHunk" : "@@ -1,1 +176,180 @@    * Document an entity to one author.\n    */\n  case object Author extends TagKind(\"@author\", numberParameters = 1)\n\n  /**"
+  },
+  {
+    "id" : "aafa24d1-b00d-48d4-9085-3264d217e0b7",
+    "prId" : 2259,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2259",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "9ff1ff1e-0c14-4b8e-8eba-9bc9e5d92a08",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "body" : "is `(_)` needed?",
+        "createdAt" : "2021-02-26T15:41:20Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ea1c7d23-2861-4757-aa36-145dfc246be2",
+        "parentId" : "9ff1ff1e-0c14-4b8e-8eba-9bc9e5d92a08",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Yes, that's the standard way in fastparse v2 from what I see. Doesn't compile without it.",
+        "createdAt" : "2021-03-01T10:28:48Z",
+        "updatedAt" : "2021-03-02T16:13:30Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "e772b2893885c31ddbf7bb5d77f0931ae4e38da9",
+    "line" : 15,
+    "diffHunk" : "@@ -1,1 +24,28 @@      .map { b =>\n        def parseBodyFrom(idx: Int): List[DocToken.Reference] = {\n          parse(b, DocToken.referenceParser(_), startIndex = idx) match {\n            case Parsed.Success(value, index) =>\n              List(DocToken.Reference(value)) ++ parseBodyFrom(index)"
   }
 ]
