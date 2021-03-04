@@ -213,5 +213,54 @@
     "commit" : "a5ec732af4c3518ebdf33cbcf706919041605d24",
     "line" : 46,
     "diffHunk" : "@@ -1,1 +1142,1146 @@      case t: Importee.Rename =>\n        if (dialect.allowAsForImportRename)\n          s(t.name, \" \", kw(\"as\"), \" \", t.rename)\n        else\n          s(t.name, \" \", kw(\"=>\"), \" \", t.rename)"
+  },
+  {
+    "id" : "e88cf519-30ba-4535-93c9-6e0924134ff9",
+    "prId" : 2261,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2261",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "017ff8ee-f1f6-45f7-80f9-67ff7ee86382",
+        "parentId" : null,
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "Interesting! Nice job with finding a minimal repro!",
+        "createdAt" : "2021-03-03T16:02:33Z",
+        "updatedAt" : "2021-03-03T16:03:00Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "118a1a11-3cdd-4913-a98c-835ec1478cbf",
+        "parentId" : "017ff8ee-f1f6-45f7-80f9-67ff7ee86382",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "that was all @WojciechMazur :tada: ",
+        "createdAt" : "2021-03-03T16:13:21Z",
+        "updatedAt" : "2021-03-03T16:13:21Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "7e12cb53c8ec1de7b51e4e28b493007647a7c44d",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +269,273 @@      /* Soft keywords might need to be written with backquotes in some places.\n       * Previously used match clause fails due to:\n       * https://github.com/scala-native/scala-native/issues/2187\n       * instead we went with if clause to work around the issue.\n       */"
   }
 ]
