@@ -2,6 +2,8 @@
   {
     "id" : "ffdbd3f6-7f83-4ffc-9a26-c9fb6c7eabb9",
     "prId" : 2153,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "3a6d7658-71fb-40da-a019-05cf38677db3",
@@ -68,6 +70,8 @@
   {
     "id" : "94d60e72-c6d0-42a1-a3b6-451dacbecb66",
     "prId" : 2148,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "93501ca2-ab5c-4168-81bd-80af5183e3c7",
@@ -115,6 +119,8 @@
   {
     "id" : "d8278d1e-fcd3-4e56-a361-1c736ff0f085",
     "prId" : 2148,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "42d35b83-1d70-4ef1-abdf-128dfae19d18",
@@ -162,6 +168,8 @@
   {
     "id" : "f2a343a9-8453-4fb7-87fb-e164b87220e3",
     "prId" : 2134,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "22b07c4b-ecd1-466e-a6a5-4b3b2f15e2bd",
@@ -205,5 +213,35 @@
     "commit" : "b842ba226f297b475e55f55b68239e54aa345811",
     "line" : 24,
     "diffHunk" : "@@ -1,1 +179,183 @@    \"doc-tool/test/dotty/tools/dottydoc/GenDocs.scala\", // +: ^\"^-project\" +: \"Dotty\"\n    // Not fixable\n    \"tools/dotc/typer/Implicits.scala\" // if without then but using significant identation\n  )\n"
+  },
+  {
+    "id" : "18a40bc8-ab16-4fe9-a41d-f2702e381843",
+    "prId" : 2264,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2264",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f16fda60-893c-44d5-ac44-54a549163c3c",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "The scripts contain `#!` statements, which I am not sure how we should handle yet.",
+        "createdAt" : "2021-03-31T14:21:00Z",
+        "updatedAt" : "2021-03-31T18:11:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "19e28411f3945da380c777a400d9d0b99ff3a7fd",
+    "line" : 36,
+    "diffHunk" : "@@ -1,1 +164,168 @@  final val ignoreParts = List(\n    \"/tests/\",\n    \"/test-resources/scripting/\",\n    \"/sbt-test/\",\n    \"/out/\","
   }
 ]
