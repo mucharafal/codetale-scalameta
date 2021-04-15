@@ -643,5 +643,54 @@
     "commit" : "e65d886f60569f3957421c3e80b5d5c88ac189f0",
     "line" : 24,
     "diffHunk" : "@@ -1,1 +219,223 @@\n  test(\"new-if-else-indented\") {\n    val code = \"\"\"|if cond\n                  |  fx1\n                  |  fx2"
+  },
+  {
+    "id" : "f35d9346-76ab-434c-a7f8-ab99424d7e11",
+    "prId" : 2285,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2285",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "21782e52-5033-4444-a506-8d8f2bbad722",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Could you also add a test for:\r\n```\r\n  val code = \"\"\"|for { a <- x }\r\n                  |  fx\r\n                  |  fy\r\n                  |\"\"\".stripMargin\r\n```\r\n?",
+        "createdAt" : "2021-04-14T16:15:43Z",
+        "updatedAt" : "2021-04-14T17:52:20Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "583080cd-1a5e-4a7b-b436-ddbfe17d1c74",
+        "parentId" : "21782e52-5033-4444-a506-8d8f2bbad722",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "Added",
+        "createdAt" : "2021-04-14T18:13:33Z",
+        "updatedAt" : "2021-04-14T18:13:33Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1716fd9b80f08361e7b3eebad8a30425c6fc2541",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +742,746 @@\n  test(\"new-for-indented-without-do\") {\n    val code = \"\"\"|for ( a <- x )\n                  |  fx\n                  |  fy"
   }
 ]
