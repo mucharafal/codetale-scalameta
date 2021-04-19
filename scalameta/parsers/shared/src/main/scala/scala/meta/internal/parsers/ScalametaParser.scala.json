@@ -2214,5 +2214,54 @@
     "commit" : "e65d886f60569f3957421c3e80b5d5c88ac189f0",
     "line" : 125,
     "diffHunk" : "@@ -1,1 +311,315 @@          prev.headOption match {\n            case Some(RegionParen) if token.is[LeftParen] => prev.tail\n            case Some(RegionEnumArtificialMark) if token.is[KwEnum] => prev.tail\n            case Some(_: RegionBrace) if token.is[LeftBrace] => prev.tail\n            case _ => prev"
+  },
+  {
+    "id" : "0d811cf7-b6bd-4e30-92ea-479ffb15dbf1",
+    "prId" : 2290,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2290",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "31067d93-768b-4370-b64b-c765b8f74372",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Funnily enough this also allows:\r\n```\r\nif\r\n   case a =>\r\n   case b =>\r\nthen\r\n  stat\r\n```\r\n\r\nwhich is not entirely correct, but it's also accepted by the Dotty parser, only to be rejected at typer. I think more permissive parser is ok in this case.",
+        "createdAt" : "2021-04-16T09:24:53Z",
+        "updatedAt" : "2021-04-16T09:24:53Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c00dab0d-5e51-4917-9008-5ac34458fc92",
+        "parentId" : "31067d93-768b-4370-b64b-c765b8f74372",
+        "author" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "body" : "I agree it's better to be permissive in this case. I think the Scalameta parser is probably too strict in some cases.",
+        "createdAt" : "2021-04-16T09:54:26Z",
+        "updatedAt" : "2021-04-16T09:54:26Z",
+        "lastEditedBy" : {
+          "login" : "olafurpg",
+          "name" : "Ólafur Páll Geirsson",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/1408093?u=dceadb57ba23a7bdcdd46a4f066a2d3c8d0cf717&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "490efa68d0f2f9a2941edebc7f766fbcc07f06aa",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +2155,2159 @@  private def exprMaybeIndented(): Term = {\n    if (token.is[Indentation.Indent]) {\n      blockExpr()\n    } else {\n      expr()"
   }
 ]
