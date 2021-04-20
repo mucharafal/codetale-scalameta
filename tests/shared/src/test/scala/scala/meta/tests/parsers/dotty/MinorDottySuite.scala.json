@@ -2,6 +2,8 @@
   {
     "id" : "87afe88e-b39e-4558-a891-4228aad18b55",
     "prId" : 2148,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "081a316e-632b-4b62-85cb-6e0d5c32c527",
@@ -49,6 +51,8 @@
   {
     "id" : "5156b14d-f1c6-43ca-ba90-459e136bf080",
     "prId" : 2134,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "85cf593d-20d3-4c1e-a3ea-f4c2dd6dcf72",
@@ -96,6 +100,8 @@
   {
     "id" : "bf72e815-8a0f-4706-8642-95229aa95b77",
     "prId" : 2134,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "ffd9ebfb-5f90-4a16-9f77-31aa3725b5ea",
@@ -143,6 +149,8 @@
   {
     "id" : "7daff443-f60b-4c3a-af6e-97a37952e9f3",
     "prId" : 2104,
+    "prUrl" : null,
+    "prSource" : null,
     "comments" : [
       {
         "id" : "b6e528e2-44ca-4d69-a9f6-80e299066c93",
@@ -186,5 +194,54 @@
     "commit" : "abda6140f18cfdd322470f06e9c7b5a6fdee0156",
     "line" : 93,
     "diffHunk" : "@@ -1,1 +319,323 @@    runTestAssert[Source](\"\"\"|object X {\n                             |  println(\"hello\")\n                             |  ???\n                             |  ??? match {\n                             |    case 0 => 1"
+  },
+  {
+    "id" : "fddf23eb-cf1d-44e1-bbbd-1816ccb4594b",
+    "prId" : 2291,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2291",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c8824c3b-3de3-498c-8951-59cf1444a07c",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "body" : "Probably, it's needed to remove all checks from `Typed.lhs`\r\n\r\nI tried the following code and dotty compiles it:\r\n```scala\r\ns match {\r\n  case (v: String): String =>  // <- scalameta tree `Pat.Typed(Pat.Typed(...), ...)`\r\n}\r\n```\r\n",
+        "createdAt" : "2021-04-16T16:33:18Z",
+        "updatedAt" : "2021-04-19T12:43:19Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4"
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "26f65ac3-180c-4c1d-a0a9-888ce939608d",
+        "parentId" : "c8824c3b-3de3-498c-8951-59cf1444a07c",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "body" : "Good catch, I removed all of them and also added another test.",
+        "createdAt" : "2021-04-19T12:43:42Z",
+        "updatedAt" : "2021-04-19T12:43:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4"
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1e452f3d8aaec78d78daaa5616f50c0e257de61e",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +909,913 @@    runTestAssert[Stat](\n      \"\"\"|s match\n         |  case re(v): String => v.toDouble\n         |  case other => o\n         |\"\"\".stripMargin,"
   }
 ]
