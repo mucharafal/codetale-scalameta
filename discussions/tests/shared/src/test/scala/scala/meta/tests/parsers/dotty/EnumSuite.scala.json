@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "dd63abbf-859d-46b6-9bc6-6b2ab5dbadd3",
+    "prId" : 2293,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2293",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0cdec351-aa3a-485c-a2ba-9aebbc3b399a",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This is basically the same as:\r\n```scala\r\nenum A:\r\n   self =>\r\n   case B(v: Int)\r\n   case C(v: String)\r\n```\r\n\r\nIndentation after `self =>` doesn't seem to be playing any role. We should most likely add a test case there too.",
+        "createdAt" : "2021-04-21T09:09:14Z",
+        "updatedAt" : "2021-04-21T11:55:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "0369d6fb1a0b3f1cb35f366b979f94cf3acdb983",
+    "line" : 53,
+    "diffHunk" : "@@ -1,1 +435,439 @@  test(\"enum-self-indented\") {\n    val code =\n      \"\"\"|enum A:\n         |  self =>\n         |    case B(v: Int)"
+  }
+]
