@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "dabacb09-7ac2-4e63-b4c5-0c3df0dd7955",
+    "prId" : 2328,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2328",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "e74602c1-6d26-4d2a-b85b-5773d3a5f05e",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "you are testing anonymous classes. did it work, without this change, with regular\r\n```\r\nclass A:\r\n  ...\r\n```\r\nand does it work with early defs (that is, should line 4733 be changed as well):\r\n```\r\nclass A extends { def ... }:\r\n  ...\r\n```",
+        "createdAt" : "2021-05-04T15:14:34Z",
+        "updatedAt" : "2021-05-04T15:21:11Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0418138b-d0e4-4319-a04a-6783a4583fb6",
+        "parentId" : "e74602c1-6d26-4d2a-b85b-5773d3a5f05e",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "The first one worked previously, only `new:` was not handled.\r\n\r\nAs for `early defs` they are no longer allowed in Dotty, so this is safe.",
+        "createdAt" : "2021-05-04T17:07:18Z",
+        "updatedAt" : "2021-05-04T17:07:19Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3eaafa05ad72799c236cb981a55fd9f93403aaec",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +55,59 @@  }\n\n  test(\"anonymous-class\") {\n    val code = \"\"\"|new A:\n                  |  def f: Int"
+  }
+]

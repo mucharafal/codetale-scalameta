@@ -1,0 +1,129 @@
+[
+  {
+    "id" : "0ec06eb1-e375-458c-8432-60068ff373dd",
+    "prId" : 2329,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2329",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "00e0aa37-cb8d-442d-84c5-a8c0a396b72b",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "does this mean you will NOT keep braces for this single-stat block? i would prefer that you had. if block had braces, they need to be part of it, regardless of the number of stats.",
+        "createdAt" : "2021-05-04T15:50:23Z",
+        "updatedAt" : "2021-05-04T15:50:55Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "9428e20a-3ad9-45e2-aefb-4185ff221a6f",
+        "parentId" : "00e0aa37-cb8d-442d-84c5-a8c0a396b72b",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "That's only for indentation, that doesn't have braces at all.",
+        "createdAt" : "2021-05-04T15:59:18Z",
+        "updatedAt" : "2021-05-04T15:59:19Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e64a0cb8-3c38-459c-9d7f-c05e2058a508",
+        "parentId" : "00e0aa37-cb8d-442d-84c5-a8c0a396b72b",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "zrozumiał...",
+        "createdAt" : "2021-05-04T16:00:54Z",
+        "updatedAt" : "2021-05-04T16:01:00Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "b7c272cbd09e4a6d6a87945a1d3ed39b10379ec8",
+    "line" : 46,
+    "diffHunk" : "@@ -1,1 +4229,4233 @@        if (in.observeIndented()) {\n          val block = autoPos(Term.Block(indented(templateStats())))\n          if (block.stats.size == 1) block.stats.head\n          else block\n        } else if (token.is[DefIntro]) {"
+  },
+  {
+    "id" : "2c921b95-3feb-4e5d-9f6b-c38d7d4f560e",
+    "prId" : 2328,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2328",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "1261af5c-dcb7-4081-b5c5-314bf79a6766",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "should this whole function be changed to:\r\n```\r\n    val edefsOrTemplate = if (token.is[LeftBrace]) {\r\n      // @S: pre template body cannot stub like post body can!\r\n      val (self, body) = templateBody(enumCaseAllowed)\r\n      if (token.is[KwWith] && self.name.is[Name.Anonymous] && self.decltpe.isEmpty) {\r\n        val edefs = body.map(ensureEarlyDef)\r\n        next()\r\n        Left(edefs)\r\n      } else {\r\n        Right(Template(Nil, Nil, self, body))\r\n      }\r\n    } else {\r\n      Left(Nil)\r\n    }\r\n    edefsOrTemplate match {\r\n      case Right(t) => t\r\n      case Left(edefs) =>\r\n        val parents = if (token.is[Colon]) Nil else templateParents(afterExtend)\r\n        template(edefs, parents, enumCaseAllowed)\r\n    }\r\n```",
+        "createdAt" : "2021-05-04T15:20:57Z",
+        "updatedAt" : "2021-05-04T15:21:11Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "f1004921-4a3e-4740-8a5a-a8373f3dcf57",
+        "parentId" : "1261af5c-dcb7-4081-b5c5-314bf79a6766",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We should be fine as is, since early defs are not allowed in Dotty, so they will not exist with colons.\r\n\r\nIt would be probably good to remove early defs from Scala 3 dialect, but we could do that separately if needed.",
+        "createdAt" : "2021-05-04T17:12:10Z",
+        "updatedAt" : "2021-05-04T17:12:10Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "3eaafa05ad72799c236cb981a55fd9f93403aaec",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +4737,4741 @@      }\n    } else {\n      val parents = if (token.is[Colon]) Nil else templateParents(afterExtend)\n      template(Nil, parents, enumCaseAllowed)\n    }"
+  }
+]
