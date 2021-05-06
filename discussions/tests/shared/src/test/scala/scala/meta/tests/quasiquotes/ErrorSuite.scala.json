@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "987df758-c89f-4df3-915b-8f59432fd4df",
+    "prId" : 2327,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2327",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4a09b198-3101-4e3b-a19b-439836e84b03",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "this type of quasiquote is probably meaningless. as a result of your [welcome] change, there's no more confusion between matching a template and a parent class.\r\n\r\nanyone who uses `$foo` without `extends` would know it matches a template. and using `extends $foo` would now require `init\"...\"` and nothing else.\r\n\r\nso i would do this:\r\n- in `ConversionMacros.scala:typeMismatchMessage`, replace the entire template-related block (and `MetaTemplate` field) and remove the `wholeMessage` variable as well.\r\n- change this `#448` test into two:\r\n  - `q\"class C $foo` where `foo = t\"...\"` (this one); wants template, gets type\r\n  - `q\"class C extends $foo` where `foo = t\"...\"` (original, with `extends`); wants init, gets type\r\n",
+        "createdAt" : "2021-05-04T15:02:58Z",
+        "updatedAt" : "2021-05-05T09:12:55Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "62bd62b3-35fa-418c-8fe4-1a9e578f6550",
+        "parentId" : "4a09b198-3101-4e3b-a19b-439836e84b03",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Did both, I think we should be fine now.",
+        "createdAt" : "2021-05-05T09:13:52Z",
+        "updatedAt" : "2021-05-05T09:13:52Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fcb000b8f81059d73eb92bba3e54f308f949da3",
+    "line" : 11,
+    "diffHunk" : "@@ -1,1 +725,729 @@      import scala.meta._\n      val notReallyAParent = t\"_root_.scala.AnyVal\"\n      q\"class C $notReallyAParent\"\n    \"\"\"),\n      \"\"\"|<macro>:4: type mismatch when unquoting;"
+  }
+]

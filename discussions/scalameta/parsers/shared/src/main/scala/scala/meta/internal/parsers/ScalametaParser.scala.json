@@ -125,5 +125,79 @@
     "commit" : "3eaafa05ad72799c236cb981a55fd9f93403aaec",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +4737,4741 @@      }\n    } else {\n      val parents = if (token.is[Colon]) Nil else templateParents(afterExtend)\n      template(Nil, parents, enumCaseAllowed)\n    }"
+  },
+  {
+    "id" : "f90d963c-db0a-4cc7-a19b-08a8c31bc88e",
+    "prId" : 2327,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2327",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "891d9e37-1a9d-4740-b824-9ec509c2cc22",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "i am not sure i understand this. does this mean unquoting a mod requires `$(mod)`, with parens?",
+        "createdAt" : "2021-05-04T15:04:02Z",
+        "updatedAt" : "2021-05-05T09:12:55Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "588ca7bb-3b91-4110-b985-827b04770078",
+        "parentId" : "891d9e37-1a9d-4740-b824-9ec509c2cc22",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "It means as far as I can tell `$mod (` so essentially the constructor should be next.",
+        "createdAt" : "2021-05-04T15:46:43Z",
+        "updatedAt" : "2021-05-05T09:12:55Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c313dace-fc58-4f3c-9793-45215c1ae04c",
+        "parentId" : "891d9e37-1a9d-4740-b824-9ec509c2cc22",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "ah, so this is not for `private class C(...)`, it's for `class C private(...)`? got it.",
+        "createdAt" : "2021-05-04T15:53:39Z",
+        "updatedAt" : "2021-05-05T09:12:55Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fcb000b8f81059d73eb92bba3e54f308f949da3",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +3574,3578 @@\n  def ctorModifiers(): Option[Mod] = token match {\n    case Unquote() if ahead(token.is[LeftParen]) => Some(unquote[Mod])\n    case Ellipsis(_) => Some(ellipsis(1, astInfo[Mod]))\n    case KwPrivate() => Some(accessModifier())"
   }
 ]

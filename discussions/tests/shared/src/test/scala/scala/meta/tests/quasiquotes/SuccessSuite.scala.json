@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "bf9aa105-0063-441a-a38a-4841f044b806",
+    "prId" : 2327,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2327",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "12b29c42-9835-4208-86a0-37c5ce0bab37",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "can you please add another test just below, to demonstrate that the `{}` is no longer needed:\r\n```\r\nassert(q\"class C extends $parent\".syntax == \"class C extends _root_.scala.AnyVal\")\r\n```\r\nmaybe add it in a few other places, too.",
+        "createdAt" : "2021-05-04T14:52:09Z",
+        "updatedAt" : "2021-05-05T09:12:55Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ea70398d-d7e0-405a-9746-9adb42b63e59",
+        "parentId" : "12b29c42-9835-4208-86a0-37c5ce0bab37",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Added! It wasn't tested anywhere else though.",
+        "createdAt" : "2021-05-05T09:13:16Z",
+        "updatedAt" : "2021-05-05T09:13:16Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "94b34142-14d2-4c11-85e3-f4d44b54caa8",
+        "parentId" : "12b29c42-9835-4208-86a0-37c5ce0bab37",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "because it wasn't possible before your change",
+        "createdAt" : "2021-05-05T13:50:56Z",
+        "updatedAt" : "2021-05-05T13:51:03Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "8fcb000b8f81059d73eb92bba3e54f308f949da3",
+    "line" : 147,
+    "diffHunk" : "@@ -1,1 +2318,2322 @@    val parent = init\"_root_.scala.AnyVal\"\n    val template = template\"$parent\"\n    assert(q\"class C $template\".syntax == \"class C extends _root_.scala.AnyVal\")\n    assert(q\"class C extends $parent {}\".syntax == \"class C extends _root_.scala.AnyVal\")\n    assert(q\"class C extends $parent\".syntax == \"class C extends _root_.scala.AnyVal\")"
+  }
+]
