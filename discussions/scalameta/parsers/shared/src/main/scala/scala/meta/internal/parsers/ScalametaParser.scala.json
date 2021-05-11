@@ -199,5 +199,58 @@
     "commit" : "8fcb000b8f81059d73eb92bba3e54f308f949da3",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +3574,3578 @@\n  def ctorModifiers(): Option[Mod] = token match {\n    case Unquote() if ahead(token.is[LeftParen]) => Some(unquote[Mod])\n    case Ellipsis(_) => Some(ellipsis(1, astInfo[Mod]))\n    case KwPrivate() => Some(accessModifier())"
+  },
+  {
+    "id" : "c16048cc-d3f4-4298-bbb2-15a776f4a3e1",
+    "prId" : 2337,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2337",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "f72f66c6-525b-43bb-9f11-66ad9a90716d",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "is this case tested? i thought this was the one that was failing for me originally, i don't see it in new tests.",
+        "createdAt" : "2021-05-10T11:41:46Z",
+        "updatedAt" : "2021-05-10T12:49:32Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dc13e3cc-4656-47fc-8f28-4437a73f5c55",
+        "parentId" : "f72f66c6-525b-43bb-9f11-66ad9a90716d",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Yes, it's covered  - https://github.com/scalameta/scalameta/blob/9e05c5aa0e796c261c85d2e0bb2215034620ef18/tests/shared/src/test/scala-2.13/scala/meta/tests/tokenizers/TokensPositionSuite.scala#L704-L709",
+        "createdAt" : "2021-05-10T11:43:28Z",
+        "updatedAt" : "2021-05-10T12:49:32Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "acc5fc3bb21f95161ee3f67ea2223893c9219a12",
+    "line" : 14,
+    "diffHunk" : "@@ -1,1 +2471,2475 @@                  Some(\n                    atPos(tree, tree)(\n                      Term.Param(Nil, atPos(name, name)(Name.Anonymous()), None, None)\n                    )\n                  )"
   }
 ]
