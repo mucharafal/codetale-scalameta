@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "aef5ca6a-64aa-4763-8470-c20d3008f5a0",
+    "prId" : 2342,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2342",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ecc7fd33-81e9-473f-b935-cc603193e29a",
+        "parentId" : null,
+        "author" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
+        },
+        "body" : "ast explorer was already setting Scala213 as the default parser, but this is just in case someone uses it standalone",
+        "createdAt" : "2021-05-14T08:01:46Z",
+        "updatedAt" : "2021-05-14T08:01:50Z",
+        "lastEditedBy" : {
+          "login" : "gabro",
+          "name" : "Gabriele Petronella",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/691940?u=cc41b494c40cff0015df21d897639d7d176bb9c6&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "86f740b6546d0453cc8ca5345cf293aae384a258",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +86,90 @@          case None => Left(s\"'$dialectStr' is not a valid dialect.\")\n        }\n      case None => Right(dialects.Scala213)\n    }\n  }"
+  }
+]
