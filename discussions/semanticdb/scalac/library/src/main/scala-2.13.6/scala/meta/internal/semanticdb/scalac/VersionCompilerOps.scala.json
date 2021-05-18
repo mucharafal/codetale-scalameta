@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "4d10ad8a-9120-4bc8-aa78-074177898e23",
+    "prId" : 2344,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2344",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b502deff-5442-4cd9-a193-7b5aa5bc7fca",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "This got fixed in 2.13.6",
+        "createdAt" : "2021-05-17T14:10:48Z",
+        "updatedAt" : "2021-05-17T14:10:49Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4bf05856695919b7b1655ac7fecc791e171cc9be",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +5,9 @@trait VersionCompilerOps {\n\n  def forceWarnings(global: Global) = {}\n\n}"
+  }
+]

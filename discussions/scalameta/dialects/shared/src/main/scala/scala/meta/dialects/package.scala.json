@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "f19ae166-8998-486f-830b-267e0b44256b",
+    "prId" : 2344,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2344",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "955d0bd9-10df-4646-b29a-9f7a980798f6",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I haven't added `case` in for expression since we don't actually have a separate option for that, I can add it if needed later, but it's rather a minor problem - it will parse it always currently.",
+        "createdAt" : "2021-05-17T13:58:32Z",
+        "updatedAt" : "2021-05-17T13:58:32Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "4bf05856695919b7b1655ac7fecc791e171cc9be",
+    "line" : 8,
+    "diffHunk" : "@@ -1,1 +63,67 @@   */\n  implicit val Scala213Source3 = Scala213\n    .withAllowQuestionMarkPlaceholder(true)\n    .withAllowAsForImportRename(true)\n    .withAllowStarWildcardImport(true)"
+  }
+]
