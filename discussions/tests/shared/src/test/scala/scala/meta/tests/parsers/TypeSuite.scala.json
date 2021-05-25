@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "a00b943d-2ede-4ef4-8ddb-03e154f7d5fc",
+    "prId" : 2348,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2348",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "b198a77a-0187-459a-9099-ba434c12be86",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "what about scala3, not just scala2source3?",
+        "createdAt" : "2021-05-19T04:37:38Z",
+        "updatedAt" : "2021-05-19T04:39:15Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "101453fe-e400-4c7f-bb47-e442583a4ffc",
+        "parentId" : "b198a77a-0187-459a-9099-ba434c12be86",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We usually just test the one dialect that it's enabled in.",
+        "createdAt" : "2021-05-19T06:47:42Z",
+        "updatedAt" : "2021-05-19T06:47:42Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "dcf9d30f-b1fc-4b80-b3bb-22b9285f10b8",
+        "parentId" : "b198a77a-0187-459a-9099-ba434c12be86",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "but we are also enabling it in scala 3, which should be tested or removed",
+        "createdAt" : "2021-05-19T11:24:34Z",
+        "updatedAt" : "2021-05-19T11:24:34Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "55606a8a37c6be603c7eecc2639a75573af72ad7",
+    "line" : 9,
+    "diffHunk" : "@@ -1,1 +165,169 @@      tpe(\"+_ => Int\")(dialects.Scala213Source3)\n    val Type.Apply(Type.Name(\"Option\"), List(Type.Name(\"-_\"))) =\n      tpe(\"Option[- _]\")(dialects.Scala213Source3)\n  }\n}"
+  }
+]
