@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "ea1bbbca-0e3b-45f9-be8a-071894ff3f10",
+    "prId" : 2366,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2366",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "4f1dcdc4-c285-4413-8256-d96dbdf5baf8",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "could you please tests with `given` and `new` anonymous? and whatever else can potentially use a template.",
+        "createdAt" : "2021-05-26T16:03:51Z",
+        "updatedAt" : "2021-05-26T16:42:53Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "ce05c0d6-9c99-4149-9a96-352a49875d58",
+        "parentId" : "4f1dcdc4-c285-4413-8256-d96dbdf5baf8",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Added tests in a separate suite for Scala 3 (I had some issues with the implicit dialect, so decided that it's safer)",
+        "createdAt" : "2021-05-27T09:36:38Z",
+        "updatedAt" : "2021-05-27T09:36:39Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "07325fc0-bc81-4531-9668-da988d7995cd",
+        "parentId" : "4f1dcdc4-c285-4413-8256-d96dbdf5baf8",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "thank you!",
+        "createdAt" : "2021-05-27T12:48:03Z",
+        "updatedAt" : "2021-05-27T12:48:03Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c29c6687e0f269f55eda7610f39fe4f8ffc79ba8",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +506,510 @@  }\n\n  test(\"package object e extends D\") {\n    assertEquals(topStat(\"package object e extends D\").syntax, \"package object e extends D\")\n    val q\"package object $name $template\" = q\"package object e extends D\""
+  }
+]

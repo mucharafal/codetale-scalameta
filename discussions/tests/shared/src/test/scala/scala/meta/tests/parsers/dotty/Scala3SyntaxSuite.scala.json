@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "1b32fa9a-bbf5-4acb-9b8b-fd7ee0804564",
+    "prId" : 2366,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2366",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "45f828e6-49ac-4ef8-89e0-b222d814c37f",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "@bjaglin quasiquotes with enums seems to work. But I had some issues with givens, however those might caused by the fact that givens can take a lot of forms. We might need to work on that depending on how much quasiquotes are used here.",
+        "createdAt" : "2021-05-27T09:38:03Z",
+        "updatedAt" : "2021-05-27T10:04:22Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "c29c6687e0f269f55eda7610f39fe4f8ffc79ba8",
+    "line" : 27,
+    "diffHunk" : "@@ -1,1 +25,29 @@      \"enum C extends A with B { case D }\"\n    )\n    val q\"enum $name $template\" = q\"enum C extends A with B { case D }\"\n    assertEquals(template.syntax, \"extends A with B { case D }\")\n  }"
+  }
+]
