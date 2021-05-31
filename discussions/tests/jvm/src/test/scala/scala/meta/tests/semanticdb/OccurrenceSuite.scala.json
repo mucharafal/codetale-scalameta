@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "61298675-4ee1-416b-92eb-3dcd62c2dcbf",
+    "prId" : 2371,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2371",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "603adba7-8dff-40a8-b83a-df5655c83637",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "We could use some better way to work with compatibility in tests, but I don't want to reinvent it all here at this time.",
+        "createdAt" : "2021-05-28T13:10:36Z",
+        "updatedAt" : "2021-05-28T13:10:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "101ab3ac84d9a2c98d520c12d25fd673047d8c33",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +22,26 @@      test(t.name) {\n        val body = t.body()\n        val expectedCompat = if (ScalaVersion.atLeast212_14) {\n          body.expected\n        } else {"
+  }
+]
