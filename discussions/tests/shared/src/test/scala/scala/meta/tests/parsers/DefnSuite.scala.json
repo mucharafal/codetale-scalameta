@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "d51c4abf-f41a-4024-a439-9231e881e06b",
+    "prId" : 2375,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2375",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "3c96c30b-38cd-433f-a5df-e85fdd24ded0",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "how's this treated:\r\n```\r\nif (...) { ... }.select else {...} + {...}\r\ntry {...}.select\r\n```\r\nwhat is `location == BlockStat`?",
+        "createdAt" : "2021-06-02T13:54:00Z",
+        "updatedAt" : "2021-06-02T13:54:15Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "70a45b62-2bbc-485c-8a9b-27cc0377009f",
+        "parentId" : "3c96c30b-38cd-433f-a5df-e85fdd24ded0",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "I think `BlockStat` means we are in a block, which can be either indented, `=>` or {}. At least that's what I think.\r\nI will check the other example",
+        "createdAt" : "2021-06-02T14:32:43Z",
+        "updatedAt" : "2021-06-02T14:32:43Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "389a314d447e5e7d47d5dd2a2d7705e582e21fe2",
+    "line" : 13,
+    "diffHunk" : "@@ -1,1 +173,177 @@  }\n\n  test(\"braces-in-functions\") {\n    val defn = templStat(\n      \"\"\"|def f = { (n: Int) =>"
+  }
+]

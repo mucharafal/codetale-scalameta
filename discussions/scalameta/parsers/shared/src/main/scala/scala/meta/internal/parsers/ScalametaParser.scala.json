@@ -358,5 +358,100 @@
     "commit" : "55606a8a37c6be603c7eecc2639a75573af72ad7",
     "line" : 24,
     "diffHunk" : "@@ -1,1 +1743,1747 @@              Type.Placeholder(typeBounds())\n            else\n              Type.Name(s\"${ident.value}_\")\n          }\n        case Literal() =>"
+  },
+  {
+    "id" : "bae3b4c7-0f2e-44d3-90bc-7720c257f7aa",
+    "prId" : 2375,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2375",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ee952967-5084-4f76-b869-2525cb733415",
+        "parentId" : null,
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "I found that for parsing cases we use `expr(location = BlockStat, ...)`: https://github.com/scalameta/scalameta/blob/c058f6dfd2d220a8cef2e44669f3adb393ff6d6d/scalameta/parsers/shared/src/main/scala/scala/meta/internal/parsers/ScalametaParser.scala#L3124\r\n\r\nI'm wondering if the same approach would work for `function` and `implicitClosure`",
+        "createdAt" : "2021-06-02T16:18:35Z",
+        "updatedAt" : "2021-06-02T16:18:35Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "27b92950-ec5b-4352-b25c-9b79df725091",
+        "parentId" : "ee952967-5084-4f76-b869-2525cb733415",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "I tried that and seems like `expr` usage instead of `blockExpr` fixes that problem - [commit](https://github.com/dos65/scalameta/commit/37f1fd38a7931d944d01b36dcf2098f7dabff4b3).\r\nI'm not fully sure if it fixes any additional cases but at least it looks more generic.\r\n@tgodzik wdyt?",
+        "createdAt" : "2021-06-03T10:04:39Z",
+        "updatedAt" : "2021-06-03T10:04:39Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "267f3a4e-eaba-45ba-a19e-ddefa159e05a",
+        "parentId" : "ee952967-5084-4f76-b869-2525cb733415",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "That's a good idea! Thanks! And also changed!",
+        "createdAt" : "2021-06-04T13:21:53Z",
+        "updatedAt" : "2021-06-04T13:21:53Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "0aff6163-326d-48cc-9edc-73bd966cc203",
+        "parentId" : "ee952967-5084-4f76-b869-2525cb733415",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Actually, it doesn't work after checking again. Reverted to the last version.",
+        "createdAt" : "2021-06-04T13:29:58Z",
+        "updatedAt" : "2021-06-04T13:29:58Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "389a314d447e5e7d47d5dd2a2d7705e582e21fe2",
+    "line" : 26,
+    "diffHunk" : "@@ -1,1 +3084,3088 @@  }\n\n  def blockExpr(isBlockOptional: Boolean = false): Term = autoPos {\n    if (ahead(token.is[CaseIntro] || (token.is[Ellipsis] && ahead(token.is[KwCase])))) {\n      if (token.is[LeftBrace])"
   }
 ]
