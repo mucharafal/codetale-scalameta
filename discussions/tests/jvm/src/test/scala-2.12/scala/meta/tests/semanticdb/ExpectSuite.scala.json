@@ -1,0 +1,34 @@
+[
+  {
+    "id" : "6d6c511c-3ed0-4bba-9592-47383a2b23db",
+    "prId" : 2378,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2378",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "0020d1b3-f416-45c1-bc24-6a82c93ed7e1",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "`Diffutils` from munit work and I don't think we plan to change it at any point in the future. What do you think @olafurpg ?",
+        "createdAt" : "2021-06-09T08:11:17Z",
+        "updatedAt" : "2021-06-09T08:11:18Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "067fc5b9019fe71a1eab6c385ff1850d0a2749b0",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +18,22 @@import scala.meta.tests.cli._\nimport munit.FunSuite\nimport munit.internal.difflib.DiffUtils\nimport scala.meta.tests.metacp.Library\nimport scala.meta.tests.metacp.MetacpOps"
+  }
+]
