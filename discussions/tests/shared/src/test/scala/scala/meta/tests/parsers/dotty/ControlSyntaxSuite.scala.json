@@ -1,0 +1,76 @@
+[
+  {
+    "id" : "a26d1e20-d4a0-41b8-8f9d-28ea1e580b96",
+    "prId" : 2381,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2381",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "84c36dc1-2407-45d5-8eba-bbbcbf024b42",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "should this also work (and if not, can we add the failure test?):\r\n```\r\n  while (x > 0) && (y > 0) x += 1\r\n```\r\nalso, is `do` allowed only in scala3?",
+        "createdAt" : "2021-06-15T16:09:56Z",
+        "updatedAt" : "2021-06-15T16:10:28Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "64d79b5a-5d11-4161-add9-7920f9f6929e",
+        "parentId" : "84c36dc1-2407-45d5-8eba-bbbcbf024b42",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "It shouldn't. It seems that the chained infix application works only if there is `do` keyword in the dotty parser.\r\n\r\nThanks for pointing at that. I will slightly rework that pr.",
+        "createdAt" : "2021-06-16T06:34:12Z",
+        "updatedAt" : "2021-06-16T06:34:12Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "c82ee304-1598-4133-9a6a-a15df983576c",
+        "parentId" : "84c36dc1-2407-45d5-8eba-bbbcbf024b42",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "Added checks on having `do`/`then` kw after complex expressions as it's works in scala3.",
+        "createdAt" : "2021-06-16T11:11:43Z",
+        "updatedAt" : "2021-06-16T11:11:43Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6a40e10fbb565d4add07d2a11c4dac0475e61e73",
+    "line" : 21,
+    "diffHunk" : "@@ -1,1 +1114,1118 @@  test(\"while-cond-expr-do\") {\n    val code =\n      \"\"\"|  while (x > 0) && (y > 0) do\n         |    x += 1\n         |\"\"\".stripMargin"
+  }
+]

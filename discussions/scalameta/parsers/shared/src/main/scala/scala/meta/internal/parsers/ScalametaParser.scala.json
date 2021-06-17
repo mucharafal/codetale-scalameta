@@ -453,5 +453,58 @@
     "commit" : "389a314d447e5e7d47d5dd2a2d7705e582e21fe2",
     "line" : 26,
     "diffHunk" : "@@ -1,1 +3084,3088 @@  }\n\n  def blockExpr(isBlockOptional: Boolean = false): Term = autoPos {\n    if (ahead(token.is[CaseIntro] || (token.is[Ellipsis] && ahead(token.is[KwCase])))) {\n      if (token.is[LeftBrace])"
+  },
+  {
+    "id" : "19fd3085-81ab-497f-a605-70773a7ad384",
+    "prId" : 2381,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2381",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "18554ebb-bdcc-408c-a6e7-1526a5547038",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "i think this branch is not tested. you don't use scala 2 in any test cases?",
+        "createdAt" : "2021-06-16T11:35:15Z",
+        "updatedAt" : "2021-06-16T11:35:47Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "364c155b-8e47-4ac7-8227-83e9a50149fa",
+        "parentId" : "18554ebb-bdcc-408c-a6e7-1526a5547038",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "For scala2 this part branch isn't involved because the condition has to be inside braces.\r\nThere are tests for scala2 `if`/`while` in [TermSuite](https://github.com/scalameta/scalameta/blob/main/tests/shared/src/test/scala/scala/meta/tests/parsers/TermSuite.scala).\r\n\r\n",
+        "createdAt" : "2021-06-16T12:07:54Z",
+        "updatedAt" : "2021-06-16T12:07:54Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6a40e10fbb565d4add07d2a11c4dac0475e61e73",
+    "line" : 19,
+    "diffHunk" : "@@ -1,1 +2271,2275 @@\n  def condExprInParens[T <: Token: TokenInfo]: Term = {\n    if (dialect.allowSignificantIndentation) {\n      val forked = in.fork\n      val simpleExpr = condExpr()"
   }
 ]
