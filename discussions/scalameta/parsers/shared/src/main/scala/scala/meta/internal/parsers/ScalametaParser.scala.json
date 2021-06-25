@@ -506,5 +506,121 @@
     "commit" : "6a40e10fbb565d4add07d2a11c4dac0475e61e73",
     "line" : 19,
     "diffHunk" : "@@ -1,1 +2271,2275 @@\n  def condExprInParens[T <: Token: TokenInfo]: Term = {\n    if (dialect.allowSignificantIndentation) {\n      val forked = in.fork\n      val simpleExpr = condExpr()"
+  },
+  {
+    "id" : "707f8d70-7f3d-4058-9735-9643cfd44a68",
+    "prId" : 2396,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2396",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "85273f0f-5212-436d-bdc1-54cdb025de9d",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Is this needed? Outdent should be always before end marker and from what I see we don't need it below.",
+        "createdAt" : "2021-06-24T16:25:37Z",
+        "updatedAt" : "2021-06-24T16:25:54Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "a7ab9d8b-d377-45ff-8230-e6c4170ab00e",
+        "parentId" : "85273f0f-5212-436d-bdc1-54cdb025de9d",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "For empty template body, there is no indent/outdent\r\n```scala\r\nobject Foo: // <- here at colon  we call `observeIndented` while the next line doesn't have any indentation\r\nend Foo\r\n```",
+        "createdAt" : "2021-06-24T16:42:35Z",
+        "updatedAt" : "2021-06-24T16:42:35Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "7e5b6ff0-1885-4371-85c2-601e4eb54901",
+        "parentId" : "85273f0f-5212-436d-bdc1-54cdb025de9d",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Generally, it should end on the LF after `:`, but this doesn't seem to happen and we are skipping the LF. That would be the underlying issue here. However, not sure how to fix it properly, so it's ok for now.",
+        "createdAt" : "2021-06-24T17:25:39Z",
+        "updatedAt" : "2021-06-24T17:25:46Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cd8da186-4ed3-4015-b040-7b5e25ec214f",
+        "parentId" : "85273f0f-5212-436d-bdc1-54cdb025de9d",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "and would this work:\r\n```\r\nobject Foo:\r\n// comment\r\nend Foo\r\n```",
+        "createdAt" : "2021-06-24T18:14:18Z",
+        "updatedAt" : "2021-06-24T18:14:18Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "d19d45b2-3dce-4b1f-8fd0-96445ce336c5",
+        "parentId" : "85273f0f-5212-436d-bdc1-54cdb025de9d",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "@kitbellew yep. Parser ignores comments in the same way as whitespaces",
+        "createdAt" : "2021-06-24T18:19:34Z",
+        "updatedAt" : "2021-06-24T18:19:34Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "5cfe008d55791ec5452f665600bee0b2d0cc6719",
+    "line" : 4,
+    "diffHunk" : "@@ -1,1 +908,912 @@    case LF() | LFLF() => next()\n    case _ if in.observeOutdented() =>\n    case t if t.is[EndMarkerIntro] =>\n    case _ => accept[Semicolon]\n  }"
   }
 ]
