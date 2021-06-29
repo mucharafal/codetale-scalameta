@@ -622,5 +622,79 @@
     "commit" : "5cfe008d55791ec5452f665600bee0b2d0cc6719",
     "line" : 4,
     "diffHunk" : "@@ -1,1 +908,912 @@    case LF() | LFLF() => next()\n    case _ if in.observeOutdented() =>\n    case t if t.is[EndMarkerIntro] =>\n    case _ => accept[Semicolon]\n  }"
+  },
+  {
+    "id" : "99f6084b-9383-4c6a-8a4d-b920d20f82ec",
+    "prId" : 2400,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2400",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "67d60a29-c204-4873-b031-6f3d5f9a803c",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "what if start != end? does it ever make sense to start a tree with Whitespace?",
+        "createdAt" : "2021-06-28T14:10:52Z",
+        "updatedAt" : "2021-06-28T14:10:52Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "b66e9694-7883-4d8a-988c-96b01d4e46f3",
+        "parentId" : "67d60a29-c204-4873-b031-6f3d5f9a803c",
+        "author" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "body" : "if start != end then trivia is already removed fully.",
+        "createdAt" : "2021-06-28T14:43:38Z",
+        "updatedAt" : "2021-06-28T14:43:48Z",
+        "lastEditedBy" : {
+          "login" : "dos65",
+          "name" : "Vadim Chelyshov",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/5816952?u=801a9faa2796a46c371c28cc181e0fa6abbb7132&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "cfa8da9a-d69e-4c1b-92dc-61e5408dbf06",
+        "parentId" : "67d60a29-c204-4873-b031-6f3d5f9a803c",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "got it... must be because it's not the start that has it but end.",
+        "createdAt" : "2021-06-28T14:49:42Z",
+        "updatedAt" : "2021-06-28T14:49:46Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "95ce5feed17b024f0a62978a4c39518d6710a5c6",
+    "line" : 6,
+    "diffHunk" : "@@ -1,1 +863,867 @@\n    if (start == end && scannerTokens(start).is[Trivia])\n      TokenStreamPosition(start, end)\n    else\n      TokenStreamPosition(start, end + 1)"
   }
 ]

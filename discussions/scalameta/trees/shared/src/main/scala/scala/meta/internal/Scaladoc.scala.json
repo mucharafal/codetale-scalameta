@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "0c3b42ec-517e-4e48-b28c-14194098de8c",
+    "prId" : 2399,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2399",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "c7aefdf5-eee7-4196-98f3-903c59d7da37",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Should we add a test for `@define` ?",
+        "createdAt" : "2021-06-28T07:56:06Z",
+        "updatedAt" : "2021-06-28T07:56:10Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "e09d0431-0331-46ee-bcf7-0c1b24b61e61",
+        "parentId" : "c7aefdf5-eee7-4196-98f3-903c59d7da37",
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "@tgodzik thanks, done.",
+        "createdAt" : "2021-06-28T15:41:32Z",
+        "updatedAt" : "2021-06-28T15:41:33Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1943cb1e2d73a3dd35ef6a365f9bdcd96c70e50e",
+    "line" : 32,
+    "diffHunk" : "@@ -1,1 +221,225 @@     * source file which will be expanded to the contents of {{{definition}}}.\n     */\n    case object Define extends Base(\"@define\", hasLabel = true, hasDesc = true)\n\n    /* 2.12 tags */"
+  }
+]
