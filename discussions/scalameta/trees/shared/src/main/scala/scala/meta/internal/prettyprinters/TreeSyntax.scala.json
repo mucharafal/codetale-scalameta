@@ -1,0 +1,55 @@
+[
+  {
+    "id" : "28e1e998-b2ba-4eea-88c9-15983c6ecee5",
+    "prId" : 2409,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2409",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "7c487877-3d32-4082-bdd0-42c495ed259a",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "you forgot to use this variable",
+        "createdAt" : "2021-07-09T11:49:36Z",
+        "updatedAt" : "2021-07-09T12:03:35Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "8e808cda-7c7e-48f6-81fe-ddf23271e45d",
+        "parentId" : "7c487877-3d32-4082-bdd0-42c495ed259a",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Good catch! It's now used.",
+        "createdAt" : "2021-07-09T13:45:39Z",
+        "updatedAt" : "2021-07-09T13:45:39Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "1675110f937fbeae1d29e83d6d6dcedede6c812e",
+    "line" : 5,
+    "diffHunk" : "@@ -1,1 +1062,1066 @@        val pparents = r(t.inits, \" with \")\n        val derived = r(t.derives, \"derives \", \", \", \"\")\n        val isGiven = t.parent.exists(_.is[Defn.Given])\n        val withGiven = if (!isGiven) \"\" else if (isBodyEmpty) \"with {}\" else \"with\"\n        val pbody = {"
+  }
+]

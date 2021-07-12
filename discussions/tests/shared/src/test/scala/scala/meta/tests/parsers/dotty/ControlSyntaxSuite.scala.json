@@ -72,5 +72,58 @@
     "commit" : "6a40e10fbb565d4add07d2a11c4dac0475e61e73",
     "line" : 21,
     "diffHunk" : "@@ -1,1 +1114,1118 @@  test(\"while-cond-expr-do\") {\n    val code =\n      \"\"\"|  while (x > 0) && (y > 0) do\n         |    x += 1\n         |\"\"\".stripMargin"
+  },
+  {
+    "id" : "d16a9e79-7b61-4e63-85ef-24bfa04a748d",
+    "prId" : 2413,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2413",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "dae607e4-d3db-4ded-a7a3-6aaf35a414f7",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "is this really valid in scala 3?!",
+        "createdAt" : "2021-07-10T12:05:31Z",
+        "updatedAt" : "2021-07-10T12:05:31Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "5aaa06c7-00c6-49c7-8085-9c262a5dff11",
+        "parentId" : "dae607e4-d3db-4ded-a7a3-6aaf35a414f7",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "Yep, it's taken straight from the tests. I think this is the most hardcore edge case they could find.",
+        "createdAt" : "2021-07-10T12:35:35Z",
+        "updatedAt" : "2021-07-10T12:35:36Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "28766865cb37c5afa3852779a57680741758af05",
+    "line" : 30,
+    "diffHunk" : "@@ -1,1 +1819,1823 @@    runTestAssert[Stat](\n      \"\"\"|if (1) max 10 gt 0\n         |\n         |then\n         |  1"
   }
 ]
