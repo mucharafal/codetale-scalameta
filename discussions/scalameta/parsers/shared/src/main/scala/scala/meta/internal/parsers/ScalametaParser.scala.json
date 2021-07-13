@@ -781,5 +781,37 @@
     "commit" : "1675110f937fbeae1d29e83d6d6dcedede6c812e",
     "line" : 5,
     "diffHunk" : "@@ -1,1 +4201,4205 @@      }\n\n    val decltype = startModType()\n\n    def parents() = {"
+  },
+  {
+    "id" : "9acd877f-0435-4fc0-9944-d19e2077a8e2",
+    "prId" : 2418,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2418",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "ce9a5941-96ff-4f9c-a0d2-b2adb5041d36",
+        "parentId" : null,
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "So this checks if all regions up to parens are indented. ",
+        "createdAt" : "2021-07-12T15:34:00Z",
+        "updatedAt" : "2021-07-12T15:34:00Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "6042ecb10e36e3d61f7e8cb84b35ab41afeac782",
+    "line" : 7,
+    "diffHunk" : "@@ -1,1 +415,419 @@        sepRegions\n          .collectFirst {\n            case RegionParen => true\n            case other if !other.isIndented => false\n          }"
   }
 ]
