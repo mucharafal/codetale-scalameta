@@ -813,5 +813,90 @@
     "commit" : "6042ecb10e36e3d61f7e8cb84b35ab41afeac782",
     "line" : 7,
     "diffHunk" : "@@ -1,1 +415,419 @@        sepRegions\n          .collectFirst {\n            case RegionParen => true\n            case other if !other.isIndented => false\n          }"
+  },
+  {
+    "id" : "637d961a-95b7-4195-a513-9b08e7583a4c",
+    "prId" : 2426,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2426",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "93b4bd3f-6277-4663-9561-752881c57b2f",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "should you access token before checking `pos < 0`?",
+        "createdAt" : "2021-07-21T00:38:55Z",
+        "updatedAt" : "2021-07-21T00:41:51Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "da0c3a3f738312340704bdbb31f777c12b5b6206",
+    "line" : 72,
+    "diffHunk" : "@@ -1,1 +702,706 @@    @tailrec\n    def countIndentInternal(pos: Int, acc: Int = 0): (Int, Int) = {\n      val token = scannerTokens(pos)\n      if (pos < 0) (acc, pos)\n      else"
+  },
+  {
+    "id" : "ee5d1324-24c8-4272-98cc-7a22428d4ce0",
+    "prId" : 2426,
+    "prUrl" : "https://github.com/scalameta/scalameta/pull/2426",
+    "prSource" : "GitHub",
+    "comments" : [
+      {
+        "id" : "16cdacb8-202f-42cc-81c9-384c774c6a17",
+        "parentId" : null,
+        "author" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "body" : "a tab is a single indent?",
+        "createdAt" : "2021-07-21T00:39:58Z",
+        "updatedAt" : "2021-07-21T00:41:51Z",
+        "lastEditedBy" : {
+          "login" : "kitbellew",
+          "name" : "Albert Meltzer",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/7529386?u=c0f3ffdc4e75c9e95b1021c84eab59d669286f02&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      },
+      {
+        "id" : "70d93079-1317-48ca-b3ae-0e5525225230",
+        "parentId" : "16cdacb8-202f-42cc-81c9-384c774c6a17",
+        "author" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "body" : "it is, you cannot mix tabs and spaces, so it's just a number of tabs or a number of spaces.",
+        "createdAt" : "2021-07-21T08:50:06Z",
+        "updatedAt" : "2021-07-21T08:50:06Z",
+        "lastEditedBy" : {
+          "login" : "tgodzik",
+          "name" : "Tomasz Godzik",
+          "avatarUrl" : "https://avatars.githubusercontent.com/u/3807253?u=094831e6a696f583ddfd86d3e5923fd8545c543a&v=4",
+          "altName" : null
+        },
+        "tags" : [
+        ]
+      }
+    ],
+    "commit" : "da0c3a3f738312340704bdbb31f777c12b5b6206",
+    "line" : 54,
+    "diffHunk" : "@@ -1,1 +679,683 @@        t.value.charAt(idx) match {\n          case '\\n' => loop(idx + 1, 0, isAfterNewline = true)\n          case ' ' | '\\t' if isAfterNewline => loop(idx + 1, indent + 1, isAfterNewline)\n          case _ => loop(idx + 1, indent, isAfterNewline = false)\n        }"
   }
 ]
